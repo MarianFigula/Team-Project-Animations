@@ -1,0 +1,129 @@
+@media only screen and (max-width:1300px) {
+    /* ked sa tri canvasy nezmestia (Generovanie a rekombinacia) */
+    #animations {
+        text-align: center;
+        align-content: center;
+        display: block;
+        width: 100%;
+    }
+
+    #div_canvas1, #div_canvas2, #div_canvas3{
+        width:100%;
+        padding-bottom: 50px;
+    }
+
+    hr {
+        display: block;
+    }
+}
+
+@media only screen and (max-width:1100px) {
+    /* pri polovodicoch */
+    .container {
+        float: none;
+    }
+
+    .tab button {
+        margin: 0;
+    }
+
+    .leftDiv, .rightDiv {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        float: none;
+    }
+
+    #t01 {
+        width: 100%;
+    }
+
+    details {
+        padding: 0 5px 0 5px;
+    }
+
+    #legenda {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width:850px) {
+    /* For tablets: */
+    body {
+        margin: 0;
+        padding: 0 10px 0 10px;
+    }
+
+    div {
+        margin: 0;
+        padding: 0;
+    }
+
+    #main {
+        padding: 0;
+        width: 100%;
+    }
+
+    canvas {
+        width: 300px;
+    }
+
+    #button1 {
+        display: none;
+    }
+
+    #button1_min {
+        display: inline;
+        width: 50px;
+        margin-top: 2px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    /* pre mobilné zariadenia: */
+    body {
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+    #welcome {
+        width: 100%;
+        padding: 100px 10px 100px 10px;
+        margin: 0;
+    }
+
+    #main {
+        padding: 0;
+        width: 100%;
+        border: 0;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .tab button {
+        padding: 8px;
+        font-size: 16px;
+        align-content: center;
+    }
+
+    #button2, #button3 {
+        display: none;
+    }
+
+    #button2_min, #button3_min {
+        display: inline;
+        width: 100px;
+        margin: 0;
+    }
+
+    ol {
+        padding: 15px;
+    }
+
+    #canvas1, #canvas2, #canvas3 {
+        margin: 0;
+        cursor: default;
+    }
+}

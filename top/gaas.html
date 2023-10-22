@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="utf-8">
+    <title>Domovská stránka</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="mobile.css">
+    <link rel="shortcut icon" href="obrazky/favicon.png">
+    <link rel="apple-touch-icon" href="obrazky/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="objects_structure.js"></script>
+    <script src="structure.js"></script>
+    <script src="ch5m3d.full.js"></script>
+    <script>
+        function loadStructure() {
+            // Add atomic coordinates to molecule array
+            addAtom(31, -1.1722, -1.6190, -1.4630);
+            addAtom(33, 0.1763, -0.1219, -2.3948);
+            addAtom(31, 2.2328, -0.3824, -1.6002);
+            addAtom(31, 0.1763, -0.5086, -4.5963);
+            addAtom(31, -0.5472, 1.9226, -1.9200);
+            addAtom(33, 2.2174, -0.0956, 0.6011);
+            addAtom(31, 4.2739, -0.3560, 1.3956);
+            addAtom(31, 1.4940, 1.9487, 1.0760);
+            addAtom(31, 0.8689, -1.5927, 1.5330);
+            addAtom(33, -1.1877, -1.3324, 0.7383);
+            addAtom(31, -1.9110, 0.7120, 1.2133);
+            addAtom(33, -0.5625, 2.2094, 0.2814);
+            addAtom(31, -1.2859, 4.2536, 0.7563);
+            addAtom(31, 0.1921, 0.7934, 4.0664);
+            addAtom(31, 2.9758, 3.0881, -1.9545);
+            addAtom(31, 1.4940, -4.0015, -1.0084);
+            addAtom(31, -4.0200, 0.4989, -1.7928);
+            addAtom(31, -2.6362, -2.9997, 1.6699);
+
+            // Add bonds to bond array
+            // Add bonds to bond array
+            addBond(1, 2, 0);
+            addBond(2, 3, 0);
+            addBond(2, 4, 0);
+            addBond(2, 5, 0);
+            addBond(3, 6, 0);
+            addBond(1, 10, 0);
+            addBond(5, 12, 0);
+            addBond(12, 13, 0);
+            addBond(12, 8, 0);
+            addBond(12, 11, 0);
+            addBond(8, 6, 0);
+            addBond(11, 10, 0);
+            addBond(9, 10, 0);
+            addBond(9, 6, 0);
+            addBond(10, 18, 0);
+            addBond(6, 7, 0);
+            addBond(16, 4, 1);
+            addBond(17, 18, 1);
+            addBond(17, 4, 1);
+            addBond(18, 16, 1);
+            addBond(17, 13, 1);
+            addBond(13, 15, 1);
+            addBond(4, 15, 1);
+            addBond(18, 14, 1);
+            addBond(15, 7, 1);
+            addBond(13, 14, 1);
+            addBond(16, 7, 1);
+            addBond(14, 7, 1);
+        }
+    </script>
+</head>
+<body onload="initialize()">
+<div>
+    <button title="späť na hlavnú stránku" id="button1" onclick="location.href='index.html'">&#127968; Späť k zoznamu</button>
+    <button title="späť na hlavnú stránku" id="button1_min" onclick="location.href='index.html'">&#127968;</button>
+    <button title="3. téma" id="button2" onclick="location.href='germanium.html'">&lt;&lt; Germánium</button>
+    <button title="3. téma" id="button2_min" onclick="location.href='germanium.html'">&lt;&lt;</button>
+    <button title="5. téma" id="button3" onclick="location.href='sic.html'">&gt;&gt; Karbid kremíka</button>
+    <button title="5. téma" id="button3_min" onclick="location.href='sic.html'">&gt;&gt;</button>
+</div>
+<div class="div">
+    <header>
+        <h1>Arzenid gália (GaAs)</h1>
+    </header>
+    <div class="tab">
+        <button id="default" class="themes" onclick="openTheme(event, '1')">Základné informácie</button>
+        <button class="themes" onclick="openTheme(event, '2')">3D Štruktúra</button>
+        <button class="themes" onclick="openTheme(event, '3')">Zaujímavosti</button>
+    </div>
+    <div id="1" class="content">
+        <h3>Základné informácie o GaAs</h3>
+        <div class="container">
+            <div class="leftDiv">
+                <img src="obrazky/gallium.jpg" alt="gallium" height="250">
+                <img src="obrazky/arsenic.jpg" alt="arsenic" height="250">
+            </div>
+            <div class="rightDiv">
+                <br><table id="tableInf">
+                    <tbody>
+                    <tr>
+                        <td>Atómové číslo</td>
+                        <td>31 (Ga) / 33 (As)</td>
+                    </tr>
+                    <tr>
+                        <td>Elektronický obal</td>
+                        <td>3d<sup>10</sup> 4s<sup>2</sup> 4p<sup>1</sup></td>
+                    </tr>
+                    <tr>
+                        <td>Hmotnosť</td>
+                        <td>144.64 g.mol<sup>-1</sup></td>
+                    </tr>
+                    <tr>
+                        <td>Kryštalografická štruktúra</td>
+                        <td>Zinc blende</td>
+                    </tr>
+                    <tr>
+                        <td>Hustota</td>
+                        <td>5,3176 g.cm<sup>-3</sup></td>
+                    </tr>
+                    <tr>
+                        <td>Bod topenia</td>
+                        <td>1238 °C (1511 K)</td>
+                    </tr>
+                    <tr>
+                        <td>Bod varu</td>
+                        <td> - °C ( - K)</td>
+                    </tr>
+                    <tr>
+                        <td>Tepelná vodivosť</td>
+                        <td>56 W·m<sup>−1</sup>·K<sup>−1</sup></td>
+                    </tr>
+                    <tr>
+                        <td>Šírka zakázaného pásma</td>
+                        <td>1,441 eV </td>
+                    </tr>
+                    </tbody>
+                </table>
+            <br></div>
+        </div>
+        <div class="container" style="clear: both;">
+            <div class="leftDiv" style="text-align: center;">
+                <img src="http://www.crystal-material.com/uploads/allimg/131020/1-13102020094K49.jpg" alt="GaAs">
+                <br><span class="source">Zdroj: <a href="http://www.crystal-material.com/Single-Crystal-Materials/450pxGallium-arsenide-GaAS-single-crystal.html">crystal-material.com</a></span>
+            </div>
+            <div class="rightDiv">
+                <p>&emsp;Arzenid gália je zmes prvkov gália a arzénu. Používa sa pri výrobe zariadení, ako sú mikrovlnné frekvenčné
+                    integrované obvody, infračervené svetelné diódy, laserové diódy, solárne články a optické okná.
+                </p><p>&emsp;Niektoré elektronické vlastnosti arzenidu gália sú <b>lepšie ako vlastnosti kremíka</b>. Má vyššiu rýchlosť
+                    nasýtenia elektrónov a vyššiu pohyblivosť elektrónov, čo umožňuje fungovanie tranzistorov arzenidu
+                    gália pri frekvenciách vyšších ako 250 GHz. Zariadenia GaAs sú vzhľadom na svoju širšiu medzeru v
+                    energetickom pásme relatívne necitlivé na teplotu. Tieto vynikajúce vlastnosti sú presvedčivými
+                    dôvodmi na použitie obvodov GaAs v mobilných telefónoch a satelitoch.</p>
+                    <p>&emsp;Ďalšou výhodou GaAs je to, že má priamu medzeru v páse, čo znamená, že <b>sa dá použiť na
+                    efektívnu absorpciu a vyžarovanie svetla</b>. Kremík má nepriamu medzeru v pásme, a preto je relatívne
+                    slabý pri vyžarovaní svetla. GaAs má aj svoje nevýhody, napr. je drahý, preto sa používa kremík, ktorý je lacnejší.</p>
+            </div>
+        </div>
+    </div>
+    <div id="2" class="content">
+        <h3>Štruktúra GaAs</h3>
+        <div class="container">
+            <div class="leftDiv">
+                <p class="drawWin">
+                    <canvas id="canvas_structure" width="500" height="500"></canvas><br>
+                    <button id="rotateX" onclick="RotateStructure('x')">Otáčanie podľa osi X</button>
+                    <button id="rotateY" onclick="RotateStructure('y')">Otáčanie podľa osi Y</button>
+                    <button id="rotateZ" onclick="RotateStructure('z')">Otáčanie podľa osi Z</button>
+                </p>
+            </div>
+            <div class="rightDiv"><br>
+                <details open>
+                    <summary>Legenda</summary>
+                    <img class="vysvetlivky" src="obrazky/canvas_items/gallium_atom.png" alt="galium"><p class="legenda_items"> – Atóm gália</p><br>
+                    <img class="vysvetlivky" src="obrazky/canvas_items/arsenic_atom.png" alt="arzen"><p class="legenda_items"> – Atóm arzénu</p><br>
+                    <img class="vysvetlivky" src="obrazky/canvas_items/vazba_hneda.png" alt="vazba"><p class="legenda_items"> – Väzba medzi atómami</p><br>
+                    <img class="vysvetlivky" src="obrazky/canvas_items/vazba_biela.png" alt="bunka"><p class="legenda_items"> – Väzba na znázornenie elementárnej bunky</p><br>
+                </details><br>
+                <details>
+                    <summary>Návod na použitie</summary>
+                    <p>&#11119; &#11118; Držaním a následným hýbaním kurzoru sa štruktúra otáča</p>
+                    <p><img src="https://freesvg.org/img/zoomicons.png" alt="zoom" width="40">Kolieskom na myši a taktiež pohybom dvomi prstami na touchpade sa dá zoomovať/unzoomovat</p>
+                </details><br>
+                <div class="note">
+                    <h4>Poznámka</h4>
+                    <p>Atómy gália a arzénu majú skoro rovnakú veľkosť, keďže ich protónové číslo a hmotnosť je skoro rovnaká.</p>
+                </div>
+            </div>
+        </div>
+        <hr class="hr_structure">
+        <div class="container" style="clear: both;">
+            <div class="leftDiv" style="text-align: left; margin: 0;">
+                <p>
+                    <b>Kryštalografia</b> definuje rôzne optické a elektrické vlastnosti materiálov a ich možné využitie pre elektronické prvky.<br>
+                    Štruktúra kryštalického GaAs je trojrozmerné periodické zoskupenie atómov. Je dôležitá,
+                    lebo má:
+                </p>
+                <ul><li>nižšiu absorpciu svetla,</li><li>vyššiu vodivosť </li><li>a menej defektov</li></ul>
+            </div>
+            <div class="rightDiv">
+                <p>
+                    Diamantovú mriežku <b>tvorí množstvo elementárnych buniek</b>, čo je najmenšia časť priestorovej mriežky, obsahuje
+                    najmenší možný počet uzlových atómov.
+                    Pod pojmom elementárny stavebný blok myslíme objekt, ktorý je jednoduchý a bez štruktúry - ktorý sa
+                    už neskladá z ničoho menšieho, len zo seba samého.
+                </p>
+                <img src="obrazky/el_bunka.png" alt="elementarna bunka" height="250"><p class="legenda_items">1 - Jedna bunka<br>2 - Elementárna bunka</p>
+            </div>
+        </div>
+    </div>
+    <div id="3" class="content">
+        <ul>
+            <li>Má veľkú rýchlosť nasýtenia elektrónov a vyššiu pohyblivosť elektrónov.</li>
+            <li>Jedným z prvých GaAs mikroprocesorov bol vyvinutý v skorých 1980.</li>
+            <li>Niektoré procesory GaAs boli implementované predajcami superpočítačov.</li>
+            <li>Prvé známe využitie solárnych článkov GaAs vo vesmíre bolo pre misiu Venera 3, ktorá sa začala v roku 1965.
+            <li>Solárne články GaAs boli vybrané kvôli ich vyššiemu výkonu v prostredí s vysokou teplotou.</li>
+            <li>Zariadenia založené na GaAs držia svetový rekord pre najúčinnejšie jednokrižové solárne články na 29,1% (od roku 2019).</li>
+            <li>Diódy GaAs sa môžu použiť na detekciu röntgenových lúčov.</li>
+            <li>Takmer všetko gálium sa využíva na výrobu arzenidu galitého.</li>
+            <li>Arzenid galitý má fascinujúcu schopnosť premieňať elektrinu priamo na svetlo.</li>
+            <li>GaAs novej generácie podporuje rýchlosť signálu, ktorá je potrebná na implementáciu 5G.</li>
+            <li>Každá elektronika obsahuje malé množstvo arzénu - preto je potrebné každú elektroniku recyklovať!</li>
+        </ul><br>
+        <span class="source">&emsp;Zdroje: <a href="https://vedanadosah.cvtisr.sk/kremik-uz-nestaci-zlozita-elektronika-si-ziada-vhodnejsie-materialy">vedanadosah.cvtisr.sk</a>,
+        <a href="https://www.sciencedirect.com/topics/materials-science/gallium-arsenide">sciencedirect.com</a>,
+        <a href="https://en.wikipedia.org/wiki/Gallium_arsenide">wikipedia.org</a></span>
+    </div>
+</div>
+<script src="helperFunctions.js"></script>
+</body>
+</html>

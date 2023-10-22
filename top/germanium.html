@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="utf-8">
+    <title>Domovská stránka</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="mobile.css">
+    <link rel="shortcut icon" href="obrazky/favicon.png">
+    <link rel="apple-touch-icon" href="obrazky/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="objects_structure.js"></script>
+    <script src="structure.js"></script>
+    <script src="ch5m3d.full.js"></script>
+    <script>
+        function loadStructure() {
+            // Add atomic coordinates to molecule array
+            addAtom(32, -1.1722, -1.6190, -1.4630);
+            addAtom(32, 0.1763, -0.1219, -2.3948);
+            addAtom(32, 2.2328, -0.3824, -1.6002);
+            addAtom(32, 0.1763, -0.5086, -4.5963);
+            addAtom(32, -0.5472, 1.9226, -1.9200);
+            addAtom(32, 2.2174, -0.0956, 0.6011);
+            addAtom(32, 4.2739, -0.3560, 1.3956);
+            addAtom(32, 1.4940, 1.9487, 1.0760);
+            addAtom(32, 0.8689, -1.5927, 1.5330);
+            addAtom(32, -1.1877, -1.3324, 0.7383);
+            addAtom(32, -1.9110, 0.7120, 1.2133);
+            addAtom(32, -0.5625, 2.2094, 0.2814);
+            addAtom(32, -1.2859, 4.2536, 0.7563);
+            addAtom(32, 0.1921, 0.7934, 4.0664);
+            addAtom(32, 2.9758, 3.0881, -1.9545);
+            addAtom(32, 1.4940, -4.0015, -1.0084);
+            addAtom(32, -4.0200, 0.4989, -1.7928);
+            addAtom(32, -2.6362, -2.9997, 1.6699);
+
+            // Add bonds to bond array
+            addBond(1, 2, 0);
+            addBond(2, 3, 0);
+            addBond(2, 4, 0);
+            addBond(2, 5, 0);
+            addBond(3, 6, 0);
+            addBond(1, 10, 0);
+            addBond(5, 12, 0);
+            addBond(12, 13, 0);
+            addBond(12, 8, 0);
+            addBond(12, 11, 0);
+            addBond(8, 6, 0);
+            addBond(11, 10, 0);
+            addBond(9, 10, 0);
+            addBond(9, 6, 0);
+            addBond(10, 18, 0);
+            addBond(6, 7, 0);
+            addBond(16, 4, 1);
+            addBond(17, 18, 1);
+            addBond(17, 4, 1);
+            addBond(18, 16, 1);
+            addBond(17, 13, 1);
+            addBond(13, 15, 1);
+            addBond(4, 15, 1);
+            addBond(18, 14, 1);
+            addBond(15, 7, 1);
+            addBond(13, 14, 1);
+            addBond(16, 7, 1);
+            addBond(14, 7, 1);
+        }
+    </script>
+</head>
+<body onload="initialize()">
+<div>
+    <button title="späť na hlavnú stránku" id="button1" onclick="location.href='index.html'">&#127968; Späť k zoznamu</button>
+    <button title="späť na hlavnú stránku" id="button1_min" onclick="location.href='index.html'">&#127968;</button>
+    <button title="2. téma" id="button2" onclick="location.href='kremik.html'">&lt;&lt; Kremík</button>
+    <button title="2. téma" id="button2_min" onclick="location.href='kremik.html'">&lt;&lt;</button>
+    <button title="4. téma" id="button3" onclick="location.href='gaas.html'">&gt;&gt; Gálium arzenid</button>
+    <button title="4. téma" id="button3_min" onclick="location.href='gaas.html'">&gt;&gt;</button>
+</div>
+<div class="div">
+    <header>
+        <h1>Germánium (Ge)</h1>
+    </header>
+    <div class="tab">
+        <button id="default" class="themes" onclick="openTheme(event, '1')">Základné informácie</button>
+        <button class="themes" onclick="openTheme(event, '2')">3D Štruktúra</button>
+        <button class="themes" onclick="openTheme(event, '3')">Zaujímavosti</button>
+    </div>
+    <div id="1" class="content">
+        <h3>Základné informácie o germániu</h3>
+        <div class="container">
+            <div class="leftDiv">
+                <img src="obrazky/germanium.jpg" alt="germanium" width="500">
+            </div>
+            <div class="rightDiv">
+                <br><table id="tableInf">
+                    <tbody>
+                    <tr>
+                        <td>Atómové číslo</td>
+                        <td>32</td>
+                    </tr>
+                    <tr>
+                        <td>Elektronický obal</td>
+                        <td>3d<sup>10</sup> 4s<sup>2</sup> 4p<sup>2</sup></td>
+                    </tr>
+                    <tr>
+                        <td>Atómová hmotnosť</td>
+                        <td>72,59 g.mol<sup>-1</sup></td>
+                    </tr>
+                    <tr>
+                        <td>Hustota</td>
+                        <td>5,3 g.cm<sup>-3</sup></td>
+                    </tr>
+                    <tr>
+                        <td>Bod topenia</td>
+                        <td>937 °C (1211.4 K)</td>
+                    </tr>
+                    <tr>
+                        <td>Bod varu</td>
+                        <td>2830 °C (3106 K)</td>
+                    </tr>
+                    <tr>
+                        <td>Tepelná vodivosť</td>
+                        <td>60,2 W·m<sup>−1</sup>·K<sup>−1</sup></td>
+                    </tr>
+                    <tr>
+                        <td>Šírka zakázaného pásma</td>
+                        <td>0,67 eV</td>
+                    </tr>
+                    <tr>
+                        <td>Izotópy</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td>Objavil</td>
+                        <td>1886 - Clemens Winkler</td>
+                    </tr>
+                    </tbody>
+                </table>
+            <br></div>
+        </div>
+        <div class="container" style="clear: both;">
+            <div class="leftDiv" style="text-align: center;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Polycrystalline-germanium.jpg/450px-Polycrystalline-germanium.jpg" alt="germánium"><br>
+                <span class="source">Zdroj: <a href="https://sk.wikipedia.org/wiki/Germ%C3%A1nium">wikipedia.org</a></span>
+            </div>
+            <div class="rightDiv">
+                <p>&emsp;Germánium je vzácny šedobiely polokovový prvok, používa sa najmä v polovodičovom priemysle.
+                    Keďže sa málokedy objavuje vo vysokej koncentrácii, germánium bolo objavené pomerne neskoro v histórii chémie.
+                    Elementárne germánium <b>sa používa v tranzistoroch</b> a rôznych iných elektronických
+                    zariadeniach. Historicky bolo prvé desaťročie polovodičovej elektroniky založené výlučne na germániu.</p>
+                    <p>&emsp;Hlavné konečné použitia germánia v roku 2007 na celom svete sa odhadovali na: 35% v prípade optických
+                    vlákien, 30% infračervenej optiky, 15% polymerizačných katalyzátorov a 15% elektroniky a solárnych
+                    elektrických aplikácií. Zostávajúcich 5% sa použilo na také účely, ako sú fosfory, metalurgia a chemoterapia.</p>
+                    <p>&emsp;Zliatiny germánia sa rýchlo stávajú dôležitým polovodičovým materiálom <b>pre vysokorýchlostné integrované obvody</b>.
+                    Čipy SiGe s vysokorýchlostnými vlastnosťami sa môžu vyrábať pomocou lacných, dobre zavedených výrobných techník.
+                    Solárne panely sú hlavným využitím germánia.</p>
+            </div>
+        </div>
+    </div>
+    <div id="2" class="content">
+        <h3>Diamantová štruktúra germánia</h3>
+        <div class="container">
+            <div class="leftDiv">
+                <h4>Elementárna bunka</h4>
+                <p class="drawWin">
+                    <canvas id="canvas_structure" width="500" height="500"></canvas><br>
+                    <button id="rotateX" onclick="RotateStructure('x')">Otáčanie podľa osi X</button>
+                    <button id="rotateY" onclick="RotateStructure('y')">Otáčanie podľa osi Y</button>
+                    <button id="rotateZ" onclick="RotateStructure('z')">Otáčanie podľa osi Z</button>
+                </p>
+            </div>
+            <div class="rightDiv"><br>
+                <details open>
+                    <summary>Legenda</summary>
+                    <img class="vysvetlivky" src="obrazky/canvas_items/germanium_atom.png" alt="germanium"><p class="legenda_items"> – Atóm germánia</p><br>
+                    <img class="vysvetlivky" src="obrazky/canvas_items/vazba_hneda.png" alt="vazba"><p class="legenda_items"> – Väzba medzi atómami</p><br>
+                    <img class="vysvetlivky" src="obrazky/canvas_items/vazba_biela.png" alt="bunka"><p class="legenda_items"> – Väzba na znázornenie elementárnej bunky</p><br>
+                </details><br>
+                <details>
+                    <summary>Návod na použitie</summary>
+                    <p>&#11119; &#11118; Držaním a následným hýbaním kurzoru sa štruktúra otáča</p>
+                    <p><img src="https://freesvg.org/img/zoomicons.png" alt="zoom" width="40">Kolieskom na myši a taktiež pohybom dvomi prstami na touchpade sa dá zoomovať/unzoomovat</p>
+                </details><br>
+                <div class="note">
+                    <h4>Poznámka</h4>
+                    <p>Diamantová štruktúra germánia sa líši od diamantovej štruktúry kremíka v tom, že vzdialenosť medzi atómami je väčšia.</p>
+                </div>
+            </div>
+        </div>
+        <hr class="hr_structure">
+        <div class="container" style="clear: both;">
+            <div class="leftDiv" style="text-align: left; margin: 0;">
+                <p>
+                    <b>Kryštalografia</b> definuje rôzne optické a elektrické vlastnosti materiálov a ich možné využitie pre elektronické prvky.<br>
+                    Štruktúra kryštalického germ8nia je trojrozmerné periodické zoskupenie atómov. Je dôležitá,
+                    lebo má:
+                </p>
+                <ul><li>nižšiu absorpciu svetla,</li><li>vyššiu vodivosť </li><li>a menej defektov</li></ul>
+            </div>
+            <div class="rightDiv">
+                <p>
+                    Diamantovú mriežku <b>tvorí množstvo elementárnych buniek</b>, čo je najmenšia časť priestorovej mriežky, obsahuje
+                    najmenší možný počet uzlových atómov.
+                    Pod pojmom elementárny stavebný blok myslíme objekt, ktorý je jednoduchý a bez štruktúry - ktorý sa
+                    už neskladá z ničoho menšieho, len zo seba samého.
+                </p>
+                <img src="obrazky/el_bunka.png" alt="elementarna bunka" height="250"><p class="legenda_items">1 - Jedna bunka<br>2 - Elementárna bunka</p>
+            </div>
+        </div>
+    </div>
+    <div id="3" class="content">
+        <ul>
+            <li>V roku 1869 Dmitrij Mendelejev predpovedal jeho existenciu a niektoré z jej vlastností z pozície v periodickej tabuľke.</li>
+            <li>Predtým, ako Winkler zverejnil svoje výsledky týkajúce sa nového prvku, rozhodol sa, že svoj prvok
+                pomenuje neptunium, od nedávneho objavu planéty Neptún. Namiesto toho pomenoval nový prvok germánium (z latinského slova Germania pre Nemecko) na počesť svojej vlasti.</li>
+            <li>Počas druhej svetovej vojny sa malé množstvá germánia používali v niektorých špeciálnych elektronických
+                zariadeniach, väčšinou v diódach.</li>
+            <li>Germánium je tvorené hviezdnou nukleosyntézou, bolo zistené u niektorých najvzdialenejších hviezd a v atmosfére Jupitera.</li>
+            <li>Je užitočné pre širokouhlé objektívy a mikroskopy.</li>
+            <li>Kryštály germánia vysokej čistoty sa používajú v detektoroch pre gama spektroskopiu a pri hľadaní tmavej hmoty.</li>
+            <li>Je priehľadné pre infračervené žiarenie.</li>
+        </ul><br>
+        <span class="source">&emsp;Zdroje: <a href="https://www.britannica.com/science/germanium">britannica.com</a>,
+        <a href="https://en.wikipedia.org/wiki/Germanium">wikipedia.org</a>,
+        <a href="https://www.rsc.org/periodic-table/element/32/germanium">rsc.org</a></span>
+    </div>
+</div>
+<script src="helperFunctions.js"></script>
+</body>
+</html>

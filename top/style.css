@@ -1,0 +1,296 @@
+a {text-decoration: none; color: #000;}
+a:hover {background: #FFFFCC; color: #000;}
+a:visited {color: black; text-decoration: none}
+
+body {
+    margin: 0 100px 0 100px;
+    padding: 1%;
+    color: #000;
+    background-image: url("obrazky/background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Calibri, serif;
+    font-size: 18px;
+    line-height: 150%;
+    overflow-y: scroll;
+}
+
+div.div {
+    background: #fff;
+    border: 1px solid #dadada;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+}
+
+/* ROZCESTNIK, index.html */
+
+#welcome {
+    padding: 150px;
+    text-align: center;
+    background: #fff;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#main {
+    display: none;
+    width: 570px;
+    border: 1px solid #000;
+    background: #fff;
+    color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#theme {
+    text-align: center;
+    font-size: 25px;
+}
+
+li, p {
+    padding: 5px;
+}
+
+ol.main { counter-reset: item }
+li.main{ display: block }
+li.main:before { content: counters(item, ".") " "; counter-increment: item }
+
+/* HLAVICKY */
+
+h1 {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+button {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    padding: 5px 10px;
+    margin: 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #FFFFCC;
+}
+
+button:disabled {
+    background: #dcdcdc;
+    cursor: default;
+}
+
+#button1 {
+    margin-right: 33px;
+}
+
+#button1_min, #button2_min, #button3_min {
+    display: none;
+}
+
+#button2, #button3 {
+    width: 200px;
+}
+
+details {
+    padding: 0 50px 0 50px;
+}
+
+/* POLOVODICE - VSEOBECNE */
+/*https://www.w3schools.com/howto/howto_js_tabs.asp*/
+.tab {
+    border: 1px solid #dadada;
+    border-right: none;
+    border-left: none;
+    background-color: #ffffff;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.tab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    padding: 15px;
+    margin: 0 80px 0 0;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.tab button:hover {
+    text-shadow: 2px 2px 8px #fff933;
+}
+
+.tab button.active {
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.content {
+    display: none;
+    padding: 0 10px 0 10px;
+}
+
+/* KREMIK */
+
+img {
+    max-width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 70%;
+}
+
+th {
+    cursor: pointer;
+}
+
+td, th {
+    border: 1px solid #f5f5f5;
+    text-align: left;
+    padding: 5px;
+    width: 400px;
+}
+
+tr {
+    align-content: center;
+}
+
+tr:nth-child(even) {
+    background-color: #ffffcc;
+    color: #000;
+}
+
+.source {
+    font-size: 16px;
+}
+
+.note {
+    border: 1px solid #fff979;
+    background: #fcffe0;
+    border-radius: 20px;
+    border-left: 5px solid #fff979;
+    padding: 0 5px 0 5px;
+}
+
+/*3.BOD*/
+select {
+    width: 200px;
+    padding: 5px;
+    border-radius: 5px;
+    /*font-size: 15px;*/
+}
+
+.sketchfab-embed-wrapper {
+    margin-left: 20%;
+}
+
+.container {
+    clear: both;
+    overflow: hidden;
+}
+
+canvas {
+    cursor: grab;
+}
+
+#canvas1, #canvas2, #canvas3 {
+    max-width: 100%;
+}
+
+#sipky {
+    cursor: default;
+}
+
+.leftDiv {
+    margin-top: 30px;
+    float: left;
+    text-align: center;
+    align-content: center;
+    width: 50%;
+}
+
+.rightDiv {
+    float: right;
+    width: 50%;
+}
+
+#tableInf {
+    border: 0;
+    width: 100%;
+    height: 350px;
+}
+
+#tableInf tr:nth-child(even) {
+    background-color: #ffffcc;
+    color: #000;
+}
+
+span {
+    text-align: center;
+}
+
+/* GENERACIA A REKOMBINACIA */
+
+#animations {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+}
+
+#animate1, #animate2, #animate3 {
+    margin-left: 20px;
+}
+
+#div_canvas1, #div_canvas2, #div_canvas3{
+    display: inherit;
+    height: inherit;
+    width:32%;
+}
+
+.vysvetlivky {
+    margin: 10px 3px 3px 3px;
+    height: 40px;
+    width: 40px;
+}
+
+#canvas1, #canvas2, #canvas3 {
+    margin: 0 15px 0 15px;
+    cursor: default;
+}
+
+.legenda_items {
+    display:inline;
+    position: absolute;
+}
+
+#legenda {
+    margin-top: 120px;
+}
+
+hr {
+    display: none;
+}
+
+hr.hr_structure {
+    display: block;
+    height: 1px;
+    background: #000;
+}

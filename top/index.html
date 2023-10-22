@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="utf-8">
+    <title>Domovská stránka</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="mobile.css">
+    <link rel="shortcut icon" href="obrazky/favicon.png">
+    <link rel="apple-touch-icon" href="obrazky/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <div id="welcome">
+        <h1 style="margin-bottom: 50px;">Vitajte vo svete polovodičov!</h1>
+        <button title="Vstup" onclick="accept();">Vstúpiť</button>
+    </div>
+    <div id="main">
+        <p id="theme"><b>Zvoľte si tému:</b></p>
+        <ol class="main">
+            <li class="main"><a href="uvod.html" target="_self">Úvod do polovodičov</a></li>
+            <li class="main"><a href="kremik.html" target="_self">Vlastnosti a porovnanie polovodičov:</a>
+            <ol class="main">
+                <li class="smaller main"><a href="kremik.html" target="_self">Kremík</a></li>
+                <li class="smaller main"><a href="germanium.html" target="_self">Germánium</a></li>
+                <li class="smaller main"><a href="gaas.html" target="_self">GaAs - Arzenid galitý</a></li>
+                <li class="smaller main"><a href="sic.html" target="_self">SiC - Karbid kremičitý</a></li>
+                <li class="smaller main"><a href="gan.html" target="_self">GaN - Gálium nitrid</a></li>
+            </ol></li>
+            <li class="main"><a href="gen_rek.html" target="_self">Generovanie a rekombinácia elektrónov a dier</a></li>
+        </ol>
+    </div>
+</body>
+</html>

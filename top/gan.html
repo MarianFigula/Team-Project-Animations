@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="utf-8">
+    <title>Domovská stránka</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="mobile.css">
+    <link rel="shortcut icon" href="obrazky/favicon.png">
+    <link rel="apple-touch-icon" href="obrazky/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="objects_structure.js"></script>
+    <script src="structure.js"></script>
+    <script src="ch5m3d.full.js"></script>
+    <script>
+        function loadStructure() {
+            // Add atomic coordinates to molecule array
+            addAtom(31, -1.1722, -1.6190, -1.4630);
+            addAtom(7, 0.1763, -0.1219, -2.3948);
+            addAtom(31, 2.2328, -0.3824, -1.6002);
+            addAtom(31, 0.1763,-0.5086, -4.5963);
+            addAtom(31, -0.5472, 1.9226, -1.9200);
+            addAtom(7, 2.2174, -0.0956, 0.6011);
+            addAtom(31, 4.2739, -0.3560, 1.3956);
+            addAtom(31, 1.4940, 1.9487, 1.0760);
+            addAtom(31, 0.8689, -1.5927, 1.5330);
+            addAtom(7, -1.1877, -1.3324, 0.7383);
+            addAtom(31, -1.9110, 0.7120, 1.2133);
+            addAtom(7, -0.5625, 2.2094, 0.2814);
+            addAtom(31, -1.2859, 4.2536, 0.7563);
+            addAtom(31, 0.1921, 0.7934, 4.0664);
+            addAtom(31, 2.9758, 3.0881, -1.9545);
+            addAtom(31, 1.4940, -4.0015, -1.0084);
+            addAtom(31, -4.0200, 0.4989, -1.7928);
+            addAtom(31, -2.6362, -2.9997, 1.6699);
+
+            // Add bonds to bond array
+            addBond(1, 2, 0);
+            addBond(2, 3, 0);
+            addBond(2, 4, 0);
+            addBond(2, 5, 0);
+            addBond(3, 6, 0);
+            addBond(1, 10, 0);
+            addBond(5, 12, 0);
+            addBond(12, 13, 0);
+            addBond(12, 8, 0);
+            addBond(12, 11, 0);
+            addBond(8, 6, 0);
+            addBond(11, 10, 0);
+            addBond(9, 10, 0);
+            addBond(9, 6, 0);
+            addBond(10, 18, 0);
+            addBond(6, 7, 0);
+            addBond(16, 4, 1);
+            addBond(17, 18, 1);
+            addBond(17, 4, 1);
+            addBond(18, 16, 1);
+            addBond(17, 13, 1);
+            addBond(13, 15, 1);
+            addBond(4, 15, 1);
+            addBond(18, 14, 1);
+            addBond(15, 7, 1);
+            addBond(13, 14, 1);
+            addBond(16, 7, 1);
+            addBond(14, 7, 1);
+        }
+    </script>
+</head>
+<body onload="initialize()">
+<div>
+    <button title="späť na hlavnú stránku" id="button1" onclick="location.href='index.html'">&#127968; Späť k zoznamu</button>
+    <button title="späť na hlavnú stránku" id="button1_min" onclick="location.href='index.html'">&#127968;</button>
+    <button title="5. téma" id="button2" onclick="location.href='sic.html'">&lt;&lt; Karbid kremíka</button>
+    <button title="5. téma" id="button2_min" onclick="location.href='sic.html'">&lt;&lt;</button>
+    <button title="7. téma" id="button3" onclick="location.href='gen_rek.html'">&gt;&gt; Generovanie, rekombin.</button>
+    <button title="7. téma" id="button3_min" onclick="location.href='gen_rek.html'">&gt;&gt;</button>
+</div>
+<div class="div">
+    <header>
+        <h1>Nitrid gália (GaN)</h1>
+    </header>
+    <div class="tab">
+        <button id="default" class="themes" onclick="openTheme(event, '1')">Základné informácie</button>
+        <button class="themes" onclick="openTheme(event, '2')">3D Štruktúra</button>
+        <button class="themes" onclick="openTheme(event, '3')">Zaujímavosti</button>
+    </div>
+    <div id="1" class="content">
+        <h3>Základné informácie o GaN</h3>
+        <div class="container">
+            <div class="leftDiv">
+                <img src="obrazky/gallium.jpg" alt="galium" height="250">
+                <img src="obrazky/nitrogen.jpg" alt="nitrogen" height="250">
+            </div>
+            <div class="rightDiv">
+                <br><table id="tableInf">
+                    <tbody>
+                    <tr>
+                        <td>Atómové číslo</td>
+                        <td>31 (Ga) / 7 (N)</td>
+                    </tr>
+                    <tr>
+                        <td>Elektronický obal</td>
+                        <td>3d<sup>10</sup> 4s<sup>2</sup> 4p<sup>1</sup> / 2s<sup>2</sup> 2p<sup>3</sup></td>
+                    </tr>
+                    <tr>
+                        <td>Hmotnosť</td>
+                        <td>83.730 g.mol<sup>-1</sup></td>
+                    </tr>
+                    <tr>
+                        <td>Kryštalografická štruktúra</td>
+                        <td>Wurtzite</td>
+                    </tr>
+                    <tr>
+                        <td>Hustota</td>
+                        <td>6.1 g.cm<sup>-3</sup></td>
+                    </tr>
+                    <tr>
+                        <td>Bod topenia</td>
+                        <td>> 1600 °C (> 1873.15 K)</td>
+                    </tr>
+                    <tr>
+                        <td>Bod varu</td>
+                        <td> - °C ( - K)</td>
+                    </tr>
+                    <tr>
+                        <td>Tepelná vodivosť</td>
+                        <td>130 W·m<sup>−1</sup>·K<sup>−1</sup></td>
+                    </tr>
+                    <tr>
+                        <td>Šírka zakázaného pásma</td>
+                        <td>3.4 eV</td>
+                    </tr>
+                    <tr>
+                        <td>Objavil</td>
+                        <td>1893 - Ferdinand Henri Moissan</td>
+                    </tr>
+                    </tbody>
+                </table><br>
+            </div>
+        </div>
+        <div class="container" style="clear: both;">
+            <div class="leftDiv" style="text-align: center;">
+                <img src="http://namlab.de/research/energy-efficiency-devices/figures-2014_2015/gan-hvpe-1.jpg/image___en____preview" alt="GaN" width="400">
+                <br><span class="source">Zdroj: <a href="http://namlab.de/research/energy-efficiency-devices/gallium-nitride-materials">namlab.de</a></span>
+            </div>
+            <div class="rightDiv">
+                <p>&emsp;Nitrid gália je veľmi tvrdý materiál, ktorý má kryštalickú štruktúru Wurtzite. GaN má <b>pásmovú
+                    medzeru širšiu ako kremík</b>, takže dokáže udržať vyššie napätie, často sa používa aj v optoelektronických
+                    zariadení.</p><p>&emsp;Jeho citlivosť na ionizujúce žiarenie je nízka, čo z neho robí vhodný materiál
+                    pre solárné články v satelitoch. Keďže tranzistory GaN môžu pracovať <b>pri oveľa vyšších teplotách
+                    a napätiach</b> ako tranzistory s GaAs, vytvárajú ideálne zosilňovače výkonu pri mikrovlnných frekvenciách.</p>
+                    <p>&emsp;GaN súčiastky sa dajú využiť vo výkonovej elektronike. Nabíjačky, konvertory napätia pre
+                    elektromobily a fotovoltaiku a ďalšie zariadenia môžu byť vďaka novému materiálu menšie a efektívnejšie.</p>
+                    <p><b>&emsp;Tranzistory GaN</b> sú vhodné pre vysokofrekvenčné, vysokonapäťové, vysoké teploty a vysoko účinné aplikácie.
+                    Objemový GaN je netoxický, preto sa môže používať v elektródach a elektronike implantátov v živých organizmoch.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="2" class="content">
+        <h3>Štruktúra GaN</h3>
+        <div class="container">
+            <div class="leftDiv">
+                <p class="drawWin">
+                    <canvas id="canvas_structure" width="500" height="500"></canvas><br>
+                    <button id="rotateX" onclick="RotateStructure('x')">Otáčanie podľa osi X</button>
+                    <button id="rotateY" onclick="RotateStructure('y')">Otáčanie podľa osi Y</button>
+                    <button id="rotateZ" onclick="RotateStructure('z')">Otáčanie podľa osi Z</button>
+                </p>
+            </div>
+            <div class="rightDiv"><br>
+                <details open>
+                    <summary>Legenda</summary>
+                    <img class="vysvetlivky" src="obrazky/canvas_items/gallium_atom.png" alt="galium"><p class="legenda_items"> – Atóm gália</p><br>
+                    <img class="vysvetlivky" src="obrazky/canvas_items/nitrogen_atom.png" alt="nitrogen"><p class="legenda_items"> – Atóm nitrogénu</p><br>
+                    <img class="vysvetlivky" src="obrazky/canvas_items/vazba_hneda.png" alt="vazba"><p class="legenda_items"> – Väzba medzi atómami</p><br>
+                    <img class="vysvetlivky" src="obrazky/canvas_items/vazba_biela.png" alt="bunka"><p class="legenda_items"> – Väzba na znázornenie elementárnej bunky</p><br>
+                </details><br>
+                <details>
+                    <summary>Návod na použitie</summary>
+                    <p>&#11119; &#11118; Držaním a následným hýbaním kurzoru sa štruktúra otáča</p>
+                    <p><img src="https://freesvg.org/img/zoomicons.png" alt="zoom" width="40">Kolieskom na myši a taktiež pohybom dvomi prstami na touchpade sa dá zoomovať/unzoomovat</p>
+                </details><br>
+                <div class="note">
+                    <h4>Poznámka</h4>
+                    <p>Atómy nitrogénu sú oveľa menšie, lebo protónové číslo a hmotnosť nitrogénu je oveľa menšia ako u gália.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="3" class="content">
+        <ul>
+            <li>Je jedným z mála materiálov, ktoré vyžarujú modré svetlo, preto sa využíva v modrých LED, alebo v laseroch pre Blu-ray prehrávače.</li>
+            <li>Tím vedcov z Harvard University pod vedením Danqinga Wanga vyrába miniatúrne GaN lasery veľkosti jedného
+                mikrónu (tisíciny milimetra), ktoré sú nepozorovateľné voľným okom.</li>
+            <li>Dnes je elektronika v aute namontovaná ďaleko od motora, aby nedošlo k prílišnému prehriatiu. GaN môže
+                toto obmedzenie eliminovať a môže otvoriť nové možnosti pre návrh áut budúcnosti.</li>
+            <li>Prach z GaN dráždi pokožku, oči a pľúca.</li>
+        </ul><br>
+        <span class="source">&emsp;Zdroje: <a href="http://namlab.de/research/energy-efficiency-devices/gallium-nitride-materials">namlab.de</a>,
+            <a href="https://techbox.dennikn.sk/prinesie-nitrid-galia-novu-elektroniku/">techbox.dennikn.sk</a>,
+            <a href="https://www.theverge.com/2018/11/1/18051974/gallium-nitride-anker-material-silicon-semiconductor-energy">theverge.com</a>,
+            <a href="https://en.wikipedia.org/wiki/Gallium_nitride">wikipedia.org</a>
+        </span>
+    </div>
+</div>
+<script src="helperFunctions.js"></script>
+</body>
+</html>

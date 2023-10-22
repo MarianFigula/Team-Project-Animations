@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="utf-8">
+    <title>Domovská stránka</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="mobile.css">
+    <link rel="shortcut icon" href="obrazky/favicon.png">
+    <link rel="apple-touch-icon" href="obrazky/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="objects_structure.js"></script>
+    <script src="structure.js"></script>
+    <script src="ch5m3d.full.js"></script>
+    <script>
+        function loadStructure() {
+            // Add atomic coordinates to molecule array
+            addAtom(6, -1.4009, -0.1558, 2.4834);
+            addAtom(14, 0.2719, -0.4293, -0.0044);
+            addAtom(6, 2.3126, -0.1457, 1.1411);
+            addAtom(6, 0.1300, 0.8651, -1.7043);
+            addAtom(14, -1.2626, 1.8516, 3.2566);
+            addAtom(14, 0.3000, 3.0000, -0.9311);
+            addAtom(14, 2.4708, 1.8300, 1.9143);
+            addAtom(6, 0.1300, -3.0000, -0.9126);
+            addAtom(14, 2.0085, -4.2084, -0.3078);
+            addAtom(14, -1.6531, -4.3000, 0.9426);
+            addAtom(14, -0.2000, -3.0000, -3.3027);
+            addAtom(14, -3.2139, 3.0000, 0.5248);
+            addAtom(6, -3.3839, 0.9380, -0.4248);
+            addAtom(14, -3.7239, -3.0184, -1.9248);
+
+            addBond(1, 2, 0);
+            addBond(1, 5, 0);
+            addBond(2, 3, 0);
+            addBond(2, 4, 0);
+            addBond(2, 8, 0);
+            addBond(3, 7, 0);
+            addBond(4, 6, 0);
+            addBond(8, 9, 0);
+            addBond(8, 10, 0);
+            addBond(8, 11, 0);
+            addBond(12, 13, 0);
+            addBond(12, 14, 1);
+            addBond(12, 5, 1);
+            addBond(12, 6, 1);
+            addBond(5, 7, 1);
+            addBond(6, 7, 1);
+            addBond(14, 10, 1);
+            addBond(14, 11, 1);
+            addBond(10, 9, 1);
+            addBond(11, 9, 1);
+            addBond(10, 5, 1);
+            addBond(11, 6, 1);
+            addBond(7, 9, 1);
+        }
+    </script>
+</head>
+<body onload="initialize()">
+<div>
+    <button title="späť na hlavnú stránku" id="button1" onclick="location.href='index.html'">&#127968; Späť k zoznamu</button>
+    <button title="späť na hlavnú stránku" id="button1_min" onclick="location.href='index.html'">&#127968;</button>
+    <button title="4. téma" id="button2" onclick="location.href='gaas.html'">&lt;&lt; Gálium arzenid</button>
+    <button title="4. téma" id="button2_min" onclick="location.href='gaas.html'">&lt;&lt;</button>
+    <button title="6. téma" id="button3" onclick="location.href='gan.html'">&gt;&gt; Nitrid gália</button>
+    <button title="6. téma" id="button3_min" onclick="location.href='gan.html'">&gt;&gt;</button>
+</div>
+<div class="div">
+    <header>
+        <h1>Karbid kremíka (SiC)</h1>
+    </header>
+    <div class="tab">
+        <button id="default" class="themes" onclick="openTheme(event, '1')">Základné informácie</button>
+        <button class="themes" onclick="openTheme(event, '2')">3D Štruktúra</button>
+        <button class="themes" onclick="openTheme(event, '3')">Zaujímavosti</button>
+    </div>
+    <div id="1" class="content">
+        <h3>Základné informácie o SiC</h3>
+        <div class="container">
+            <div class="leftDiv">
+                <img src="obrazky/silicon.jpg" alt="kremík" height="250">
+                <img src="obrazky/carbon.jpg" alt="uhlik" height="250">
+            </div>
+            <div class="rightDiv">
+                <br><table id="tableInf">
+                    <tbody>
+                    <tr>
+                        <td>Atómové číslo</td>
+                        <td>14 (Si) / 6 (C)</td>
+                    </tr>
+                    <tr>
+                        <td>Elektronický obal</td>
+                        <td>3s<sup>2</sup> 3p<sup>2</sup> / 2s<sup>2</sup>2p<sup>2</sup></td>
+                    </tr>
+                    <tr>
+                        <td>Hmotnosť</td>
+                        <td>40.096 g.mol<sup>-1</sup></td>
+                    </tr>
+                    <tr>
+                        <td>Kryštalografická štruktúra</td>
+                        <td>Zinc blende (3C), Hexagonálna (2H, 4H, 6H)</td>
+                    </tr>
+                    <tr>
+                        <td>Hustota</td>
+                        <td>3.16 g.cm<sup>-3</sup></td>
+                    </tr>
+                    <tr>
+                        <td>Bod topenia</td>
+                        <td>2,830 °C (3100 K)</td>
+                    </tr>
+                    <tr>
+                        <td>Bod varu</td>
+                        <td> - °C ( - K)</td>
+                    </tr>
+                    <tr>
+                        <td>Tepelná vodivosť</td>
+                        <td>360 - 490 W·m<sup>−1</sup>·K<sup>−1</sup></td>
+                    </tr>
+                    <tr>
+                        <td>Šírka zakázaného pásma</td>
+                        <td>2.36 - 3.23 eV</td>
+                    </tr>
+                    <tr>
+                        <td>Objavil</td>
+                        <td>1893 - Ferdinand Henri Moissan</td>
+                    </tr>
+                    </tbody>
+                </table><br>
+            </div>
+        </div>
+        <div class="container" style="clear: both;">
+            <div class="leftDiv" style="text-align: center;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/SiC_p1390066.jpg/450px-SiC_p1390066.jpg" alt="SiC">
+                <br><span class="source">Zdroj: <a href="https://en.wikipedia.org/wiki/Silicon_carbide">wikipedia.org</a></span>
+            </div>
+            <div class="rightDiv">
+                <p>&emsp;Karbid kremíka je polovodič obsahujúci kremík a uhlík. Vyskytuje sa v prírode ako mimoriadne vzácny
+                    minerál, <b>moissanit</b>. Syntetický prášok SiC sa vyrába od roku 1893 na vyrábanie brúsiva. Používa
+                    sa v aplikáciách vyžadujúcich vysokú vytrvalosť, ako sú automobilové brzdy, automobilové spojky a
+                    keramické dosky. SiC sa používa v polovodičových elektronických zariadeniach, ktoré pracujú pri vysokých
+                    teplotách a/alebo napätiach.</p>
+                    <p>&emsp;Prakticky všetok karbid kremíka predávaný na svete <b>je syntetický.</b>
+                    Karbid kremíka existuje v asi<b> 250 kryštalických formách</b>. Polymorfizmus SiC sa vyznačuje veľkou
+                    rodinou podobných kryštalických štruktúr nazývaných polytypy. Najčastejšie sú: 3C, 4H, 6H.
+                    Alfa karbid kremíka (6H-SiC) je najčastejšie sa vyskytujúcim polymorfom a tvorí sa pri teplotách vyšších
+                    ako 1700 °C. Modifikácia beta (3C-SiC) s kryštálovou štruktúrou sa tvorí pri teplotách pod 1700 °C.</p>
+                    <p>&emsp;V súčasnosti existuje <b>veľký záujem o jeho použitie v elektronike</b> kvôli jeho vysokej
+                    tepelnej vodivosti, vysokej odolnosti proti elektrickému poľu a vysokej maximálnej prúdovej hustote.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="2" class="content">
+        <h3>Štruktúra 2H - polytyp SiC</h3>
+        <div class="container">
+            <div class="leftDiv">
+                <p class="drawWin">
+                    <canvas id="canvas_structure" width="500" height="500"></canvas><br>
+                    <button id="rotateX" onclick="RotateStructure('x')">Otáčanie podľa osi X</button>
+                    <button id="rotateY" onclick="RotateStructure('y')">Otáčanie podľa osi Y</button>
+                    <button id="rotateZ" onclick="RotateStructure('z')">Otáčanie podľa osi Z</button>
+                </p>
+            </div>
+            <div class="rightDiv"><br>
+                <details open>
+                    <summary>Legenda</summary>
+                    <img class="vysvetlivky" src="obrazky/canvas_items/silicon_atom.png" alt="kremik"><p class="legenda_items"> – Atóm kremíka</p><br>
+                    <img class="vysvetlivky" src="obrazky/canvas_items/carbon_atom.png" alt="uhlik"><p class="legenda_items"> – Atóm uhlíka</p><br>
+                    <img class="vysvetlivky" src="obrazky/canvas_items/vazba_hneda.png" alt="vazba"><p class="legenda_items"> – Väzba medzi atómami</p><br>
+                    <img class="vysvetlivky" src="obrazky/canvas_items/vazba_biela.png" alt="bunka"><p class="legenda_items"> – Väzba na znázornenie elementárnej bunky</p><br>
+                </details><br>
+                <details>
+                    <summary>Návod na použitie</summary>
+                    <p>&#11119; &#11118; Držaním a následným hýbaním kurzoru sa štruktúra otáča</p>
+                    <p><img src="https://freesvg.org/img/zoomicons.png" alt="zoom" width="40">Kolieskom na myši a taktiež pohybom dvomi prstami na touchpade sa dá zoomovať/unzoomovat</p>
+                </details><br>
+                <div class="note">
+                    <h4>Poznámka</h4>
+                    <p>2H-SiC nie je najčastejšie používaný polytyp, ale z neho sa skladá 4H-SiC a 6H-SiC.</p>
+                </div>
+            </div>
+        </div>
+        <hr class="hr_structure">
+        <div class="container" style="clear: both;">
+            <div class="leftDiv" style="text-align: left; margin: 0;">
+                <p>Hoci existuje veľké množstvo variácií SiC, len niekoľko z nich sa vyrába v reprodukovateľnej forme a
+                    ešte menej je vhodných ako polovodiče pre elektronický priemysel. <b>Dostupné polytypy SiC používané
+                    v priemysle sú 3C-SiC, 4H-SiC, 6H-SiC</b>. Z dostupných polytypov je 4H-SiC v súčasnosti najpoužívanejším.
+                    Hlavnými dôvodmi sú cenová a technologická zrelosť z pomädzi ostatných polytypov.</p>
+                <p style="align-content: center; text-align: center">
+                    <img src="obrazky/sic_polytypes.png" alt="polytypy" height="350"><br>
+                    <span class="source">Zdroj: <a href="https://api.intechopen.com/chapter/pdf-preview/21138">api.intechopen.com</a></span>
+                </p>
+            </div>
+            <div class="rightDiv">
+                <p>
+                    Medzná intenzita prierazného poľa pre SiC je 10-krát vyššia ako pre Si. Táto vlastnosť umožňuje
+                    použitie prvkov na báze SiC vo vysoko výkonných aplikáciách s vyššími napájacími napätiami. Väčšia
+                    šírka zakázaného pásma ďalej umožňuje SiC prvkom pracovať pri vyšších teplotách. Garantovaná
+                    prevádzková teplota súčasných SiC prvkov je v rozsahu od 150 °C do 175 °C kde je limitným parametrom
+                    materiál zapuzdrenia prvku. Správnym zapuzdrením môžu pracovať SiC prvky aj pri teplote vyššej ako 200 °C.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="3" class="content">
+        <ul>
+            <li>Elektronické aplikácie karbidu kremíka, ako sú diódy vyžarujúce svetlo (LED) a detektory sa prvýkrát demonštrovali okolo roku 1907.</li>
+            <li>Prvé použitie SiC bolo ako brúsivo, neskôr elektronické aplikácie.</li>
+            <li>Prírodný moissanit bol prvýkrát nájdený v roku 1893 ako malá súčasť meteoritu Canyon Diablo v Arizone.</li>
+            <li>Najčastejšie sa nachádza okolo hviezd bohatých na uhlík v medziplanetárnom vesmírnom prachu.</li>
+            <li>Poskytuje výhody pre rýchle, vysokoteplotné a / alebo vysokonapäťové zariadenia.</li>
+            <li>Z karbidu kremíka vyrábajú zrkadlový materiál pre astronomické teleskopy.</li>
+            <li>Vlákna z karbidu kremíka sa používajú na meranie teploty plynu.</li>
+            <li>Je podobný diamantu v niekoľkých dôležitých ohľadoch: je priehľadný a tvrdý (9–9,5 na Mohsovej stupnici
+                v porovnaní s 10 pre diamant).</li>
+        </ul><br>
+        <span class="source">&emsp;Zdroje: <a href="https://blog.st.com/silicon-carbide-cars-wide-bandgap-semiconductor/">blog.st.com</a>,
+            <a href="https://www.sciencedirect.com/science/article/abs/pii/0038110196000457">sciencedirect.com</a>,
+            <a href="https://www.fei.stuba.sk/buxus/docs/2019/Autoreferat_Szobolovszky_Robert.pdf">fei.stuba.sk</a>,
+            <a href="https://arxiv.org/ftp/arxiv/papers/1712/1712.00830.pdf">arxiv.org</a>,
+            <a href="https://en.wikipedia.org/wiki/Silicon_carbide">wikipedia.org</a>
+        </span>
+    </div>
+</div>
+<script src="helperFunctions.js"></script>
+</body>
+</html>

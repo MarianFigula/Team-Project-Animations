@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="utf-8">
+    <title>Domovská stránka</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="mobile.css">
+    <link rel="shortcut icon" href="obrazky/favicon.png">
+    <link rel="apple-touch-icon" href="obrazky/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div>
+    <button title="späť na hlavnú stránku" id="button1" onclick="location.href='index.html'">&#127968; Späť k zoznamu</button>
+    <button title="späť na hlavnú stránku" id="button1_min" onclick="location.href='index.html'">&#127968;</button>
+    <button title="6.téma" id="button2" onclick="location.href='gan.html'">&lt;&lt; Nitrid gália</button>
+    <button title="6.téma" id="button2_min" onclick="location.href='gan.html'">&lt;&lt;</button>
+    <button id="button3" disabled>&gt;&gt;</button>
+    <button id="button3_min" disabled>&gt;&gt;</button>
+</div>
+<div class="div">
+    <header>
+        <h1>Generovanie a rekombinácia elektrónov a dier</h1>
+    </header><br>
+    <div id="animations">
+        <div id="div_canvas1">
+            <h3>Intrizický polovodič</h3>
+            <h4 style="visibility: hidden">-</h4>
+            <canvas id="canvas1" width="300" height="300"></canvas><br>
+            <button id="animate1" onclick="move()">Generovanie</button>
+            <button id="animateBack1" onclick="moveBack()" disabled>Rekombinácia</button>
+        </div>
+        <hr>
+        <div id="div_canvas2">
+            <h3>Prímesový polovodič</h3>
+            <h4>Donor</h4>
+            <canvas id="canvas2" width="300" height="300"></canvas><br>
+            <button id="animate2" onclick="move2()">Generovanie</button>
+            <button id="animateBack2" onclick="moveBack2()" disabled>Rekombinácia</button>
+        </div>
+        <hr>
+        <div id="div_canvas3">
+            <h3>Prímesový polovodič</h3>
+            <h4>Akceptor</h4>
+            <canvas id="canvas3" width="300" height="300"></canvas><br>
+            <button id="animate3" onclick="move3()">Generovanie</button>
+            <button id="animateBack3" onclick="moveBack3()" disabled>Rekombinácia</button>
+        </div>
+        <hr>
+    </div>
+    <div class="container" style="padding: 30px;">
+        <div class="leftDiv" style="text-align: left">
+            <h4>Legenda</h4>
+            <img class="vysvetlivky" src="obrazky/canvas_items/electron.png" alt="elektron"><p class="legenda_items"> – Elektrón</p><br>
+            <img class="vysvetlivky" src="obrazky/canvas_items/hole.png" alt="diera"><p class="legenda_items"> – Diera</p><br>
+            <img class="vysvetlivky" src="obrazky/canvas_items/cond_band.png" alt="vodivostne pasmo"><p class="legenda_items"> – Prázdne energetické (vodivostné) pásmo</p><br>
+            <img class="vysvetlivky" src="obrazky/canvas_items/val_band.png" alt="valencne pasmo"><p class="legenda_items"> – Zaplnené energetické (valenčné) pásmo</p><br>
+        </div>
+        <div class="rightDiv">
+            <h4 id="legenda"></h4>
+            <img class="vysvetlivky" src="obrazky/canvas_items/donor.png" alt="donor"><p class="legenda_items"> – Donor</p><br>
+            <img class="vysvetlivky" src="obrazky/canvas_items/acceptor.png" alt="akceptor"><p class="legenda_items"> – Akceptor</p><br>
+            <img class="vysvetlivky" src="obrazky/canvas_items/ion_donor.png" alt="ionizovany donor"><p class="legenda_items"> – Ionizovaný donor</p><br>
+            <img class="vysvetlivky" src="obrazky/canvas_items/ion_acceptor.png" alt="ionizovany akceptor"><p class="legenda_items"> – Ionizovaný akceptor</p><br>
+        </div><br>
+    </div>
+    <div class="container" style="padding: 30px;">
+        <h4>Teória</h4>
+        <audio controls>
+            <source src="" type="audio/mpeg">
+        </audio>
+    </div>
+</div>
+<script src="objects.js"></script>
+<script src="generacia.js"></script>
+<script src="generaciaDonor.js"></script>
+<script src="generaciaAkceptor.js"></script>
+<script>
+</script>
+</body>
+</html>
