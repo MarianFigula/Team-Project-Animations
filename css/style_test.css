@@ -1,0 +1,159 @@
+html{
+	width: 100%;
+	height: 100%;
+	font-family: calibri;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+}
+
+
+#left_menu{
+	overflow: initial;
+	float:left;
+	margin: 0 1.95vw;	
+	position: -webkit-sticky;
+  	position: static;
+  	top: 0;
+}
+
+#left_menu #menu{
+	display: block;
+}
+
+.verticalMenu{
+	color: white;
+	width: 100%;
+	text-align: center;
+	background: black;
+	font-size: 1.2em;
+	display: none;
+}
+
+#left_menu nav a{
+	display: block;
+}
+
+nav a{
+	/*display: block;*/
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
+	font-size: 2vW;
+	text-align: center;
+	padding: 2vh;
+	margin: 1vh;
+	/*background-color: black;*/
+	border-radius: 10px;
+}
+
+nav a:hover{
+	color:grey;
+}
+
+#test{
+	padding: 1vh 0 3vh 0;
+	width: 87%;
+	min-height: 80vh;
+	background: #b8b8b8;
+	float:left;
+	text-align: center;
+}
+
+/*horná lišta---------------------------------*/
+
+.testEdit{
+	width: 100%;
+	background: grey;
+	height: 10vh;
+}
+
+
+/*stopky------------------------------------------*/
+/*#stopwatch {
+  background: #eee;
+  border: 1px solid #999;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 250px;
+}*/
+
+
+#stopwatch{
+	width: 33%;
+	/*background: green;*/
+	padding: 2vh 0;
+	height: 6vh;
+	float: left;
+	font-size: 5vh;
+	font-weight: bold;
+	text-align: center;
+}
+
+/*test/kviz---------------------------------------------*/
+
+.result{
+	width: 34%;
+	/*background: red;*/
+	padding: 2vh 0;
+	height: 6vh;
+	float: left;
+	font-size: 5vh;
+}
+
+
+#quiz{
+	width: 45%;
+	/*background: yellow;*/
+	margin: 1vh auto;
+	text-align: left;
+}
+
+.question{
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.answers{
+	font-size: 1.2em;
+}
+
+.correctAns{
+	font-size: 1.2em;
+	margin-bottom: 1vh;
+	color: lightgreen;
+	display: none;
+}
+
+/*velkost písma---------------------------------------*/
+
+.textSize{
+	width: 33%;
+	/*background: blue;*/
+	padding: 2vh 0;
+	height: 6vh;
+	float: left;
+}
+
+.big{
+  font-size: 2em;  
+  margin-left: 1em;
+}
+
+.small{
+  font-size: 1.2em;
+  margin-left: 0.3em;
+}
+
+.big, .small{
+  font-weight: bold;
+  cursor: default;
+}
+
+.big:hover, .small:hover{
+  color: yellow;
+}
+
+/*----------------------------------*/

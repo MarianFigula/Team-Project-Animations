@@ -1,0 +1,377 @@
+html{
+	width: 100%;
+	height: 100%;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	font-family: calibri;
+}
+
+body, .main{
+	margin: 0;
+ 	padding: 0;
+}
+
+/*----------menu----------------------*/
+
+	.menu{
+	  overflow: initial;
+	  float:left;
+	  /*margin: 0 2vw 0 2vw;  */
+	  position: -webkit-sticky;
+	    position: static;
+	    top: 0;
+	    width: 100%;
+	}
+
+	.menu #animationMenu{
+	  display: none;
+	}
+
+	.verticalMenu{
+	  color: white;
+	  width: 100%;
+	  text-align: center;
+	  background: #0f6e21;
+	  font-size: 1.2em;
+	  display: block;
+	}
+
+	.menu .navbar a{
+	  display: block;
+	}
+
+	.navbar a{
+	  /*display: block;*/
+	  text-decoration: none;
+	  font-weight: bold;
+	  color: white;
+	  font-size: 1.2em;
+	  text-align: center;
+	  padding: 0.3vh;
+	  margin: 2px 0 0 0;
+	  background: #0f6e21;
+	}
+
+	  .navbar a.classic:hover {
+	    /*color: black;*/
+	    color: #13902a;
+	  }
+
+	  .help{
+	    cursor: help;
+	  }
+
+	  .score:hover{
+	  	cursor: auto;
+	  }
+
+/*----------------koniec menu----------------*/
+
+/*----------------------------hlavný obsah-----------------------------*/
+  #main{
+    width: 100%;
+    background: yellow;
+  }
+/*---------prava strana ---------------------*/
+  #info{
+    float: left;
+    margin-top: 1vw;
+    background: #adadad;
+    max-height: 570px;
+    min-width: 20vw;
+    max-width:100%;
+    /*display: none;*/
+    width: 100%;
+    padding-bottom: 1vh;
+  }
+
+  #info h1{
+    /*margin-top: : 2em;
+    padding: 0;*/
+    margin-top: 0;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
+  .textInfo{
+    margin:0 1vw 0 1vw;
+    overflow: auto;
+    /*background: green;*/
+    font-size: 1.2em;
+    height: 480px;
+  }
+
+  .textInfo a{
+    color:blue;
+  }
+
+  #close{
+    position: relative;
+    top: 5px;
+    right: -5px;
+    margin: 0.2em;
+    cursor: pointer;
+    display: none;
+  }
+
+  /*velkost písma*/
+  .big{
+    font-size: 2em;  
+    margin-left: 1em;
+  }
+
+  .small{
+    font-size: 1.2em;
+    margin-left: 0.3em;
+  }
+
+  .big, .small{
+    font-weight: bold;
+    cursor: default;
+  }
+
+  .big:hover, .small:hover{
+    color: yellow;
+  }
+
+  .componentInfo{
+    display: none;
+  }
+
+/*------------------------------*/
+/*doplnkove info-----------------------------*/
+  .accordion {
+    background: #0f6e21;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+
+  .accordion a{
+    color: white;
+    text-decoration: none;
+  }
+
+  .active, .accordion:hover {
+    background-color: #6e6e6e;
+    color: white;
+  }
+
+/* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0 18px;
+    /*background-color: #6e6e6e;*/
+    display: none;
+    overflow: hidden;
+  }
+
+/*tabulky--------------------------*/
+  table {
+    border-collapse: collapse;
+  }
+
+  table, th, td {
+    border: 1px solid black;
+  }
+
+  th, td {
+    padding: 15px;
+    text-align: center;
+  }
+
+  th{
+    background: #0f6e21;
+    color: white;
+  }
+
+  .dva{
+    background: #8c8c8c;
+  }
+
+
+/*---------lava strana---------*/
+  #con{
+  	margin-top: 1vw;
+    padding:0;
+    width: 100%;
+  	max-width: 864px;
+  	max-height: 570px;
+  	/*background: #00A020;*/
+  	float:left;
+  	position: relative;
+  	top: 0;
+  	left: 0;
+    text-align: center;
+  }
+
+  #plan{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-width: 864px;
+    max-height: 570px;
+  }
+
+  /*suhlas použitých fotografií*/
+  .agree{
+    font-size: 0.8em;
+  }
+
+  #con a{  
+    color:blue;
+  }
+
+  /*napis, na ktorý komponent ukazuje*/
+  .thisCom{
+    margin-left: 2em;
+  }
+
+  .active{
+    opacity: 0.5;
+  }
+
+/*-----------componenty----------------*/
+
+
+  .rasp{
+  	  position: relative;
+  	  top: 0;
+    	left: 0;
+  }
+
+  .eth{
+  	  position: absolute;
+  	  top: 6.7%;
+    	left: 75%;
+      /*display: hide;*/
+    	background: yellow;
+  }
+
+  .usb2{
+  	position: absolute;
+  	  top: 68%;
+    	left: 79%;
+    	background: yellow;
+  }
+
+  .usb3{
+  	position: absolute;
+  	  top: 39%;
+    	left: 79%;
+    	background: yellow;
+  }
+
+  .jack{
+  	position: absolute;
+  	  top: 72.5%;
+    	left: 57%;
+    	background: yellow;
+  }
+
+  .HDMI1{
+  	position: absolute;
+  	  top: 82.5%;
+    	left: 42%;
+    	background: yellow;
+  }
+
+  .HDMI2{
+  	position: absolute;
+  	  top: 82.5%;
+    	left: 28%;
+    background: yellow;
+  }
+
+  .usbC{
+  	position: absolute;
+  	  top: 82.5%;
+    	left: 11%;
+    background: yellow;
+  }
+
+  .memory{
+  	position: absolute;
+  	  top: 38.5%;
+    	left: 1.7%;
+    background: yellow;
+  }
+
+  .procesor{
+  	position: absolute;
+  	  top: 28.8%;
+    	left: 26.6%;
+    background: yellow;
+  }
+
+  .ram{
+  	position: absolute;
+  	  top: 28.8%;
+    	left: 45.4%;
+    background: yellow;
+  }
+
+  .dsi{
+  	position: absolute;
+  	  top: 29.6%;
+    	left: 5.8%;
+    background: yellow;
+  }
+
+  .csi{
+  	position: absolute;
+  	  top: 56.5%;
+    	left: 51%;
+    background: yellow;
+  }
+
+  .blueth{
+  	position: absolute;
+  	  top: 14.6%;
+    	left: 10.4%;
+    background: yellow;
+  }
+
+  .usbControll{
+  	position: absolute;
+  	  top: 47%;
+    	left: 62%;
+    background: yellow;
+  }
+
+  .ethControll{
+  	position: absolute;
+  	  top: 26%;
+    	left: 62%;
+    background: yellow;
+  }
+
+  .poe{
+  	position: absolute;
+  	  top: 14%;
+    	left: 66%;
+    background: yellow;
+  }
+
+  .pin{
+  	position: absolute;
+  	  /*top: 25px;*/
+      top: 4%;
+    	/*left: 97px;*/
+      left: 11%;
+    background: yellow;
+  }
+  
+  .component{
+    opacity: 0;
+  }
+
+  .component:hover{
+    opacity: 0.3;
+  }
+

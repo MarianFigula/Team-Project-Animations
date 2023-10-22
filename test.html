@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Dominika Suhajdova">
+	<title>Rapsberry Pi4 - interaktívna animácia</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!--css-->
+	<link Rel="stylesheet" type="text/css" media="screen and (min-width: 851px)" href="css/style_test.css">
+	<link Rel="stylesheet" type="text/css" media="screen and (max-width: 850px)" href="css/style_test_mobile.css">
+
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  	<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  	<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+
+</head>
+<body>
+	<!--menu-->
+	<div id="left_menu">
+		<div class="verticalMenu" onclick="mobileMenuTest()"><i>Menu</i></div>
+		<nav id="menu">
+			<a href="animation.html">Play</a>
+	   		<a href="#" id="govern">Help</a>
+	   		<a href="index.html" id="cancel">Intro</a>
+	   		<a href="test.html">Reset</a>
+		</nav>
+	</div>
+
+	<!--diaogove okno ovládania-->
+	<div id="control">
+		<b><a href="uzivatelska-dokumentacia.pdf" target="blank">Používateľská dokumentácia</a></b><br><br>
+		
+		V nasledujúcom teste je 10 otázok, ktoré preveria Vaše vedomosti v oblasti mikropočítačov. <br><br>
+		Test je vyklikávací. V každej otázke je len 1 správna odpoveď. 
+
+		<br><br>Do hlavnej časti animácie sa dostanete tlačidlom <b>"Play"</b><br>
+
+		<br> <b>Časovač</b> sa spúšťa automaticky s načítaním webstránky.<br><br>
+		<b>Vyhodnotenie</b> testu môžete vidieť v hornej (sivej) časti medzi časomierou a nastavaním veľkosti písma.<br>
+	</div>
+
+	<div id="test">
+		<div class="testEdit">
+			
+			<div id="stopwatch">00:00:00</div>
+
+			<div id="results" class="result"></div>
+
+			<div class="textSize">
+				<span class="big">A</span>
+				<span class="small">A</span>
+			</div>
+		</div>
+
+		<div id="quiz"></div>
+		<button id="submit">Odoslať</button>
+	
+
+	</div>
+
+	<script src="js/testjs.js"></script>
+	<script src="js/mobileMenu.js"></script>
+	<script src="js/dialog.js"></script>
+	<script src="js/fontSize.js"></script>
+
+</body>
+</html>
