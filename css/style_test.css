@@ -53,21 +53,26 @@ body{
 /*	color:grey;*/
 /*}*/
 
-#test{
-	padding: 1vh 0 3vh 0;
-	width: 87%;
-	min-height: 80vh;
-	background: #b8b8b8;
-	float:left;
-	text-align: center;
-}
+/*#test{*/
+/*	padding: 1vh 0 3vh 0;*/
+
+/*	min-height: 80vh;*/
+/*	background: #b8b8b8;*/
+/*	text-align: center;*/
+/*}*/
 
 /*horná lišta---------------------------------*/
+
+/*#test{*/
+/*	background: linear-gradient(180deg, rgba(255,255,255,1) 14%, rgba(61,134,19,1) 100%, rgba(61,134,19,1) 100%);*/
+/*}*/
 
 .testEdit{
 	width: 100%;
 	background: grey;
 	height: 10vh;
+	float: left;
+
 }
 
 
@@ -82,11 +87,9 @@ body{
 
 
 #stopwatch{
-	width: 33%;
 	/*background: green;*/
 	padding: 2vh 0;
 	height: 6vh;
-	float: left;
 	font-size: 5vh;
 	font-weight: bold;
 	text-align: center;
