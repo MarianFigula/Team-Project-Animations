@@ -1,58 +1,67 @@
 <!DOCTYPE html>
 <html lang="sk">
 <head>
-	<meta charset="utf-8">
-	<meta name="author" content="Dominika Suhajdova">
-	<title>Rapsberry Pi4 - interaktívna animácia</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link Rel="stylesheet" type="text/css" href="css/style_index.css">
+    <meta charset="utf-8">
+    <meta name="author" content="Dominika Suhajdova">
+    <title>Rapsberry Pi4 - interaktívna animácia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link Rel="stylesheet" type="text/css" href="css/style_index.css">
 
-	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  	<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-  	<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
 </head>
 <body>
-	<!--menu-->
-	<div id="bckgrnd">
-		<div class="header"><h2><a href="#" id="microPC">Mikropočítač</a> Raspberry Pi4</h2></div>
 
-		<nav id="menu">
-			<a href="animation.html">Play</a>
-	   		<a href="#" id="govern">Help</a>
-	   		<a href="test.html">FAQ</a>
-		</nav>
+<!--menu-->
+<div id="bckgrnd">
+    <div class="header"><h2><a href="#" id="microPC">Mikropočítač</a> Raspberry Pi4</h2></div>
 
-		<!--<a href="#" id="microPC"><h1>???</h1></a>-->
-				
-	</div>	
+    <nav id="menu">
+        <a href="animation.html">Štart</a>
+        <a href="#" id="govern">Pomoc</a>
+        <a href="test.html">Otestuj Sa</a>
+    </nav>
 
-	<!--dialogove okno ovládania-->
-	<div id="introduction">
-		<b>Mikropočítač v princípe funguje rovnako ako počítač.<br><br> Na rozdiel od počítača sa na mikropočítači nachádzajú len elementárne prvky.<br><br> Teraz, keď pôjdete ďalej, sa dozviete, ktoré elementárne prvky obsahuje a aké sú možnosti komponentov. </b>
+    <!--<a href="#" id="microPC"><h1>???</h1></a>-->
 
-	</div>
+</div>
 
-	<!--dialogove okno ovládania-->
-	<div id="control">
-		<b><a href="uzivatelska-dokumentacia.pdf" target="blank">Používateľská dokumentácia</a></b><br><br>
-		
-		Slovo <b>"Mikropočítač"</b> v názve animácie je tiež ako tlačidlo. <br>
-		Tlačidlom <b>"Play"</b> spustíte základnú animáciu. <br><br>
-		Tlačidlom <b>"FAQ"</b> spustíte kontrolný test s 10 otázkami. 
-		<br><br>
-		<b>Ovládanie animácie</b><br>
-		Kurzorom myši prejdite na požadovaný komponent mikropočítača. Ak je možné daný komponent preštudovať bližšie tak sa farebne vyznačí. Po kliknutí na daný komponent sa zobrazia bližšie informácie o komponente.
+<!--dialogove okno ovládania-->
+<div id="introduction">
+    <b>Mikropočítač v princípe funguje rovnako ako počítač.<br><br> Na rozdiel od počítača sa na mikropočítači
+        nachádzajú len elementárne prvky.<br><br> Teraz, keď pôjdete ďalej, sa dozviete, ktoré elementárne prvky
+        obsahuje a aké sú možnosti komponentov. </b>
 
-		<br><br>
-		Farebné vyznačenie komponentov: 
-		<ul>
-			<li>Zelená: komponent bol už preštudovaný</li>
-			<li>Žltá: komponent nie je ešte preštudovaný. Po zakliknutí sa Vám zobrazia informácie</li>
-		</ul>
+</div>
 
-		V ľavej hornej časti je zobrazení počet preštudovaných komponentov z celkového počtu 16 komponentov. <br>
-	</div>
+<!--dialogove okno ovládania-->
+<div id="control">
+    <b><a href="uzivatelska-dokumentacia.pdf" target="blank">Používateľská dokumentácia</a></b><br><br>
 
-	<script src="js/dialog.js"></script>
+    Slovo <b>"Mikropočítač"</b> v názve animácie je tiež ako tlačidlo. <br>
+    Tlačidlom <b>"Play"</b> spustíte základnú animáciu. <br><br>
+    Tlačidlom <b>"FAQ"</b> spustíte kontrolný test s 10 otázkami.
+    <br><br>
+    <b>Ovládanie animácie</b><br>
+    Kurzorom myši prejdite na požadovaný komponent mikropočítača. Ak je možné daný komponent preštudovať bližšie tak sa
+    farebne vyznačí. Po kliknutí na daný komponent sa zobrazia bližšie informácie o komponente.
+
+    <br><br>
+    Farebné vyznačenie komponentov:
+    <ul>
+        <li>Zelená: komponent bol už preštudovaný</li>
+        <li>Žltá: komponent nie je ešte preštudovaný. Po zakliknutí sa Vám zobrazia informácie</li>
+    </ul>
+
+    V ľavej hornej časti je zobrazení počet preštudovaných komponentov z celkového počtu 16 komponentov. <br>
+</div>
+
+<script src="js/dialog.js"></script>
 </body>
 </html>

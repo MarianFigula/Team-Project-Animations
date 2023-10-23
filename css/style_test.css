@@ -32,26 +32,26 @@ body{
 	display: none;
 }
 
-#left_menu nav a{
-	display: block;
-}
+/*#left_menu nav a{*/
+/*	display: block;*/
+/*}*/
 
-nav a{
-	/*display: block;*/
-	text-decoration: none;
-	font-weight: bold;
-	color: black;
-	font-size: 2vW;
-	text-align: center;
-	padding: 2vh;
-	margin: 1vh;
-	/*background-color: black;*/
-	border-radius: 10px;
-}
+/*nav a{*/
+/*	!*display: block;*!*/
+/*	text-decoration: none;*/
+/*	font-weight: bold;*/
+/*	color: black;*/
+/*	font-size: 2vW;*/
+/*	text-align: center;*/
+/*	padding: 2vh;*/
+/*	margin: 1vh;*/
+/*	!*background-color: black;*!*/
+/*	border-radius: 10px;*/
+/*}*/
 
-nav a:hover{
-	color:grey;
-}
+/*nav a:hover{*/
+/*	color:grey;*/
+/*}*/
 
 #test{
 	padding: 1vh 0 3vh 0;

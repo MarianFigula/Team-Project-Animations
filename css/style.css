@@ -1,9 +1,5 @@
 html{
-	width: 100%;
-	height: 100%;
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
-  font-family: calibri;
+  margin: 0;
 }
 
 body, .main{
@@ -11,41 +7,41 @@ body, .main{
   padding: 0;
 }
 
-/*top menu v animacii*/
-  .verticalMenu{
-    display: none;
-  }
+/*!*top menu v animacii*!*/
+/*  .verticalMenu{*/
+/*    display: none;*/
+/*  }*/
 
-  .navbar {
-   /*position: -webkit-sticky;
-    position: sticky;
-    top: 0;*/
-    width: 100%;
-  }
+/*  .navbar {*/
+/*   !*position: -webkit-sticky;*/
+/*    position: sticky;*/
+/*    top: 0;*!*/
+/*    width: 100%;*/
+/*  }*/
 
-  .navbar a {
-    float: left;
-    color: white;
-    text-decoration: none;
-    font-size: 1.5em;
-    font-weight: bold;
-    width: 18%; /* Four links of equal widths */
-    text-align: center;
-    margin:0 1%;
-    background: #0f6e21;
-  }
+/*  .navbar a {*/
+/*    float: left;*/
+/*    color: white;*/
+/*    text-decoration: none;*/
+/*    font-size: 1.5em;*/
+/*    font-weight: bold;*/
+/*    width: 18%; !* Four links of equal widths *!*/
+/*    text-align: center;*/
+/*    margin:0 1%;*/
+/*    background: #0f6e21;*/
+/*  }*/
 
-  .navbar a.classic:hover {
-    color: black;
-  }
+/*  .navbar a.classic:hover {*/
+/*    color: black;*/
+/*  }*/
 
-  .help{
-    cursor: help;
-  }
+/*  .help{*/
+/*    cursor: help;*/
+/*  }*/
 
-  .score:hover{
-  	cursor: auto;
-  }
+/*  .score:hover{*/
+/*  	cursor: auto;*/
+/*  }*/
   
 /*hlavný obsah---------------------------------------------------------*/
   #main{
