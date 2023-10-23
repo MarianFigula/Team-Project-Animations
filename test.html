@@ -7,11 +7,6 @@
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!--Bootstrap -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script><!--JQUERY-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
 	<!--css-->
 	<link Rel="stylesheet" type="text/css" media="screen and (min-width: 851px)" href="css/style_test.css">
 	<link Rel="stylesheet" type="text/css" media="screen and (max-width: 850px)" href="css/style_test_mobile.css">
@@ -22,41 +17,16 @@
 
 </head>
 <body>
-
-<header class="mb-3" >
-	<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-		<div class="container-fluid">
-			<a class="navbar-brand" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Úvod</a>
-			<button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNavDropdown">
-				<ul class="navbar-nav">
-					<li class="nav-item">
-						<a class="nav-link" aria-current="page" href="animation.html">Začať znovu</a>
-					</li>
-					<li class="nav-item">
-						<!-- TODO: modal -->
-						<a class="nav-link" aria-current="page" href="#">Pomoc</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="test.html">Otestuj sa</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-</header>
-<!--	&lt;!&ndash;menu&ndash;&gt;-->
-<!--	<div id="left_menu">-->
-<!--		<div class="verticalMenu" onclick="mobileMenuTest()"><i>Menu</i></div>-->
-<!--		<nav id="menu">-->
-<!--			<a href="animation.html">Play</a>-->
-<!--	   		<a href="#" id="govern">Help</a>-->
-<!--	   		<a href="index.html" id="cancel">Intro</a>-->
-<!--	   		<a href="test.html">Reset</a>-->
-<!--		</nav>-->
-<!--	</div>-->
+	<!--menu-->
+	<div id="left_menu">
+		<div class="verticalMenu" onclick="mobileMenuTest()"><i>Menu</i></div>
+		<nav id="menu">
+			<a href="animation.html">Play</a>
+	   		<a href="#" id="govern">Help</a>
+	   		<a href="index.html" id="cancel">Intro</a>
+	   		<a href="test.html">Reset</a>
+		</nav>
+	</div>
 
 	<!--diaogove okno ovládania-->
 	<div id="control">
@@ -78,14 +48,14 @@
 
 			<div id="results" class="result"></div>
 
-<!--			<div class="textSize">-->
-<!--				<span class="big">A</span>-->
-<!--				<span class="small">A</span>-->
-<!--			</div>-->
+			<div class="textSize">
+				<span class="big">A</span>
+				<span class="small">A</span>
+			</div>
 		</div>
 
 		<div id="quiz"></div>
-		<button class="btn btn-outline-success" id="submit">Vyhodnotiť</button>
+		<button id="submit">Odoslať</button>
 	
 
 	</div>
