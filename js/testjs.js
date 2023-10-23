@@ -204,11 +204,18 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 
 				// ...pridaj butony
 				answers.push(
-					'<label>'
-						+ '<input type="radio" name="question'+i+'" value="'+letter+'">'
-						+ letter + ': '
-						+ questions[i].answers[letter]
-					+ '</label><br>'
+					'<div class="form-check">' +
+					`  <input class="form-check-input" type="radio" name="question+${i}">` +
+					'  <label class="form-check-label" for="flexRadioDefault1">' +
+					`    ${questions[i].answers[letter]}` +
+					'  </label>' +
+					'</div>'
+
+					// '<label>'
+					// 	+ '<input type="radio" name="question'+i+'" value="'+letter+'">'
+					// 	+ letter + ': '
+					// 	+ questions[i].answers[letter]
+					// + '</label><br>'
 				);
 			}
 
