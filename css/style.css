@@ -42,7 +42,7 @@ body, .main{
 /*  .score:hover{*/
 /*  	cursor: auto;*/
 /*  }*/
-  
+
 /*hlavný obsah---------------------------------------------------------*/
   #main{
     width: 100%;
@@ -95,7 +95,7 @@ body, .main{
 
   /*velkost písma*/
   .big{
-    font-size: 2em;  
+    font-size: 2em;
     margin-left: 1em;
   }
 
@@ -179,7 +179,6 @@ body, .main{
   	max-height: 570px;*/
     width: 49%;
   	/*background: #00A020;*/
-  	float:left;
   	position: relative;
   	top: 0;
   	left: 0;
@@ -189,10 +188,8 @@ body, .main{
   #plan{
     display: inline-block;
     position: relative;
-    width: 100%;
+    width: 60vw;
     height: auto;
-    max-width: 864px;
-    max-height: 570px;
   }
 
   /*suhlas použitých fotografií*/
@@ -200,7 +197,7 @@ body, .main{
     font-size: 0.8em;
   }
 
-  #con a{  
+  #con a{
     color:blue;
   }
 
@@ -221,7 +218,7 @@ body, .main{
   	  top: 0;
     	left: 0;
   }
-  
+
   .component{
     opacity: 0;
   }
