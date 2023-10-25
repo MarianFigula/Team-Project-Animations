@@ -131,6 +131,7 @@ body, .main{
     top: 0;
     left: 0;
     background-color: rgba(15, 15, 15, 0.7);
+    overflow: auto;
   }
 
 /*doplnkove info-----------------------------*/
