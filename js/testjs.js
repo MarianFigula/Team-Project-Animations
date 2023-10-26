@@ -217,12 +217,14 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 
 			// zobraz celý test
 			for(letter in questions[i].answers){
+				//console.log(letter)
 				let inputValue = questions[i].answers[letter]
+
 				// ...pridaj butony
 				answers.push(
 					'<div class="form-check">' +
-					`  <input class="form-check-input" type="radio" name="question${i}" id="flexRadioDefault${i}" value="${inputValue}">` +
-					`  <label class="form-check-label" for="flexRadioDefault${i}" id="label${inputValue}">` +
+					`  <input class="form-check-input" type="radio" name="question${i}" id="question${i}" value="${inputValue}">` +
+					`  <label class="form-check-label" for="question${i}" id="label${letter}">` +
 					`    ${inputValue}` +
 					'  </label>' +
 					'</div>'
@@ -238,7 +240,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 			output.push(
 				'<div class="question">' + questions[i].question + '</div>'
 				+ '<div class="answers">' + answers.join('') + '</div>'
-				+ '<div class="correctAns">Správna odpoveď:  ' + questions[i].correctAnswer + '</div><br>'
+				+ '<div class="correctAns">Správna odpoveď:  ' + questions[i].displayAnswer + '</div><br>'
 			);
 
 		}
@@ -254,6 +256,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 	
 		// zisti ake mau byt spravne odpovede z test
 		var answerContainers = quizContainer.querySelectorAll('.answers');
+		answerContainers.forEach(value => console.log(value))
 		//console.log("A-con:" + answerContainers.forEach(a => console.log(a)))
 		// uzivatelove odpovede
 		var userAnswer = '';
@@ -264,19 +267,24 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 		for(var i= 0; i < questions.length; i++){
 			document.getElementsByClassName('correctAns')[i].style.display = 'block';
 
+			let inputTag
+				= (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{})
 			// zvolena odpoved
-			userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
-			//console.log(userAnswer)
+			userAnswer = inputTag.value;
+			console.log(userAnswer)
+
+			console.log("PARENT:" + inputTag.parentElement)
+
+			//console.log("U-answer:"+ userAnswer)
+			let labelAnswer
+				= (answerContainers[i].querySelector(`label[for=question${i}][id=label${questions[i].correctAnswer}]`)||{})
+			//console.log(labelAnswer)
+
 			// ak je odpoved undefinde
-			if (userAnswer === undefined)
+			if (labelAnswer === undefined || userAnswer === undefined)
 				continue;
 
-
-			console.log("U-answer:"+ userAnswer)
-			let labelAnswer
-				= (answerContainers[i].querySelector('label[id=label'+userAnswer+']')||{})
-
-			if(userAnswer===questions[i].correctAnswer){
+			if(userAnswer===questions[i].displayAnswer){
 				// pripocitavanie spravnych odpovedi
 				numCorrect++;
 
