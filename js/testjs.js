@@ -27,6 +27,9 @@ timer();
 
 /*---------------------------------------------------------------------------------------------*/
 
+
+
+
 //test otázky
 var myQuestions = [
 	{
@@ -197,11 +200,14 @@ var myQuestions = [
 var quizContainer = document.getElementById('quiz');
 var resultsContainer = document.getElementById('results');
 var submitButton = document.getElementById('submit');
+var resetTestButton = document.getElementById('resetTestBtn')
+
+resetTestButton.addEventListener('click', () => location.reload())
 
 generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
 
 //generovanie testu
-function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
+function generateQuiz(questions, quizContainer, resultsContainer){
 
 	//zobrazenie testu
 	function showQuestions(questions, quizContainer){
@@ -317,6 +323,13 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 		})
 	}
 
+	function switchButtons(){
+		resetTestButton = document.getElementById('resetTestBtn')
+		submitButton = document.getElementById('submit')
+
+		submitButton.style.display = 'none'
+		resetTestButton.style.display = "inline-block";
+	}
 	// zobrazenie vysledkov
 	showQuestions(questions, quizContainer);
 
@@ -324,6 +337,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 	submitButton.onclick = function(){
 		showResults(questions, quizContainer, resultsContainer);
 		disableRadios()
+		switchButtons()
 		clearTimeout(t);
 	}
 
