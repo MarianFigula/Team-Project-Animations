@@ -37,7 +37,8 @@ var myQuestions = [
 			c: 'Windows',
 			d: 'Android'
 		},
-		correctAnswer: 'Raspbian'
+		correctAnswer: 'b',
+		displayAnswer: 'Raspbian'
 	},
 	{
 		question: "Aké sú základné druhy Ethernet?",
@@ -46,7 +47,9 @@ var myQuestions = [
 			b: 'Hrubý ethernet 10base5, tenký ethernet 10Base2, UTP 10baseT',
 			c: 'Fast Ethernet, Gigabit Ethernet'
 		},
-		correctAnswer: 'Hrubý ethernet 10base5, tenký ethernet 10Base2, UTP 10baseT'
+
+		correctAnswer: 'b',
+		displayAnswer: 'Hrubý ethernet 10base5, tenký ethernet 10Base2, UTP 10baseT'
 	},
 	{
 		question: "Akú prenosovú rýchlosť má USB 2.0? ",
@@ -56,7 +59,8 @@ var myQuestions = [
 			c: '480 Mb/s',
 			d: '5 Gb/s'
 		},
-		correctAnswer: 'c'
+		correctAnswer: 'c',
+		displayAnswer: '480 Mb/s'
 	},
 	{
 		question: "Akú prenosovú rýchlosť má USB 3.0?",
@@ -66,7 +70,8 @@ var myQuestions = [
 			c: '12 Mb/s',
 			d: '480 Mb/s'
 		},
-		correctAnswer: 'a'
+		correctAnswer: 'a',
+		displayAnswer: '5 Gb/s'
 	},
 	{
 		question: "Ako odlíšiť USB 2.0 port od USB 3.0 portu?",
@@ -76,7 +81,8 @@ var myQuestions = [
 			c: 'USB 3.0 port má čierny konektor, USB 2.0 má modrý konektor',
 			d: 'USB 2.0  má iný tvar'
 		},
-		correctAnswer: 'a'
+		correctAnswer: 'a',
+		displayAnswer: 'USB 3.0 port má modrý konektor, USB 2.0 má čierny konektor'
 	},
 	{
 		question: "Ako zistiť či je konektor kábla pre jack vhodný?",
@@ -86,7 +92,8 @@ var myQuestions = [
 			c: 'Uzemnenie je na "ring 2"',
 			d: 'Uzemnenie je na "tip"'
 		},
-		correctAnswer: 'c'
+		correctAnswer: 'c',
+		displayAnswer: 'Uzemnenie je na "ring 2"'
 	},
 	{
 		question: "Čím môže byť narušená kvalita prenosu audio a video obsahu pri HDMI?",
@@ -96,7 +103,8 @@ var myQuestions = [
 			c: 'Rýchlosťou prenosu',
 			d: 'Dĺžkou kábla'
 		},
-		correctAnswer: 'd'
+		correctAnswer: 'd',
+		displayAnswer: 'Dĺžkou kábla'
 	},
 	{
 		question: "Môže PoE a Ethernet fungovať na jednom kábli? ",
@@ -104,7 +112,8 @@ var myQuestions = [
 			a: 'Áno',
 			b: 'Nie'
 		},
-		correctAnswer: 'a'
+		correctAnswer: 'a',
+		displayAnswer: 'Áno'
 	},
 	{
 		question: "Označ správne tvrdenia:",
@@ -114,7 +123,8 @@ var myQuestions = [
 			c: 'Kolíky GPIO 0 a 1 (fyzické kolíky 27 a 28), sú vyhradené pre pokročilé použitie',
 			d: 'GPIO neumožňujú k Raspberry Pi pripojiť elektronické súčiastky, ako sú LED diódy a tlačidlá'
 		},
-		correctAnswer: 'c'
+		correctAnswer: 'c',
+		displayAnswer: 'Kolíky GPIO 0 a 1 (fyzické kolíky 27 a 28), sú vyhradené pre pokročilé použitie'
 	},
 	{
 		question: "24-pinový, symetrický (12 pinov hore, 12 dolu) konektor je pre:",
@@ -124,7 +134,8 @@ var myQuestions = [
 			c: 'USB 1.0',
 			d: 'USB-C'
 		},
-		correctAnswer: 'd'
+		correctAnswer: 'd',
+		displayAnswer:  'USB-C'
 	},
 	{
 		question: "Raspberry Pi4 využíva:",
@@ -133,7 +144,8 @@ var myQuestions = [
 			b: 'DRAM',
 			c: 'SDRAM'
 		},
-		correctAnswer: 'c'
+		correctAnswer: 'c',
+		displayAnswer: 'SDRAM'
 	},
 	{
 		question: "Operačná pamäť v ktorej sa ukladajú dáta, ktoré procesor počítača momentálne nespracováva ale budú potrebné neskôr, je rýchlejšia a jej obsah je po vypnutí vymazaní sa nazýva:",
@@ -145,7 +157,8 @@ var myQuestions = [
 			e: 'EEPROM',
 			f: 'RAM'
 		},
-		correctAnswer: 'f'
+		correctAnswer: 'f',
+		displayAnswer: 'RAM'
 	},
 	{
 		question: "BCM2711 je:",
@@ -155,7 +168,8 @@ var myQuestions = [
 			c: 'USB kontrolér',
 			d: 'Ethernet kontrolér'
 		},
-		correctAnswer: 'a'
+		correctAnswer: 'a',
+		displayAnswer: 'Štvorjadrový procesor'
 	},
 	{
 		question: "AKý je rozdiel medzi klasickým Bluetooth a Bluetooth Low Energy (BLE)? ",
@@ -165,16 +179,18 @@ var myQuestions = [
 			c: 'BLE má väčšie časové oneskorenie',
 			d: 'BLE poskytuje značne zníženú spotrebu energie'
 		},
-		correctAnswer: 'd'
+		correctAnswer: 'd',
+		displayAnswer: 'BLE poskytuje značne zníženú spotrebu energie'
 	},
 	{
 		question: "Čo je to radič/kontrolér?",
 		answers: {
 			a: 'Periférne zariadenie',
-			b: 'Je počítačový hardvér zabezpečujúci styk s počítačovou perifériou',
+			b: 'Počítačový hardvér zabezpečujúci styk s počítačovou perifériou',
 			c: 'Typ procesoru'
 		},
-		correctAnswer: 'b'
+		correctAnswer: 'b',
+		displayAnswer: 'Je počítačový hardvér zabezpečujúci styk s počítačovou perifériou'
 	}
 ];
 
