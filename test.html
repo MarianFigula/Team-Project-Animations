@@ -4,7 +4,10 @@
 	<meta charset="utf-8">
 	<meta name="author" content="Dominika Suhajdova">
 	<title>Rapsberry Pi4 - interaktívna animácia</title>
-	
+
+
+
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!--css-->
@@ -15,18 +18,52 @@
   	<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
   	<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 
+	<!--Bootstrap-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+			crossorigin="anonymous"></script>
+
 </head>
 <body>
 	<!--menu-->
-	<div id="left_menu">
-		<div class="verticalMenu" onclick="mobileMenuTest()"><i>Menu</i></div>
-		<nav id="menu">
-			<a href="animation.html">Play</a>
-	   		<a href="#" id="govern">Help</a>
-	   		<a href="index.html" id="cancel">Intro</a>
-	   		<a href="test.html">Reset</a>
+<!--	<div id="left_menu">-->
+<!--		<div class="verticalMenu" onclick="mobileMenuTest()"><i>Menu</i></div>-->
+<!--		<nav id="menu">-->
+<!--			<a href="animation.html">Play</a>-->
+<!--	   		<a href="#" id="govern">Help</a>-->
+<!--	   		<a href="index.html" id="cancel">Intro</a>-->
+<!--	   		<a href="test.html">Reset</a>-->
+<!--		</nav>-->
+<!--	</div>-->
+
+	<header class="mb-3">
+		<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="index.html" data-bs-toggle="modal" data-bs-target="#exampleModal">Úvod</a>
+				<button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+						data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+						aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="animation.html">Začať znovu</a>
+						</li>
+						<li class="nav-item">
+							<!-- TODO: modal -->
+							<a class="nav-link" aria-current="page" href="#">Pomoc</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="test.html">Otestuj sa</a>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</nav>
-	</div>
+	</header>
 
 	<!--diaogove okno ovládania-->
 	<div id="control">
@@ -42,20 +79,21 @@
 	</div>
 
 	<div id="test">
+
 		<div class="testEdit">
 			
 			<div id="stopwatch">00:00:00</div>
 
 			<div id="results" class="result"></div>
 
-			<div class="textSize">
-				<span class="big">A</span>
-				<span class="small">A</span>
-			</div>
+<!--			<div class="textSize">-->
+<!--				<span class="big">A</span>-->
+<!--				<span class="small">A</span>-->
+<!--			</div>-->
 		</div>
 
 		<div id="quiz"></div>
-		<button id="submit">Odoslať</button>
+		<button class="btn btn-outline-success" id="submit">Vyhodnotiť</button>
 	
 
 	</div>

@@ -37,16 +37,16 @@ var myQuestions = [
 			c: 'Windows',
 			d: 'Android'
 		},
-		correctAnswer: 'b'
+		correctAnswer: 'Raspbian'
 	},
 	{
 		question: "Aké sú základné druhy Ethernet?",
 		answers: {
 			a: 'Cat5e a Cat6a',
-			b: 'hrubý ethernet 10base5, tenký ethernet 10Base2, UTP 10baseT',
+			b: 'Hrubý ethernet 10base5, tenký ethernet 10Base2, UTP 10baseT',
 			c: 'Fast Ethernet, Gigabit Ethernet'
 		},
-		correctAnswer: 'b'
+		correctAnswer: 'Hrubý ethernet 10base5, tenký ethernet 10Base2, UTP 10baseT'
 	},
 	{
 		question: "Akú prenosovú rýchlosť má USB 2.0? ",
@@ -81,37 +81,37 @@ var myQuestions = [
 	{
 		question: "Ako zistiť či je konektor kábla pre jack vhodný?",
 		answers: {
-			a: 'uzemnenie je na "sleeve"',
-			b: 'uzemnenie je na "ring 1"',
-			c: 'uzemnenie je na "ring 2"',
-			d: 'uzemnenie je na "tip"'
+			a: 'Uzemnenie je na "sleeve"',
+			b: 'Uzemnenie je na "ring 1"',
+			c: 'Uzemnenie je na "ring 2"',
+			d: 'Uzemnenie je na "tip"'
 		},
 		correctAnswer: 'c'
 	},
 	{
 		question: "Čím môže byť narušená kvalita prenosu audio a video obsahu pri HDMI?",
 		answers: {
-			a: 'nie je ovplyvnená',
-			b: 'pripojeným ďalších zariadení',
-			c: 'rýchlosťou prenosu',
-			d: 'dĺžkou kábla'
+			a: 'Nie je ovplyvnená',
+			b: 'Pripojeným ďalších zariadení',
+			c: 'Rýchlosťou prenosu',
+			d: 'Dĺžkou kábla'
 		},
 		correctAnswer: 'd'
 	},
 	{
 		question: "Môže PoE a Ethernet fungovať na jednom kábli? ",
 		answers: {
-			a: 'áno',
-			b: 'nie'
+			a: 'Áno',
+			b: 'Nie'
 		},
 		correctAnswer: 'a'
 	},
 	{
 		question: "Označ správne tvrdenia:",
 		answers: {
-			a: 'číslovanie pinov GPIO je v číselnom poradí',
+			a: 'Číslovanie pinov GPIO je v číselnom poradí',
 			b: 'Pred Raspberry Pi Model B dosky obsahovali 40-pinovú GPIO hlavičku',
-			c: 'kolíky GPIO 0 a 1 (fyzické kolíky 27 a 28), sú vyhradené pre pokročilé použitie',
+			c: 'Kolíky GPIO 0 a 1 (fyzické kolíky 27 a 28), sú vyhradené pre pokročilé použitie',
 			d: 'GPIO neumožňujú k Raspberry Pi pripojiť elektronické súčiastky, ako sú LED diódy a tlačidlá'
 		},
 		correctAnswer: 'c'
@@ -150,8 +150,8 @@ var myQuestions = [
 	{
 		question: "BCM2711 je:",
 		answers: {
-			a: 'štvorjadrový procesor',
-			b: 'dvojjadrový procesor',
+			a: 'Štvorjadrový procesor',
+			b: 'Dvojjadrový procesor',
 			c: 'USB kontrolér',
 			d: 'Ethernet kontrolér'
 		},
@@ -160,8 +160,8 @@ var myQuestions = [
 	{
 		question: "AKý je rozdiel medzi klasickým Bluetooth a Bluetooth Low Energy (BLE)? ",
 		answers: {
-			a: 'klasické Bluetooth má väčšiu frekvenciu',
-			b: 'klasické Bluetooth poskytuje značne zníženú spotrebu energie',
+			a: 'Klasické Bluetooth má väčšiu frekvenciu',
+			b: 'Klasické Bluetooth poskytuje značne zníženú spotrebu energie',
 			c: 'BLE má väčšie časové oneskorenie',
 			d: 'BLE poskytuje značne zníženú spotrebu energie'
 		},
@@ -170,9 +170,9 @@ var myQuestions = [
 	{
 		question: "Čo je to radič/kontrolér?",
 		answers: {
-			a: 'periférne zariadenie',
-			b: 'je počítačový hardvér zabezpečujúci styk s počítačovou perifériou',
-			c: 'typ procesoru'
+			a: 'Periférne zariadenie',
+			b: 'Je počítačový hardvér zabezpečujúci styk s počítačovou perifériou',
+			c: 'Typ procesoru'
 		},
 		correctAnswer: 'b'
 	}
@@ -201,16 +201,15 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 
 			// zobraz celý test
 			for(letter in questions[i].answers){
-
+				let inputValue = questions[i].answers[letter]
 				// ...pridaj butony
 				answers.push(
 					'<div class="form-check">' +
-					`  <input class="form-check-input" type="radio" name="question+${i}">` +
-					'  <label class="form-check-label" for="flexRadioDefault1">' +
-					`    ${questions[i].answers[letter]}` +
+					`  <input class="form-check-input" type="radio" name="question${i}" id="flexRadioDefault${i}" value="${inputValue}">` +
+					`  <label class="form-check-label" for="flexRadioDefault${i}" id="label${inputValue}">` +
+					`    ${inputValue}` +
 					'  </label>' +
 					'</div>'
-
 					// '<label>'
 					// 	+ '<input type="radio" name="question'+i+'" value="'+letter+'">'
 					// 	+ letter + ': '
@@ -239,37 +238,53 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 	
 		// zisti ake mau byt spravne odpovede z test
 		var answerContainers = quizContainer.querySelectorAll('.answers');
-		
+		//console.log("A-con:" + answerContainers.forEach(a => console.log(a)))
 		// uzivatelove odpovede
 		var userAnswer = '';
 		// pocet spravnych odpovedi
 		var numCorrect = 0;
 		
 		// skontroluj formular
-		for(var i=0; i<questions.length; i++){
+		for(var i= 0; i < questions.length; i++){
+			document.getElementsByClassName('correctAns')[i].style.display = 'block';
 
 			// zvolena odpoved
 			userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
-			
-			// ak je odpoved spravna
+			//console.log(userAnswer)
+			// ak je odpoved undefinde
+			if (userAnswer === undefined)
+				continue;
+
+
+			console.log("U-answer:"+ userAnswer)
+			let labelAnswer
+				= (answerContainers[i].querySelector('label[id=label'+userAnswer+']')||{})
+
 			if(userAnswer===questions[i].correctAnswer){
 				// pripocitavanie spravnych odpovedi
 				numCorrect++;
-				
+
+				//console.log((answerContainers[i].querySelector('label[id=label'+userAnswer+']')||{}))
+				//(answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).style.color = "lightgreen";
 				// spravne odpovede zelena
-				answerContainers[i].style.color = 'lightgreen';
+				//answerContainers[i].style.color = 'lightgreen';
+				labelAnswer.style.color = "lightgreen"
 			}
 			// ak je odpoved zla alebo nevyplnena
 			else{
 				// nespravne odpovede cervena
-				answerContainers[i].style.color = 'red';
-				document.getElementsByClassName('correctAns')[i].style.display = 'block';
+				//answerContainers[i].style.color = 'red';
+				labelAnswer.style.color = "red"
 			}
-
+			document.getElementsByClassName('correctAns')[i].style.display = 'block';
 		}		
 
 		// zobrazenie počtu spravnych odpovedi
 		resultsContainer.innerHTML = numCorrect + ' z ' + questions.length;
+	}
+
+	function showResult(questions, quizContainer, answerContainer){
+
 	}
 
 	// zobrazenie vysledkov

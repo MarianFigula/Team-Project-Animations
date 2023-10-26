@@ -55,10 +55,9 @@ body{
 
 #test{
 	padding: 1vh 0 3vh 0;
-	width: 87%;
+	width: 100%;
 	min-height: 80vh;
-	background: #b8b8b8;
-	float:left;
+	background: white;
 	text-align: center;
 }
 
