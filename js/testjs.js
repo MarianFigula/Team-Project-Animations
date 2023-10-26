@@ -223,8 +223,8 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 				// ...pridaj butony
 				answers.push(
 					'<div class="form-check">' +
-					`  <input class="form-check-input" type="radio" name="question${i}" id="question${i}" value="${inputValue}">` +
-					`  <label class="form-check-label" for="question${i}" id="label${letter}">` +
+					`  <input class="form-check-input" type="radio" name="question${i}" id="question${i}${letter}" value="${inputValue}">` +
+					`  <label class="form-check-label" for="question${i}${letter}" id="label${i}${letter}">` +
 					`    ${inputValue}` +
 					'  </label>' +
 					'</div>'
@@ -267,21 +267,19 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 		for(var i= 0; i < questions.length; i++){
 			document.getElementsByClassName('correctAns')[i].style.display = 'block';
 
-			let inputTag
-				= (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{})
+
+			const input
+				= answerContainers[i].querySelector('input[name=question'+i+']:checked') || {};
+			const labelForInput = document.querySelector(`label[for=${input.id}]`);
 			// zvolena odpoved
-			userAnswer = inputTag.value;
-			console.log(userAnswer)
-
-			console.log("PARENT:" + inputTag.parentElement)
-
+			userAnswer = input.value
 			//console.log("U-answer:"+ userAnswer)
-			let labelAnswer
-				= (answerContainers[i].querySelector(`label[for=question${i}][id=label${questions[i].correctAnswer}]`)||{})
+//			let labelAnswer
+//				= (answerContainers[i].querySelector(`label[for=question${i}][id=label${questions[i].correctAnswer}]`)||{})
 			//console.log(labelAnswer)
 
-			// ak je odpoved undefinde
-			if (labelAnswer === undefined || userAnswer === undefined)
+			//ak je odpoved undefinde
+			if (userAnswer === undefined)
 				continue;
 
 			if(userAnswer===questions[i].displayAnswer){
@@ -292,16 +290,16 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 				//(answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).style.color = "lightgreen";
 				// spravne odpovede zelena
 				//answerContainers[i].style.color = 'lightgreen';
-				labelAnswer.style.color = "lightgreen"
+				labelForInput.style.color = "lightgreen"
 			}
 			// ak je odpoved zla alebo nevyplnena
 			else{
 				// nespravne odpovede cervena
 				//answerContainers[i].style.color = 'red';
-				labelAnswer.style.color = "red"
+				labelForInput.style.color = "red"
 			}
 			document.getElementsByClassName('correctAns')[i].style.display = 'block';
-		}		
+		}
 
 		// zobrazenie počtu spravnych odpovedi
 		resultsContainer.innerHTML = numCorrect + ' z ' + questions.length;
