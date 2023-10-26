@@ -190,7 +190,7 @@ var myQuestions = [
 			c: 'Typ procesoru'
 		},
 		correctAnswer: 'b',
-		displayAnswer: 'Je počítačový hardvér zabezpečujúci styk s počítačovou perifériou'
+		displayAnswer: 'Počítačový hardvér zabezpečujúci styk s počítačovou perifériou'
 	}
 ];
 
@@ -256,7 +256,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 	
 		// zisti ake mau byt spravne odpovede z test
 		var answerContainers = quizContainer.querySelectorAll('.answers');
-		answerContainers.forEach(value => console.log(value))
+		//answerContainers.forEach(value => console.log(value))
 		//console.log("A-con:" + answerContainers.forEach(a => console.log(a)))
 		// uzivatelove odpovede
 		var userAnswer = '';
@@ -276,7 +276,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 			//console.log("U-answer:"+ userAnswer)
 //			let labelAnswer
 //				= (answerContainers[i].querySelector(`label[for=question${i}][id=label${questions[i].correctAnswer}]`)||{})
-			//console.log(labelAnswer)
+			console.log(userAnswer)
 
 			//ak je odpoved undefinde
 			if (userAnswer === undefined)
@@ -296,17 +296,25 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 			else{
 				// nespravne odpovede cervena
 				//answerContainers[i].style.color = 'red';
-				labelForInput.style.color = "red"
+				labelForInput.style.color = "#d90429"
+				labelForInput.style.fontWeight = 'bold'
+			//d90429
 			}
 			document.getElementsByClassName('correctAns')[i].style.display = 'block';
 		}
 
 		// zobrazenie počtu spravnych odpovedi
 		resultsContainer.innerHTML = numCorrect + ' z ' + questions.length;
+		// TODO: make all radios disabled
+		// TODO: change button to reset the test
 	}
 
-	function showResult(questions, quizContainer, answerContainer){
+	function disableRadios(){
+		let inputs = document.querySelectorAll('input')
 
+		inputs.forEach(input => {
+			input.setAttribute('disabled', 'disabled')
+		})
 	}
 
 	// zobrazenie vysledkov
@@ -315,6 +323,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 	// zobrazenie vysledkov po odosalni testu
 	submitButton.onclick = function(){
 		showResults(questions, quizContainer, resultsContainer);
+		disableRadios()
 		clearTimeout(t);
 	}
 
