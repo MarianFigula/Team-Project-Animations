@@ -63,11 +63,7 @@ body{
 
 /*horná lišta---------------------------------*/
 
-.testEdit{
-	width: 100%;
-	background: grey;
-	height: 10vh;
-}
+
 
 #resetTestBtn{
 	display: none;
@@ -83,18 +79,35 @@ body{
 }*/
 
 
-#stopwatch{
-	width: 33%;
+#stopwatch, #results{
+	/*width: 33%;*/
 	/*background: green;*/
-	padding: 2vh 0;
-	height: 6vh;
-	float: left;
-	font-size: 5vh;
-	font-weight: bold;
+	/*padding: 2vh 0;*/
+	/*height: 6vh;*/
+	/*float: left;*/
+	font-size: 22px;
 	text-align: center;
+
 }
 
 /*test/kviz---------------------------------------------*/
+.custom-card-time{
+	width: 16rem;
+	float: right;
+	margin-right: 5vw;
+}
+
+.custom-card-result{
+
+	width: 16rem;
+	float: left;
+	margin-left: 5vw;
+}
+
+
+.custom-card-time > .custom-card-header, .custom-card-result > .custom-card-header{
+	background-color: #56ab91;
+}
 
 .result{
 	width: 34%;

@@ -78,25 +78,29 @@
 		<b>Vyhodnotenie</b> testu môžete vidieť v hornej (sivej) časti medzi časomierou a nastavaním veľkosti písma.<br>
 	</div>
 
+	<div class="card sticky-top fw-medium custom-card-time">
+		<h5 class="card-header text-center text-white custom-card-header">Časovač</h5>
+		<div class="card-body">
+			<p class="card-text" id="stopwatch">00:00:00</p>
+		</div>
+	</div>
+
+<!-- TODO: bud nechat alebo modal po vyhodnoteni	-->
+	<div class="card fw-medium sticky-top custom-card-result" id="card-result" style="display: none;">
+		<h5 class="card-header text-center text-white custom-card-header">Výsledok</h5>
+		<div class="card-body" id="results"></div>
+	</div>
+
 	<div id="test">
 
-		<div class="testEdit">
-			
-			<div id="stopwatch">00:00:00</div>
 
-			<div id="results" class="result"></div>
-
-<!--			<div class="textSize">-->
-<!--				<span class="big">A</span>-->
-<!--				<span class="small">A</span>-->
-<!--			</div>-->
-		</div>
 
 		<div id="quiz"></div>
 		<button class="btn btn-outline-success" id="submit">Vyhodnotiť</button>
 		<button class="btn btn-outline-primary " id="resetTestBtn">Skúsiť znovu</button>
 
 	</div>
+
 
 	<script src="js/testjs.js"></script>
 	<script src="js/mobileMenu.js"></script>

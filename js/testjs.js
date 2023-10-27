@@ -1,3 +1,8 @@
+// TODO: make better timer
+// TODO: show better score
+
+
+
 /* ----------------------- casovac-------------------------------------------------------------*/
 var h1 = document.getElementById('stopwatch')[0],
 stop = document.getElementById('submit'),
@@ -25,6 +30,11 @@ t = setTimeout(add, 1000);
 }
 timer();
 
+// TODO: stop watch scrolluje jak aj user scrolluje
+// https://stackoverflow.com/questions/28340054/bootstrap-keep-div-fixed-after-scrolling-to-it
+// $('#test').scroll(function() {
+// 	$('#stopwatch').css('top', $(this).scrollTop());
+// });
 /*---------------------------------------------------------------------------------------------*/
 
 
@@ -197,10 +207,11 @@ var myQuestions = [
 	}
 ];
 
-var quizContainer = document.getElementById('quiz');
-var resultsContainer = document.getElementById('results');
-var submitButton = document.getElementById('submit');
-var resetTestButton = document.getElementById('resetTestBtn')
+let quizContainer = document.getElementById('quiz');
+let resultsContainer = document.getElementById('results');
+let cardResult = document.getElementById('card-result')
+let submitButton = document.getElementById('submit');
+let resetTestButton = document.getElementById('resetTestBtn')
 
 resetTestButton.addEventListener('click', () => location.reload())
 
@@ -233,7 +244,8 @@ function generateQuiz(questions, quizContainer, resultsContainer){
 					`  <label class="form-check-label" for="question${i}${letter}" id="label${i}${letter}">` +
 					`    ${inputValue}` +
 					'  </label>' +
-					'</div>'
+					'</div>' //+ '<hr>'
+
 					// '<label>'
 					// 	+ '<input type="radio" name="question'+i+'" value="'+letter+'">'
 					// 	+ letter + ': '
@@ -244,7 +256,7 @@ function generateQuiz(questions, quizContainer, resultsContainer){
 
 			// pridaj otazky a odpovede
 			output.push(
-				'<div class="question">' + questions[i].question + '</div>'
+				'<div class="question">' + questions[i].question + '</div>'// + '<hr>'
 				+ '<div class="answers">' + answers.join('') + '</div>'
 				+ '<div class="correctAns">Správna odpoveď:  ' + questions[i].displayAnswer + '</div><br>'
 			);
@@ -310,9 +322,9 @@ function generateQuiz(questions, quizContainer, resultsContainer){
 		}
 
 		// zobrazenie počtu spravnych odpovedi
-		resultsContainer.innerHTML = numCorrect + ' z ' + questions.length;
-		// TODO: make all radios disabled
-		// TODO: change button to reset the test
+		cardResult.style.display = 'block'
+		resultsContainer.innerHTML = numCorrect + ' / ' + questions.length;
+
 	}
 
 	function disableRadios(){
@@ -330,6 +342,8 @@ function generateQuiz(questions, quizContainer, resultsContainer){
 		submitButton.style.display = 'none'
 		resetTestButton.style.display = "inline-block";
 	}
+
+
 	// zobrazenie vysledkov
 	showQuestions(questions, quizContainer);
 
