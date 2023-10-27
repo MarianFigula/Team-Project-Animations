@@ -104,6 +104,9 @@ body{
 	margin-left: 5vw;
 }
 
+.card.custom-card-time,card.custom-card-result{
+	top: 15px;
+}
 
 .custom-card-time > .custom-card-header, .custom-card-result > .custom-card-header{
 	background-color: #56ab91;
@@ -126,19 +129,19 @@ body{
 	text-align: left;
 }
 
-.question{
-	font-weight: bold;
-	font-size: 1.2em;
-}
+/*.question{*/
+/*	font-weight: bold;*/
+/*	font-size: 1.2em;*/
+/*}*/
 
 .answers{
 	font-size: 1.2em;
 }
 
 .correctAns{
-	font-size: 1.2em;
+	font-size: 1.3em;
 	margin-bottom: 1vh;
-	color: lightgreen;
+	color: #2fbf71;
 	display: none;
 }
 

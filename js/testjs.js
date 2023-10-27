@@ -185,7 +185,7 @@ var myQuestions = [
 		displayAnswer: 'Štvorjadrový procesor'
 	},
 	{
-		question: "AKý je rozdiel medzi klasickým Bluetooth a Bluetooth Low Energy (BLE)? ",
+		question: "Aký je rozdiel medzi klasickým Bluetooth a Bluetooth Low Energy (BLE)? ",
 		answers: {
 			a: 'Klasické Bluetooth má väčšiu frekvenciu',
 			b: 'Klasické Bluetooth poskytuje značne zníženú spotrebu energie',
@@ -256,9 +256,9 @@ function generateQuiz(questions, quizContainer, resultsContainer){
 
 			// pridaj otazky a odpovede
 			output.push(
-				'<div class="question">' + questions[i].question + '</div>'// + '<hr>'
-				+ '<div class="answers">' + answers.join('') + '</div>'
-				+ '<div class="correctAns">Správna odpoveď:  ' + questions[i].displayAnswer + '</div><br>'
+				'<h5 class="pt-3">' + questions[i].question + '</h5>'// + '<hr>'
+				+ '<div class="answers pb-2">' + answers.join('') + '</div>'
+				+ '<div class="correctAns pt-2 fw-medium"><span style="color: #1985a1">Správna odpoveď: </span>' + questions[i].displayAnswer + '</div><hr>'
 			);
 
 		}
