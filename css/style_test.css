@@ -104,7 +104,7 @@ body{
 	margin-left: 5vw;
 }
 
-.card.custom-card-time,card.custom-card-result{
+.card.custom-card-time,.card.custom-card-result{
 	top: 15px;
 }
 
