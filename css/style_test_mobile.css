@@ -102,8 +102,10 @@ body{
 	margin: 0 2vw;
 }
 
-.custom-card-time > .custom-card-header, .custom-card-result > .custom-card-header{
+
+.custom-card-time > .custom-card-header,.modal-header, .custom-card-result > .custom-card-header{
 	background-color: #56ab91;
+	color: white;
 }
 
 #quiz{
@@ -112,3 +114,11 @@ body{
 	margin: 1vh auto;
 	text-align: left;
 }
+
+.correctAns{
+	font-size: 1.3em;
+	margin-bottom: 1vh;
+	color: #2fbf71;
+	display: none;
+}
+

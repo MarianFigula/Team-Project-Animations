@@ -108,8 +108,9 @@ body{
 	top: 15px;
 }
 
-.custom-card-time > .custom-card-header, .custom-card-result > .custom-card-header{
+.custom-card-time > .custom-card-header,.modal-header, .custom-card-result > .custom-card-header{
 	background-color: #56ab91;
+	color: white;
 }
 
 .result{

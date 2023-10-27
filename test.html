@@ -85,18 +85,37 @@
 	</div>
 
 <!-- TODO: bud nechat alebo modal po vyhodnoteni	-->
-	<div class="card fw-medium sticky-top custom-card-result" id="card-result" style="display: none;">
-		<h5 class="card-header text-center text-white custom-card-header">Výsledok</h5>
-		<div class="card-body" id="results"></div>
+<!--	<div class="card fw-medium sticky-top custom-card-result" id="card-result" style="display: none;">-->
+<!--		<h5 class="card-header text-center text-white custom-card-header">Výsledok</h5>-->
+<!--		<div class="card-body" id="results"></div>-->
+<!--	</div>-->
+
+	<!-- Modal -->
+	<div class="modal fade text-center" id="resultModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header text-center">
+					<h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Výsledok testu</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p id="results"></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvoriť</button>
+				</div>
+			</div>
+		</div>
 	</div>
+
 
 	<div id="test">
 
 
 
 		<div id="quiz"></div>
-		<button class="btn btn-outline-success" id="submit">Vyhodnotiť</button>
-		<button class="btn btn-outline-primary " id="resetTestBtn">Skúsiť znovu</button>
+		<button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#resultModal" id="submit">Vyhodnotiť</button>
+		<button class="btn btn-outline-primary" id="resetTestBtn">Skúsiť znovu</button>
 
 	</div>
 

@@ -209,7 +209,7 @@ var myQuestions = [
 
 let quizContainer = document.getElementById('quiz');
 let resultsContainer = document.getElementById('results');
-let cardResult = document.getElementById('card-result')
+//let cardResult = document.getElementById('card-result')
 let submitButton = document.getElementById('submit');
 let resetTestButton = document.getElementById('resetTestBtn')
 
@@ -323,8 +323,8 @@ function generateQuiz(questions, quizContainer, resultsContainer){
 		}
 
 		// zobrazenie počtu spravnych odpovedi
-		cardResult.style.display = 'block'
-		resultsContainer.innerHTML = numCorrect + ' / ' + questions.length;
+		//Result.style.display = 'block'
+		resultsContainer.innerHTML += "Počet bodov: " + "<span class='fw-medium'>" + numCorrect + ' / ' + questions.length + "</span>";
 
 	}
 
