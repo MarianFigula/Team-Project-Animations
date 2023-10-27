@@ -19,70 +19,74 @@ body{
   	width: 100%;
 }
 
-#left_menu #menu{
-	display: none;
-}
+/*#left_menu #menu{*/
+/*	display: none;*/
+/*}*/
 
-.verticalMenu{
-	color: white;
-	width: 100%;
-	text-align: center;
-	background: #0f6e21;
-	font-size: 1.2em;
-	display: block;
-}
+/*.verticalMenu{*/
+/*	color: white;*/
+/*	width: 100%;*/
+/*	text-align: center;*/
+/*	background: #0f6e21;*/
+/*	font-size: 1.2em;*/
+/*	display: block;*/
+/*}*/
 
-#left_menu nav a{
-	display: block;
-}
+/*#left_menu nav a{*/
+/*	display: block;*/
+/*}*/
 
-nav a{
-	/*display: block;*/
-	text-decoration: none;
-	font-weight: bold;
-	color: white;
-	font-size: 1.2em;
-	text-align: center;
-	padding: 0.3vh;
-	margin: 2px 0 0 0;
-	background: #0f6e21;
-}
+/*nav a{*/
+/*	!*display: block;*!*/
+/*	text-decoration: none;*/
+/*	font-weight: bold;*/
+/*	color: white;*/
+/*	font-size: 1.2em;*/
+/*	text-align: center;*/
+/*	padding: 0.3vh;*/
+/*	margin: 2px 0 0 0;*/
+/*	background: #0f6e21;*/
+/*}*/
 
-nav a:hover{
-	color: #13902a;
-}
+/*nav a:hover{*/
+/*	color: #13902a;*/
+/*}*/
 
 #test{
 	padding: 1vh 0 3vh 0;
 	width: 100%;
 	min-height: 80vh;
-	background: #b8b8b8;
+	background: white;
 	float:left;
 	text-align: center;
 }
 
 /*horná lišta---------------------------------*/
 
-.testEdit{
-	width: 100%;
-	background: grey;
-	height: 8vh;
-}
+/*.testEdit{*/
+/*	width: 100%;*/
+/*	background: white;*/
+/*	height: 8vh;*/
+/*}*/
 
 /*stopky------------------------------------------*/
 
-#stopwatch{
-	width: 33%;
-	/*background: green;*/
-	padding: 2vh 0;
-	height: 6vh;
-	float: left;
-	font-size: 1.2em;
-	font-weight: bold;
-	text-align: center;
-}
+/*#stopwatch{*/
+/*	width: 33%;*/
+/*	!*background: green;*!*/
+/*	padding: 2vh 0;*/
+/*	height: 6vh;*/
+/*	float: left;*/
+/*	font-size: 1.2rem;*/
+/*	font-weight: bold;*/
+/*	text-align: center;*/
+/*}*/
 
 /*test/kviz---------------------------------------------*/
+
+#resetTestBtn{
+	display: none;
+}
 
 .result{
 	width: 34%;
@@ -90,9 +94,17 @@ nav a:hover{
 	padding: 2vh 0;
 	height: 6vh;
 	float: left;
-	font-size: 1.2em;
+	font-size: 1.2rem;
 }
 
+.card.custom-card-time,.card.custom-card-result{
+	top: 15px;
+	margin: 0 2vw;
+}
+
+.custom-card-time > .custom-card-header, .custom-card-result > .custom-card-header{
+	background-color: #56ab91;
+}
 
 #quiz{
 	width: 90%;
@@ -100,50 +112,3 @@ nav a:hover{
 	margin: 1vh auto;
 	text-align: left;
 }
-
-.question{
-	font-weight: bold;
-	font-size: 1em;
-}
-
-.answers{
-	font-size: 1em;
-}
-
-.correctAns{
-	font-size: 1.2em;
-	margin-bottom: 1vh;
-	color: lightgreen;
-	display: none;
-}
-
-/*velkost písma---------------------------------------*/
-
-.textSize{
-	width: 33%;
-	/*background: blue;*/
-	padding: 2vh 0;
-	height: 6vh;
-	float: left;
-}
-
-.big{
-  font-size: 1.5em;  
-  margin-left: 1em;
-}
-
-.small{
-  font-size: 1.2em;
-  margin-left: 0.3em;
-}
-
-.big, .small{
-  font-weight: bold;
-  cursor: default;
-}
-
-.big:hover, .small:hover{
-  color: yellow;
-}
-
-/*----------------------------------*/

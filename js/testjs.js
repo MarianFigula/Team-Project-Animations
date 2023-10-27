@@ -308,16 +308,17 @@ function generateQuiz(questions, quizContainer, resultsContainer){
 				//(answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).style.color = "lightgreen";
 				// spravne odpovede zelena
 				//answerContainers[i].style.color = 'lightgreen';
-				labelForInput.style.color = "lightgreen"
+				labelForInput.style.color = "#2fbf71"
 			}
 			// ak je odpoved zla alebo nevyplnena
 			else{
 				// nespravne odpovede cervena
 				//answerContainers[i].style.color = 'red';
 				labelForInput.style.color = "#d90429"
-				labelForInput.style.fontWeight = 'bold'
+
 			//d90429
 			}
+			labelForInput.style.fontWeight = 'bold'
 			document.getElementsByClassName('correctAns')[i].style.display = 'block';
 		}
 
