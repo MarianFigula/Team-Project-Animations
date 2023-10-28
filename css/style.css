@@ -190,13 +190,13 @@ body, .main{
   #plan{
     display: inline-block;
     position: relative;
-    width: 65vw;
+    width: 64vw;
     height: auto;
   }
 
   /*suhlas použitých fotografií*/
   .agree{
-    font-size: 0.8em;
+    font-size: 0.8rem;
   }
 
   #con a{
