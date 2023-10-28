@@ -109,20 +109,6 @@ body, .main{
     margin-left: 1em;
   }
 
-  .small{
-    font-size: 1.2em;
-    margin-left: 0.3em;
-  }
-
-  .big, .small{
-    font-weight: bold;
-    cursor: default;
-  }
-
-  .big:hover, .small:hover{
-    color: yellow;
-  }
-
   .componentInfo{
     display: none;
     position: absolute;
