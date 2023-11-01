@@ -1,7 +1,7 @@
 a {text-decoration: none; color: #000;}
-/*
-a:hover {background: #FFFFCC; color: #000;}
-*/
+
+a:hover {background: none; color: #000;}
+
 
 a:visited {color: black; text-decoration: none}
 
@@ -237,7 +237,7 @@ canvas {
 }
 
 #tableInf tr:nth-child(even) {
-    background-color: #ffffcc;
+    background-color: #d9e1f9;
     color: #000;
 }
 

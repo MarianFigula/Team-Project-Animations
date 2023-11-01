@@ -45,6 +45,7 @@ function centerStructure() {
 
 function RotateStructure(axis) {
   // Declare local variables
+  var delay = 20;  // Delay between redrawing screen, in ms
   var delay = 10;  // Delay between redrawing screen, in ms
 
   // Parameter validation
