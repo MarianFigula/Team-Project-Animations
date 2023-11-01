@@ -97,9 +97,11 @@ body{
 	font-size: 1.2rem;
 }
 
-.card.custom-card-time,.card.custom-card-result{
+.custom-card-time{
+	width: 60%;
 	top: 15px;
-	margin: 0 2vw;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 

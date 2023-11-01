@@ -92,13 +92,12 @@ body{
 
 /*test/kviz---------------------------------------------*/
 .custom-card-time{
-	width: 16rem;
+	width: 14rem;
 	float: right;
-	margin-right: 5vw;
+	margin-right: 1vw;
 }
 
 .custom-card-result{
-
 	width: 16rem;
 	float: left;
 	margin-left: 5vw;
@@ -108,8 +107,10 @@ body{
 	top: 15px;
 }
 
+
+
 .custom-card-time > .custom-card-header,.modal-header, .custom-card-result > .custom-card-header{
-	background-color: #56ab91;
+	background-color: #56ab91; /*49a078*/
 	color: white;
 }
 
