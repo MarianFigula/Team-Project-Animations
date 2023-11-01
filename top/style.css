@@ -1,10 +1,14 @@
 a {text-decoration: none; color: #000;}
+/*
 a:hover {background: #FFFFCC; color: #000;}
+*/
+
 a:visited {color: black; text-decoration: none}
 
+img:hover{cursor: pointer;}
+
 body {
-    margin: 0 100px 0 100px;
-    padding: 1%;
+/*    margin: 0 100px 0 100px;*/
     color: #000;
     background-image: url("obrazky/background.jpg");
     background-size: cover;
@@ -28,7 +32,7 @@ div.div {
 #welcome {
     padding: 150px;
     text-align: center;
-    background: #fff;
+/*    background: #fff;*/
     display: none;
     position: absolute;
     top: 50%;
@@ -85,11 +89,6 @@ button {
     border-radius: 4px;
     cursor: pointer;
 }
-
-button:hover {
-    background: #FFFFCC;
-}
-
 button:disabled {
     background: #dcdcdc;
     cursor: default;
@@ -131,11 +130,11 @@ details {
     transition: 0.3s;
     font-size: 16px;
 }
-
+/*
 .tab button:hover {
     text-shadow: 2px 2px 8px #fff933;
 }
-
+*/
 .tab button.active {
     border-radius: 5px;
     font-weight: bold;
@@ -173,14 +172,14 @@ tr {
 }
 
 tr:nth-child(even) {
-    background-color: #ffffcc;
+    background-color: #d9e1f9;
     color: #000;
 }
 
 .source {
     font-size: 16px;
 }
-
+/*
 .note {
     border: 1px solid #fff979;
     background: #fcffe0;
@@ -188,7 +187,7 @@ tr:nth-child(even) {
     border-left: 5px solid #fff979;
     padding: 0 5px 0 5px;
 }
-
+*/
 /*3.BOD*/
 select {
     width: 200px;
@@ -293,4 +292,22 @@ hr.hr_structure {
     display: block;
     height: 1px;
     background: #000;
+}
+/* pridane */
+.my-menu-item {
+    padding: 12px 14px;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+    transform: scale(1);
+}
+
+.my-menu-item:hover {
+    background-color: #aaaaaa;
+    border-radius: 50px;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.my-menu-item-active {
+    background-color: #111;
+    border-radius: 50px;
 }

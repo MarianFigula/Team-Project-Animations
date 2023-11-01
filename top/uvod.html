@@ -3,26 +3,293 @@
 <head>
     <meta charset="utf-8">
     <title>Domovská stránka</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="mobile.css">
     <link rel="shortcut icon" href="obrazky/favicon.png">
     <link rel="apple-touch-icon" href="obrazky/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="mobile.css">
 </head>
 <body>
-<div>
-    <button title="späť na hlavnú stránku" id="button1" onclick="location.href='index.html'">&#127968; Späť k zoznamu</button>
-    <button title="späť na hlavnú stránku" id="button1_min" onclick="location.href='index.html'">&#127968;</button>
-    <button id="button2" disabled>&lt;&lt;</button>
-    <button id="button2_min" disabled>&lt;&lt;</button>
-    <button title="2.téma" id="button3" onclick="location.href='kremik.html'">&gt;&gt; Vlastnosti polovodičov</button>
-    <button title="2.téma" id="button3_min" onclick="location.href='kremik.html'">&gt;&gt;</button>
+<header>
+    <div class="collapse bg-dark" id="navbarToggleExternalContent">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+                <a class="col py-4 text-start" href="index.html">
+                    <h5 class="text-white my-menu-item"><i18n vanilla-i18n="subtitle.application">Úvod</i18n></h5>
+                </a>
+                <a class="col py-4 text-start" href="uvod.html">
+                    <h5 class="text-white my-menu-item"><i18n vanilla-i18n="subtitle.application">Základné informácie</i18n></h5>
+                </a>
+                <a class="col py-4 text-start" href="kremik.html">
+                    <h5 class="text-white my-menu-item"><i18n vanilla-i18n="subtitle.va">Kremík</i18n></h5>
+                </a>
+                <a class="col py-4 text-start" href="germanium.html">
+                    <h5 class="text-white my-menu-item"><i18n vanilla-i18n="subtitle.circuits">Germánium</i18n></h5>
+                </a>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 text-center">
+                <a class="col py-4 text-start" href="gaas.html">
+                    <h5 class="text-white my-menu-item"><i18n vanilla-i18n="subtitle.comparison">Arzenid galitý</i18n></h5>
+                </a>
+                <a class="col py-4 text-start" href="sic.html">
+                    <h5 class="text-white my-menu-item"><i18n vanilla-i18n="subtitle.development">Karbid kremičitý</i18n></h5>
+                </a>
+                <a class="col py-4 text-start" href="gan.html">
+                    <h5 class="text-white my-menu-item"><i18n vanilla-i18n="subtitle.2deg">Gálium nitrid</i18n></h5>
+                </a>
+                <a class="col py-4 text-start" href="gen_rek.html">
+                    <h5 class="text-white my-menu-item"><i18n vanilla-i18n="subtitle.faq">Generovanie a rekombinácia elektrónov a dier</i18n></h5>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="index.html">
+                <img width="20%" height="20%"src="obrazky/STU-FEI-ancv_nn.png">|Základné informácie
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+</header>
+<section class="mt-4 mb-2 text-center container bg-white">
+    <div class="row">
+        <div class="col-lg-10 col-md-10 mx-auto">
+            <h1 class="fw-light"><i18n vanilla-i18n="application.paragraph.title">Čo sú polovodiče?</i18n></h1>
+            <p class="lead">
+                <i18n vanilla-i18n="application.paragraph.body">
+                &emsp;Objav polovodičov sa počíta medzi veľké objavy súčasnej doby. Celým generáciám zostávali utajené mnohé
+                výborné vlastnosti polovodičov, ktoré umožňujú ich súčasné mnohostranné využitie. V elektronike
+                <b>tvoria základ každej technológie</b>, ale ich použitie je nevyhnutnosťou aj v elektrotechnike,
+                zobrazovacej technike, v solárnych článkoch, fotočlánkoch, atómových batériach a podobne.
+                Na pochopenie možného využitia polovodičov pre vytváranie súčiastok je nevyhnutné získať základné poznatky o
+                elektrónovej štruktúre polovodičov.<br>
+                </i18n>
+            </p>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div id="carouselExampleIndicators" class="carousel slide w-50" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <h5><i18n vanilla-i18n="application.carousel.radars">V solárnych článkoch </i18n></h5>
+                    <img src="obrazky\fotoclanok_full.jpg" class="d-block w-100" alt="photocell">
+                </div>
+                <div class="carousel-item">
+                    <h5><i18n vanilla-i18n="application.carousel.radars">V integrovaných obvodoch </i18n></h5>
+                    <img src="obrazky\integrovany_obvod.jpg" class="d-block w-100" alt="integrated circuit">
+                </div>
+                <div class="carousel-item">
+                    <h5><i18n vanilla-i18n="application.carousel.radars">V laseroch </i18n></h5>
+                    <img src="obrazky\laser.jpg" class="d-block w-100" alt="laser">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-10 col-md-10 mx-auto mt-4">
+            <p class="lead">
+                <i18n vanilla-i18n="application.paragraph.body">
+                    &emsp;Polovodič je materiál, ktorý sa zaraďuje <b>elektrickou vodivosťou</b> medzi vodiče (elektricky vodivé látky)
+                    a nevodiče (elektricky nevodivé látky). Jeho vodivosť sa silne mení s teplotou, dopadajúcim svetlom,
+                    usporiadaním kryštalickej mriežky a s obsahom prímesí.<br>
+                    &emsp;V tuhých látkach sú viazané jednotlivé atómy navzájom do kryštalickej mriežky s viac či menej rozsiahlou
+                    usporiadanosťou. Elektróny s najmenšou väzbovou energiou sú valenčné elektróny, nachádzajú sa na poslednom
+                    orbitáli. Každý elektrónový orbitál má vlastnú energiu. Na jednom orbitáli sú maximálne dva elektróny. Ich
+                    energia vytvára valenčné pásmo, v animácii nazývané tzv. zaplnené energetické pásmo. Niektoré elektróny sa
+                    od jadra uvoľnia, preskočia do vodivostného pásma a začnú sa tam voľne pohybovať. Na odtrhnutie elektrónu od
+                    jadra bolo potrebné vynaložiť nejakú energiu, ktorá predstavuje energetickú medzeru medzi pásmom.
+                    <b>Šírka zakázaného pásma určuje</b>
+                    aj pravdepodobnosť, že sa za danej teploty dokáže odtrhnúť dostatočné množstvo elektrónov, čiže určuje
+                    <b>elektrickú vodivosť</b> danej látky. U vodičov (zväčša kovov) je šírka zakázaného pásma nulová, valenčné a vodivostné
+                    pásmo sa prekrývajú. U nevodičov (izolantov) je táto šírka veľká (3-4 eV).<br>
+                    &emsp;Výhoda polovodičov je, že dokážu viesť veľké prúdy a majú dosť malý odpor aj pri veľkých teplotách.
+                </i18n>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-10 col-md-10 mx-auto">
+            <h1 class="fw-light"><i18n vanilla-i18n="application.paragraph.title">História polovodičov</i18n></h1>
+            <p class="lead">
+                <i18n vanilla-i18n="application.paragraph.body">
+                    &emsp;Niektoré z významných vlastností polovodičov boli známe už pomerne dávno. Fotoelektrické vlastnosti selénu
+                    sa vyšetrovali už v 60. rokoch 19. storočia. Koncom 19. a začiatkom 20. storočia sa vyšetrujú vlastnosti
+                    polárnych polovodičov a usmerňovacie účinky niektorých oxidov.
+                    Z Cu<sub>2</sub>O sa r. 1926 vyhotovil prvý technický upotrebiteľný usmerňovač. Z toho istého polovodiča sa r.
+                    1932 vyrobil aj fotočlánok. Napriek týmto sporadickým úspechom sa vlastné dejiny polovodičov začínajú
+                    fakticky až v polovici 20. storočia, keď sa bezpečne zistilo, že prvým predpokladom praktického upotrebenia
+                    polovodičových materiálov, najmä chemických jedincov, je takmer dokonalá čistota, a keď sa podarilo vypracovať
+                    vhodnú technológiu dvoch súčasne najvýznamnejších polovodičov: kremíka a germánia.<br>
+                    &emsp;Obrovský rozvoj v technickej aplikácii polovodičov nastal od r. 1948, keď vyhotovili prvý tranzistor
+                    (aktívna polovodičová súčiastka prevažne s tromi elektródami, ktorá slúži na spracovanie signálov, napr.
+                    generovanie, resp. zosilnenie elektrických signálov, premenu neelektrických signálov na elektrické a pod.).
+                </i18n>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-10 col-md-10 mx-auto">
+            <h1 class="fw-light"><i18n vanilla-i18n="application.paragraph.title">Aké látky patria k polovodičom?</i18n></h1>
+            <p class="lead">
+                <i18n vanilla-i18n="application.paragraph.body">
+                    &emsp;Odpoveď na túto otázku sa komplikovala tým viac, čím viac sa polovodiče preskúmali. Na začiatku polovodičovej
+                    éry stačilo povedať, že polovodič je materiál s elektrickou vodivosťou medzi kovom a izolantom. Neskôr, keď sa zistila
+                    vzájomná súvislosť vlastností polovodiča s periodickosťou (t.j. kryštalickosťou) látky, z ktorej vyplynul
+                    tzv. model pásmového spektra elektrónov, bolo možné definovať polovodič presnejšie.<br>
+                    &emsp;<b>Typické polovodiče</b> tvorené jedným prvkom (elementárne polovodiče) sú zo IV. skupiny periodickej tabuľky prvkov:
+                    Kremík, Germánium, Uhlík a Selén. Keď sa spoja atómy, kde majú elektróny rôzne potenciálové hladiny,
+                    v zlúčenine alebo zliatine (tuhej zmesi), môžu vzniknúť efekty, ktoré pri jednoduchých polovodičoch nie sú možné.
+                    Podstatné však je, aby bola zachovaná dokonalá kryštalická mriežka.
+                    Podľa počtu prvkov v kompozitnom polovodiči hovoríme o binárnych (2), ternárnych (3) a kvaternárnych (4) kompozitoch.
+                    V nasledujúcej tabuľke uvádzame iba niektoré z najvýznamnejších:
+                </i18n>
+            </p>
+        </div>
+        <div class="col-lg-10 col-md-10 mx-auto d-flex justify-content-center">
+            <table id="t01">
+                <tr>
+                    <th onclick="sorting(0, 0)">Skupina &#8691;</th>
+                    <th onclick="sorting(1, 1)">Počet atómov &#8691;</th>
+                    <th onclick="sorting(2, 0)">Polovodič &#8691;</th>
+                    <th onclick="sorting(3, 1)">Šírka zak. pásma [eV] &#8691;</th>
+                </tr>
+                <tr>
+                    <td>IV</td>
+                    <td>1</td>
+                    <td>C (diamant)</td>
+                    <td>5.47</td>
+                </tr>
+                <tr>
+                    <td>IV</td>
+                    <td>1</td>
+                    <td>Ge (germánium)</td>
+                    <td>0.67</td>
+                </tr>
+                <tr>
+                    <td>IV</td>
+                    <td>1</td>
+                    <td>Si (silicon)</td>
+                    <td>1.12</td>
+                </tr>
+                <tr>
+                    <td>VI</td>
+                    <td>1</td>
+                    <td>Se (selén)</td>
+                    <td>1.74</td>
+                </tr>
+                <tr>
+                    <td>VI</td>
+                    <td>1</td>
+                    <td>Te (telúr)</td>
+                    <td>0.33</td>
+                </tr>
+                <tr>
+                    <td>I - VI</td>
+                    <td>2</td>
+                    <td>Cu<sub>2</sub>S</td>
+                    <td>1.12</td>
+                </tr>
+                <tr>
+                    <td>I - VII</td>
+                    <td>2</td>
+                    <td>CuCl</td>
+                    <td>3.4</td>
+                </tr>
+                <tr>
+                    <td>II - VI</td>
+                    <td>2</td>
+                    <td>CdSe</td>
+                    <td>1.74</td>
+                </tr>
+                <tr>
+                    <td>II - VI</td>
+                    <td>2</td>
+                    <td>CdS</td>
+                    <td>2.42</td>
+                </tr>
+                <tr>
+                    <td>II - VI</td>
+                    <td>2</td>
+                    <td>ZnO</td>
+                    <td>3.37</td>
+                </tr>
+                <tr>
+                    <td>III - V</td>
+                    <td>2</td>
+                    <td>GaAs</td>
+                    <td>1.43</td>
+                </tr>
+                <tr>
+                    <td>III - V</td>
+                    <td>2</td>
+                    <td>GaN</td>
+                    <td>3.44</td>
+                </tr>
+                <tr>
+                    <td>Oxid</td>
+                    <td>3</td>
+                    <td>LiNbO<sub>3</sub></td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>iné</td>
+                    <td>3</td>
+                    <td>Cu<sub>2</sub>SnS<sub>3</sub></td>
+                    <td>0.91</td>
+                </tr>
+                <tr>
+                    <td>iné</td>
+                    <td>4</td>
+                    <td>Cu<sub>2</sub>ZnSnS<sub>4</sub></td>
+                    <td>1.49</td>
+                </tr>
+            </table><br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-10 col-md-10 mx-auto">
+            <p class="lead">
+                <i18n vanilla-i18n="application.paragraph.body">
+                    <span class="source"><b>Zdroje:  </b><a href="https://referaty.aktuality.sk/polovodice/referat-30979">referáty.aktuality.sk</a>,
+        <a href="http://www.matnet.sav.sk/index.php?ID=400">matnet.sav.sk</a>,
+        <a href="http://uef.fei.stuba.sk/elearn/mod/glossary/print.php?id=6&mode=cat&hook=12&sortkey=&sortorder=asc&offset=-10">uef.fei.stuba.sk</a>,
+        <a href="http://web.tuke.sk/fei-kte/slovak/subjects/ZIM/Kapitola%2009%20-%20Polovodice.pdf">web.tuke.sk</a>,
+        <a href="https://sk.wikipedia.org/wiki/Polovodi%C4%8D">sk.wikipedia.org</a></span>
+                </i18n>
+            </p>
+        </div>
+    </div>
+</section>
+<div class="container bg-white">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <p class="col-md-4 mb-0 text-body-secondary">© 2023 Company, Inc</p>
+
+        <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+        </a>
+    </footer>
 </div>
-<div class="div">
-    <header>
-        <h1>Úvod do polovodičov</h1>
-    </header><br>
+<!--
+<div class="div ">
+    <h1>Základné informácie</h1>
+    <br>
     <details open>
         <summary>Čo sú polovodiče?</summary>
         <p>
@@ -79,104 +346,6 @@
             Podľa počtu prvkov v kompozitnom polovodiči hovoríme o binárnych (2), ternárnych (3) a kvaternárnych (4) kompozitoch.
             V nasledujúcej tabuľke uvádzame iba niektoré z najvýznamnejších:
         </p>
-        <table id="t01">
-            <tr>
-                <th onclick="sorting(0, 0)">Skupina &#8691;</th>
-                <th onclick="sorting(1, 1)">Počet atómov &#8691;</th>
-                <th onclick="sorting(2, 0)">Polovodič &#8691;</th>
-                <th onclick="sorting(3, 1)">Šírka zak. pásma [eV] &#8691;</th>
-            </tr>
-            <tr>
-                <td>IV</td>
-                <td>1</td>
-                <td>C (diamant)</td>
-                <td>5.47</td>
-            </tr>
-            <tr>
-                <td>IV</td>
-                <td>1</td>
-                <td>Ge (germánium)</td>
-                <td>0.67</td>
-            </tr>
-            <tr>
-                <td>IV</td>
-                <td>1</td>
-                <td>Si (silicon)</td>
-                <td>1.12</td>
-            </tr>
-            <tr>
-                <td>VI</td>
-                <td>1</td>
-                <td>Se (selén)</td>
-                <td>1.74</td>
-            </tr>
-            <tr>
-                <td>VI</td>
-                <td>1</td>
-                <td>Te (telúr)</td>
-                <td>0.33</td>
-            </tr>
-            <tr>
-                <td>I - VI</td>
-                <td>2</td>
-                <td>Cu<sub>2</sub>S</td>
-                <td>1.12</td>
-            </tr>
-            <tr>
-                <td>I - VII</td>
-                <td>2</td>
-                <td>CuCl</td>
-                <td>3.4</td>
-            </tr>
-            <tr>
-                <td>II - VI</td>
-                <td>2</td>
-                <td>CdSe</td>
-                <td>1.74</td>
-            </tr>
-            <tr>
-                <td>II - VI</td>
-                <td>2</td>
-                <td>CdS</td>
-                <td>2.42</td>
-            </tr>
-            <tr>
-                <td>II - VI</td>
-                <td>2</td>
-                <td>ZnO</td>
-                <td>3.37</td>
-            </tr>
-            <tr>
-                <td>III - V</td>
-                <td>2</td>
-                <td>GaAs</td>
-                <td>1.43</td>
-            </tr>
-            <tr>
-                <td>III - V</td>
-                <td>2</td>
-                <td>GaN</td>
-                <td>3.44</td>
-            </tr>
-            <tr>
-                <td>Oxid</td>
-                <td>3</td>
-                <td>LiNbO<sub>3</sub></td>
-                <td>4</td>
-            </tr>
-            <tr>
-                <td>iné</td>
-                <td>3</td>
-                <td>Cu<sub>2</sub>SnS<sub>3</sub></td>
-                <td>0.91</td>
-            </tr>
-            <tr>
-                <td>iné</td>
-                <td>4</td>
-                <td>Cu<sub>2</sub>ZnSnS<sub>4</sub></td>
-                <td>1.49</td>
-            </tr>
-        </table><br>
         <span class="source"><b>Zdroje:  </b><a href="https://referaty.aktuality.sk/polovodice/referat-30979">referáty.aktuality.sk</a>,
         <a href="http://www.matnet.sav.sk/index.php?ID=400">matnet.sav.sk</a>,
         <a href="http://uef.fei.stuba.sk/elearn/mod/glossary/print.php?id=6&mode=cat&hook=12&sortkey=&sortorder=asc&offset=-10">uef.fei.stuba.sk</a>,
@@ -184,6 +353,9 @@
         <a href="https://sk.wikipedia.org/wiki/Polovodi%C4%8D">sk.wikipedia.org</a></span>
     </details>
 </div>
+-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 <script src="helperFunctions.js"></script>
 </body>
 </html>
