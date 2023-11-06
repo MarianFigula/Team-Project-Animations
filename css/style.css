@@ -228,7 +228,7 @@ body, .main{
 
   .component{
     opacity: 0;
-    transition: 0.4s;
+    transition: 0.3s;
   }
 
   .component:hover{
