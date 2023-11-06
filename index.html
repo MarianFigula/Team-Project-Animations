@@ -24,7 +24,7 @@
 
     <nav id="menu">
         <a href="animation.html">Štart</a>
-        <a href="#" id="govern">Pomoc</a>
+        <a class="" data-bs-toggle="modal" data-bs-target="#exampleModal">Nápoveda</a>
         <a href="test.html">Otestuj Sa</a>
     </nav>
 
@@ -42,26 +42,65 @@
 
 </div>
 
+
+
+
 <!--dialogove okno ovládania-->
-<div id="control">
-    <b><a href="uzivatelska-dokumentacia.pdf" target="blank">Používateľská dokumentácia</a></b><br><br>
+<!--<div id="control">-->
+<!--    <b><a href="uzivatelska-dokumentacia.pdf" target="blank">Používateľská dokumentácia</a></b><br><br>-->
 
-    Slovo <b>"Mikropočítač"</b> v názve animácie je tiež ako tlačidlo. <br>
-    Tlačidlom <b>"Play"</b> spustíte základnú animáciu. <br><br>
-    Tlačidlom <b>"FAQ"</b> spustíte kontrolný test s 10 otázkami.
-    <br><br>
-    <b>Ovládanie animácie</b><br>
-    Kurzorom myši prejdite na požadovaný komponent mikropočítača. Ak je možné daný komponent preštudovať bližšie tak sa
-    farebne vyznačí. Po kliknutí na daný komponent sa zobrazia bližšie informácie o komponente.
+<!--    Slovo <b>"Mikropočítač"</b> v názve animácie je tiež ako tlačidlo. <br>-->
+<!--    Tlačidlom <b>"Play"</b> spustíte základnú animáciu. <br><br>-->
+<!--    Tlačidlom <b>"FAQ"</b> spustíte kontrolný test s 10 otázkami.-->
+<!--    <br><br>-->
+<!--    <b>Ovládanie animácie</b><br>-->
+<!--    Kurzorom myši prejdite na požadovaný komponent mikropočítača. Ak je možné daný komponent preštudovať bližšie tak sa-->
+<!--    farebne vyznačí. Po kliknutí na daný komponent sa zobrazia bližšie informácie o komponente.-->
 
-    <br><br>
-    Farebné vyznačenie komponentov:
-    <ul>
-        <li>Zelená: komponent bol už preštudovaný</li>
-        <li>Žltá: komponent nie je ešte preštudovaný. Po zakliknutí sa Vám zobrazia informácie</li>
-    </ul>
+<!--    <br><br>-->
+<!--    Farebné vyznačenie komponentov:-->
+<!--    <ul>-->
+<!--        <li>Zelená: komponent bol už preštudovaný</li>-->
+<!--        <li>Žltá: komponent nie je ešte preštudovaný. Po zakliknutí sa Vám zobrazia informácie</li>-->
+<!--    </ul>-->
 
-    V ľavej hornej časti je zobrazení počet preštudovaných komponentov z celkového počtu 16 komponentov. <br>
+<!--    V ľavej hornej časti je zobrazení počet preštudovaných komponentov z celkového počtu 16 komponentov. <br>-->
+<!--</div>-->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Nápoveda</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Slovo <b>"Mikropočítač"</b> v názve animácie je tiež ako tlačidlo. <br>
+                Tlačidlom <b>"Play"</b> spustíte základnú animáciu. <br><br>
+                Tlačidlom <b>"FAQ"</b> spustíte kontrolný test s 10 otázkami.
+                <br><br>
+                <b>Ovládanie animácie</b><br>
+                Kurzorom myši prejdite na požadovaný komponent mikropočítača. Ak je možné daný komponent preštudovať bližšie tak sa
+                farebne vyznačí. Po kliknutí na daný komponent sa zobrazia bližšie informácie o komponente.
+
+                <br><br>
+                Farebné vyznačenie komponentov:
+                <ul>
+                    <li>Zelená: komponent bol už preštudovaný</li>
+                    <li>Oranžová: komponent nie je ešte preštudovaný. Po zakliknutí sa Vám zobrazia informácie</li>
+                </ul>
+
+                V ľavej hornej časti je zobrazení počet preštudovaných komponentov z celkového počtu 16 komponentov. <br>
+            </div>
+            <div class="modal-footer d2-flex justify-content-center">
+                <a type="button" class="btn btn-primary" href="uzivatelska-dokumentacia.pdf" target="blank">Stiahnúť používateľskú dokumentáciu</a>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvoriť</button>
+
+            </div>
+        </div>
+    </div>
 </div>
 
 <script src="js/dialog.js"></script>
