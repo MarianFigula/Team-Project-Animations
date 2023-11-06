@@ -240,7 +240,7 @@ function generateQuiz(questions, quizContainer, resultsContainer){
 				// ...pridaj butony
 				answers.push(
 					'<div class="form-check">' +
-					`  <input class="form-check-input" type="radio" name="question${i}" id="question${i}${letter}" value="${inputValue}">` +
+					`  <input class="form-check-input border border-primary-subtle border-2" type="radio" name="question${i}" id="question${i}${letter}" value="${inputValue}">` +
 					`  <label class="form-check-label" for="question${i}${letter}" id="label${i}${letter}">` +
 					`    ${inputValue}` +
 					'  </label>' +
