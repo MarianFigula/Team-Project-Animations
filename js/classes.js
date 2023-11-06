@@ -9,7 +9,7 @@ function Component(name, width, height, top, left){
     var div = document.createElement("div"); 
 	div.style.width = this.width + "%";
 	div.style.height = this.height+ "%";
-	div.style.background = "yellow";
+	div.style.background = "lime";
 	div.style.position = "absolute";
 	div.style.top = this.top + "%";
 	div.style.left = this.left + "%";
