@@ -228,10 +228,14 @@ body, .main{
 
   .component{
     opacity: 0;
+    transition: 0.4s;
   }
 
   .component:hover{
-    opacity: 0.3;
+    opacity: 0.6;
+    cursor: pointer;
+    border: 1px solid #f34213;
+    border-radius: 0.35rem;
   }
 
 
