@@ -86,6 +86,7 @@ body, .main{
     overflow: auto;
     /*background: green;*/
     font-size: 1.2em;
+    border-radius: 20px;
   }
 
   .textInfo div{
