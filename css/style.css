@@ -61,6 +61,7 @@ body, .main{
   }
 
 /*---------prava strana ---------------------*/
+
 /*  #info{*/
 /*    float: left;*/
 /*    margin-top: 1vw;*/
@@ -208,10 +209,12 @@ body, .main{
     color:blue;
   }
 
-  /*napis, na ktorý komponent ukazuje*/
-  .thisCom{
-    margin-left: 2em;
-  }
+
+/*napis, na ktorý komponent ukazuje*/
+.thisCom{
+  margin-left: 2em;
+  transition: opacity 0.5s;
+}
 
   .active{
     opacity: 0.5;

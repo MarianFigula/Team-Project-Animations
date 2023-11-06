@@ -228,8 +228,15 @@ body, .main{
   }
 
   /*napis, na ktorý komponent ukazuje*/
+  .component:hover + .thisCom {
+        opacity: 1;
+    }
+
   .thisCom{
-    margin-left: 2em;
+      margin-left: 2em;
+      text-decoration: none;
+      opacity: 0;
+      transition: opacity 0.5s;
   }
 
   .active{
@@ -366,12 +373,17 @@ body, .main{
       left: 11%;
     background: yellow;
   }
-  
-  .component{
-    opacity: 0;
-  }
 
-  .component:hover{
-    opacity: 0.3;
-  }
+.component{
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.component:hover{
+    opacity: 0.6;
+    cursor: pointer;
+    border: 1px solid #f34213;
+    border-radius: 0.35rem;
+}
+
 
