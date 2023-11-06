@@ -232,12 +232,9 @@ body, .main{
         opacity: 1;
     }
 
-  .thisCom{
-      margin-left: 2em;
-      text-decoration: none;
-      opacity: 0;
-      transition: opacity 0.5s;
-  }
+.thisCom{
+    margin-left: 2em;
+}
 
   .active{
     opacity: 0.5;

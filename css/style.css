@@ -213,7 +213,6 @@ body, .main{
 /*napis, na ktorý komponent ukazuje*/
 .thisCom{
   margin-left: 2em;
-  transition: opacity 0.5s;
 }
 
   .active{
