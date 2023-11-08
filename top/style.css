@@ -9,13 +9,13 @@ img:hover{cursor: pointer;}
 
 body {
 /*    margin: 0 100px 0 100px;*/
-    color: #000;
+    color: #212529;
     background-image: url("obrazky/background.jpg");
     background-size: cover;
     background-attachment: fixed;
     font-family: Calibri, serif;
-    font-size: 18px;
-    line-height: 150%;
+    font-size: 20px;
+    line-height: 130%;
     overflow-y: scroll;
 }
 
@@ -47,7 +47,7 @@ div.div {
     width: 570px;
     border: 1px solid #000;
     background: #fff;
-    color: #000;
+    color: #212529;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -72,13 +72,34 @@ li.main:before { content: counters(item, ".") " "; counter-increment: item }
 /* HLAVICKY */
 
 h1 {
+    font-weight:  600 !important;
+    font-size: 50px;
     margin-bottom: 0;
+    padding: 20px 0;
     text-align: center;
 }
 
 h2 {
     text-align: center;
     padding-bottom: 10px;
+}
+
+h5 {
+    font-weight: 600;
+    font-size: 22px;
+    margin-top: 8px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li::before {
+    color: #000;
+    content: "\2301";
+    margin-right: 8px;
+    font-size: 40px;
 }
 
 button {
@@ -113,12 +134,16 @@ details {
 /* POLOVODICE - VSEOBECNE */
 /*https://www.w3schools.com/howto/howto_js_tabs.asp*/
 .tab {
-    border: 1px solid #dadada;
+    border: 1px solid #212529;
     border-right: none;
     border-left: none;
     background-color: #ffffff;
     margin-top: 10px;
     text-align: center;
+}
+
+tr {
+
 }
 
 .tab button {
@@ -172,7 +197,7 @@ tr {
 }
 
 tr:nth-child(even) {
-    background-color: #d9e1f9;
+    background: linear-gradient(to left, #c5cfd9, #eff2f5);
     color: #000;
 }
 
