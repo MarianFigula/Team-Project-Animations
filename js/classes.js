@@ -13,8 +13,10 @@ function Component(name, width, height, top, left){
 	div.style.position = "absolute";
 	div.style.top = this.top + "%";
 	div.style.left = this.left + "%";
-	div.setAttribute("class", this.id + " component backCom");		
-	$("#plan").append(div); 
+	div.setAttribute("class", this.id + " component backCom");
+	div.setAttribute("data-bs-toggle", "modal")
+	div.setAttribute("data-bs-target", "#" + this.id + "Modal")
+	$("#plan").append(div);
 
 }
 
@@ -22,8 +24,8 @@ var ethernet = new Component("eth", 22.5, 27, 6.7, 75);
 var usb2 = new Component("usb2", 19, 22, 68, 79);
 var usb3 = new Component("usb3", 19, 22, 39, 79);
 var jack = new Component("jack", 8, 24, 72.5, 57);
-var hdmi1 = new Component("microHDMI HDMI1", 7, 13, 82.5, 42);
-var hdmi2 = new Component("microHDMI HDMI2", 7, 13, 82.5, 28);
+var hdmi1 = new Component("microHDMI", 7, 13, 82.5, 42);
+var hdmi2 = new Component("microHDMI", 7, 13, 82.5, 28);
 var usbc = new Component("usbC", 9, 12, 82.5, 11);
 var memory = new Component("memory", 2.5, 17, 38.5, 1.7);
 var procesor = new Component("procesor", 16, 25, 28.8, 26.6);
