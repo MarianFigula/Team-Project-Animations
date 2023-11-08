@@ -16,19 +16,19 @@
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
             crossorigin="anonymous"></script>
 </head>
-<body>
+<body id="bckgrnd">
 
 <!--menu-->
-<div id="bckgrnd">
+<div>
     <!--    <div class="header"><h2><a href="#" id="microPC">Mikropočítač</a> Raspberry Pi4</h2></div>-->
-    <div class="container text-center bg-white border border-light rounded-2">
-        <div class="header"><h2>Mikropočítač Raspberry Pi4</h2></div>
+    <div class="container text-center bg-light border border-dark rounded-2 p-3 mt-5 opacity-75">
+        <div class="header"><h2 class="display-4  border-dark border-bottom ">Mikropočítač Raspberry Pi4</h2></div>
 
-        <nav id="menu">
-            <a href="animation.html">Štart</a>
-            <a class="" data-bs-toggle="modal" data-bs-target="#exampleModal">Nápoveda</a>
-            <a class="" data-bs-toggle="modal" data-bs-target="#introductionModal">Mikropočítač</a>
-            <a href="test.html">Otestuj Sa</a>
+        <nav class="d2-flex justify-content-center p-1">
+            <a class="btn btn-outline-dark" href="animation.html">Animácia</a>
+            <a class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Nápoveda</a>
+            <a class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#introductionModal">Mikropočítač</a>
+            <a class="btn btn-outline-dark" href="test.html">Otestuj sa</a>
         </nav>
     </div>
 
@@ -96,9 +96,11 @@
                 </ul>
 
                 V ľavej hornej časti je zobrazení počet preštudovaných komponentov z celkového počtu 16 komponentov.
-                <br>
+                <br><br>
+                Obrázok mikropočítača použitý so súhlasom
+                <a href="https://www.raspberrypi.org/" target="_blank">https://www.raspberrypi.org</a>
             </div>
-            <div class="modal-footer d2-flex justify-content-center">
+            <div class="modal-footer ">
                 <a type="button" class="btn btn-primary" href="uzivatelska-dokumentacia.pdf" target="blank">Stiahnúť
                     používateľskú dokumentáciu</a>
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Zatvoriť</button>
@@ -123,7 +125,7 @@
                 nachádzajú len elementárne prvky.<br><br> Teraz, keď pôjdete ďalej, sa dozviete, ktoré elementárne prvky
                 obsahuje a aké sú možnosti komponentov.
             </div>
-            <div class="modal-footer d2-flex justify-content-center">
+            <div class="modal-footer ">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Zatvoriť</button>
             </div>
         </div>
