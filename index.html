@@ -20,13 +20,17 @@
 
 <!--menu-->
 <div id="bckgrnd">
-    <div class="header"><h2><a href="#" id="microPC">Mikropočítač</a> Raspberry Pi4</h2></div>
+    <!--    <div class="header"><h2><a href="#" id="microPC">Mikropočítač</a> Raspberry Pi4</h2></div>-->
+    <div class="container text-center bg-white border border-light rounded-2">
+        <div class="header"><h2>Mikropočítač Raspberry Pi4</h2></div>
 
-    <nav id="menu">
-        <a href="animation.html">Štart</a>
-        <a class="" data-bs-toggle="modal" data-bs-target="#exampleModal">Nápoveda</a>
-        <a href="test.html">Otestuj Sa</a>
-    </nav>
+        <nav id="menu">
+            <a href="animation.html">Štart</a>
+            <a class="" data-bs-toggle="modal" data-bs-target="#exampleModal">Nápoveda</a>
+            <a class="" data-bs-toggle="modal" data-bs-target="#introductionModal">Mikropočítač</a>
+            <a href="test.html">Otestuj Sa</a>
+        </nav>
+    </div>
 
     <!--<a href="#" id="microPC"><h1>???</h1></a>-->
     <!--<a href="#" id="microPC"><h1>???</h1></a>-->
@@ -34,15 +38,13 @@
 
 </div>
 
-<!--dialogove okno ovládania-->
-<div id="introduction">
-    <b>Mikropočítač v princípe funguje rovnako ako počítač.<br><br> Na rozdiel od počítača sa na mikropočítači
-        nachádzajú len elementárne prvky.<br><br> Teraz, keď pôjdete ďalej, sa dozviete, ktoré elementárne prvky
-        obsahuje a aké sú možnosti komponentov. </b>
+<!--dialogove okno ovládania -nevyzeralo dobre-->
+<!--<div id="introduction">-->
+<!--    <b>Mikropočítač v princípe funguje rovnako ako počítač.<br><br> Na rozdiel od počítača sa na mikropočítači-->
+<!--        nachádzajú len elementárne prvky.<br><br> Teraz, keď pôjdete ďalej, sa dozviete, ktoré elementárne prvky-->
+<!--        obsahuje a aké sú možnosti komponentov. </b>-->
 
-</div>
-
-
+<!--</div>-->
 
 
 <!--dialogove okno ovládania-->
@@ -77,12 +79,13 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                Slovo <b>"Mikropočítač"</b> v názve animácie je tiež ako tlačidlo. <br>
+
                 Tlačidlom <b>"Play"</b> spustíte základnú animáciu. <br><br>
                 Tlačidlom <b>"Otestuj sa"</b> spustíte kontrolný test s 10 otázkami.
                 <br><br>
                 <b>Ovládanie animácie</b><br>
-                Kurzorom myši prejdite na požadovaný komponent mikropočítača. Ak je možné daný komponent preštudovať bližšie tak sa
+                Kurzorom myši prejdite na požadovaný komponent mikropočítača. Ak je možné daný komponent preštudovať
+                bližšie tak sa
                 farebne vyznačí. Po kliknutí na daný komponent sa zobrazia bližšie informácie o komponente.
 
                 <br><br>
@@ -92,12 +95,36 @@
                     <li>Oranžová: komponent nie je ešte preštudovaný. Po zakliknutí sa Vám zobrazia informácie</li>
                 </ul>
 
-                V ľavej hornej časti je zobrazení počet preštudovaných komponentov z celkového počtu 16 komponentov. <br>
+                V ľavej hornej časti je zobrazení počet preštudovaných komponentov z celkového počtu 16 komponentov.
+                <br>
             </div>
             <div class="modal-footer d2-flex justify-content-center">
-                <a type="button" class="btn btn-primary" href="uzivatelska-dokumentacia.pdf" target="blank">Stiahnúť používateľskú dokumentáciu</a>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvoriť</button>
+                <a type="button" class="btn btn-primary" href="uzivatelska-dokumentacia.pdf" target="blank">Stiahnúť
+                    používateľskú dokumentáciu</a>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Zatvoriť</button>
 
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="introductionModal" tabindex="-1" aria-labelledby="introductionModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="eintroductionModalLabel">Mikropočítač</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <b>Mikropočítač</b> v princípe funguje rovnako ako počítač.<br><br> Na rozdiel od počítača sa na
+                mikropočítači
+                nachádzajú len elementárne prvky.<br><br> Teraz, keď pôjdete ďalej, sa dozviete, ktoré elementárne prvky
+                obsahuje a aké sú možnosti komponentov.
+            </div>
+            <div class="modal-footer d2-flex justify-content-center">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Zatvoriť</button>
             </div>
         </div>
     </div>

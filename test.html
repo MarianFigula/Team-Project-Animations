@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="author" content="Dominika Suhajdova">
-	<title>Rapsberry Pi4 - interaktívna animácia</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Dominika Suhajdova">
+    <title>Rapsberry Pi4 - interaktívna animácia</title>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!--css-->
-	<link Rel="stylesheet" type="text/css" media="screen and (min-width: 861px)" href="css/style_test.css">
-	<link Rel="stylesheet" type="text/css" media="screen and (max-width: 861px)" href="css/style_test_mobile.css">
+    <!--css-->
+    <link Rel="stylesheet" type="text/css" media="screen and (min-width: 861px)" href="css/style_test.css">
+    <link Rel="stylesheet" type="text/css" media="screen and (max-width: 861px)" href="css/style_test_mobile.css">
 
-	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  	<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-  	<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 
-	<!--Bootstrap-->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-		  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-			crossorigin="anonymous"></script>
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
 </head>
 <body>
-	<!--menu-->
+<!--menu-->
 <!--	<div id="left_menu">-->
 <!--		<div class="verticalMenu" onclick="mobileMenuTest()"><i>Menu</i></div>-->
 <!--		<nav id="menu">-->
@@ -34,50 +34,54 @@
 <!--		</nav>-->
 <!--	</div>-->
 
-	<header class="mb-3">
-		<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-			<div class="container-fluid">
-				<a class="navbar-brand" href="index.html">Úvod</a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a class="nav-link" href="animation.html">Raspberry Pi4</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Pomoc</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link active" href="test.html">Otestuj sa</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</header>
+<header class="mb-3">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="https://www.fei.stuba.sk/">
+                <img src="/img/STU-FEI-ancv_nn.png" width="100" height="30" alt="">
+            </a>
+            <a class="navbar-brand" href="index.html">Úvod</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="animation.html">Raspberry Pi4</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Pomoc</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="test.html">Otestuj sa</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
 
 
-	<!--diaogove okno ovládania-->
-	<div id="control">
-		<b><a href="uzivatelska-dokumentacia.pdf" target="blank">Používateľská dokumentácia</a></b><br><br>
-		
-		V nasledujúcom teste je 10 otázok, ktoré preveria Vaše vedomosti v oblasti mikropočítačov. <br><br>
-		Test je vyklikávací. V každej otázke je len 1 správna odpoveď. 
+<!--diaogove okno ovládania-->
+<div id="control">
+    <b><a href="uzivatelska-dokumentacia.pdf" target="blank">Používateľská dokumentácia</a></b><br><br>
 
-		<br><br>Do hlavnej časti animácie sa dostanete tlačidlom <b>"Play"</b><br>
+    V nasledujúcom teste je 10 otázok, ktoré preveria Vaše vedomosti v oblasti mikropočítačov. <br><br>
+    Test je vyklikávací. V každej otázke je len 1 správna odpoveď.
 
-		<br> <b>Časovač</b> sa spúšťa automaticky s načítaním webstránky.<br><br>
-		<b>Vyhodnotenie</b> testu môžete vidieť v hornej (sivej) časti medzi časomierou a nastavaním veľkosti písma.<br>
-	</div>
+    <br><br>Do hlavnej časti animácie sa dostanete tlačidlom <b>"Play"</b><br>
 
-	<div class="card sticky-top fw-medium custom-card-time">
-		<h5 class="card-header text-center text-white custom-card-header">Časovač</h5>
-		<div class="card-body">
-			<p class="card-text text-center" id="stopwatch">00:00:00</p>
-		</div>
-	</div>
+    <br> <b>Časovač</b> sa spúšťa automaticky s načítaním webstránky.<br><br>
+    <b>Vyhodnotenie</b> testu môžete vidieť v hornej (sivej) časti medzi časomierou a nastavaním veľkosti písma.<br>
+</div>
+
+<div class="card sticky-top fw-medium custom-card-time">
+    <h5 class="card-header text-center text-white custom-card-header">Časovač</h5>
+    <div class="card-body">
+        <p class="card-text text-center" id="stopwatch">00:00:00</p>
+    </div>
+</div>
 
 <!-- TODO: bud nechat alebo modal po vyhodnoteni	-->
 <!--	<div class="card fw-medium sticky-top custom-card-result" id="card-result" style="display: none;">-->
@@ -85,40 +89,61 @@
 <!--		<div class="card-body" id="results"></div>-->
 <!--	</div>-->
 
-	<!-- Modal -->
-	<div class="modal fade text-center" id="resultModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header text-center">
-					<h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Výsledok testu</h1>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<p id="results"></p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvoriť</button>
-				</div>
-			</div>
-		</div>
-	</div>
+<!-- Modal -->
+<div class="modal fade text-center" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h1 class="modal-title fs-5 text-center" id="resultModalLabel">Výsledok testu</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="results"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvoriť</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade text-center" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                Pomoc
+            </div>
+            <div class="modal-body">
+                tu napíšeme návod na vyplnenie textu
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Zatvoriť</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
-	<div id="test">
+
+<div id="test">
 
 
+    <div id="quiz"></div>
+    <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#resultModal" id="submit">
+        Vyhodnotiť
+    </button>
+    <button class="btn btn-outline-primary" id="resetTestBtn">Skúsiť znovu</button>
 
-		<div id="quiz"></div>
-		<button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#resultModal" id="submit">Vyhodnotiť</button>
-		<button class="btn btn-outline-primary" id="resetTestBtn">Skúsiť znovu</button>
-
-	</div>
+</div>
 
 
-	<script src="js/testjs.js"></script>
-	<script src="js/mobileMenu.js"></script>
-	<script src="js/dialog.js"></script>
-	<script src="js/fontSize.js"></script>
+<script src="js/testjs.js"></script>
+<script src="js/mobileMenu.js"></script>
+<script src="js/dialog.js"></script>
+<script src="js/fontSize.js"></script>
 
 </body>
 </html>
