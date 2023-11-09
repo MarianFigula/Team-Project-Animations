@@ -182,7 +182,7 @@ body, .main{
 
 /*---------lava strana---------*/
   #con{
-  	margin-top: 1vw;
+  	margin-top: 0.8vw;
     padding:0;
   	/*max-width: 864px;
   	max-height: 570px;*/
@@ -231,13 +231,13 @@ body, .main{
   .component{
     opacity: 0;
     transition: 0.3s;
+    border: 1px solid transparent;
+    border-radius: 0.35rem;
   }
 
   .component:hover{
     opacity: 0.6;
     cursor: pointer;
-    border: 1px solid #f34213;
-    border-radius: 0.35rem;
   }
 
 
