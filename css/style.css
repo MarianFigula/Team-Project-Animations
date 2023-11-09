@@ -127,17 +127,6 @@ body, .main{
   }
 
 /*doplnkove info-----------------------------*/
-  .accordion {
-    background: #0f6e21;
-    color: white;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-  }
 
   .accordion a{
     color: white;
