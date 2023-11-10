@@ -26,6 +26,14 @@ body{
 	/*margin: 0 auto;*/
 }
 
+.ccimage{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(256,256,256,25%);
+	cursor: pointer;
+}
+
 /*index*/
 /*#menu{*/
 /*	width: 20%;*/
