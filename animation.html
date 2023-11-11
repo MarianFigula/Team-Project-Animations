@@ -27,9 +27,12 @@
     <!--javascript file-->
     <style>
         /* Custom CSS to make the modal wider */
-        .modal-lg {
-            max-width: 80%; /* You can adjust this value based on your needs */
+        @media (min-width: 767px) {
+            .modal-lg {
+                max-width: 80%; /* You can adjust this value based on your needs */
+            }
         }
+
         .modal {
             font-size: 1.25rem;
         }
