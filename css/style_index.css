@@ -28,10 +28,14 @@ body{
 
 .ccimage{
 	position: absolute;
-	right: 0;
-	bottom: 0;
-	background-color: rgba(256,256,256,25%);
+	right: 20px;
+	bottom: 20px;
+	/*background-color: rgba(256,256,256,25%);*/
 	cursor: pointer;
+}
+
+.modal {
+	font-size: 1.25rem;
 }
 
 /*index*/
