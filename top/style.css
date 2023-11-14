@@ -133,6 +133,7 @@ details {
 
 /* POLOVODICE - VSEOBECNE */
 /*https://www.w3schools.com/howto/howto_js_tabs.asp*/
+
 .tab {
     border: 1px solid #212529;
     border-right: none;
@@ -324,6 +325,8 @@ hr.hr_structure {
     text-decoration: none;
     transition: all 0.3s ease 0s;
     transform: scale(1);
+    border: 1px solid white;
+    border-radius: 50px;
 }
 
 .my-menu-item:hover {
@@ -336,3 +339,19 @@ hr.hr_structure {
     background-color: #111;
     border-radius: 50px;
 }
+#carousel-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#carouselExampleIndicators {
+    width: 50%;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+}
+
