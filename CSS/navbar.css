@@ -2,6 +2,16 @@ body {
     padding-bottom: 20px;
 }
 
-.navbar {
-    margin-bottom: 20px;
+.navbar-nav {
+    color: #c7c7c7;
+
+}
+
+#napatie,#porovnanie,#ampFaza{
+    opacity: 0.8;
+}
+
+#napatie:hover,#porovnanie:hover,#ampFaza:hover{
+    color: #d9d9d9;
+    opacity: 1;
 }
