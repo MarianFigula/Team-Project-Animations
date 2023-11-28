@@ -41,6 +41,11 @@ a{
     text-decoration: none;
 }
 
+#schema, #graf, #frequency, #jump{
+    max-width: 400px;
+}
+
+
 .my-img {
     -webkit-transform: scale(1);
     transform: scale(1);

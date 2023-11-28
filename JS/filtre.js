@@ -227,7 +227,7 @@ function drawDerivator(){
     drawDer = SVG()
         .addTo(backgroundDiv)
         .size(400,250)
-        .viewbox(0, 0, 600, 450)
+        .viewbox(60, 0, 600, 450)
     //canvasDer = drawDer.group().flip('y', height / 2)
     canvasDer = drawDer.group()
     canvasDer.text("Derivátor - Hornopriepustný frekvenčný RC filter").move(60,10).font(myFont2).fill("black")
@@ -282,7 +282,7 @@ function drawIntegrator(){
     drawDer = SVG()
         .addTo(backgroundDiv)
         .size(400,250)
-        .viewbox(0, -10, 600, 450)
+        .viewbox(60, 0, 600, 450)
     //canvasDer = drawDer.group().flip('y', height / 2)
 
     canvasDer = drawDer.group()
