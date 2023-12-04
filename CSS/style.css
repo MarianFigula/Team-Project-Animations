@@ -146,3 +146,7 @@ main {
     min-width: 200px;
     min-height: calc(100% - 56px);
 }
+
+#graph{
+    margin-top: 5px;
+}
