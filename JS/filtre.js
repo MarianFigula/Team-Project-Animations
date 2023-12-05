@@ -437,7 +437,7 @@ drawGraphF(true,1)
 
 //width = 100, height 200
 function whiteOutRight(canvasGraph){
-    canvasGraph.rect(1150,500).move(885, 100).fill("white");
+    canvasGraph.rect(100,500).move(885, 100).fill("white");
 }
 
 function whiteOutLeft(canvasGraph){
