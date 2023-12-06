@@ -800,51 +800,75 @@ function animacia2(){
         weight: 'bold'
     });
 }
-function elektronN01(){
-    for(let i = 0; i < 40; i++){
-        let group = cdDraw.group();
-        let obj1 = group.circle(20)
-        obj1.fill('white')
-        obj1.stroke({color: '#0000FF', width: 3, linecap: 'round'});
-        let line1 = group.line(5, 10, 15, 10).stroke({ color: '#000', width: 2 });
-        group.move(120, 125);
-        let path1 = cdDraw.path('M 120 125 Q 470 350, 800 125').fill('none');
-        const length = path1.length();
-        let anim1 = group.animate({
-            duration: 6000,
-            delay: i * 400,
-            when: "relative",
-        }).during(function(pos){
-            const eased_pos = SVG.easing['-'](pos);
-            const p = path1.pointAt(eased_pos * length * 1.68);
-            group.center(p.x,p.y);
-        }).loop();
-        animationsElektron.push(anim1);
-    }
-}
-function protonP01(){
-    for(let i = 0; i < 40; i++){
-        let group = cdDraw.group();
-        let obj1 = group.circle(20)
-        obj1.fill('white')
-        obj1.stroke({color: '#FF0000', width: 3, linecap: 'round'});
-        let line1 = group.line(5, 10, 15, 10).stroke({ color: '#000', width: 2 });
-        let line2 = group.line(10, 5, 10, 15).stroke({ color: '#000', width: 2 });
-        let path1 = cdDraw.path('M 120 125 Q 470 350, 800 125').fill('none');
-        group.move(120, 125);
-        const length = path1.length();
-        const anim1 = group.animate({
-            duration: 6000,
-            delay: i * 400,
-            when: "relative",
-        }).during(function(pos){
-            const eased_pos = SVG.easing['-'](pos);
-            const p = path1.pointAt(eased_pos * length * 1.68);
-            group.center(p.x,p.y);
-        }).loop();
 
-        animationsProton.push(anim1)
-    }
+
+
+
+
+async function elektronN01() {
+    let group = cdDraw.group();
+    let obj1 = group.circle(20)
+    obj1.fill('white')
+    obj1.stroke({color: '#0000FF', width: 3, linecap: 'round'});
+    let line1 = group.line(5, 10, 15, 10).stroke({color: '#000', width: 2});
+    group.move(120, 125);
+    let path1 = cdDraw.path('M 120 125 Q 470 350, 800 125').fill('none');
+    const length = path1.length();
+    let anim1 = group.animate({
+        duration: 6000,
+        // delay: i * 400,
+        when: "relative",
+    }).during(function (pos) {
+        const eased_pos = SVG.easing['-'](pos);
+        const p = path1.pointAt(eased_pos * length * 1.68);
+        group.center(p.x, p.y);
+    })//.loop();
+    animationsElektron.push(anim1);
+    setTimeout(function () {
+        console.log("a")
+        console.log(value)
+        if (value) {
+            elektronN01()
+        }
+
+    }, 400);
+
+}
+
+let value = false
+
+
+function protonP01(){
+
+    let group = cdDraw.group();
+    let obj1 = group.circle(20)
+    obj1.fill('white')
+    obj1.stroke({color: '#FF0000', width: 3, linecap: 'round'});
+    let line1 = group.line(5, 10, 15, 10).stroke({ color: '#000', width: 2 });
+    let line2 = group.line(10, 5, 10, 15).stroke({ color: '#000', width: 2 });
+    let path1 = cdDraw.path('M 120 125 Q 470 350, 800 125').fill('none');
+    group.move(120, 125);
+    const length = path1.length();
+    const anim1 = group.animate({
+        duration: 6000,
+        // delay: i * 400,
+        when: "relative",
+    }).during(function(pos){
+        const eased_pos = SVG.easing['-'](pos);
+        const p = path1.pointAt(eased_pos * length * 1.68);
+        group.center(p.x,p.y);
+    })//.loop();
+
+    animationsProton.push(anim1)
+    setTimeout(function () {
+        console.log("a")
+        console.log(value)
+        if (value) {
+            protonP01()
+        }
+
+    }, 400);
+
 }
 
 schema1()
@@ -876,32 +900,52 @@ document.getElementById('kanal').addEventListener('change', function() {
 });
 document.getElementById('Ugs').addEventListener('change', function() {
     let uds = document.getElementById('Uds')
-    if(document.getElementById('kanal').value == "n"){
-        elektronN01()
+    if(this.value == "0"){
+        value = false;
+    }
+    else if(document.getElementById('kanal').value == "n"){
+        if(!value){
+            value = true;
+            elektronN01()
+        }
+
     }
     else if(document.getElementById('kanal').value == "p"){
-        protonP01()
+        if(!value){
+            value = true;
+            protonP01()
+        }
     }
-    console.log('Ugs zmenené na: ' + this.value);
-    if(document.getElementById('kanal').value == "n" && this.value == "0"){
-    }
-    if(this.value == "0" && uds.value() == "0"){
-        redCircle.move(117,347)
-    }
-    else if(this.value == "0" && uds.value() == "1"){
-        redCircle.move(150,250)
-    }
+    // if(document.getElementById('kanal').value == "n" && this.value == "0"){
+    //
+    // }
+    // if(this.value == "0" && uds.value() == "0"){
+    //     redCircle.move(117,347)
+    // }
+    // else if(this.value == "0" && uds.value() == "1"){
+    //     redCircle.move(150,250)
+    // }
 });
 
 document.getElementById('Uds').addEventListener('change', function() {
-    if(document.getElementById('kanal').value == "n"){
-        elektronN01()
+    if(this.value == "0"){
+        value = false;
+    }
+    else if(document.getElementById('kanal').value == "n"){
+        if(!value){
+            value = true;
+            elektronN01()
+        }
+
     }
     else if(document.getElementById('kanal').value == "p"){
-        protonP01()
+        if(!value){
+            value = true;
+            protonP01()
+        }
     }
-    if(document.getElementById('kanal').value == "p" && this.value == "0"){
-    }
+    // if(document.getElementById('kanal').value == "p" && this.value == "0"){
+    // }
 });
 
 document.querySelector('.form-check-input').addEventListener('change', function() {
@@ -910,7 +954,7 @@ document.querySelector('.form-check-input').addEventListener('change', function(
         schema1()
     }
     else if(!this.checked && document.getElementById('kanal').value == "n"){
-        animacia1() 
+        animacia1()
     }
     else if(!this.checked && document.getElementById('kanal').value == "p"){
         animacia2()
