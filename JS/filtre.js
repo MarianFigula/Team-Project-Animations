@@ -222,117 +222,125 @@ function buttonsEvent(){
 
 
 let drawDer, canvasDer;
-function drawDerivator(){
+function drawDerivator() {
+    const svgConfig = {
+        size: [400, 250],
+        viewbox: [60, 0, 600, 450],
+        font: {
+            family: "Roboto",
+            size: 18,
+            weight: "bold",
+        },
+    };
+
     backgroundDiv.innerHTML = "";
-    drawDer = SVG()
-        .addTo(backgroundDiv)
-        .size(400,250)
-        .viewbox(60, 0, 600, 450)
-    //canvasDer = drawDer.group().flip('y', height / 2)
-    canvasDer = drawDer.group()
-    canvasDer.text("Derivátor - Hornopriepustný frekvenčný RC filter").move(60,10).font(myFont2).fill("black")
+    const drawDer = SVG().addTo(backgroundDiv).size(...svgConfig.size).viewbox(...svgConfig.viewbox);
+    const canvasDer = drawDer.group();
 
-    canvasDer.line(80, 100, 250, 100).stroke({width:1, color: 'black' });
-    canvasDer.line(270, 100, 580, 100).stroke({width:1, color: 'black' });
-    canvasDer.line(250, 60, 250, 140).stroke({width:1, color: 'black' });
-    canvasDer.line(270, 60, 270, 140).stroke({width:1, color: 'black' });
-    canvasDer.circle(20).center(80, 100).stroke({width:1, color: 'black' }).fill("white");
-    canvasDer.circle(20).center(580, 100).stroke({width:1, color: 'black' }).fill("white");;
-    canvasDer.text("C").move(225,40).font(myFont)
+    canvasDer.text("Derivátor - Hornopriepustný frekvenčný RC filter").move(60, 10).font(svgConfig.font).fill("black");
 
-    canvasDer.line(80, 350, 580, 350).stroke({width:1, color: 'black' });
-    canvasDer.circle(20).center(80, 350).stroke({width:1, color: 'black' }).fill("white");;
-    canvasDer.circle(20).center(580, 350).stroke({width:1, color: 'black' }).fill("white");;
+    function drawLine(startX, startY, endX, endY) {
+        canvasDer.line(startX, startY, endX, endY).stroke({ width: 1, color: 'black' });
+    }
 
+    function drawCircle(centerX, centerY) {
+        canvasDer.circle(20).center(centerX, centerY).stroke({ width: 1, color: 'black' }).fill("white");
+    }
 
-    //225 je stred 225 -50 =175 225 +50 =275
-    canvasDer.line(390, 100, 390, 185).stroke({width:1, color: 'black' });
-    canvasDer.line(390, 265, 390, 350).stroke({width:1, color: 'black' });
+    drawLine(80, 100, 250, 100);
+    drawLine(270, 100, 580, 100);
+    drawLine(250, 60, 250, 140);
+    drawLine(270, 60, 270, 140);
+    drawCircle(80, 100);
+    drawCircle(580, 100);
+    canvasDer.text("C").move(225, 40).font(svgConfig.font);
+
+    drawLine(80, 350, 580, 350);
+    drawCircle(80, 350);
+    drawCircle(580, 350);
+
+    drawLine(390, 100, 390, 185);
+    drawLine(390, 265, 390, 350);
     canvasDer.circle(10).center(390, 100);
     canvasDer.circle(10).center(390, 350);
-//320 100
-    canvasDer.rect(40,80).move(370,185).fill("none").stroke({width:1, color: "#24252A"})
-    canvasDer.text("R").move(420,225).font(myFont)
+    canvasDer.rect(40, 80).move(370, 185).fill("none").stroke({ width: 1, color: "#24252A" });
+    canvasDer.text("R").move(420, 225).font(svgConfig.font);
     canvasDer.animate(1000).opacity(1);
 
-    canvasDer.line(60, 150, 60, 300).stroke({width:1, color: 'black' });
-    canvasDer.polyline([[60,300], [65,290], [55,290]])
+    drawLine(60, 150, 60, 300);
+    canvasDer.polyline([[60, 300], [65, 290], [55, 290]]);
 
-    canvasDer.line(600, 150, 600, 300).stroke({width:1, color: 'black' });
-    canvasDer.polyline([[600,300], [605,290], [595,290]])
-    canvasDer.text("U").move(610,225).font(italicFont).fill("blue")
-    canvasDer.text("out").move(626,230).font(({
-        family: "Roboto",
-        size: 18,
-        fill: "blue",
-        weight: "bold",
-    }));
-    canvasDer.text("U").move(10,225).font(italicFont).fill("green")
-    canvasDer.text("in").move(26,230).font({
-        family: "Roboto",
-        size: 18,
-        fill: "green",
-        weight: "bold",
-    })
+    drawLine(600, 150, 600, 300);
+    canvasDer.polyline([[600, 300], [605, 290], [595, 290]]);
+    canvasDer.text("U").move(610, 225).font({ ...svgConfig.font, style: "italic" }).fill("blue");
+    canvasDer.text("out").move(626, 230).font(svgConfig.font).fill("blue");
+    canvasDer.text("U").move(10, 225).font({ ...svgConfig.font, style: "italic" }).fill("green");
+    canvasDer.text("in").move(26, 230).font(svgConfig.font).fill("green");
 }
 
 
-function drawIntegrator(){
+
+function drawIntegrator() {
     backgroundDiv.innerHTML = "";
-    drawDer = SVG()
-        .addTo(backgroundDiv)
-        .size(400,250)
-        .viewbox(60, 0, 600, 450)
-    //canvasDer = drawDer.group().flip('y', height / 2)
+    const drawDer = SVG().addTo(backgroundDiv).size(400, 250).viewbox(60, 0, 600, 450);
+    const canvasDer = drawDer.group();
 
-    canvasDer = drawDer.group()
-    canvasDer.text("Integrátor - Dolnopriepustný frekvenčný RC filter").move(60,10).font(myFont2).fill("black")
+    canvasDer.text("Integrátor - Dolnopriepustný frekvenčný RC filter").move(60, 10).font(myFont2).fill("black");
 
-    canvasDer.line(80, 100, 175, 100).stroke({width:1, color: 'black' });
-    canvasDer.line(255, 100, 580, 100).stroke({width:1, color: 'black' });
-    canvasDer.rect(80,40).move(175,80).fill("none").stroke({width:1, color: "#24252A"})
+    // Draw components
+    function drawLine(x1, y1, x2, y2) {
+        canvasDer.line(x1, y1, x2, y2).stroke({ width: 1, color: 'black' });
+    }
 
-    canvasDer.circle(20).center(80, 100).stroke({width:1, color: 'black' }).fill("white");;
-    canvasDer.circle(20).center(580, 100).stroke({width:1, color: 'black' }).fill("white");;
-    canvasDer.text("R").move(210,50).font(myFont)
+    function drawRect(x, y, width, height) {
+        canvasDer.rect(width, height).move(x, y).fill("none").stroke({ width: 1, color: "#24252A" });
+    }
 
-    canvasDer.line(80, 350, 580, 350).stroke({width:1, color: 'black' });
-    canvasDer.circle(20).center(80, 350).stroke({width:1, color: 'black' }).fill("white");;
-    canvasDer.circle(20).center(580, 350).stroke({width:1, color: 'black' }).fill("white");;
+    function drawCircle(centerX, centerY) {
+        canvasDer.circle(20).center(centerX, centerY).stroke({ width: 1, color: 'black' }).fill("white");
+    }
 
+    function drawText(content, x, y, font, fill) {
+        canvasDer.text(content).move(x, y).font(font).fill(fill);
+    }
 
-    //225 je stred 225 -50 =175 225 +50 =275
-    canvasDer.line(390, 100, 390, 215).stroke({width:1, color: 'black' });
-    canvasDer.line(390, 235, 390, 350).stroke({width:1, color: 'black' });
+    // Draw main components
+    drawLine(80, 100, 175, 100);
+    drawLine(255, 100, 580, 100);
+    drawRect(175, 80, 80, 40);
+
+    drawCircle(80, 100);
+    drawCircle(580, 100);
+    drawText("R", 210, 50, myFont);
+
+    drawLine(80, 350, 580, 350);
+    drawCircle(80, 350);
+    drawCircle(580, 350);
+
+    drawLine(390, 100, 390, 215);
+    drawLine(390, 235, 390, 350);
     canvasDer.circle(10).center(390, 100);
     canvasDer.circle(10).center(390, 350);
-    canvasDer.line(350, 215, 430, 215).stroke({width:1, color: 'black' });
-    canvasDer.line(350, 235, 430, 235).stroke({width:1, color: 'black' });
-//320 100
+    drawLine(350, 215, 430, 215);
+    drawLine(350, 235, 430, 235);
 
-    canvasDer.text("C").move(440,200).font(myFont)
+    drawText("C", 440, 200, myFont);
     canvasDer.animate(1000).opacity(1);
 
-    canvasDer.line(60, 150, 60, 300).stroke({width:1, color: 'black' });
-    canvasDer.polyline([[60,300], [65,290], [55,290]])
+    // Draw additional lines and text
+    drawLine(60, 150, 60, 300);
+    canvasDer.polyline([[60, 300], [65, 290], [55, 290]]);
 
-    canvasDer.line(600, 150, 600, 300).stroke({width:1, color: 'black' });
-    canvasDer.polyline([[600,300], [605,290], [595,290]])
-    canvasDer.text("U").move(610,225).font(italicFont).fill("blue")
-    canvasDer.text("out").move(626,230).font(({
-        family: "Roboto",
-        size: 18,
-        fill: "blue",
-        weight: "bold",
-    }));
-    canvasDer.text("U").move(10,225).font(italicFont).fill("green")
-    canvasDer.text("in").move(26,230).font({
-        family: "Roboto",
-        size: 18,
-        fill: "green",
-        weight: "bold",
-    })
+    drawLine(600, 150, 600, 300);
+    canvasDer.polyline([[600, 300], [605, 290], [595, 290]]);
+
+    drawText("U", 610, 225, italicFont, "blue");
+    drawText("out", 626, 230, { family: "Roboto", size: 18, fill: "blue", weight: "bold" });
+
+    drawText("U", 10, 225, italicFont, "green");
+    drawText("in", 26, 230, { family: "Roboto", size: 18, fill: "green", weight: "bold" });
 }
+
 
 drawDerivator()
 
@@ -441,7 +449,7 @@ function whiteOutRight(canvasGraph){
 }
 
 function whiteOutLeft(canvasGraph){
-    canvasGraph.rect(375,350).move(-300, 200).fill("white");
+    canvasGraph.rect(100,350).move(-25, 200).fill("white");
     canvasGraph.text("0").move(40,340).font(labelFont).fill("black")
     let txt = canvasGraph.text("Napätie (V)").move(-60,340).font(labelFont).fill("black")
     txt.transform({rotate:270})
@@ -776,6 +784,7 @@ function f_jump_HF_g(){
     canvasJump.line(1100, 100, 1100, 1250).stroke({width:2.5, color: '#24252A', dasharray: '4' }).opacity('50%');
 
 
+
 }
 
 function f_jump_HF(){
@@ -791,7 +800,7 @@ function f_jump_HF(){
         "L 805 590 C 805,905 905,875 1105,875 L 1105 1160 C 1135 870 1115 870 1410 875")
         .fill('none').stroke({width:6, color: 'blue', linecap: "round"})
     whiteOutRightJump()
-    let white = canvasJump.rect(1500,1260).move(100,90).fill('white')
+    let white = canvasJump.rect(800,1260).move(100,90).fill('white')
     white.animate(5000,800).move(1302,100)
 
     canvasJump.text("Odozva HF RC filtra na napäťový skok").move(130,40).font(biggerLegend).fill("black")
@@ -1004,13 +1013,13 @@ function legendForFreqFaza(canvasFreq,x,y) {
     canvasFreq.text("(°)").move(x+155,y+90).font(freqLegend).fill("black")
 
 }
-
+der_freq_graph
 function der_freq_graph(der,which){
 
     let drawFreq = SVG()
         .addTo(frequency)
-        .size(410, 700)
-        .viewbox(0, 10, 750,1500)
+        .size(410, 500)
+        .viewbox(0, 10, 750,1000)
     let canvasFreq = drawFreq.group()
 
     if(der){
