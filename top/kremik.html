@@ -45,25 +45,25 @@
         </div>
     </div>
     <div class="navbar navbar-dark bg-dark shadow-sm">
-        <div class="container-fluid">
-            <div class="d-flex justify-content-between align-items-center w-100">
-                <div class="d-flex align-items-center">
-                    <a class="navbar-brand text-white" href="index.html">
-                        <img width="30%" height="30%" src="obrazky/STU-FEI-ancv_nn.png">| Kremík
-                    </a>
-                </div>
-                <div class="d-flex align-items-center">
-                    <select id="languageSelect" class="form-select ml-2" onchange="changeLanguage()">
-                        <option value="en">English</option>
-                        <option value="sk">Slovak</option>
-                    </select>
-                </div>
+    <div class="container-fluid">
+        <div class="d-flex justify-content-between align-items-center w-100">
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand text-white" href="index.html">
+                    <img width="30%" height="30%" src="obrazky/STU-FEI-ancv_nn.png">| Kremík
+                </a>
+            </div>
+            <div class="d-flex align-items-center">
+                <select id="languageSelect" class="form-select ml-2" onchange="changeLanguage()">
+                    <option value="sk">Slovak</option>
+                    <option value="en">English</option>
+                </select>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
         </div>
     </div>
+</div>
 </header>
 <!--
 <div>
@@ -77,15 +77,15 @@
 -->
 <div class="div">
     <header>
-        <h1>Kremík (Si)</h1>
+        <h1 data-i18n="title_5">Kremík (Si)</h1>
     </header>
     <div class="tab">
-        <button id="default" type="button" class="theme" onclick="openTheme(event, '1')">Základné informácie</button>
-        <button type="button" class="theme" onclick="openTheme(event, '2')">3D Štruktúra</button>
-        <button type="button" class="theme" onclick="openTheme(event, '3')">Zaujímavosti</button>
+        <button id="default" type="button" class="theme" onclick="openTheme(event, '1')" data-i18n="sub_menu_1">Základné informácie</button>
+        <button type="button" class="theme" onclick="openTheme(event, '2')" data-i18n="sub_menu_2">3D Štruktúra</button>
+        <button type="button" class="theme" onclick="openTheme(event, '3')" data-i18n="sub_menu_3">Zaujímavosti</button>
     </div>
     <div id="1" class="content">
-        <h3>Základné informácie o kremíku</h3>
+        <h3  data-i18n="title_6">Základné informácie o kremíku</h3>
         <div class="container">
             <div class="leftDiv">
                 <img src="obrazky/silicon.jpg" alt="kremik" width="500">
@@ -94,43 +94,43 @@
                 <br><table id="tableInf">
                     <tbody>
                     <tr>
-                        <td>Atómové číslo</td>
+                        <td data-i18n="table_row_item_5">Atómové číslo</td>
                         <td>14</td>
                     </tr>
                     <tr>
-                        <td>Elektronický obal</td>
+                        <td data-i18n="table_row_item_6">Elektronický obal</td>
                         <td>3s<sup>2</sup> 3p<sup>2</sup></td>
                     </tr>
                     <tr>
-                        <td>Atómová hmotnosť</td>
+                        <td data-i18n="table_row_item_7">Atómová hmotnosť</td>
                         <td>28,0855 g.mol<sup>-1</sup></td>
                     </tr>
                     <tr>
-                        <td>Hustota</td>
+                        <td data-i18n="table_row_item_8">Hustota</td>
                         <td>2,33 g.cm<sup>-3</sup></td>
                     </tr>
                     <tr>
-                        <td>Bod topenia</td>
+                        <td data-i18n="table_row_item_9">Bod topenia</td>
                         <td>1410 °C (1687 K)</td>
                     </tr>
                     <tr>
-                        <td>Bod varu</td>
+                        <td data-i18n="table_row_item_10">Bod varu</td>
                         <td>3265 °C (3538 K)</td>
                     </tr>
                     <tr>
-                        <td>Tepelná vodivosť</td>
+                        <td data-i18n="table_row_item_11">Tepelná vodivosť</td>
                         <td>149 W·m<sup>−1</sup>·K<sup>−1</sup></td>
                     </tr>
                     <tr>
-                        <td>Šírka zakázaného pásma</td>
+                        <td data-i18n="table_row_item_12">Šírka zakázaného pásma</td>
                         <td>1,12 eV</td>
                     </tr>
                     <tr>
-                        <td>Izotópy</td>
+                        <td data-i18n="table_row_item_13">Izotópy</td>
                         <td>5</td>
                     </tr>
                     <tr>
-                        <td>Objavil</td>
+                        <td data-i18n="table_row_item_14">Objavil</td>
                         <td>1823 - Jöns Jacob Berzelius</td>
                     </tr>
                     </tbody>
@@ -143,11 +143,11 @@
                 <span class="source">Zdroj: <a href="https://sk.wikipedia.org/wiki/Krem%C3%ADk">wikipedia.org</a></span>
             </div>
             <div class="rightDiv">
-                <p>&emsp;Kremík je prvok na 14. mieste v Mendelejevovej periodickej tabuľke. Kryštalizuje sa v kubickej sústave s
+                <p data-i18n="first_paragraph">&emsp;Kremík je prvok na 14. mieste v Mendelejevovej periodickej tabuľke. Kryštalizuje sa v kubickej sústave s
                     plošne centrovanou kryštálovou mriežkou. Tvorí <b>26 – 28% zemskej kôry</b>, v ktorej sa nachádza hlavne vo
                     forme oxida kremičitého (SiO<sub>2</sub>), rozličných pieskov a pod. V morskej vode je jeho
-                    koncentrácia pomerne nízka, vo vesmíre pripadá na jeden atóm kremíka približne 30 000 atómov vodíka.
-                </p><p>&emsp;Má širšie zakázané pásmo (1.12 eV) ako germánium (0.67 eV), čo spôsobuje, že vodivosť kremíka je priemerne
+                    koncentrácia pomerne nízka, vo vesmíre pripadá na jeden atóm kremíka približne 30 000 atómov vodíka. </p>
+                <p data-i18n="second_paragraph">&emsp;Má širšie zakázané pásmo (1.12 eV) ako germánium (0.67 eV), čo spôsobuje, že vodivosť kremíka je priemerne
                     100-krát menšia ako vodivosť germánia. Kremík má vyšší bod topenia a je lacnejší.
                     To je hlavne v <b>usmerňovacej a tranzistorovej
                     technike</b> veľkou výhodou, pretože umožňuje prácu pri podstatne vyšších teplotách.

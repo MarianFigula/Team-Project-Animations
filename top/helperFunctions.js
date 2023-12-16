@@ -69,3 +69,30 @@ function sorting(n, type) {
         }
     }
 }
+
+
+// Define the changeLanguage function
+function changeLanguage() {
+    // Fetch the translations from the JSON file
+    fetch('translations.json')
+        .then(response => response.json())
+        .then(data => {
+            // Get the selected language from the select element
+            const selectedLanguage = document.getElementById('languageSelect').value;
+
+            // Fetch the translation object for the selected language
+            const translation = data[selectedLanguage];
+
+            // Get all elements with data-i18n attribute
+            const elements = document.querySelectorAll('[data-i18n]');
+
+            // Iterate over elements and update text content based on translation
+            elements.forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translation[key]) {
+                    element.textContent = translation[key];
+                }
+            });
+        })
+        .catch(error => console.error('Error fetching translations:', error));
+}

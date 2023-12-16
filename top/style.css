@@ -355,3 +355,7 @@ hr.hr_structure {
     height: auto;
 }
 
+#languageSelect {
+    margin: 0 10px;
+}
+
