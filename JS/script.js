@@ -575,9 +575,15 @@ function animacia1(){
     rectangle.move(60,320);
     //zeleny obdl
     if (ugs == "0" && uds == "0"){
-        rectangle = cdDraw.rect(832, 100).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        //spodny obdlznik
+        rectangle = cdDraw.rect(834, 100).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
         rectangle.opacity(0.7);
-        rectangle.move(60,270);
+        rectangle.move(58,270);
+        //vrchny
+        rectangle = cdDraw.rect(290, 80).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle.opacity(0.7);
+        rectangle.move(320,123);
+
     }else if (ugs == "-1" && uds == "0"){
         rectangle = cdDraw.rect(832, 100).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
         rectangle.opacity(0.7);
