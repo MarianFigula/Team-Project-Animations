@@ -579,18 +579,11 @@ function animacia1(){
         rectangle = cdDraw.rect(834, 50).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
         rectangle.opacity(0.7);
         rectangle.move(58,290);
-        // //trojuholnik vrchny
-        // rectangle = cdDraw.polygon('0,0 295,0 250,75').fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
-        // rectangle.opacity(0.7);
-        // rectangle.move(318,204);
-        // // trojuholnik
-        // rectangle = cdDraw.polygon('0,0 834,-100 834,0').fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
-        // rectangle.opacity(0.7);
-        // rectangle.move(58,190);
+
         //vrchny
-        rectangle = cdDraw.rect(320, 100).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle = cdDraw.rect(370, 120).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
         rectangle.opacity(0.7);
-        rectangle.move(305,123);
+        rectangle.move(280,123);
 
 
     }else if (ugs == "-1" && uds == "0"){
@@ -618,18 +611,18 @@ function animacia1(){
         rectangle.opacity(0.7);
         rectangle.move(58,290);
         //vrchny
-        rectangle = cdDraw.rect(290, 80).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle = cdDraw.rect(345, 110).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
         rectangle.opacity(0.7);
-        rectangle.move(320,123);
+        rectangle.move(295,123);
     }else if (ugs == "Ut" && uds == "0"){
         //spodny obdlznik
         rectangle = cdDraw.rect(834, 50).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
         rectangle.opacity(0.7);
         rectangle.move(58,290);
         //vrchny
-        rectangle = cdDraw.rect(290, 80).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle = cdDraw.rect(370, 120).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
         rectangle.opacity(0.7);
-        rectangle.move(320,123);
+        rectangle.move(280,123);
     }else if (ugs == "0" && uds == "0.5"){
         //spodny obdlznik
         rectangle = cdDraw.rect(834, 50).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
@@ -665,6 +658,10 @@ function animacia1(){
         rectangle = cdDraw.rect(834, 50).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
         rectangle.opacity(0.7);
         rectangle.move(58,290);
+        //trojuholnik vrchny
+        rectangle = cdDraw.polygon('0,0 320,0 320,20').fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle.opacity(0.7);
+        rectangle.move(305,222);
         // trojuholnik
         rectangle = cdDraw.polygon('0,0 834,-25 834,0').fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
         rectangle.opacity(0.7);
@@ -678,27 +675,35 @@ function animacia1(){
         rectangle = cdDraw.rect(834, 50).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
         rectangle.opacity(0.7);
         rectangle.move(58,290);
+        //trojuholnik vrchny
+        rectangle = cdDraw.polygon('0,0 345,0 345,20').fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle.opacity(0.7);
+        rectangle.move(295,234);
         // trojuholnik
         rectangle = cdDraw.polygon('0,0 834,-25 834,0').fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
         rectangle.opacity(0.7);
         rectangle.move(58,265);
         //vrchny
-        rectangle = cdDraw.rect(290, 80).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle = cdDraw.rect(345, 110).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
         rectangle.opacity(0.7);
-        rectangle.move(320,123);
+        rectangle.move(295,123);
     }else if (ugs == "Ut" && uds == "0.5"){
         //spodny obdlznik
         rectangle = cdDraw.rect(834, 50).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
         rectangle.opacity(0.7);
         rectangle.move(58,290);
+        //trojuholnik vrchny
+        rectangle = cdDraw.polygon('0,0 370,0 370,30').fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle.opacity(0.7);
+        rectangle.move(280,244);
         // trojuholnik
         rectangle = cdDraw.polygon('0,0 834,-25 834,0').fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
         rectangle.opacity(0.7);
         rectangle.move(58,265);
         //vrchny
-        rectangle = cdDraw.rect(290, 80).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle = cdDraw.rect(370, 120).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
         rectangle.opacity(0.7);
-        rectangle.move(320,123);
+        rectangle.move(280,123);
     }else if (ugs == "0" && uds == "5"){
         //spodny obdlznik
         rectangle = cdDraw.rect(834, 50).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
@@ -738,6 +743,10 @@ function animacia1(){
         rectangle = cdDraw.rect(834, 50).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
         rectangle.opacity(0.7);
         rectangle.move(58,290);
+        //trojuholnik vrchny
+        rectangle = cdDraw.polygon('0,0 320,0 290,75').fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle.opacity(0.7);
+        rectangle.move(305,222);
         // trojuholnik
         rectangle = cdDraw.polygon('0,0 834,-100 834,0').fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
         rectangle.opacity(0.7);
@@ -751,27 +760,35 @@ function animacia1(){
         rectangle = cdDraw.rect(834, 50).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
         rectangle.opacity(0.7);
         rectangle.move(58,290);
+        //trojuholnik vrchny
+        rectangle = cdDraw.polygon('0,0 345,0 320,60').fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle.opacity(0.7);
+        rectangle.move(295,234);
         // trojuholnik
         rectangle = cdDraw.polygon('0,0 834,-100 834,0').fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
         rectangle.opacity(0.7);
         rectangle.move(58,190);
         //vrchny
-        rectangle = cdDraw.rect(290, 80).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle = cdDraw.rect(345, 110).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
         rectangle.opacity(0.7);
-        rectangle.move(320,123);
+        rectangle.move(295,123);
     }else if (ugs == "Ut" && uds == "5"){
         //spodny obdlznik
         rectangle = cdDraw.rect(834, 50).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
         rectangle.opacity(0.7);
         rectangle.move(58,290);
+        //trojuholnik vrchny
+        rectangle = cdDraw.polygon('0,0 370,0 300,60').fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle.opacity(0.7);
+        rectangle.move(280,244);
         // trojuholnik
         rectangle = cdDraw.polygon('0,0 834,-100 834,0').fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
         rectangle.opacity(0.7);
         rectangle.move(58,190);
         //vrchny
-        rectangle = cdDraw.rect(290, 80).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle = cdDraw.rect(370, 120).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
         rectangle.opacity(0.7);
-        rectangle.move(320,123);
+        rectangle.move(280,123);
     }else if (ugs == "0" && uds == "Udsat"){
         //spodny obdlznik
         rectangle = cdDraw.rect(834, 50).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
@@ -811,6 +828,10 @@ function animacia1(){
         rectangle = cdDraw.rect(834, 50).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
         rectangle.opacity(0.7);
         rectangle.move(58,290);
+        //trojuholnik vrchny
+        rectangle = cdDraw.polygon('0,0 320,0 320,35').fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle.opacity(0.7);
+        rectangle.move(305,222);
         // trojuholnik
         rectangle = cdDraw.polygon('0,0 834,-50 834,0').fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
         rectangle.opacity(0.7);
@@ -824,27 +845,35 @@ function animacia1(){
         rectangle = cdDraw.rect(834, 50).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
         rectangle.opacity(0.7);
         rectangle.move(58,290);
+        //trojuholnik vrchny
+        rectangle = cdDraw.polygon('0,0 345,0 345,30').fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle.opacity(0.7);
+        rectangle.move(295,234);
         // trojuholnik
         rectangle = cdDraw.polygon('0,0 834,-50 834,0').fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
         rectangle.opacity(0.7);
         rectangle.move(58,240);
         //vrchny
-        rectangle = cdDraw.rect(290, 80).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle = cdDraw.rect(345, 110).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
         rectangle.opacity(0.7);
-        rectangle.move(320,123);
+        rectangle.move(295,123);
     }else if (ugs == "Ut" && uds == "Udsat"){
         //spodny obdlznik
         rectangle = cdDraw.rect(834, 50).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
         rectangle.opacity(0.7);
         rectangle.move(58,290);
+        //trojuholnik vrchny
+        rectangle = cdDraw.polygon('0,0 370,0 370,45').fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle.opacity(0.7);
+        rectangle.move(280,244);
         // trojuholnik
         rectangle = cdDraw.polygon('0,0 834,-50 834,0').fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
         rectangle.opacity(0.7);
         rectangle.move(58,240);
         //vrchny
-        rectangle = cdDraw.rect(290, 80).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle = cdDraw.rect(370, 120).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
         rectangle.opacity(0.7);
-        rectangle.move(320,123);
+        rectangle.move(280,123);
     }
 
     //n+ lavy aj pravy
