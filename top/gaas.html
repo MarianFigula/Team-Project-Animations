@@ -135,15 +135,15 @@
 -->
 <div class="div">
     <header>
-        <h1>Arzenid gália (GaAs)</h1>
+        <h1 data-i18n="title_15">Arzenid gália (GaAs)</h1>
     </header>
     <div class="tab">
-        <button id="default" class="themes" onclick="openTheme(event, '1')">Základné informácie</button>
-        <button class="themes" onclick="openTheme(event, '2')">3D Štruktúra</button>
-        <button class="themes" onclick="openTheme(event, '3')">Zaujímavosti</button>
+        <button id="default" class="themes" onclick="openTheme(event, '1')" data-i18n="sub_menu_1">Základné informácie</button>
+        <button class="themes" onclick="openTheme(event, '2')" data-i18n="sub_menu_2">3D Štruktúra</button>
+        <button class="themes" onclick="openTheme(event, '3')" data-i18n="sub_menu_3">Zaujímavosti</button>
     </div>
     <div id="1" class="content">
-        <h3>Základné informácie o GaAs</h3>
+        <h3 data-i18n="title_16">Základné informácie o GaAs</h3>
         <div class="container">
             <div class="leftDiv">
                 <img src="obrazky/gallium.jpg" alt="gallium" height="250">
@@ -153,39 +153,39 @@
                 <br><table id="tableInf">
                     <tbody>
                     <tr>
-                        <td>Atómové číslo</td>
+                        <td data-i18n="table_row_item_5">Atómové číslo</td>
                         <td>31 (Ga) / 33 (As)</td>
                     </tr>
                     <tr>
-                        <td>Elektronický obal</td>
+                        <td data-i18n="table_row_item_6">Elektronický obal</td>
                         <td>3d<sup>10</sup> 4s<sup>2</sup> 4p<sup>1</sup></td>
                     </tr>
                     <tr>
-                        <td>Hmotnosť</td>
+                        <td data-i18n="table_row_item_15">Hmotnosť</td>
                         <td>144.64 g.mol<sup>-1</sup></td>
                     </tr>
                     <tr>
-                        <td>Kryštalografická štruktúra</td>
+                        <td data-i18n="table_row_item_16">Kryštalografická štruktúra</td>
                         <td>Zinc blende</td>
                     </tr>
                     <tr>
-                        <td>Hustota</td>
+                        <td data-i18n="table_row_item_9">Hustota</td>
                         <td>5,3176 g.cm<sup>-3</sup></td>
                     </tr>
                     <tr>
-                        <td>Bod topenia</td>
+                        <td data-i18n="table_row_item_9">Bod topenia</td>
                         <td>1238 °C (1511 K)</td>
                     </tr>
                     <tr>
-                        <td>Bod varu</td>
+                        <td data-i18n="table_row_item_10">Bod varu</td>
                         <td> - °C ( - K)</td>
                     </tr>
                     <tr>
-                        <td>Tepelná vodivosť</td>
+                        <td data-i18n="table_row_item_11">Tepelná vodivosť</td>
                         <td>56 W·m<sup>−1</sup>·K<sup>−1</sup></td>
                     </tr>
                     <tr>
-                        <td>Šírka zakázaného pásma</td>
+                        <td data-i18n="table_row_item_12">Šírka zakázaného pásma</td>
                         <td>1,441 eV </td>
                     </tr>
                     </tbody>
@@ -198,83 +198,83 @@
                 <br><span class="source">Zdroj: <a href="http://www.crystal-material.com/Single-Crystal-Materials/450pxGallium-arsenide-GaAS-single-crystal.html">crystal-material.com</a></span>
             </div>
             <div class="rightDiv">
-                <p>&emsp;Arzenid gália je zmes prvkov gália a arzénu. Používa sa pri výrobe zariadení, ako sú mikrovlnné frekvenčné
+                <p data-i18n="paragraph_8">&emsp;Arzenid gália je zmes prvkov gália a arzénu. Používa sa pri výrobe zariadení, ako sú mikrovlnné frekvenčné
                     integrované obvody, infračervené svetelné diódy, laserové diódy, solárne články a optické okná.
-                </p><p>&emsp;Niektoré elektronické vlastnosti arzenidu gália sú <b>lepšie ako vlastnosti kremíka</b>. Má vyššiu rýchlosť
+                </p><p data-i18n="paragraph_9">&emsp;Niektoré elektronické vlastnosti arzenidu gália sú <b>lepšie ako vlastnosti kremíka</b>. Má vyššiu rýchlosť
                     nasýtenia elektrónov a vyššiu pohyblivosť elektrónov, čo umožňuje fungovanie tranzistorov arzenidu
                     gália pri frekvenciách vyšších ako 250 GHz. Zariadenia GaAs sú vzhľadom na svoju širšiu medzeru v
                     energetickom pásme relatívne necitlivé na teplotu. Tieto vynikajúce vlastnosti sú presvedčivými
                     dôvodmi na použitie obvodov GaAs v mobilných telefónoch a satelitoch.</p>
-                    <p>&emsp;Ďalšou výhodou GaAs je to, že má priamu medzeru v páse, čo znamená, že <b>sa dá použiť na
+                    <p data-i18n="paragraph_10">&emsp;Ďalšou výhodou GaAs je to, že má priamu medzeru v páse, čo znamená, že <b>sa dá použiť na
                     efektívnu absorpciu a vyžarovanie svetla</b>. Kremík má nepriamu medzeru v pásme, a preto je relatívne
                     slabý pri vyžarovaní svetla. GaAs má aj svoje nevýhody, napr. je drahý, preto sa používa kremík, ktorý je lacnejší.</p>
             </div>
         </div>
     </div>
     <div id="2" class="content">
-        <h3>Štruktúra GaAs</h3>
+        <h3 data-i18n="title_14">Štruktúra GaAs</h3>
         <div class="container">
             <div class="leftDiv">
                 <p class="drawWin">
                     <canvas id="canvas_structure" width="500" height="500"></canvas><br>
-                    <button id="rotateX" onclick="RotateStructure('x')">Otáčanie podľa osi X</button>
-                    <button id="rotateY" onclick="RotateStructure('y')">Otáčanie podľa osi Y</button>
-                    <button id="rotateZ" onclick="RotateStructure('z')">Otáčanie podľa osi Z</button>
+                    <button id="rotateX" onclick="RotateStructure('x')" data-i18n="rotateX">Otáčanie podľa osi X</button>
+                    <button id="rotateY" onclick="RotateStructure('y')" data-i18n="rotateY">Otáčanie podľa osi Y</button>
+                    <button id="rotateZ" onclick="RotateStructure('z')" data-i18n="rotateZ">Otáčanie podľa osi Z</button>
                 </p>
             </div>
             <div class="rightDiv"><br>
                 <details open>
-                    <summary>Legenda</summary>
-                    <img class="vysvetlivky" src="obrazky/canvas_items/gallium_atom.png" alt="galium"><p class="legenda_items"> – Atóm gália</p><br>
-                    <img class="vysvetlivky" src="obrazky/canvas_items/arsenic_atom.png" alt="arzen"><p class="legenda_items"> – Atóm arzénu</p><br>
-                    <img class="vysvetlivky" src="obrazky/canvas_items/vazba_hneda.png" alt="vazba"><p class="legenda_items"> – Väzba medzi atómami</p><br>
-                    <img class="vysvetlivky" src="obrazky/canvas_items/vazba_biela.png" alt="bunka"><p class="legenda_items"> – Väzba na znázornenie elementárnej bunky</p><br>
+                    <summary data-i18n="title_9">Legenda</summary>
+                    <img class="vysvetlivky" src="obrazky/canvas_items/gallium_atom.png" alt="galium"><p class="legenda_items" data-i18n="legenda_items_5"> – Atóm gália</p><br>
+                    <img class="vysvetlivky" src="obrazky/canvas_items/arsenic_atom.png" alt="arzen"><p class="legenda_items" data-i18n="legenda_items_6"> – Atóm arzénu</p><br>
+                    <img class="vysvetlivky" src="obrazky/canvas_items/vazba_hneda.png" alt="vazba"><p class="legenda_items" data-i18n="legenda_items_2"> – Väzba medzi atómami</p><br>
+                    <img class="vysvetlivky" src="obrazky/canvas_items/vazba_biela.png" alt="bunka"><p class="legenda_items" data-i18n="legenda_items_3"> – Väzba na znázornenie elementárnej bunky</p><br>
                 </details><br>
                 <details>
-                    <summary>Návod na použitie</summary>
-                    <p>&#11119; &#11118; Držaním a následným hýbaním kurzoru sa štruktúra otáča</p>
-                    <p><img src="https://freesvg.org/img/zoomicons.png" alt="zoom" width="40">Kolieskom na myši a taktiež pohybom dvomi prstami na touchpade sa dá zoomovať/unzoomovat</p>
+                    <summary data-i18n="title_10">Návod na použitie</summary>
+                    <p data-i18n="manual_item_1">&#11119; &#11118; Držaním a následným hýbaním kurzoru sa štruktúra otáča</p>
+                    <p data-i18n="manual_item_2"><img src="https://freesvg.org/img/zoomicons.png" alt="zoom" width="40">Kolieskom na myši a taktiež pohybom dvomi prstami na touchpade sa dá zoomovať/unzoomovat</p>
                 </details><br>
                 <div class="note">
-                    <h4>Poznámka</h4>
-                    <p>Atómy gália a arzénu majú skoro rovnakú veľkosť, keďže ich protónové číslo a hmotnosť je skoro rovnaká.</p>
+                    <h4 data-i18n="title_18">Poznámka</h4>
+                    <p data-i18n="paragraph_11">Atómy gália a arzénu majú skoro rovnakú veľkosť, keďže ich protónové číslo a hmotnosť je skoro rovnaká.</p>
                 </div>
             </div>
         </div>
         <hr class="hr_structure">
         <div class="container" style="clear: both;">
             <div class="leftDiv" style="text-align: left; margin: 0;">
-                <p>
+                <p data-i18n="paragraph_12">
                     <b>Kryštalografia</b> definuje rôzne optické a elektrické vlastnosti materiálov a ich možné využitie pre elektronické prvky.<br>
                     Štruktúra kryštalického GaAs je trojrozmerné periodické zoskupenie atómov. Je dôležitá,
                     lebo má:
                 </p>
-                <ul><li>nižšiu absorpciu svetla,</li><li>vyššiu vodivosť </li><li>a menej defektov</li></ul>
+                <ul><li data-i18n="list_item_1">nižšiu absorpciu svetla,</li><li data-i18n="list_item_3">vyššiu vodivosť </li><li data-i18n="list_item_4">a menej defektov</li></ul>
             </div>
             <div class="rightDiv">
-                <p>
+                <p data-i18n="paragraph_13">
                     Diamantovú mriežku <b>tvorí množstvo elementárnych buniek</b>, čo je najmenšia časť priestorovej mriežky, obsahuje
                     najmenší možný počet uzlových atómov.
                     Pod pojmom elementárny stavebný blok myslíme objekt, ktorý je jednoduchý a bez štruktúry - ktorý sa
                     už neskladá z ničoho menšieho, len zo seba samého.
                 </p>
-                <img src="obrazky/el_bunka.png" alt="elementarna bunka" height="250"><p class="legenda_items">1 - Jedna bunka<br>2 - Elementárna bunka</p>
+                <img src="obrazky/el_bunka.png" alt="elementarna bunka" height="250"><p class="legenda_items" data-i18n="paragraph_7">1 - Jedna bunka<br>2 - Elementárna bunka</p>
             </div>
         </div>
     </div>
     <div id="3" class="content">
         <ul>
-            <li>Má veľkú rýchlosť nasýtenia elektrónov a vyššiu pohyblivosť elektrónov.</li>
-            <li>Jedným z prvých GaAs mikroprocesorov bol vyvinutý v skorých 1980.</li>
-            <li>Niektoré procesory GaAs boli implementované predajcami superpočítačov.</li>
-            <li>Prvé známe využitie solárnych článkov GaAs vo vesmíre bolo pre misiu Venera 3, ktorá sa začala v roku 1965.</li>
-            <li>Solárne články GaAs boli vybrané kvôli ich vyššiemu výkonu v prostredí s vysokou teplotou.</li>
-            <li>Zariadenia založené na GaAs držia svetový rekord pre najúčinnejšie jednokrižové solárne články na 29,1% (od roku 2019).</li>
-            <li>Diódy GaAs sa môžu použiť na detekciu röntgenových lúčov.</li>
-            <li>Takmer všetko gálium sa využíva na výrobu arzenidu galitého.</li>
-            <li>Arzenid galitý má fascinujúcu schopnosť premieňať elektrinu priamo na svetlo.</li>
-            <li>GaAs novej generácie podporuje rýchlosť signálu, ktorá je potrebná na implementáciu 5G.</li>
-            <li>Každá elektronika obsahuje malé množstvo arzénu - preto je potrebné každú elektroniku recyklovať!</li>
+            <li data-i18n="inter_facts_8">Má veľkú rýchlosť nasýtenia elektrónov a vyššiu pohyblivosť elektrónov.</li>
+            <li data-i18n="inter_facts_9">Jedným z prvých GaAs mikroprocesorov bol vyvinutý v skorých 1980.</li>
+            <li data-i18n="inter_facts_10">Niektoré procesory GaAs boli implementované predajcami superpočítačov.</li>
+            <li data-i18n="inter_facts_11">Prvé známe využitie solárnych článkov GaAs vo vesmíre bolo pre misiu Venera 3, ktorá sa začala v roku 1965.</li>
+            <li data-i18n="inter_facts_12">Solárne články GaAs boli vybrané kvôli ich vyššiemu výkonu v prostredí s vysokou teplotou.</li>
+            <li data-i18n="inter_facts_13">Zariadenia založené na GaAs držia svetový rekord pre najúčinnejšie jednokrižové solárne články na 29,1% (od roku 2019).</li>
+            <li data-i18n="inter_facts_14">Diódy GaAs sa môžu použiť na detekciu röntgenových lúčov.</li>
+            <li data-i18n="inter_facts_15">Takmer všetko gálium sa využíva na výrobu arzenidu galitého.</li>
+            <li data-i18n="inter_facts_16">Arzenid galitý má fascinujúcu schopnosť premieňať elektrinu priamo na svetlo.</li>
+            <li data-i18n="inter_facts_17">GaAs novej generácie podporuje rýchlosť signálu, ktorá je potrebná na implementáciu 5G.</li>
+            <li data-i18n="inter_facts_18">Každá elektronika obsahuje malé množstvo arzénu - preto je potrebné každú elektroniku recyklovať!</li>
         </ul><br>
         <span class="source">&emsp;Zdroje: <a href="https://vedanadosah.cvtisr.sk/kremik-uz-nestaci-zlozita-elektronika-si-ziada-vhodnejsie-materialy">vedanadosah.cvtisr.sk</a>,
         <a href="https://www.sciencedirect.com/topics/materials-science/gallium-arsenide">sciencedirect.com</a>,
