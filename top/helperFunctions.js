@@ -71,7 +71,6 @@ function sorting(n, type) {
 }
 
 
-// Define the changeLanguage function
 function changeLanguage() {
     // Fetch the translations from the JSON file
     fetch('translations.json')
@@ -79,6 +78,9 @@ function changeLanguage() {
         .then(data => {
             // Get the selected language from the select element
             const selectedLanguage = document.getElementById('languageSelect').value;
+
+            // Store the selected language in localStorage
+            localStorage.setItem('selectedLanguage', selectedLanguage);
 
             // Fetch the translation object for the selected language
             const translation = data[selectedLanguage];
@@ -96,3 +98,19 @@ function changeLanguage() {
         })
         .catch(error => console.error('Error fetching translations:', error));
 }
+
+// Function to set the language on page load
+function setLanguageOnLoad() {
+    // Retrieve the selected language from localStorage
+    const selectedLanguage = localStorage.getItem('selectedLanguage');
+
+    // Set the selected language in the dropdown
+    if (selectedLanguage) {
+        document.getElementById('languageSelect').value = selectedLanguage;
+    }
+
+    changeLanguage();
+}
+
+// Call setLanguageOnLoad when the page loads
+window.addEventListener('load', setLanguageOnLoad);
