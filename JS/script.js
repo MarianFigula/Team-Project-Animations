@@ -1,6 +1,10 @@
 SVG.on(document, 'DOMContentLoaded', function() {
 let gDraw = SVG().addTo('#graph').size(1000, 450)
 let cdDraw = SVG().addTo('#circuit-diagram').size(1100, 450)
+
+var ugs = "0";
+var uds = "0";
+
 //schema
 function schema1(){
     // prva ciara z lava 130 + 20
@@ -530,6 +534,7 @@ function graphP(){
         size: '15'
     })
 }
+
 function animacia1(){
     // Prvky obvodu
     // sedy navrchu
@@ -569,9 +574,88 @@ function animacia1(){
     rectangle = cdDraw.rect(830, 100).fill("#FFB9B9").stroke({ color: '#FF0000', width: 5 });
     rectangle.move(60,320);
     //zeleny obdl
-    rectangle = cdDraw.rect(832, 100).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
-    rectangle.opacity(0.7);
-    rectangle.move(60,270);
+    if (ugs == "0" && uds == "0"){
+        rectangle = cdDraw.rect(832, 100).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle.opacity(0.7);
+        rectangle.move(60,270);
+    }else if (ugs == "-1" && uds == "0"){
+        rectangle = cdDraw.rect(832, 100).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle.opacity(0.7);
+        rectangle.move(60,300);
+    } else if (ugs == "-2.2" && uds == "0"){
+        rectangle = cdDraw.rect(832, 100).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle.opacity(0.7);
+        rectangle.move(60,300);
+    }else if (ugs == "-3" && uds == "0"){
+        rectangle = cdDraw.rect(832, 100).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle.opacity(0.7);
+        rectangle.move(60,300);
+    }else if (ugs == "Ut" && uds == "0"){
+        rectangle = cdDraw.rect(832, 100).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle.opacity(0.7);
+        rectangle.move(60,300);
+    }else if (ugs == "0" && uds == "0.5"){
+        rectangle = cdDraw.rect(832, 100).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle.opacity(0.7);
+        rectangle.move(60,300);
+    }else if (ugs == "-1" && uds == "0.5"){
+        rectangle = cdDraw.rect(832, 100).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle.opacity(0.7);
+        rectangle.move(60,300);
+    }else if (ugs == "-2.2" && uds == "0.5"){
+        rectangle = cdDraw.rect(832, 100).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle.opacity(0.7);
+        rectangle.move(60,300);
+    }else if (ugs == "-3" && uds == "0.5"){
+        rectangle = cdDraw.rect(832, 100).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle.opacity(0.7);
+        rectangle.move(60,300);
+    }else if (ugs == "Ut" && uds == "0.5"){
+        rectangle = cdDraw.rect(832, 100).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle.opacity(0.7);
+        rectangle.move(60,300);
+    }else if (ugs == "0" && uds == "5"){
+        rectangle = cdDraw.rect(832, 100).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle.opacity(0.7);
+        rectangle.move(60,300);
+    }else if (ugs == "-1" && uds == "5"){
+        rectangle = cdDraw.rect(832, 100).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle.opacity(0.7);
+        rectangle.move(60,300);
+    }else if (ugs == "-2.2" && uds == "5"){
+        rectangle = cdDraw.rect(832, 100).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle.opacity(0.7);
+        rectangle.move(60,300);
+    }else if (ugs == "-3" && uds == "5"){
+        rectangle = cdDraw.rect(832, 100).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle.opacity(0.7);
+        rectangle.move(60,300);
+    }else if (ugs == "Ut" && uds == "5"){
+        rectangle = cdDraw.rect(832, 100).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle.opacity(0.7);
+        rectangle.move(60,300);
+    }else if (ugs == "0" && uds == "Udsat"){
+        rectangle = cdDraw.rect(832, 100).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle.opacity(0.7);
+        rectangle.move(60,300);
+    }else if (ugs == "-1" && uds == "Udsat"){
+        rectangle = cdDraw.rect(832, 100).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle.opacity(0.7);
+        rectangle.move(60,300);
+    }else if (ugs == "-2.2" && uds == "Udsat"){
+        rectangle = cdDraw.rect(832, 100).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle.opacity(0.7);
+        rectangle.move(60,300);
+    }else if (ugs == "-3" && uds == "Udsat"){
+        rectangle = cdDraw.rect(832, 100).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle.opacity(0.7);
+        rectangle.move(60,300);
+    }else if (ugs == "Ut" && uds == "Udsat"){
+        rectangle = cdDraw.rect(832, 100).fill("#89ee9f").stroke({ color: '#89ee9f', width: 1 });
+        rectangle.opacity(0.7);
+        rectangle.move(60,300);
+    }
+
     //n+ lavy aj pravy
     rectangle = cdDraw.rect(90, 65).fill("#AFE1FF").stroke({ color: '#0000FF', width: 0 });
     rectangle.move(90,123);
@@ -665,6 +749,7 @@ function animacia1(){
         weight: 'bold'
     });
 }
+
 function animacia2(){
     // Prvky obvodu
     // sedy navrchu
@@ -880,6 +965,7 @@ redCircle.fill("#FE8585")
 redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(117,347)
 
 
+
 let animationsElektron = []
 let animationsProton = []
 document.getElementById('kanal').addEventListener('change', function() {
@@ -899,23 +985,26 @@ document.getElementById('kanal').addEventListener('change', function() {
     }
 });
 document.getElementById('Ugs').addEventListener('change', function() {
-    let uds = document.getElementById('Uds')
-    if(this.value == "0"){
-        value = false;
-    }
-    else if(document.getElementById('kanal').value == "n"){
-        if(!value){
-            value = true;
-            elektronN01()
-        }
-
-    }
-    else if(document.getElementById('kanal').value == "p"){
-        if(!value){
-            value = true;
-            protonP01()
-        }
-    }
+    ugs = this.value;
+    console.log(ugs);
+    animacia1();
+    // let uds = document.getElementById('Uds')
+    // if(this.value == "0"){
+    //     value = false;
+    // }
+    // else if(document.getElementById('kanal').value == "n"){
+    //     if(!value){
+    //         value = true;
+    //         elektronN01()
+    //     }
+    //
+    // }
+    // else if(document.getElementById('kanal').value == "p"){
+    //     if(!value){
+    //         value = true;
+    //         protonP01()
+    //     }
+    // }
     // if(document.getElementById('kanal').value == "n" && this.value == "0"){
     //
     // }
@@ -928,22 +1017,22 @@ document.getElementById('Ugs').addEventListener('change', function() {
 });
 
 document.getElementById('Uds').addEventListener('change', function() {
-    if(this.value == "0"){
-        value = false;
-    }
-    else if(document.getElementById('kanal').value == "n"){
-        if(!value){
-            value = true;
-            elektronN01()
-        }
-
-    }
-    else if(document.getElementById('kanal').value == "p"){
-        if(!value){
-            value = true;
-            protonP01()
-        }
-    }
+    uds = this.value;
+    console.log(uds);
+    animacia1();
+    // else if(document.getElementById('kanal').value == "n"){
+    //     if(!value){
+    //         value = true;
+    //         elektronN01()
+    //     }
+    //
+    // }
+    // else if(document.getElementById('kanal').value == "p"){
+    //     if(!value){
+    //         value = true;
+    //         protonP01()
+    //     }
+    // }
     // if(document.getElementById('kanal').value == "p" && this.value == "0"){
     // }
 });
