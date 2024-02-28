@@ -1406,7 +1406,8 @@ function animacia2(){
 
 
 
-
+//TODO: vela elektronov seka, trema vymazat nejako niekolko nak ich neni moc sak vis jak
+    //TODO: zrychlovat- mensi duration, vacsi pocet- mensi timeout
 
 async function elektronN01() {
     let group = cdDraw.group();
