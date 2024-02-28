@@ -10,6 +10,14 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="mobile.css">
 </head>
+<style>
+    .carousel-inner img {
+        height: 300px; /* Set a fixed height for all images */
+        width: auto; /* Maintain aspect ratio */
+        margin: auto; /* Center the images horizontally */
+        display: block; /* Remove any default inline spacing */
+    }
+</style>
 <body>
 <header>
     <div class="collapse bg-dark" id="navbarToggleExternalContent">
@@ -47,7 +55,7 @@
     <div class="navbar navbar-dark bg-dark shadow-sm">
         <div class="container-fluid">
             <a class="navbar-brand text-white" href="index.html">
-                <img width="20%" height="20%" src="obrazky/STU-FEI-ancv_nn.png">|  Základné informácie
+                <img width="20%" height="20%" src="obrazky/STU-FEI-ancv_nn.png">|  Organické polovodiče
             </a>
             <div class="d-flex align-items-center">
                 <select id="languageSelect" class="form-select ml-2" onchange="changeLanguage()">
@@ -64,11 +72,33 @@
 <section class="mt-4 mb-2 container bg-white">
     <div class="row">
         <div class="col-lg-10 col-md-10 mx-auto">
-            <h1 data-i18n="title_2">Čo sú to polovodiče?</h1>
+            <h1 data-i18n="title_2">Čo sú to organické polovodiče?</h1>
             <ul>
-                <li data-i18n="first_list_1">Objav polovodičov je považovaný za významný objav s veľkým využitím v súčasnosti.</li>
-                <li data-i18n="first_list_2">Polovodiče majú mnohé vlastnosti, ktoré ich robia dôležitými v rôznych oblastiach, vrátane <b>elektroniky, elektrotechniky, zobrazovacej techniky, solárnych článkov a atómových batérií.</b></li>
-                <li data-i18n="first_list_3">Pre pochopenie využitia polovodičov je dôležné mať základné poznatky o ich <b>elektrónovej štruktúre</b>.</li>
+                <li data-i18n="first_list_1">Organické polovodiče sú založené na uhlíkových štruktúrach, vďaka čomu majú jedinečné elektrické, optické a mechanické vlastnosti oproti anorganickým polovodičom ako je kremík.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-10 col-md-10 mx-auto">
+            <h2 class="fw-light" data-i18n="title_4">Výrobná flexibilita</h2>
+            <ul>
+                <li data-i18n="fourth_list_1">Umožňujú výrobu elektronických súčiastok a obvodov tlačou z roztoku, čo vedie k nižším nákladom a jednoduchšiemu výrobnému procesu.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-10 col-md-10 mx-auto">
+            <h2 class="fw-light" data-i18n="title_4">Flexibilita a pružnosť</h2>
+            <ul>
+                <li data-i18n="fourth_list_1">Možnosť aplikácie na flexibilné alebo pružné substráty otvára cestu k novým typom elektroniky, ako sú ohybné displeje a nositeľná elektronika.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-10 col-md-10 mx-auto">
+            <h2 class="fw-light" data-i18n="title_4">Syntetická prispôsobivosť</h2>
+            <ul>
+                <li data-i18n="fourth_list_1">Chemickou modifikáciou možno dosiahnuť špecifické vlastnosti, ako sú vodivosť, mobilita náboja a emisné vlastnosti, pre rôzne aplikácie od tranzistorov po OLED displeje.</li>
             </ul>
         </div>
     </div>
@@ -80,16 +110,16 @@
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="obrazky\fotovoltaika.jpg" class="d-block mx-50" alt="photocell">
+                <div class="carousel-item text-center">
+                    <h5 data-i18n="carousel_item_2">OLED</h5>
+                    <img src="obrazky\OLED-UEF.jpg" class="d-block mx-auto" alt="oled">
+                </div>
+                <div class="carousel-item active text-center">
+                    <img src="obrazky\_DSC0437.JPG" class="d-block mx-auto" alt="photocell">
                     <h5 data-i18n="carousel_item_1">Solárne články</h5>
                 </div>
-                <div class="carousel-item">
-                    <img src="obrazky\dioda.jpg" class="d-block mx-50" alt="integrated circuit">
-                    <h5 data-i18n="carousel_item_2">Diódy</h5>
-                </div>
-                <div class="carousel-item">
-                    <img src="obrazky\laser.png" class="d-block mx-50" alt="laser">
+                <div class="carousel-item text-center">
+                    <img src="obrazky\XR5_7013.jpg" class="d-block mx-auto" alt="laser">
                     <h5 data-i18n="carousel_item_3">Lasery</h5>
                 </div>
             </div>
@@ -104,56 +134,51 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-10 col-md-10 mx-auto mt-2">
+        <div class="col-lg-10 col-md-10 mx-auto">
+            <h2 class="fw-light" data-i18n="title_4">Výskum a vývoj na FEI STU</h2>
             <ul>
-                <li data-i18n="second_list_1">Polovodiče sú materiály, ktoré sa <b>nachádzajú medzi vodičmi a nevodičmi z hľadiska elektrickej vodivosti.</b></li>
-                <li data-i18n="second_list_2">Ich elektrická vodivosť sa mení v závislosti na teplote, osvetlení, usporiadaní kryštalickej mriežky a prítomnosti prímesí.</li>
-                <li data-i18n="second_list_3">Polovodiče majú <b>valenčné elektróny</b>, ktoré môžu prejsť do vodivostného pásma a pohybovať sa voľne, ak dostanú energiu, ktorá presahuje energetickú medzeru medzi týmito pásmami.</li>
-                <li data-i18n="second_list_4">Šírka tejto medzery určuje elektrickú vodivosť látky, pričom u vodičov je táto medzera nulová, zatiaľ čo u nevodičov je veľká.</li>
-                <li data-i18n="second_list_5">Polovodiče majú schopnosť <b>viesť veľké prúdy</b> a majú <b>nízky odpor pri vyšších teplotách.</b></li>
+                <li data-i18n="fourth_list_1">Sústreďuje sa na zlepšenie stability a výkonnosti organických polovodičov, kľúčových aspektov pre ich komerčné využitie.</li>
             </ul>
         </div>
     </div>
     <div class="row">
         <div class="col-lg-10 col-md-10 mx-auto">
-            <h1 class="fw-light" data-i18n="title_3">História polovodičov</h1>
+            <h2 class="fw-light" data-i18n="title_4">Stabilita a životnosť</h2>
             <ul>
-                <li data-i18n="third_list_1">Niektoré z významných vlastností polovodičov boli známe už pomerne dávno.</li>
-                <li data-i18n="third_list_2">Fotoelektrické vlastnosti selénu sa vyšetrovali už v 60. rokoch 19. storočia.</li>
-                <li data-i18n="third_list_3">Koncom 19. a začiatkom 20. storočia sa vyšetrujú vlastnosti polárnych polovodičov a usmerňovacie účinky niektorých oxidov.</li>
-                <li data-i18n="third_list_4">Z Cu2O sa r. 1926 vyhotovil prvý technický upotrebiteľný usmerňovač.</li>
-                <li data-i18n="third_list_5">Z toho istého polovodiča sa r. 1932 vyrobil aj fotočlánok.</li>
-                <li data-i18n="third_list_6">Napriek týmto sporadickým úspechom sa vlastné dejiny polovodičov začínajú fakticky až v polovici 20. storočia.</li>
-                <li data-i18n="third_list_7">Prvým predpokladom praktického upotrebenia polovodičových materiálov, najmä chemických jedincov, je takmer dokonalá čistota.</li>
-                <li data-i18n="third_list_8">Obrovský rozvoj v technickej aplikácii polovodičov nastal od r. 1948.</li>
-                <li data-i18n="third_list_9">Prvý tranzistor, aktívna polovodičová súčiastka prevažne s tromi elektródami, bola vyrobený v tomto období. Tranzistor slúži na spracovanie signálov, napríklad na generovanie a zosilnenie elektrických signálov, premenu neelektrických signálov na elektrické a pod.</li>
+                <li data-i18n="fourth_list_1">Napriek tendencii k menšej stabilite v porovnaní s anorganickými polovodičmi, pokroky v materiálovom výskume a vývoji ochranných vrstiev zvyšujú odolnosť a životnosť organických súčiastok.</li>
             </ul>
         </div>
     </div>
     <div class="row">
         <div class="col-lg-10 col-md-10 mx-auto">
-            <h1 class="fw-light" data-i18n="title_4">Aké látky patria k polovodičom?</h1>
+            <h2 class="fw-light" data-i18n="title_4">Rozmanitosť aplikácií</h2>
             <ul>
-                <li data-i18n="fourth_list_1">Odpoveď na túto otázku sa komplikovala tým viac, čím viac sa polovodiče preskúmali.</li>
-                <li data-i18n="fourth_list_2">Na začiatku polovodičovej éry stačilo povedať, že polovodič je materiál s elektrickou vodivosťou medzi kovom a izolantom.</li>
-                <li data-i18n="fourth_list_3">Neskôr, keď sa zistila vzájomná súvislosť vlastností polovodiča s periodickosťou (t.j. kryštalickosťou) látky, z ktorej vyplynul tzv. model pásmového spektra elektrónov, bolo možné definovať polovodič presnejšie.</li>
-                <li data-i18n="fourth_list_4">Typické polovodiče tvorené jedným prvkom (elementárne polovodiče) sú zo IV. skupiny periodickej tabuľky prvkov: Kremík, Germánium, Uhlík a Selén.</li>
-                <li data-i18n="fourth_list_5">Keď sa spoja atómy, kde majú elektróny rôzne potenciálové hladiny, v zlúčenine alebo zliatine (tuhej zmesi), môžu vzniknúť efekty, ktoré pri jednoduchých polovodičoch nie sú možné. Podstatné však je, aby bola zachovaná dokonalá kryštalická mriežka.</li>
-                <li data-i18n="fourth_list_6">Podľa počtu prvkov v kompozitnom polovodiči hovoríme o binárnych (2), ternárnych (3) a kvaternárnych (4) kompozitoch. V nasledujúcej tabuľke uvádzame iba niektoré z najvýznamnejších.</li>
+                <li data-i18n="fourth_list_1">Od tranzistorov, solárnych článkov a senzorov po OLED displeje, organické polovodiče umožňujú široké spektrum použitia.</li>
             </ul>
         </div>
     </div>
     <div class="row">
         <div class="col-lg-10 col-md-10 mx-auto">
-            <p class="lead">
-                <i18n vanilla-i18n="application.paragraph.body">
-                    <span class="source"><b>Zdroje:  </b><a href="https://referaty.aktuality.sk/polovodice/referat-30979">referáty.aktuality.sk</a>,
-        <a href="http://www.matnet.sav.sk/index.php?ID=400">matnet.sav.sk</a>,
-        <a href="http://uef.fei.stuba.sk/elearn/mod/glossary/print.php?id=6&mode=cat&hook=12&sortkey=&sortorder=asc&offset=-10">uef.fei.stuba.sk</a>,
-        <a href="http://web.tuke.sk/fei-kte/slovak/subjects/ZIM/Kapitola%2009%20-%20Polovodice.pdf">web.tuke.sk</a>,
-        <a href="https://sk.wikipedia.org/wiki/Polovodi%C4%8D">sk.wikipedia.org</a></span>
-                </i18n>
-            </p>
+            <h2 class="fw-light" data-i18n="title_4">Ekologický potenciál</h2>
+            <ul>
+                <li data-i18n="fourth_list_1">Ponúkajú ekologické výhody vďaka možnosti využitia obnoviteľných zdrojov a sníženiu závislosti na vzácnych materiáloch.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-10 col-md-10 mx-auto">
+            <h2 class="fw-light" data-i18n="title_4">Prínos pre vedeckú komunitu</h2>
+            <ul>
+                <li data-i18n="fourth_list_1">Rozvoj organických polovodičov vedie k lepšiemu pochopeniu základných vedeckých princípov a otvára nové možnosti výskumu v oblasti organických materiálov.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-10 col-md-10 mx-auto">
+            <h2 class="fw-light" data-i18n="title_4">Budúcnosť organických polovodičov</h2>
+            <ul>
+                <li data-i18n="fourth_list_1">Sľubujú revolúciu v oblasti elektroniky a nové technologické možnosti, od flexibilnej elektroniky po inovatívne senzorické systémy.</li>
+            </ul>
         </div>
     </div>
 </section>
