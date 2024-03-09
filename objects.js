@@ -16,6 +16,11 @@ function Dot(x, y, type) {
     this.type = type;
     this.radius = 15;
 }
+function Line(x,type) {
+    this.x = x;
+    this.y = cH;
+    this.type = type;
+}
 
 // ak typ == 0, tak je to donor
 // ak typ == 1, tak je to akceptor
@@ -27,6 +32,40 @@ function Orbital(x, y, type)
     this.height = 35;
     this.width = 35;
 }
+
+Line.prototype.draw = function (ctx) {
+    ctx.beginPath();
+    ctx.setLineDash([]);
+    ctx.lineWidth = 3;
+
+    if (this.type === 0) {
+        // Draw red line for type 0
+        ctx.strokeStyle = 'red';
+        ctx.moveTo(20, 0);
+        ctx.lineTo(20, cH);
+
+        // Draw minus sign
+        ctx.fillStyle = '#ff0000';
+        ctx.font = '40px Arial';
+        ctx.fillText('-', 23, 23);
+    } else if (this.type === 1) {
+        // Draw blue line for type 1
+        ctx.strokeStyle = 'blue';
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = '#0000ff';
+        ctx.moveTo(297, 0);
+        ctx.lineTo(297, cH);
+
+        // Draw plus sign
+        ctx.font = '40px Arial';
+        ctx.fillStyle = '#0000ff';
+        ctx.fillText('+', 273, 23);
+    }
+
+    ctx.stroke();
+    ctx.closePath();
+};
+
 
 //pasma su rovnake pre vsetky canvasy
 Band.prototype.draw = function (ctx) {
@@ -109,6 +148,24 @@ Dot.prototype.transportation = function () {
     if (this.y != dis) {
         this.y--;
         this.travel++;
+    }
+};
+//pohyb dolava a doprava
+Dot.prototype.transportation_right_left = function () {
+    var dis = 0;
+    if (this.type == 0) {
+        dis = cW - 5;
+        if (this.x != dis) {
+            this.x++;
+        }else
+            this.x = this.x + 50;
+    }
+    if (this.type == 1) {
+        dis = 25;
+        if (this.x != dis) {
+            this.x--;
+        }else
+        this.x = this.x - 50;
     }
 };
 
