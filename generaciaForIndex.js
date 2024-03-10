@@ -31,11 +31,11 @@ function draw_moving(ctx) {
 }
 
 //generovanie na onClick (generovanie)
-function move() {
+async function move() {
     var ctx = document.getElementById('canvas1').getContext('2d');
     var cW = ctx.canvas.width, cH = ctx.canvas.height;
-    document.getElementById("animateBack1").disabled = true;
-    document.getElementById("animate1").disabled = true;
+    //document.getElementById("animateBack1").disabled = true;
+    //document.getElementById("animate1").disabled = true;
     var pos = 0;
     var count = cH - 40;
     var id = setInterval(frame, 6);
@@ -43,7 +43,7 @@ function move() {
     function frame() {
         if (pos == count) {
             clearInterval(id);
-            document.getElementById("animateBack1").disabled = false;
+            //document.getElementById("animateBack1").disabled = false;
         } else {
             pos++;
             ctx.clearRect(0, 0, innerWidth, innerHeight);
@@ -54,16 +54,16 @@ function move() {
             hole2.transportation();
         }
     }
-
-
+    // Simulate asynchronous behavior with setTimeout
+    await new Promise(resolve => setTimeout(resolve, 3000));
 }
 
 //rekombinacia na onClick (rekombinacia)
-function moveBack() {
+async function moveBack() {
     var ctx = document.getElementById('canvas1').getContext('2d');
     var cW = ctx.canvas.width, cH = ctx.canvas.height;
-    document.getElementById("animateBack1").disabled = true;
-    document.getElementById("animate1").disabled = true;
+    //document.getElementById("animateBack1").disabled = true;
+    //document.getElementById("animate1").disabled = true;
     var pos = 0;
     var count = cH - 40 + 1;
     var id = setInterval(frame, 6);
@@ -72,7 +72,7 @@ function moveBack() {
         if (pos == count) {
             clearInterval(id);
             draw(ctx);
-            document.getElementById("animate1").disabled = false;
+            //document.getElementById("animate1").disabled = false;
         } else {
             pos++;
             ctx.clearRect(0, 0, innerWidth, innerHeight);
@@ -81,5 +81,16 @@ function moveBack() {
             electron2.transportationBack();
         }
     }
-
+    // Simulate asynchronous behavior with setTimeout
+    await new Promise(resolve => setTimeout(resolve, 3000));
 }
+
+async function runLoop() {
+    while (true) {
+        await move();
+        await moveBack();
+    }
+}
+
+// Start the loop
+runLoop();
