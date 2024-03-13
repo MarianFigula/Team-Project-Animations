@@ -93,7 +93,10 @@
         </div>
         <hr>
         <div id="div_canvas2">
-            <h3 data-i18n="subtitle_2">Prímesový polovodič</h3>
+            <div class="title-container">
+                <h3 data-i18n="subtitle_2">Prímesový polovodič</h3>
+                <span class="info-icon" title="More information"></span>
+            </div>
             <h4 data-i18n="semiconductor_type_1">Donor</h4>
             <canvas id="canvas2" width="300" height="300"></canvas><br>
             <button id="animate2" onclick="move2()" data-i18n="button_1">Generovanie</button>
@@ -112,7 +115,23 @@
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <p>Additional information about intrinsic and extrinsic semiconductors goes here...</p>
+                <h6>Vlastná vodivosť polovodičov</h6>
+                <p>Rozlišujeme dva spôsoby vedenia elektrického prúdu v polovodičoch. Vlastná vodivosť je spôsobená samotným prvkom, ktorý tvorí polovodič.</p>
+                <p>Typickým príkladom je kremík, ktorý neobsahuje žiadne prímesi. Za bežných podmienok kremík neobsahuje žiadne voľné častice s nábojom, chová sa teda ako izolant. Avšak dodaním energie sa niektoré elektróny môžu uvoľniť a vytvoria voľné elektróny a diery. </p>
+                <p>Elektrický prúd v polovodičoch je sprostredkovaný pohybom voľných elektrónov a dier. Generácia páru elektrón-diera môže byť spôsobená zahriatím alebo vplyvom elektromagnetického žiarenia.</p>
+                <div class="image-container">
+                    <img src="semiconductor.png" alt="Image description">
+                </div>
+            </div>
+        </div>
+        <div id="myModal2" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h6>Prímesová vodivosť polovodičov</h6>
+                <p>Dôležitejšia v praxi je prímesová vodivosť polovodičov. Prímesové polovodiče vznikajú nahradením atómov kremíka atómami s viacerými alebo menej valenčnými elektrónmi.</p>
+                <p>N-type polovodiče vznikajú, keď sa kremík nahradí atómami arzénu, čím sa vytvoria voľné elektróny. </p>
+                <p>P-type polovodiče vznikajú, keď sa kremík nahradí atómami india, čo vytvorí diery v mriežke.</p>
+                <p>V oboch prípadoch sa generujú páry elektrón-diera, no s rastúcou teplotou sa rozdiely vodivosti medzi prímesovými a vlastnými polovodičmi zmenšujú.</p>
             </div>
         </div>
     </div>
