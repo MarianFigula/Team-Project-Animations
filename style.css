@@ -338,3 +338,7 @@ hr.hr_structure {
     background-color: #111;
     border-radius: 50px;
 }
+
+#languageSelect {
+    margin: 2px 8px;
+}
