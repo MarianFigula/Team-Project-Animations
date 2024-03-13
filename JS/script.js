@@ -1404,42 +1404,46 @@ function animacia2(){
     });
 }
 
+    async function elektronN01() {
+        let group = cdDraw.group();
+        let obj1 = group.circle(20)
+        obj1.fill('white')
+        obj1.stroke({color: '#0000FF', width: 3, linecap: 'round'});
+        let line1 = group.line(5, 10, 15, 10).stroke({color: '#000', width: 2});
+        group.move(120, 125);
+        let path1 = cdDraw.path('M 120 125 Q 470 350, 800 125').fill('none');
 
+        const length = path1.length();
+        group.animate({
+            duration: 6000,
+            // delay: i * 400,
+            when: "relative",
 
-//TODO: vela elektronov seka, trema vymazat nejako niekolko nak ich neni moc sak vis jak
-    //TODO: zrychlovat- mensi duration, vacsi pocet- mensi timeout
+        }).during(function (pos) {
+            const eased_pos = SVG.easing['-'](pos);
+            const p = path1.pointAt(eased_pos * length * 1.68);
+            group.center(p.x, p.y);
+        }).after(function() {
+            // Remove the electron group when animation is complete
+            group.remove();
+            console.log("PRINT AFTER")
+        })
 
-async function elektronN01() {
-    let group = cdDraw.group();
-    let obj1 = group.circle(20)
-    obj1.fill('white')
-    obj1.stroke({color: '#0000FF', width: 3, linecap: 'round'});
-    let line1 = group.line(5, 10, 15, 10).stroke({color: '#000', width: 2});
-    group.move(120, 125);
-    let path1 = cdDraw.path('M 120 125 Q 470 350, 800 125').fill('none');
-    const length = path1.length();
-    let anim1 = group.animate({
-        duration: 6000,
-        // delay: i * 400,
-        when: "relative",
-    }).during(function (pos) {
-        const eased_pos = SVG.easing['-'](pos);
-        const p = path1.pointAt(eased_pos * length * 1.68);
-        group.center(p.x, p.y);
-    })//.loop();
-    animationsElektron.push(anim1);
-    setTimeout(function () {
-        console.log("a")
-        console.log(value)
-        if (value) {
-            elektronN01()
-        }
+        //console.log(anim1)
 
-    }, 400);
+        setTimeout(function () {
+            //console.log("a")
+            //console.log(value)
+            if (value) {
+                elektronN01()
+                //group.remove()
+                //anim1.remove()
+            }
 
-}
+        }, 400);
+    }
 
-let value = false
+    let value = false
 
 
 function protonP01(){
@@ -1448,12 +1452,10 @@ function protonP01(){
     let obj1 = group.circle(20)
     obj1.fill('white')
     obj1.stroke({color: '#FF0000', width: 3, linecap: 'round'});
-    let line1 = group.line(5, 10, 15, 10).stroke({ color: '#000', width: 2 });
-    let line2 = group.line(10, 5, 10, 15).stroke({ color: '#000', width: 2 });
     let path1 = cdDraw.path('M 120 125 Q 470 350, 800 125').fill('none');
     group.move(120, 125);
     const length = path1.length();
-    const anim1 = group.animate({
+    group.animate({
         duration: 6000,
         // delay: i * 400,
         when: "relative",
@@ -1461,9 +1463,12 @@ function protonP01(){
         const eased_pos = SVG.easing['-'](pos);
         const p = path1.pointAt(eased_pos * length * 1.68);
         group.center(p.x,p.y);
-    })//.loop();
+    }).after(function() {
+        // Remove the electron group when animation is complete
+        group.remove();
+        console.log("PRINT AFTER")
+    })
 
-    animationsProton.push(anim1)
     setTimeout(function () {
         console.log("a")
         console.log(value)
@@ -1485,8 +1490,6 @@ redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(117,347)
 
 var selectValue = "n";
 
-let animationsElektron = []
-let animationsProton = []
 document.getElementById('kanal').addEventListener('change', function() {
     if(this.value == "n"){
         selectValue = "n";
@@ -1560,21 +1563,21 @@ document.getElementById('Uds').addEventListener('change', function() {
         default:
             break
     }
-    // else if(document.getElementById('kanal').value == "n"){
-    //     if(!value){
-    //         value = true;
-    //         elektronN01()
-    //     }
-    //
-    // }
-    // else if(document.getElementById('kanal').value == "p"){
-    //     if(!value){
-    //         value = true;
-    //         protonP01()
-    //     }
-    // }
-    // if(document.getElementById('kanal').value == "p" && this.value == "0"){
-    // }
+    if(document.getElementById('kanal').value == "n"){
+        if(!value){
+            value = true;
+            elektronN01()
+        }
+
+    }
+    else if(document.getElementById('kanal').value == "p"){
+        if(!value){
+            value = true;
+            protonP01()
+        }
+    }
+    if(document.getElementById('kanal').value == "p" && this.value == "0"){
+    }
 });
 
 document.querySelector('.form-check-input').addEventListener('change', function() {
