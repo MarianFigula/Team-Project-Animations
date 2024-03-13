@@ -82,7 +82,10 @@
     </div><br>
     <div id="animations">
         <div id="div_canvas1">
-            <h3 data-i18n="subtitle_1">Intrizický polovodič</h3>
+            <div class="title-container">
+                <h3 data-i18n="subtitle_1">Intrizický (vlastný) polovodič</h3>
+                <span class="info-icon" title="More information"></span>
+            </div>
             <h4 style="visibility: hidden">-</h4>
             <canvas id="canvas1" width="300" height="300"></canvas><br>
             <button id="animate1" onclick="move()" data-i18n="button_1">Generovanie</button>
@@ -105,6 +108,13 @@
             <button id="animateBack3" onclick="moveBack3()" data-i18n="button_2" disabled>Rekombinácia</button>
         </div>
         <hr>
+        <!-- Modal -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Additional information about intrinsic and extrinsic semiconductors goes here...</p>
+            </div>
+        </div>
     </div>
     <div class="container" style="padding: 30px;">
         <div class="leftDiv" style="text-align: left">
@@ -145,6 +155,7 @@
 <script src="generaciaDonor.js"></script>
 <script src="generaciaAkceptor.js"></script>
 <script src="helperFunctions.js"></script>
+<script src="infoModal.js"></script>
 <script>
 </script>
 </body>
