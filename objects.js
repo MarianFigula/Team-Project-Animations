@@ -39,26 +39,26 @@ Line.prototype.draw = function (ctx) {
     ctx.lineWidth = 3;
 
     if (this.type === 0) {
-        // Draw red line for type 0
-        ctx.strokeStyle = 'red';
+        // Draw blue line for type 0
+        ctx.strokeStyle = 'blue';
         ctx.moveTo(20, 0);
         ctx.lineTo(20, cH);
 
         // Draw minus sign
-        ctx.fillStyle = '#ff0000';
+        ctx.fillStyle = '#0000ff';
         ctx.font = '40px Arial';
         ctx.fillText('-', 23, 23);
     } else if (this.type === 1) {
-        // Draw blue line for type 1
-        ctx.strokeStyle = 'blue';
+        // Draw red line for type 1
+        ctx.strokeStyle = 'red';
         ctx.lineWidth = 3;
-        ctx.strokeStyle = '#0000ff';
+        ctx.strokeStyle = '#ff0000';
         ctx.moveTo(297, 0);
         ctx.lineTo(297, cH);
 
         // Draw plus sign
         ctx.font = '40px Arial';
-        ctx.fillStyle = '#0000ff';
+        ctx.fillStyle = '#ff0000';
         ctx.fillText('+', 273, 23);
     }
 
