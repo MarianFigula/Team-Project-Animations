@@ -15,6 +15,10 @@ function Dot(x, y, type) {
     this.travel = 0;
     this.type = type;
     this.radius = 15;
+
+    this.getY = function() {
+        return this._y;
+    };
 }
 function Line(x,type) {
     this.x = x;
