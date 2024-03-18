@@ -71,13 +71,14 @@ function move2() {
         if (pos == count) {
             clearInterval(id);
             document.getElementById("animateBack2").disabled = false;
-        } else {
+        } else{
             pos++;
             ctx.clearRect(0, 0, innerWidth, innerHeight);
             draw_while_moving2(ctx);
             electron3.transportation();
             electron10.transportation();
-            if(pos2 > count2 ){
+            if(pos2 < 48){
+                pos2++;
                 electron5.transportation();
                 electron4.transportation();
 
