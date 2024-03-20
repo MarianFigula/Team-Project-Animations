@@ -1405,6 +1405,13 @@ SVG.on(document, 'DOMContentLoaded', function () {
             weight: 'bold'
         });
     }
+    function easeInSine(pos) {
+        return 1 - Math.cos(pos * Math.PI / 2);
+    }
+
+    function easeOutCubic(pos) {
+        return 1 - Math.pow(1 - pos, 3);
+    }
 
     var timeoutIDn
 
@@ -1438,110 +1445,122 @@ SVG.on(document, 'DOMContentLoaded', function () {
             clearTimeout(timeoutIDn)
         } else if (ugs == "0" && uds == "0.5") {
             timeout = 1000
-            duration = 7000
+            duration = 4000
             value = true
             clearTimeout(timeoutIDn)
         } else if (ugs == "-1" && uds == "0.5") {
             timeout = 1000
-            duration = 7000
+            duration = 4000
             value = true
             clearTimeout(timeoutIDn)
         } else if (ugs == "-2.2" && uds == "0.5") {
             timeout = 1000
-            duration = 7000
+            duration = 4000
             value = true
             clearTimeout(timeoutIDn)
         } else if (ugs == "-3" && uds == "0.5") {
             timeout = 1000
-            duration = 7000
+            duration = 4000
             value = true
             clearTimeout(timeoutIDn)
         } else if (ugs == "Ut" && uds == "0.5") {
             timeout = 1000
-            duration = 7000
+            duration = 4000
             value = true
             clearTimeout(timeoutIDn)
         } else if (ugs == "0" && uds == "5") {
             timeout = 600
-            duration = 4000
+            duration = 2000
             value = true
             clearTimeout(timeoutIDn)
         } else if (ugs == "-1" && uds == "5") {
             timeout = 600
-            duration = 4000
+            duration = 2000
             value = true
             clearTimeout(timeoutIDn)
         } else if (ugs == "-2.2" && uds == "5") {
             timeout = 600
-            duration = 4000
+            duration = 2000
             value = true
             clearTimeout(timeoutIDn)
         } else if (ugs == "-3" && uds == "5") {
             timeout = 600
-            duration = 4000
+            duration = 2000
             value = true
             clearTimeout(timeoutIDn)
         } else if (ugs == "Ut" && uds == "5") {
             timeout = 600
-            duration = 4000
+            duration = 2000
             value = true
             clearTimeout(timeoutIDn)
         } else if (ugs == "0" && uds == "Udsat") {
             timeout = 600
-            duration = 4000
+            duration = 2000
             value = true
             clearTimeout(timeoutIDn)
         } else if (ugs == "-1" && uds == "Udsat") {
             timeout = 600
-            duration = 4000
+            duration = 2000
             value = true
             clearTimeout(timeoutIDn)
         } else if (ugs == "-2.2" && uds == "Udsat") {
             timeout = 600
-            duration = 4000
+            duration = 2000
             value = true
             clearTimeout(timeoutIDn)
         } else if (ugs == "-3" && uds == "Udsat") {
             timeout = 600
-            duration = 4000
+            duration = 2000
             value = true
             clearTimeout(timeoutIDn)
         } else if (ugs == "Ut" && uds == "Udsat") {
             timeout = 600
-            duration = 4000
+            duration = 2000
             value = true
             clearTimeout(timeoutIDn)
         }
         let group = cdDraw.group();
-        let obj1 = group.circle(20)
-        obj1.fill('white')
-        obj1.stroke({color: '#0000FF', width: 3, linecap: 'round'});
-        group.line(5, 10, 15, 10).stroke({color: '#000', width: 2});
+        let obj1 = group.circle(20);
+        obj1.fill('white');
+        obj1.stroke({ color: '#0000FF', width: 3, linecap: 'round' });
+        group.line(5, 10, 15, 10).stroke({ color: '#000', width: 2 });
         group.move(120, 125);
-        let path1 = cdDraw.path('M 120 125 Q 470 350, 800 125').fill('none');
 
-        const length = path1.length();
+        let path1Data = 'M -300 125 Q 300 650, 657.5 200';
+        let path2Data = 'M 657.5 200 Q 725 200, 815 125';
+
+        let path1 = cdDraw.path(path1Data).fill('none');
+        let path2 = cdDraw.path(path2Data).fill('none');
+
+        const length1 = path1.length();
+        const length2 = path2.length();
+
         group.animate({
             duration: duration,
-            // delay: i * 400,
-            when: "relative",
-
+            when: "relative"
         }).during(function (pos) {
-            const eased_pos = SVG.easing['-'](pos);
-            const p = path1.pointAt(eased_pos * length * 1.68);
-            group.center(p.x, p.y);
+            // Apply different easing functions for path1 and path2 animation speed control
+            const eased_pos1 = easeInSine(pos);  // Faster easing (experiment for desired speed)
+            const eased_pos2 = easeOutCubic(pos); // Slower easing (experiment for desired speed)
 
+            const p1 = path1.pointAt(eased_pos1 * length1);
+            const p2 = path2.pointAt(eased_pos2 * length2);
+            const x = (p1.x + p2.x) / 2;
+            const y = (p1.y + p2.y) / 2;
+            group.center(x, y);
         }).after(function () {
             group.remove();
-            console.log("PRINT AFTER")
-        })
-
+            console.log("PRINT AFTER");
+        });
 
         timeoutIDn = setTimeout(function () {
             if (value) {
-                elektronN01()
+                elektronN01();
             }
         }, timeout);
+
+
+
 
     }
 
