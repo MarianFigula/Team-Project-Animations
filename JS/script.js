@@ -1679,7 +1679,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
         group.line(10, 5, 10, 15).stroke({color: '#000', width: 2});
         group.move(120, 125);
         let path1 = cdDraw.path('M 120 125 Q 470 350, 800 125').fill('none');
-
+        //TODO: cim vacsie UDS tak ich castejsie spawnovat, pri zaskrteni ich zrychlovat dokonca
         const length = path1.length();
         group.animate({
             duration: duration,
