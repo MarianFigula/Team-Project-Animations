@@ -5,10 +5,10 @@ let band1 = new Band(0, cH - 80, 0);
 let band2 = new Band(0, 0, 1);
 
 // vytvorenie objektov podla ich konstruktorov, ktore sa budu hybat
-let electron1 = new Dot(80, 20, 0);
-let electron2 = new Dot(130, 20, 0);
-let hole1 = new Dot(80, 20, 1);
-let hole2 = new Dot(130, 20, 1);
+let electron1 = new Dot(80, 60, 0);
+let electron2 = new Dot(130, 60, 0);
+let hole1 = new Dot(80, 60, 1);
+let hole2 = new Dot(130, 60, 1);
 
 //vykreslenie objektov na canvas
 function draw(ctx) {
@@ -37,7 +37,7 @@ async function move() {
     //document.getElementById("animateBack1").disabled = true;
     //document.getElementById("animate1").disabled = true;
     var pos = 0;
-    var count = cH - 40;
+    var count = cH - 120;
     var id = setInterval(frame, 6);
 
     function frame() {
@@ -50,8 +50,8 @@ async function move() {
             draw_moving(ctx);
             electron1.transportation();
             electron2.transportation();
-            hole1.transportation();
-            hole2.transportation();
+            //hole1.transportation();
+            //hole2.transportation();
         }
     }
     // Simulate asynchronous behavior with setTimeout

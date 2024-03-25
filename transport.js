@@ -5,10 +5,10 @@ let band1 = new Band(0, cH - 80, 0);
 let band2 = new Band(0, 0, 1);
 
 // vytvorenie objektov podla ich konstruktorov, ktore sa budu hybat
-let electron1 = new Dot(80, cH - 20, 0);
-let electron2 = new Dot(130, cH - 20, 0);
-let hole1 = new Dot(80, 20, 1);
-let hole2 = new Dot(130, 20, 1);
+let electron1 = new Dot(80, cH - 60, 0);
+let electron2 = new Dot(130, cH - 60, 0);
+let hole1 = new Dot(80, 60, 1);
+let hole2 = new Dot(130, 60, 1);
 let line1 = new Line(0,0)
 let line2 = new Line(0,1)
 
