@@ -224,7 +224,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
             size: '12'
         })
         text = gDraw.text(function (add) {
-            add.tspan('= -0,5V')
+            add.tspan('= -1V')
         }).move(400, 175).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '15'
@@ -243,7 +243,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
             size: '12'
         })
         text = gDraw.text(function (add) {
-            add.tspan('= -1V')
+            add.tspan('= -3V')
         }).move(370, 275).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '12'
@@ -1766,13 +1766,95 @@ SVG.on(document, 'DOMContentLoaded', function () {
 
     }
 
+    var redCircle
+    function dotN(){
+        if (redCircle) {
+            redCircle.remove();
+        }
+
+        if (ugs == "0" && uds == "0") {
+            redCircle = gDraw.circle(7)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(116, 346)
+        } else if (ugs == "-1" && uds == "0") {
+            redCircle = gDraw.circle(7)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(116, 346)
+        } else if (ugs == "-2.2" && uds == "0") {
+            redCircle = gDraw.circle(7)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(116, 346)
+        } else if (ugs == "-3" && uds == "0") {
+            redCircle = gDraw.circle(7)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(116, 346)
+        } else if (ugs == "Ut" && uds == "0") {
+            redCircle = gDraw.circle(7)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(116, 346)
+        } else if (ugs == "0" && uds == "0.5") {
+            redCircle = gDraw.circle(7)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(140, 295)
+        } else if (ugs == "-1" && uds == "0.5") {
+            redCircle = gDraw.circle(7)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(140, 311)
+        } else if (ugs == "-2.2" && uds == "0.5") {
+
+        } else if (ugs == "-3" && uds == "0.5") {
+            redCircle = gDraw.circle(7)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(140, 333)
+        } else if (ugs == "Ut" && uds == "0.5") {
+            redCircle = gDraw.circle(7)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(140, 338)
+        } else if (ugs == "0" && uds == "5") {
+            redCircle = gDraw.circle(7)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(310, 98)
+        } else if (ugs == "-1" && uds == "5") {
+            redCircle = gDraw.circle(7)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(310, 191)
+        } else if (ugs == "-2.2" && uds == "5") {
+
+        } else if (ugs == "-3" && uds == "5") {
+            redCircle = gDraw.circle(7)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(310, 297)
+        } else if (ugs == "Ut" && uds == "5") {
+            redCircle = gDraw.circle(7)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(310, 332)
+        } else if (ugs == "0" && uds == "Udsat") {
+            redCircle = gDraw.circle(7)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(310, 99)
+        } else if (ugs == "-1" && uds == "Udsat") {
+            redCircle = gDraw.circle(7)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(252, 192)
+        } else if (ugs == "-2.2" && uds == "Udsat") {
+
+        } else if (ugs == "-3" && uds == "Udsat") {
+            redCircle = gDraw.circle(7)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(207, 300)
+        } else if (ugs == "Ut" && uds == "Udsat") {
+            redCircle = gDraw.circle(7)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(165, 332)
+        }
+    }
+
     schema1()
     graphN()
+    dotN()
     animacia1()
 
-    redCircle = gDraw.circle(7)
-    redCircle.fill("#FE8585")
-    redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(117, 347)
+
 
     var selectValue = "n";
 
@@ -1783,6 +1865,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
             cdDraw.clear()
             schema1()
             graphN()
+            dotN()
             animacia1()
             clearTimeout(timeoutIDp)
             clearTimeout(timeoutIDn)
@@ -1803,6 +1886,8 @@ SVG.on(document, 'DOMContentLoaded', function () {
         switch (selectValue) {
             case "n":
                 animacia1();
+                // redCircle.remove()
+                dotN()
                 if (uds == "0") {
                     value = false;
                 } else {
@@ -1830,6 +1915,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
         switch (selectValue) {
             case "n":
                 animacia1();
+                dotN()
                 if (uds == "0") {
                     value = false;
                 } else {
