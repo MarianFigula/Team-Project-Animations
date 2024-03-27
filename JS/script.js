@@ -1,6 +1,6 @@
 SVG.on(document, 'DOMContentLoaded', function () {
-    let gDraw = SVG().addTo('#graph').size('100%', '100%').viewbox(0, 0, 1000, 450);
-    let cdDraw = SVG().addTo('#circuit-diagram').size('100%', '100%').viewbox(0, 0, 1100, 450);
+    let gDraw = SVG().addTo('#graph').size('100%', '100%').viewbox(-100, 0, 1000, 450);
+    let cdDraw = SVG().addTo('#circuit-diagram').size('100%', '100%').viewbox(-50, 0, 1100, 450);
 
 
     var ugs = "0";

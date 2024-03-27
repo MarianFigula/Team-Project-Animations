@@ -36,15 +36,15 @@
         <div class="col mt-3 mb-4"><h2 class="text-center">Parametre pre tranzistor</h2></div>
     </div>
     <div class="row">
-        <div class="col">
-            <label for="kanal" class="text-center">N/P - kanál</label>
+        <div class="col-12 col-sm-4">
+            <label for="kanal" class="text-center pb-2">N/P - kanál</label>
             <select class="form-select" id="kanal">
                 <option value=n>n - kanál</option>
                 <option value=p>p - kanál</option>
             </select>
         </div>
-        <div class="col">
-            <label for="Ugs">UGS</label><select class="form-select" id="Ugs">
+        <div class="col-6 col-sm-4">
+            <label for="Ugs" class="text-center pb-2">UGS</label><select class="form-select" id="Ugs">
             <option value=0>0</option>
             <option value=-1>-1</option>
             <option value=-2.2>-2.2</option>
@@ -52,8 +52,8 @@
             <option value=Ut>Ut</option>
         </select>
         </div>
-        <div class="col">
-            <label for="Uds">UDS</label><select class="form-select" id="Uds">
+        <div class="col-6 col-sm-4">
+            <label for="Uds" class="text-center pb-2">UDS</label><select class="form-select" id="Uds">
             <option value=0>0</option>
             <option value=0.5>0.5</option>
             <option value=Udsat>Udsat</option>
@@ -62,16 +62,17 @@
         </div>
     </div>
     <div class="row mt-6">
-        <div class="col">
+        <div class="col mt-3">
             <label>
                 <input class="form-check-input" type="checkbox">
-            </label>Obvodová schéma
+                Obvodová schéma
+            </label>
         </div>
     </div>
-    <div class="row mt-5">
+    <div class="row mt-4">
         <div class="col"><div id="circuit-diagram" class="mb-5"></div></div>
     </div>
-    <div class="row mt-5">
+    <div class="row">
         <div class="col"><div id="graph"></div></div>
     </div>
 </div>
