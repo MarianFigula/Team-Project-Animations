@@ -1422,6 +1422,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
         let duration = 0
         let threshold = 0
         let pinchOf = false
+        let curve = 0
         if (ugs == "0" && uds == "0") {
             timeout = 0
             duration = 0
@@ -1448,25 +1449,29 @@ SVG.on(document, 'DOMContentLoaded', function () {
             value = false
             clearTimeout(timeoutIDn)
         } else if (ugs == "0" && uds == "0.5") {
-            timeout = 200
+            timeout = 1000
             duration = 4000
             value = true
             clearTimeout(timeoutIDn)
+            curve = 650
         } else if (ugs == "-1" && uds == "0.5") {
             timeout = 1000
             duration = 4000
             value = true
             clearTimeout(timeoutIDn)
+            curve = 670
         } else if (ugs == "-2.2" && uds == "0.5") {
             timeout = 1000
             duration = 4000
             value = true
             clearTimeout(timeoutIDn)
+            curve = 700
         } else if (ugs == "-3" && uds == "0.5") {
             timeout = 1000
             duration = 4000
             value = true
             clearTimeout(timeoutIDn)
+            curve = 730
         } else if (ugs == "Ut" && uds == "0.5") {
             timeout = 1000
             duration = 4000
@@ -1474,74 +1479,87 @@ SVG.on(document, 'DOMContentLoaded', function () {
             threshold = 0.75
             pinchOf = true
             clearTimeout(timeoutIDn)
+            curve = 760
         } else if (ugs == "0" && uds == "5") {
-            timeout = 600
+            timeout = 500
             duration = 4000
             value = true
-            threshold = 0.5
+            threshold = 0.55
             pinchOf = true
             clearTimeout(timeoutIDn)
+            curve = 630
         } else if (ugs == "-1" && uds == "5") {
-            timeout = 600
+            timeout = 500
             duration = 4000
             value = true
-            threshold = 0.4
+            threshold = 0.47
             pinchOf = true
             clearTimeout(timeoutIDn)
+            curve = 650
         } else if (ugs == "-2.2" && uds == "5") {
-            timeout = 600
+            timeout = 500
             duration = 4000
             value = true
-            threshold = 0.4
+            threshold = 0.43
             pinchOf = true
             clearTimeout(timeoutIDn)
+            curve = 700
         } else if (ugs == "-3" && uds == "5") {
-            timeout = 600
+            timeout = 500
             duration = 4000
             value = true
+            threshold = 0.40
+            pinchOf = true
             clearTimeout(timeoutIDn)
+            curve = 730
         } else if (ugs == "Ut" && uds == "5") {
-            timeout = 600
+            timeout = 500
             duration = 4000
             value = true
             threshold = 0.3
             pinchOf = true
             clearTimeout(timeoutIDn)
+            curve = 760
         } else if (ugs == "0" && uds == "Udsat") {
-            timeout = 600
+            timeout = 500
             duration = 4000
             value = true
-            threshold = 0.6
+            threshold = 0.67
             pinchOf = true
             clearTimeout(timeoutIDn)
+            curve = 680
         } else if (ugs == "-1" && uds == "Udsat") {
-            timeout = 600
-            duration = 4000
-            value = true
-            threshold = 0.6
-            pinchOf = true
-            clearTimeout(timeoutIDn)
-        } else if (ugs == "-2.2" && uds == "Udsat") {
-            timeout = 600
-            duration = 4000
-            value = true
-            threshold = 0.6
-            pinchOf = true
-            clearTimeout(timeoutIDn)
-        } else if (ugs == "-3" && uds == "Udsat") {
-            timeout = 600
+            timeout = 500
             duration = 4000
             value = true
             threshold = 0.65
             pinchOf = true
             clearTimeout(timeoutIDn)
+            curve = 690
+        } else if (ugs == "-2.2" && uds == "Udsat") {
+            timeout = 500
+            duration = 4000
+            value = true
+            threshold = 0.7
+            pinchOf = true
+            clearTimeout(timeoutIDn)
+            curve = 700
+        } else if (ugs == "-3" && uds == "Udsat") {
+            timeout = 500
+            duration = 4000
+            value = true
+            threshold = 0.65
+            pinchOf = true
+            clearTimeout(timeoutIDn)
+            curve = 730
         } else if (ugs == "Ut" && uds == "Udsat") {
-            timeout = 600
+            timeout = 500
             duration = 4000
             value = true
             threshold = 0.45
             pinchOf = true
             clearTimeout(timeoutIDn)
+            curve = 760
         }
         //TODO: upravit aj cestu pre specificke nastavenia
         let group = cdDraw.group();
@@ -1551,7 +1569,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
         group.line(5, 10, 15, 10).stroke({ color: '#000', width: 2 });
         group.move(120, 125);
 
-        let path1Data = 'M -300 125 Q 300 650, 657.5 200';
+        let path1Data = 'M -300 125 Q 250 '+ curve +', 657.5 200';
         let path2Data = 'M 657.5 200 Q 725 10, 850 125';
 
         let path1 = cdDraw.path(path1Data).fill('none');
