@@ -1416,9 +1416,12 @@ SVG.on(document, 'DOMContentLoaded', function () {
 
     var timeoutIDn
 
+
     async function elektronN01() {
         let timeout = 0
         let duration = 0
+        let threshold = 0
+        let pinchOf = false
         if (ugs == "0" && uds == "0") {
             timeout = 0
             duration = 0
@@ -1445,7 +1448,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
             value = false
             clearTimeout(timeoutIDn)
         } else if (ugs == "0" && uds == "0.5") {
-            timeout = 1000
+            timeout = 200
             duration = 4000
             value = true
             clearTimeout(timeoutIDn)
@@ -1468,58 +1471,79 @@ SVG.on(document, 'DOMContentLoaded', function () {
             timeout = 1000
             duration = 4000
             value = true
+            threshold = 0.75
+            pinchOf = true
             clearTimeout(timeoutIDn)
         } else if (ugs == "0" && uds == "5") {
             timeout = 600
-            duration = 2000
+            duration = 4000
             value = true
+            threshold = 0.5
+            pinchOf = true
             clearTimeout(timeoutIDn)
         } else if (ugs == "-1" && uds == "5") {
             timeout = 600
-            duration = 2000
+            duration = 4000
             value = true
+            threshold = 0.4
+            pinchOf = true
             clearTimeout(timeoutIDn)
         } else if (ugs == "-2.2" && uds == "5") {
             timeout = 600
-            duration = 2000
+            duration = 4000
             value = true
+            threshold = 0.4
+            pinchOf = true
             clearTimeout(timeoutIDn)
         } else if (ugs == "-3" && uds == "5") {
             timeout = 600
-            duration = 2000
+            duration = 4000
             value = true
             clearTimeout(timeoutIDn)
         } else if (ugs == "Ut" && uds == "5") {
             timeout = 600
-            duration = 2000
+            duration = 4000
             value = true
+            threshold = 0.3
+            pinchOf = true
             clearTimeout(timeoutIDn)
         } else if (ugs == "0" && uds == "Udsat") {
             timeout = 600
-            duration = 2000
+            duration = 4000
             value = true
+            threshold = 0.6
+            pinchOf = true
             clearTimeout(timeoutIDn)
         } else if (ugs == "-1" && uds == "Udsat") {
             timeout = 600
-            duration = 2000
+            duration = 4000
             value = true
+            threshold = 0.6
+            pinchOf = true
             clearTimeout(timeoutIDn)
         } else if (ugs == "-2.2" && uds == "Udsat") {
             timeout = 600
-            duration = 2000
+            duration = 4000
             value = true
+            threshold = 0.6
+            pinchOf = true
             clearTimeout(timeoutIDn)
         } else if (ugs == "-3" && uds == "Udsat") {
             timeout = 600
-            duration = 2000
+            duration = 4000
             value = true
+            threshold = 0.65
+            pinchOf = true
             clearTimeout(timeoutIDn)
         } else if (ugs == "Ut" && uds == "Udsat") {
             timeout = 600
-            duration = 2000
+            duration = 4000
             value = true
+            threshold = 0.45
+            pinchOf = true
             clearTimeout(timeoutIDn)
         }
+        //TODO: upravit aj cestu pre specificke nastavenia
         let group = cdDraw.group();
         let obj1 = group.circle(20);
         obj1.fill('white');
@@ -1528,7 +1552,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
         group.move(120, 125);
 
         let path1Data = 'M -300 125 Q 300 650, 657.5 200';
-        let path2Data = 'M 657.5 200 Q 725 200, 815 125';
+        let path2Data = 'M 657.5 200 Q 725 10, 850 125';
 
         let path1 = cdDraw.path(path1Data).fill('none');
         let path2 = cdDraw.path(path2Data).fill('none');
@@ -1540,9 +1564,26 @@ SVG.on(document, 'DOMContentLoaded', function () {
             duration: duration,
             when: "relative"
         }).during(function (pos) {
-            // Apply different easing functions for path1 and path2 animation speed control
-            const eased_pos1 = easeInSine(pos);  // Faster easing (experiment for desired speed)
-            const eased_pos2 = easeOutCubic(pos); // Slower easing (experiment for desired speed)
+
+            let eased_pos1 //= pos //easeInSine(pos);  // Faster easing (experiment for desired speed)
+            let eased_pos2 //= pos //easeOutCubic(pos); // Slower easing (experiment for desired speed)
+            eased_pos1 = pos;
+            eased_pos2 = pos;
+            if (pinchOf) {
+                if (pos < threshold) {
+                    // Animácia bez zrýchlenia
+                    eased_pos1 = pos;
+                    eased_pos2 = pos;
+                } else {
+                    // Animácia so zrýchlením
+                    const acceleration = (pos - threshold) * 10; // Vypočítajte zrýchlenie
+                    eased_pos1 = threshold + acceleration;
+                    eased_pos2 = threshold + acceleration;
+                }
+            }
+
+            //TODO: zvysit prud, zuzenie kanala -> mensi prud
+
 
             const p1 = path1.pointAt(eased_pos1 * length1);
             const p2 = path2.pointAt(eased_pos2 * length2);
