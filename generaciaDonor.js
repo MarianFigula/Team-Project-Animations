@@ -63,26 +63,34 @@ function move2() {
     document.getElementById("animate2").disabled = true;
     var pos = 0;
     var pos2 = 0;
-    var count = cH - 100;
-    var count2 = cH - 120;
-    var id = setInterval(frame, 6);
+    var count = cH - 52;
+    var count2 = count * 2;
+    var id = setInterval(frame, 20);
 
     function frame() {
-        if (pos == count) {
+        if (pos == count2) {
             clearInterval(id);
             document.getElementById("animateBack2").disabled = false;
         } else{
             pos++;
             ctx.clearRect(0, 0, innerWidth, innerHeight);
             draw_while_moving2(ctx);
-            electron3.transportation();
-            electron10.transportation();
-            if(pos2 < 48){
-                pos2++;
+            //if(pos2 > 47){
+            //    pos2++;
+            //    electron3.transportation();
+           // }
+            //electron3.transportation();
+            //electron10.transportation();
+            if(pos < 48){
                 electron5.transportation();
                 electron4.transportation();
 
+            }else if( pos < count){
+                electron3.transportation();
+            }else if(pos < count2 - 49 ){
+                electron10.transportation();
             }
+
 
             //hole3.transportation();
             //hole10.transportation();
