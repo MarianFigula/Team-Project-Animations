@@ -2,6 +2,24 @@ SVG.on(document, 'DOMContentLoaded', function () {
     let gDraw = SVG().addTo('#graph').size('100%', '100%').viewbox(-100, 0, 1000, 450);
     let cdDraw = SVG().addTo('#circuit-diagram').size('100%', '100%').viewbox(-50, 0, 1100, 450);
 
+    function drawText(){
+        let base = cdDraw.text('SiO').move(900, 80).font({
+            family: 'Arial',
+            size: '28',
+            weight: 'bold'
+        });
+        let exponent = cdDraw.text('2').move(948, 90).font({
+            family: 'Arial',
+            size: '24',
+            weight: 'bold'
+        });
+
+        base = cdDraw.text('Si').move(900, 170).font({
+            family: 'Arial',
+            size: '28',
+            weight: 'bold'
+        });
+    }
 
     var ugs = "0";
     var uds = "0";
@@ -955,22 +973,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
             size: '24',
             weight: 'bold'
         });
-        base = cdDraw.text('SiO').move(900, 80).font({
-            family: 'Arial',
-            size: '28',
-            weight: 'bold'
-        });
-        exponent = cdDraw.text('2').move(948, 90).font({
-            family: 'Arial',
-            size: '24',
-            weight: 'bold'
-        });
 
-        base = cdDraw.text('Si').move(900, 170).font({
-            family: 'Arial',
-            size: '28',
-            weight: 'bold'
-        });
     }
 
     function animacia2() {
@@ -1387,22 +1390,6 @@ SVG.on(document, 'DOMContentLoaded', function () {
         exponent = cdDraw.text('+').move(815, 380).font({
             family: 'Arial',
             size: '24',
-            weight: 'bold'
-        });
-        base = cdDraw.text('SiO').move(900, 80).font({
-            family: 'Arial',
-            size: '28',
-            weight: 'bold'
-        });
-        exponent = cdDraw.text('2').move(948, 90).font({
-            family: 'Arial',
-            size: '24',
-            weight: 'bold'
-        });
-
-        base = cdDraw.text('Si').move(900, 170).font({
-            family: 'Arial',
-            size: '28',
             weight: 'bold'
         });
     }
@@ -1849,6 +1836,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
         }
     }
 
+    drawText()
     schema1()
     graphN()
     dotN()
@@ -1863,6 +1851,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
             selectValue = "n";
             gDraw.clear()
             cdDraw.clear()
+            drawText()
             schema1()
             graphN()
             dotN()
@@ -1873,6 +1862,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
             selectValue = "p";
             gDraw.clear()
             cdDraw.clear()
+            drawText()
             schema1()
             graphP()
             animacia2()
