@@ -480,7 +480,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
             size: '12'
         })
         text = gDraw.text(function (add) {
-            add.tspan('= 1V')
+            add.tspan('= -1V')
         }).move(360, 197).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '15'
@@ -499,7 +499,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
             size: '12'
         })
         text = gDraw.text(function (add) {
-            add.tspan('= 2,2V')
+            add.tspan('= -2,2V')
         }).move(360, 150).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '15'
@@ -518,7 +518,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
             size: '12'
         })
         text = gDraw.text(function (add) {
-            add.tspan('= 3V')
+            add.tspan('= -3V')
         }).move(360, 75).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '15'
