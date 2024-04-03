@@ -49,22 +49,28 @@ SVG.on(document, 'DOMContentLoaded', function () {
         line = cdDraw.line(20, 40, 20, 440)
         line.stroke({color: '#000', width: 3, linecap: 'round'})
 
-        line = cdDraw.line(20, 440, 1000, 440)
+        line = cdDraw.line(20, 440, 920, 440)
         line.stroke({color: '#000', width: 3, linecap: 'round'})
 
-        line = cdDraw.line(1000, 440, 1000, 300)
+        line = cdDraw.line(920, 440, 920, 320)
         line.stroke({color: '#000', width: 3, linecap: 'round'})
 
-        line = cdDraw.line(1000, 300, 1050, 300)
+        line = cdDraw.line(920, 300, 930, 300)
         line.stroke({color: '#000', width: 3, linecap: 'round'})
 
-        line = cdDraw.line(1000, 250, 1050, 250)
+        line = cdDraw.line(920, 320, 930, 320)
         line.stroke({color: '#000', width: 3, linecap: 'round'})
 
-        line = cdDraw.line(1000, 250, 1000, 40)
+        line = cdDraw.line(970, 205, 970, 40)
         line.stroke({color: '#000', width: 3, linecap: 'round'})
 
-        line = cdDraw.line(950, 40, 1000, 40)
+        line = cdDraw.line(970, 205, 920, 205)
+        line.stroke({color: '#000', width: 3, linecap: 'round'})
+
+        line = cdDraw.line(920, 300, 920, 205)
+        line.stroke({color: '#000', width: 3, linecap: 'round'})
+
+        line = cdDraw.line(950, 40, 970, 40)
         line.stroke({color: '#000', width: 3, linecap: 'round'})
 
         let rect = cdDraw.rect(80, 30)
@@ -981,6 +987,10 @@ SVG.on(document, 'DOMContentLoaded', function () {
         // p+
         rectangle = cdDraw.rect(250, 65).fill("#FFB9B9").stroke({color: '#FE8585', width: 0});
         rectangle.move(340, 123);
+
+        rectangle = cdDraw.rect(30, 30).fill("#000000").stroke({color: '#000000', width: 0});
+        rectangle.move(1000, 100);
+
         base = cdDraw.text('p').move(450, 130).font({
             family: 'Arial',
             size: '28',
