@@ -65,7 +65,7 @@ function move2() {
     var pos2 = 0;
     var count = cH - 52;
     var count2 = count * 2;
-    var id = setInterval(frame, 20);
+    var id = setInterval(frame, 15);
 
     function frame() {
         if (pos == count2) {

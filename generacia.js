@@ -38,18 +38,23 @@ function move() {
     document.getElementById("animate1").disabled = true;
     var pos = 0;
     var count = cH - 120;
-    var id = setInterval(frame, 6);
+    var count4 = count * 2;
+    var id = setInterval(frame, 15);
 
     function frame() {
-        if (pos == count) {
+        if (pos == count4) {
             clearInterval(id);
             document.getElementById("animateBack1").disabled = false;
         } else {
             pos++;
             ctx.clearRect(0, 0, innerWidth, innerHeight);
             draw_moving(ctx);
-            electron1.transportation();
-            electron2.transportation();
+            if (pos < count ){
+                electron1.transportation();
+            }else if(pos < count + 179){
+                electron2.transportation();
+            }
+            //electron2.transportation();
             //hole1.transportation();
             //hole2.transportation();
         }

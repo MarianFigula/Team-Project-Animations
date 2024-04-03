@@ -82,28 +82,38 @@ function move3() {
     document.getElementById("animateBack3").disabled = true;
     document.getElementById("animate3").disabled = true;
     var pos = 0;
-    var count = cH - 100;
-    var id = setInterval(frame, 6);
+    var count = cH - 52;
+    var count3 = count * 2;
+    var id = setInterval(frame, 15);
 
     function frame() {
-        if (pos == count) {
+        if (pos == count3) {
             clearInterval(id);
             document.getElementById("animateBack3").disabled = false;
         } else {
             pos++;
             ctx.clearRect(0, 0, innerWidth, innerHeight);
-            if(pos < 65)
+            draw_while_moving3(ctx);
+            if(pos < 45)
             {
-                draw_while_moving3(ctx);
+                //draw_while_moving3(ctx);
                 electron7.transportation();
                 electron8.transportation();
-            } else { draw_while_moving_middle3(ctx); }
-            electron6.transportation();
-            electron9.transportation();
+            }else if( pos < count - 2){
+                draw_while_moving_middle3(ctx);
+                electron6.transportation();
+            }else if(pos < count3 - 49){
+                draw_while_moving_middle3(ctx);
+                electron9.transportation();
+            }else{
+                draw_while_moving_middle3(ctx);
+            }
+
             //hole4.transportation();
             //hole5.transportation();
             //hole6.transportation();
             //hole9.transportation();
+
         }
     }
 }
