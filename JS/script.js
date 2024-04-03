@@ -156,6 +156,9 @@ SVG.on(document, 'DOMContentLoaded', function () {
         path = gDraw.path('M120 350 C210 210 250 200 260 195 L550 195 C560 200 580 180 625 0')
         path.fill('none')
         path.stroke({color: '#000', width: 3, linecap: 'round', linejoin: 'round'})
+        path = gDraw.path('M120 350 C205 260 230 250 240 250 L525 250 C540 250 560 230 612 0')
+        path.fill('none')
+        path.stroke({color: '#000', width: 3, linecap: 'round', linejoin: 'round'})
         path = gDraw.path('M120 350 C200 310 210 300 220 301 L500 299 C520 300 540 280 600 0')
         path.fill('none')
         path.stroke({color: '#000', width: 3, linecap: 'round', linejoin: 'round'})
@@ -168,9 +171,9 @@ SVG.on(document, 'DOMContentLoaded', function () {
         circle = gDraw.circle(7)
         circle.stroke({color: '#000', width: 3, linecap: 'round'}).move(165, 332)
         circle = gDraw.circle(7)
-        circle.stroke({color: '#000', width: 3, linecap: 'round'}).move(165, 332)
-        circle = gDraw.circle(7)
         circle.stroke({color: '#000', width: 3, linecap: 'round'}).move(208, 299)
+        circle = gDraw.circle(7)
+        circle.stroke({color: '#000', width: 3, linecap: 'round'}).move(229, 248)
         circle = gDraw.circle(7)
         circle.stroke({color: '#000', width: 3, linecap: 'round'}).move(253, 192)
         circle = gDraw.circle(7)
@@ -217,7 +220,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
         })
         text = gDraw.text(function (add) {
             add.tspan('GS')
-        }).move(410, 85).stroke({color: '#000', width: 1}).font({
+        }).move(410, 83).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '12'
         })
@@ -237,13 +240,32 @@ SVG.on(document, 'DOMContentLoaded', function () {
         })
         text = gDraw.text(function (add) {
             add.tspan('GS')
-        }).move(380, 180).stroke({color: '#000', width: 1}).font({
+        }).move(380, 177).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '12'
         })
         text = gDraw.text(function (add) {
             add.tspan('= -1V')
         }).move(400, 175).stroke({color: '#000', width: 1}).font({
+            family: 'Arial',
+            size: '15'
+        })
+
+        text = gDraw.text(function (add) {
+            add.tspan('U')
+        }).move(350, 225).stroke({color: '#000', width: 1}).font({
+            family: 'Arial',
+            size: '15'
+        })
+        text = gDraw.text(function (add) {
+            add.tspan('GS')
+        }).move(360, 229).stroke({color: '#000', width: 1}).font({
+            family: 'Arial',
+            size: '12'
+        })
+        text = gDraw.text(function (add) {
+            add.tspan('= -2.2V')
+        }).move(380, 225).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '15'
         })
@@ -1760,79 +1782,85 @@ SVG.on(document, 'DOMContentLoaded', function () {
         }
 
         if (ugs == "0" && uds == "0") {
-            redCircle = gDraw.circle(7)
+            redCircle = gDraw.circle(16)
             redCircle.fill("#FE8585")
-            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(116, 346)
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(113, 343)
         } else if (ugs == "-1" && uds == "0") {
-            redCircle = gDraw.circle(7)
+            redCircle = gDraw.circle(16)
             redCircle.fill("#FE8585")
-            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(116, 346)
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(113, 343)
         } else if (ugs == "-2.2" && uds == "0") {
-            redCircle = gDraw.circle(7)
+            redCircle = gDraw.circle(16)
             redCircle.fill("#FE8585")
-            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(116, 346)
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(113, 343)
         } else if (ugs == "-3" && uds == "0") {
-            redCircle = gDraw.circle(7)
+            redCircle = gDraw.circle(16)
             redCircle.fill("#FE8585")
-            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(116, 346)
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(113, 343)
         } else if (ugs == "Ut" && uds == "0") {
-            redCircle = gDraw.circle(7)
+            redCircle = gDraw.circle(16)
             redCircle.fill("#FE8585")
-            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(116, 346)
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(113, 343)
         } else if (ugs == "0" && uds == "0.5") {
-            redCircle = gDraw.circle(7)
+            redCircle = gDraw.circle(16)
             redCircle.fill("#FE8585")
-            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(140, 295)
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(134, 295)
         } else if (ugs == "-1" && uds == "0.5") {
-            redCircle = gDraw.circle(7)
+            redCircle = gDraw.circle(16)
             redCircle.fill("#FE8585")
-            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(140, 311)
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(137, 308)
         } else if (ugs == "-2.2" && uds == "0.5") {
-
+            redCircle = gDraw.circle(16)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(137, 316)
         } else if (ugs == "-3" && uds == "0.5") {
-            redCircle = gDraw.circle(7)
+            redCircle = gDraw.circle(16)
             redCircle.fill("#FE8585")
-            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(140, 333)
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(137, 330)
         } else if (ugs == "Ut" && uds == "0.5") {
-            redCircle = gDraw.circle(7)
+            redCircle = gDraw.circle(16)
             redCircle.fill("#FE8585")
-            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(140, 338)
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(137, 335)
         } else if (ugs == "0" && uds == "5") {
-            redCircle = gDraw.circle(7)
+            redCircle = gDraw.circle(16)
             redCircle.fill("#FE8585")
-            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(310, 98)
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(307, 95)
         } else if (ugs == "-1" && uds == "5") {
-            redCircle = gDraw.circle(7)
+            redCircle = gDraw.circle(16)
             redCircle.fill("#FE8585")
-            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(310, 191)
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(307, 188)
         } else if (ugs == "-2.2" && uds == "5") {
-
+            redCircle = gDraw.circle(16)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(307, 242)
         } else if (ugs == "-3" && uds == "5") {
-            redCircle = gDraw.circle(7)
+            redCircle = gDraw.circle(16)
             redCircle.fill("#FE8585")
-            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(310, 297)
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(307, 294)
         } else if (ugs == "Ut" && uds == "5") {
-            redCircle = gDraw.circle(7)
+            redCircle = gDraw.circle(16)
             redCircle.fill("#FE8585")
-            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(310, 332)
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(307, 329)
         } else if (ugs == "0" && uds == "Udsat") {
-            redCircle = gDraw.circle(7)
+            redCircle = gDraw.circle(16)
             redCircle.fill("#FE8585")
-            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(310, 99)
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(288, 96)
         } else if (ugs == "-1" && uds == "Udsat") {
-            redCircle = gDraw.circle(7)
+            redCircle = gDraw.circle(16)
             redCircle.fill("#FE8585")
-            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(252, 192)
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(249, 189)
         } else if (ugs == "-2.2" && uds == "Udsat") {
-
+            redCircle = gDraw.circle(16)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(225, 242)
         } else if (ugs == "-3" && uds == "Udsat") {
-            redCircle = gDraw.circle(7)
+            redCircle = gDraw.circle(16)
             redCircle.fill("#FE8585")
-            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(207, 300)
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(204, 297)
         } else if (ugs == "Ut" && uds == "Udsat") {
-            redCircle = gDraw.circle(7)
+            redCircle = gDraw.circle(16)
             redCircle.fill("#FE8585")
-            redCircle.stroke({color: '#FE8585', width: 3, linecap: 'round'}).move(165, 332)
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(162, 329)
         }
     }
 
