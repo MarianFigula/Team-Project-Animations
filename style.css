@@ -289,6 +289,39 @@ span {
     width:32%;
 }
 
+#temperature_animations {
+    text-align: center;
+}
+
+#temperature_animations img {
+    display: inline-block;
+}
+
+#temperature_div_canvas1,
+#temperature_div_canvas2,
+#temperature_div_canvas3 {
+    display: inline-block;
+    height: 400px;
+    width: 33%;
+}
+
+@media (max-width: 768px) {
+    #animations img {
+        width: 100%;
+        height: auto;
+    }
+
+    #temperature_div_canvas1,
+    #temperature_div_canvas2,
+    #temperature_div_canvas3 {
+        width: 100%;
+    }
+}
+
+#startGenerationButton {
+    margin: 50px 0;
+}
+
 .vysvetlivky {
     margin: 10px 3px 3px 3px;
     height: 40px;
