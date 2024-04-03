@@ -378,27 +378,42 @@ SVG.on(document, 'DOMContentLoaded', function () {
     }
 
     function graphP() {
+        let path = gDraw.path('M680 20 C610 60 700 60 250 60 Q220 60 200 350');
+        path.fill('none');
+        path.stroke({color: '#000', width: 3, linecap: 'round', linejoin: 'round'});
+        path = gDraw.path('M680 20 C600 100 695 100 220 100 Q190 100 180 350');
+        path.fill('none');
+        path.stroke({color: '#000', width: 3, linecap: 'round', linejoin: 'round'});
+        path = gDraw.path('M680 20 C590 150 690 150 180 150 Q165 150 157 350');
+        path.fill('none');
+        path.stroke({color: '#000', width: 3, linecap: 'round', linejoin: 'round'});
+        path = gDraw.path('M680 20 C580 200 685 200 160 200 Q140 200 135 350');
+        path.fill('none');
+        path.stroke({color: '#000', width: 3, linecap: 'round', linejoin: 'round'});
+        path = gDraw.path('M680 20 C570 240 680 240 140 240 Q120 240 115 350');
+        path.fill('none');
+        path.stroke({color: '#000', width: 3, linecap: 'round', linejoin: 'round'});
+        // ('M120 350 C200 330 210 310 220 280 L340 0')
+        path = gDraw.path('M680 20 C590 30 590 40 580 60 L450 350');
+        path.fill('none');
+        path.stroke({color: '#A020F0', width: 5, linecap: 'round', linejoin: 'round'});
+
         line = gDraw.line(100, 20, 700, 20)
         line.stroke({color: '#FF0000', width: 5, linecap: 'round'})
         line = gDraw.line(680, 0, 680, 370)
         line.stroke({color: '#FF0000', width: 5, linecap: 'round'})
-        //ciary z hora dole
-        let path = gDraw.path('M680 20 L600 30 L250 30 L220 150')
-        path.fill('none')
-        path.stroke({color: '#000', width: 3, linecap: 'round', linejoin: 'round'})
-        path = gDraw.path('M680 20 L590 65 L220 65 L190 200')
-        path.fill('none')
-        path.stroke({color: '#000', width: 3, linecap: 'round', linejoin: 'round'})
-        path = gDraw.path('M680 20 L580 150 L180 150 L160 250')
-        path.fill('none')
-        path.stroke({color: '#000', width: 3, linecap: 'round', linejoin: 'round'})
-        path = gDraw.path('M680 20 L570 240 L140 245 L120 350')
-        path.fill('none')
-        path.stroke({color: '#000', width: 3, linecap: 'round', linejoin: 'round'})
-        path = gDraw.path('M680 20 L600 30 L590 65 L580 150 L570 240 L565 350')
-        path.fill('none')
-        path.stroke({color: '#A020F0', width: 5, linecap: 'round', linejoin: 'round'})
-
+        let circle = gDraw.circle(10);
+        circle.stroke({color: '#000', width: 3, linecap: 'round'}).move(674, 15);
+        circle = gDraw.circle(7);
+        circle.stroke({color: '#000', width: 3, linecap: 'round'}).move(577, 55);
+        circle = gDraw.circle(7);
+        circle.stroke({color: '#000', width: 3, linecap: 'round'}).move(560, 91);
+        circle = gDraw.circle(7);
+        circle.stroke({color: '#000', width: 3, linecap: 'round'}).move(538, 140);
+        circle = gDraw.circle(7);
+        circle.stroke({color: '#000', width: 3, linecap: 'round'}).move(517, 188);
+        circle = gDraw.circle(7);
+        circle.stroke({color: '#000', width: 3, linecap: 'round'}).move(500, 228);
         text = gDraw.text(function (add) {
             add.tspan('lineárna')
             add.tspan('oblasť').newLine()
@@ -454,76 +469,95 @@ SVG.on(document, 'DOMContentLoaded', function () {
 
         text = gDraw.text(function (add) {
             add.tspan('U')
-        }).move(360, 160).stroke({color: '#000', width: 1}).font({
+        }).move(330, 197).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '15'
         })
         text = gDraw.text(function (add) {
             add.tspan('GS')
-        }).move(370, 165).stroke({color: '#000', width: 1}).font({
-            family: 'Arial',
-            size: '12'
-        })
-        text = gDraw.text(function (add) {
-            add.tspan('= 0,5V')
-        }).move(390, 160).stroke({color: '#000', width: 1}).font({
-            family: 'Arial',
-            size: '15'
-        })
-
-        text = gDraw.text(function (add) {
-            add.tspan('U')
-        }).move(340, 75).stroke({color: '#000', width: 1}).font({
-            family: 'Arial',
-            size: '15'
-        })
-        text = gDraw.text(function (add) {
-            add.tspan('GS')
-        }).move(350, 80).stroke({color: '#000', width: 1}).font({
+        }).move(340, 202).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '12'
         })
         text = gDraw.text(function (add) {
             add.tspan('= 1V')
-        }).move(370, 75).stroke({color: '#000', width: 1}).font({
+        }).move(360, 197).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '15'
         })
 
         text = gDraw.text(function (add) {
             add.tspan('U')
-        }).move(325, 35).stroke({color: '#000', width: 1}).font({
+        }).move(330, 150).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '15'
         })
         text = gDraw.text(function (add) {
             add.tspan('GS')
-        }).move(335, 40).stroke({color: '#000', width: 1}).font({
+        }).move(340, 160).stroke({color: '#000', width: 1}).font({
+            family: 'Arial',
+            size: '12'
+        })
+        text = gDraw.text(function (add) {
+            add.tspan('= 2,2V')
+        }).move(360, 150).stroke({color: '#000', width: 1}).font({
+            family: 'Arial',
+            size: '15'
+        })
+
+        text = gDraw.text(function (add) {
+            add.tspan('U')
+        }).move(330, 75).stroke({color: '#000', width: 1}).font({
+            family: 'Arial',
+            size: '15'
+        })
+        text = gDraw.text(function (add) {
+            add.tspan('GS')
+        }).move(340, 80).stroke({color: '#000', width: 1}).font({
+            family: 'Arial',
+            size: '12'
+        })
+        text = gDraw.text(function (add) {
+            add.tspan('= 3V')
+        }).move(360, 75).stroke({color: '#000', width: 1}).font({
+            family: 'Arial',
+            size: '15'
+        })
+
+        text = gDraw.text(function (add) {
+            add.tspan('U')
+        }).move(330, 35).stroke({color: '#000', width: 1}).font({
+            family: 'Arial',
+            size: '15'
+        })
+        text = gDraw.text(function (add) {
+            add.tspan('GS')
+        }).move(340, 40).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '12'
         })
         text = gDraw.text(function (add) {
             add.tspan('=U')
-        }).move(355, 35).stroke({color: '#000', width: 1}).font({
+        }).move(360, 35).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '15'
         })
         text = gDraw.text(function (add) {
             add.tspan('t')
-        }).move(376, 40).stroke({color: '#000', width: 1}).font({
+        }).move(379, 40).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '12'
         })
         text = gDraw.text(function (add) {
             add.tspan('V')
-        }).move(380, 35).stroke({color: '#000', width: 1}).font({
+        }).move(383, 35).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '15'
         })
 
         text = gDraw.text(function (add) {
             add.tspan('saturačná oblasť')
-        }).move(360, 100).stroke({color: '#00FF00', width: 0.5}).font({
+        }).move(315, 113).stroke({color: '#00FF00', width: 0.5}).font({
             family: 'Arial',
             size: '14'
         })
