@@ -322,7 +322,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
 
         text = gDraw.text(function (add) {
             add.tspan('saturačná oblasť')
-        }).move(360, 155).stroke({color: '#00FF00', width: 0.5}).font({
+        }).move(360, 140).stroke({color: '#00FF00', width: 0.5}).font({
             family: 'Arial',
             size: '14'
         })
