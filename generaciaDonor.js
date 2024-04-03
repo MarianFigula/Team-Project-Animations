@@ -82,12 +82,15 @@ function move2() {
             //electron3.transportation();
             //electron10.transportation();
             if(pos < 48){
+                //cestuju prve dva elektrony , zobrazuje sa teplomer s hodnotou 10
                 electron5.transportation();
                 electron4.transportation();
 
             }else if( pos < count){
+                //cestuje treti elektron , teplomer ukazuje 200
                 electron3.transportation();
             }else if(pos < count2 - 49 ){
+                //cestuje stvrty elektron , teplomer ukazuje 300
                 electron10.transportation();
             }
 

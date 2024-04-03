@@ -96,13 +96,16 @@ function move3() {
             draw_while_moving3(ctx);
             if(pos < 45)
             {
+                //cestuju prve dva elektrony , zobrazuje sa teplomer s hodnotou 10
                 //draw_while_moving3(ctx);
                 electron7.transportation();
                 electron8.transportation();
             }else if( pos < count - 2){
+                //cestuje treti elektron , teplomer ukazuje 200
                 draw_while_moving_middle3(ctx);
                 electron6.transportation();
             }else if(pos < count3 - 49){
+                //cestuje stvrty elektron , teplomer ukazuje 300
                 draw_while_moving_middle3(ctx);
                 electron9.transportation();
             }else{

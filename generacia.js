@@ -42,6 +42,7 @@ function move() {
     var id = setInterval(frame, 15);
 
     function frame() {
+        //mozno sem zaviest nejaky delay pre synchronizaciu
         if (pos == count4) {
             clearInterval(id);
             document.getElementById("animateBack1").disabled = false;
@@ -50,8 +51,10 @@ function move() {
             ctx.clearRect(0, 0, innerWidth, innerHeight);
             draw_moving(ctx);
             if (pos < count ){
+                //cestuje prvy elektron , teplomer ukazuje 200 (v donor a akceptor je nacasovanie s tretim elektronom)
                 electron1.transportation();
             }else if(pos < count + 179){
+                //cestuje druhy elektron , teplomer ukazuje 300 (v donor a akceptor je nacasovanie so stvrtym elektronom)
                 electron2.transportation();
             }
             //electron2.transportation();
