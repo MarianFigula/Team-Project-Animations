@@ -1661,118 +1661,154 @@ SVG.on(document, 'DOMContentLoaded', function () {
                 elektronN01();
             }
         }, timeout);
-
-
-
-
     }
 
     let value = false
 
-    var timeoutIDp
+    var timeoutIDn
     async function protonP01() {
         let timeout = 0
         let duration = 0
+        let threshold = 0
+        let pinchOf = false
+        let curve = 0
         if (ugs == "0" && uds == "0") {
             timeout = 0
             duration = 0
             value = false
-            clearTimeout(timeoutIDp)
+            clearTimeout(timeoutIDn)
         } else if (ugs == "-1" && uds == "0") {
             timeout = 0
             duration = 0
             value = false
-            clearTimeout(timeoutIDp)
+            clearTimeout(timeoutIDn)
         } else if (ugs == "-2.2" && uds == "0") {
             timeout = 0
             duration = 0
             value = false
-            clearTimeout(timeoutIDp)
+            clearTimeout(timeoutIDn)
         } else if (ugs == "-3" && uds == "0") {
             timeout = 0
             duration = 0
             value = false
-            clearTimeout(timeoutIDp)
+            clearTimeout(timeoutIDn)
         } else if (ugs == "Ut" && uds == "0") {
             timeout = 0
             duration = 0
             value = false
-            clearTimeout(timeoutIDp)
+            clearTimeout(timeoutIDn)
         } else if (ugs == "0" && uds == "0.5") {
             timeout = 1000
-            duration = 7000
+            duration = 4000
             value = true
-            clearTimeout(timeoutIDp)
+            clearTimeout(timeoutIDn)
+            curve = 650
         } else if (ugs == "-1" && uds == "0.5") {
             timeout = 1000
-            duration = 7000
+            duration = 4000
             value = true
-            clearTimeout(timeoutIDp)
+            clearTimeout(timeoutIDn)
+            curve = 670
         } else if (ugs == "-2.2" && uds == "0.5") {
             timeout = 1000
-            duration = 7000
+            duration = 4000
             value = true
-            clearTimeout(timeoutIDp)
+            clearTimeout(timeoutIDn)
+            curve = 700
         } else if (ugs == "-3" && uds == "0.5") {
             timeout = 1000
-            duration = 7000
+            duration = 4000
             value = true
-            clearTimeout(timeoutIDp)
+            clearTimeout(timeoutIDn)
+            curve = 730
         } else if (ugs == "Ut" && uds == "0.5") {
             timeout = 1000
-            duration = 7000
+            duration = 4000
             value = true
-            clearTimeout(timeoutIDp)
+            threshold = 0.75
+            pinchOf = true
+            clearTimeout(timeoutIDn)
+            curve = 760
         } else if (ugs == "0" && uds == "5") {
-            timeout = 600
+            timeout = 500
             duration = 4000
             value = true
-            clearTimeout(timeoutIDp)
+            threshold = 0.55
+            pinchOf = true
+            clearTimeout(timeoutIDn)
+            curve = 630
         } else if (ugs == "-1" && uds == "5") {
-            timeout = 600
+            timeout = 500
             duration = 4000
             value = true
-            clearTimeout(timeoutIDp)
+            threshold = 0.47
+            pinchOf = true
+            clearTimeout(timeoutIDn)
+            curve = 650
         } else if (ugs == "-2.2" && uds == "5") {
-            timeout = 600
+            timeout = 500
             duration = 4000
             value = true
-            clearTimeout(timeoutIDp)
+            threshold = 0.43
+            pinchOf = true
+            clearTimeout(timeoutIDn)
+            curve = 700
         } else if (ugs == "-3" && uds == "5") {
-            timeout = 600
+            timeout = 500
             duration = 4000
             value = true
-            clearTimeout(timeoutIDp)
+            threshold = 0.40
+            pinchOf = true
+            clearTimeout(timeoutIDn)
+            curve = 730
         } else if (ugs == "Ut" && uds == "5") {
-            timeout = 600
+            timeout = 500
             duration = 4000
             value = true
-            clearTimeout(timeoutIDp)
+            threshold = 0.3
+            pinchOf = true
+            clearTimeout(timeoutIDn)
+            curve = 760
         } else if (ugs == "0" && uds == "Udsat") {
-            timeout = 600
+            timeout = 500
             duration = 4000
             value = true
-            clearTimeout(timeoutIDp)
+            threshold = 0.67
+            pinchOf = true
+            clearTimeout(timeoutIDn)
+            curve = 680
         } else if (ugs == "-1" && uds == "Udsat") {
-            timeout = 600
+            timeout = 500
             duration = 4000
             value = true
-            clearTimeout(timeoutIDp)
+            threshold = 0.65
+            pinchOf = true
+            clearTimeout(timeoutIDn)
+            curve = 690
         } else if (ugs == "-2.2" && uds == "Udsat") {
-            timeout = 600
+            timeout = 500
             duration = 4000
             value = true
-            clearTimeout(timeoutIDp)
+            threshold = 0.7
+            pinchOf = true
+            clearTimeout(timeoutIDn)
+            curve = 700
         } else if (ugs == "-3" && uds == "Udsat") {
-            timeout = 600
+            timeout = 500
             duration = 4000
             value = true
-            clearTimeout(timeoutIDp)
+            threshold = 0.65
+            pinchOf = true
+            clearTimeout(timeoutIDn)
+            curve = 730
         } else if (ugs == "Ut" && uds == "Udsat") {
-            timeout = 600
+            timeout = 500
             duration = 4000
             value = true
-            clearTimeout(timeoutIDp)
+            threshold = 0.45
+            pinchOf = true
+            clearTimeout(timeoutIDn)
+            curve = 760
         }
         let group = cdDraw.group();
         let obj1 = group.circle(20)
@@ -1781,32 +1817,55 @@ SVG.on(document, 'DOMContentLoaded', function () {
         group.line(5, 10, 15, 10).stroke({color: '#000', width: 2});
         group.line(10, 5, 10, 15).stroke({color: '#000', width: 2});
         group.move(120, 125);
-        let path1 = cdDraw.path('M 120 125 Q 470 350, 800 125').fill('none');
-        //TODO: cim vacsie UDS tak ich castejsie spawnovat, pri zaskrteni ich zrychlovat dokonca
-        const length = path1.length();
+        let path1Data = 'M -300 125 Q 250 '+ curve +', 657.5 200';
+        let path2Data = 'M 657.5 200 Q 725 10, 850 125';
+
+        let path1 = cdDraw.path(path1Data).fill('none');
+        let path2 = cdDraw.path(path2Data).fill('none');
+
+        const length1 = path1.length();
+        const length2 = path2.length();
+
         group.animate({
             duration: duration,
-            // delay: i * 400,
-            when: "relative",
+            when: "relative"
         }).during(function (pos) {
-            const eased_pos = SVG.easing['-'](pos);
-            const p = path1.pointAt(eased_pos * length * 1.68);
-            group.center(p.x, p.y);
-        }).after(function () {
-            // Remove the electron group when animation is complete
-            group.remove();
-            console.log("PRINT AFTER")
-        })
 
-        timeoutIDp = setTimeout(function () {
-            // console.log("a")
-            // console.log(value)
-            if (value) {
-                protonP01()
+            let eased_pos1 //= pos //easeInSine(pos);  // Faster easing (experiment for desired speed)
+            let eased_pos2 //= pos //easeOutCubic(pos); // Slower easing (experiment for desired speed)
+            eased_pos1 = pos;
+            eased_pos2 = pos;
+            if (pinchOf) {
+                if (pos < threshold) {
+                    // Animácia bez zrýchlenia
+                    eased_pos1 = pos;
+                    eased_pos2 = pos;
+                } else {
+                    // Animácia so zrýchlením
+                    const acceleration = (pos - threshold) * 10; // Vypočítajte zrýchlenie
+                    eased_pos1 = threshold + acceleration;
+                    eased_pos2 = threshold + acceleration;
+                }
             }
 
-        }, timeout);
+            //TODO: zvysit prud, zuzenie kanala -> mensi prud
 
+
+            const p1 = path1.pointAt(eased_pos1 * length1);
+            const p2 = path2.pointAt(eased_pos2 * length2);
+            const x = (p1.x + p2.x) / 2;
+            const y = (p1.y + p2.y) / 2;
+            group.center(x, y);
+        }).after(function () {
+            group.remove();
+            console.log("PRINT AFTER");
+        });
+
+        timeoutIDn = setTimeout(function () {
+            if (value) {
+                protonP01();
+            }
+        }, timeout);
     }
 
     var redCircle
