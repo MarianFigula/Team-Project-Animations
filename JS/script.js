@@ -1032,21 +1032,21 @@ SVG.on(document, 'DOMContentLoaded', function () {
         rectangle.move(340, 123);
 
         //TODO:zdroj
-        rectangle = cdDraw.rect(70, 70).fill("#FFFFFF").stroke({color: '#000000', width: 4});
+        rectangle = cdDraw.rect(70, 70).fill("#FFFFE0").stroke({color: '#FFFF00', width: 4});
         rectangle.move(930, 275);
 
-        base = cdDraw.text('UDS').move(945, 250).font({
+        base = cdDraw.text('Zdroj - UDS').move(930, 250).font({
             family: 'Arial',
-            size: '20',
+            size: '15',
             weight: 'bold'
         });
 
-        rectangle = cdDraw.rect(70, 70).fill("#FFFFFF").stroke({color: '#000000', width: 4});
+        rectangle = cdDraw.rect(70, 70).fill("#FFFFE0").stroke({color: '#FFFF00', width: 4});
         rectangle.move(210, -10);
 
-        base = cdDraw.text('UGS').move(225, -35).font({
+        base = cdDraw.text('Zdroj - UGS').move(205, -35).font({
             family: 'Arial',
-            size: '20',
+            size: '15',
             weight: 'bold'
         });
 
