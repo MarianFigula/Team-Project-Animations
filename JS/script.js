@@ -2,7 +2,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
     let gDraw = SVG().addTo('#graph').size('100%', '100%').viewbox(-100, 0, 1000, 450);
     let cdDraw = SVG().addTo('#circuit-diagram').size('100%', '100%').viewbox(-50, 0, 1100, 450);
 
-    function drawText(){
+    function drawText(sourceTXT){
         let base = cdDraw.text('SiO').move(900, 80).font({
             family: 'Arial',
             size: '28',
@@ -19,6 +19,8 @@ SVG.on(document, 'DOMContentLoaded', function () {
             size: '28',
             weight: 'bold'
         });
+
+
     }
 
     var ugs = "0";
@@ -34,16 +36,28 @@ SVG.on(document, 'DOMContentLoaded', function () {
         circle.fill('none')
         circle.stroke({color: '#000', width: 3, linecap: 'round'}).move(130, 35)
 //horna ciara
-        line = cdDraw.line(270, 40, 460, 40)
+        line = cdDraw.line(305, 40, 460, 40)
         line.stroke({color: '#000', width: 3, linecap: 'round'})
 
-        line = cdDraw.line(140, 40, 230, 40)
+        line = cdDraw.line(305, 40, 305, 70)
         line.stroke({color: '#000', width: 3, linecap: 'round'})
 
-        line = cdDraw.line(230, 20, 230, 40)
+        line = cdDraw.line(305, 70, 260, 70)
         line.stroke({color: '#000', width: 3, linecap: 'round'})
 
-        line = cdDraw.line(270, 20, 270, 40)
+        line = cdDraw.line(140, 40, 185, 40)
+        line.stroke({color: '#000', width: 3, linecap: 'round'})
+
+        line = cdDraw.line(185, 40, 185, 70)
+        line.stroke({color: '#000', width: 3, linecap: 'round'})
+
+        line = cdDraw.line(185, 70, 230,70)
+        line.stroke({color: '#000', width: 3, linecap: 'round'})
+
+        line = cdDraw.line(230, 70, 230, 60)
+        line.stroke({color: '#000', width: 3, linecap: 'round'})
+
+        line = cdDraw.line(260, 70, 260, 60)
         line.stroke({color: '#000', width: 3, linecap: 'round'})
 
         line = cdDraw.line(20, 40, 20, 440)
@@ -988,8 +1002,12 @@ SVG.on(document, 'DOMContentLoaded', function () {
         rectangle = cdDraw.rect(250, 65).fill("#FFB9B9").stroke({color: '#FE8585', width: 0});
         rectangle.move(340, 123);
 
-        rectangle = cdDraw.rect(30, 30).fill("#000000").stroke({color: '#000000', width: 0});
-        rectangle.move(1000, 100);
+        //TODO:zdroj
+        rectangle = cdDraw.rect(70, 70).fill("#FFFFFF").stroke({color: '#000000', width: 4});
+        rectangle.move(930, 275);
+
+        rectangle = cdDraw.rect(60, 60).fill("#FFFFFF").stroke({color: '#000000', width: 4});
+        rectangle.move(215, 2);
 
         base = cdDraw.text('p').move(450, 130).font({
             family: 'Arial',
@@ -1614,6 +1632,15 @@ SVG.on(document, 'DOMContentLoaded', function () {
             clearTimeout(timeoutIDn)
             curve = 760
         }
+        var udsTxt;
+        if (udsTxt) {
+            udsTxt.remove()
+        }
+        udsTxt= cdDraw.text(uds+' V').move(940, 300).font({
+            family: 'Arial',
+            size: '20',
+            weight: 'bold'
+        });
         //TODO: upravit aj cestu pre specificke nastavenia
         let group = cdDraw.group();
         let obj1 = group.circle(20);
