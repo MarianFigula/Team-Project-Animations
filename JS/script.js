@@ -1,8 +1,8 @@
 SVG.on(document, 'DOMContentLoaded', function () {
     let gDraw = SVG().addTo('#graph').size('100%', '100%').viewbox(-100, 0, 1000, 450);
-    let cdDraw = SVG().addTo('#circuit-diagram').size('100%', '100%').viewbox(-50, 0, 1100, 450);
+    let cdDraw = SVG().addTo('#circuit-diagram').size('100%', '100%').viewbox(-50, -50, 1100, 500);
 
-    function drawText(sourceTXT){
+    function drawText(ugs, uds){
         let base = cdDraw.text('SiO').move(900, 80).font({
             family: 'Arial',
             size: '28',
@@ -17,6 +17,35 @@ SVG.on(document, 'DOMContentLoaded', function () {
         base = cdDraw.text('Si').move(900, 170).font({
             family: 'Arial',
             size: '28',
+            weight: 'bold'
+        });
+        if (udsTxtObj) {
+            udsTxtObj.remove()
+        }
+        let udsTxt;
+        if (uds == "Udsat"){
+            udsTxt = uds
+        } else {
+            udsTxt = uds+'V'
+        }
+        udsTxt= cdDraw.text(udsTxt).move(940, 300).font({
+            family: 'Arial',
+            size: '20',
+            weight: 'bold'
+        });
+
+        if (ugsTxtObj) {
+            ugsTxtObj.remove()
+        }
+        let ugsTxt;
+        if (ugs == "Ut"){
+            ugsTxt = ugs
+        } else {
+            ugsTxt = ugs+'V'
+        }
+        udsTxt= cdDraw.text(ugsTxt).move(225, 17).font({
+            family: 'Arial',
+            size: '20',
             weight: 'bold'
         });
 
@@ -1006,8 +1035,20 @@ SVG.on(document, 'DOMContentLoaded', function () {
         rectangle = cdDraw.rect(70, 70).fill("#FFFFFF").stroke({color: '#000000', width: 4});
         rectangle.move(930, 275);
 
-        rectangle = cdDraw.rect(60, 60).fill("#FFFFFF").stroke({color: '#000000', width: 4});
-        rectangle.move(215, 2);
+        base = cdDraw.text('UDS').move(945, 250).font({
+            family: 'Arial',
+            size: '20',
+            weight: 'bold'
+        });
+
+        rectangle = cdDraw.rect(70, 70).fill("#FFFFFF").stroke({color: '#000000', width: 4});
+        rectangle.move(210, -10);
+
+        base = cdDraw.text('UGS').move(225, -35).font({
+            family: 'Arial',
+            size: '20',
+            weight: 'bold'
+        });
 
         base = cdDraw.text('p').move(450, 130).font({
             family: 'Arial',
@@ -1486,8 +1527,8 @@ SVG.on(document, 'DOMContentLoaded', function () {
     }
 
     var timeoutIDn
-
-
+    var udsTxtObj;
+    var ugsTxtObj;
     async function elektronN01() {
         let timeout = 0
         let duration = 0
@@ -1632,15 +1673,8 @@ SVG.on(document, 'DOMContentLoaded', function () {
             clearTimeout(timeoutIDn)
             curve = 760
         }
-        var udsTxt;
-        if (udsTxt) {
-            udsTxt.remove()
-        }
-        udsTxt= cdDraw.text(uds+' V').move(940, 300).font({
-            family: 'Arial',
-            size: '20',
-            weight: 'bold'
-        });
+
+
         //TODO: upravit aj cestu pre specificke nastavenia
         let group = cdDraw.group();
         let obj1 = group.circle(20);
@@ -1847,6 +1881,32 @@ SVG.on(document, 'DOMContentLoaded', function () {
             clearTimeout(timeoutIDn)
             curve = 760
         }
+        let udsTxt;
+        if (uds == "Udsat"){
+            udsTxt = uds
+        } else {
+            udsTxt = uds+'V'
+        }
+        udsTxt= cdDraw.text(udsTxt).move(940, 300).font({
+            family: 'Arial',
+            size: '20',
+            weight: 'bold'
+        });
+
+        if (ugsTxtObj) {
+            ugsTxtObj.remove()
+        }
+        let ugsTxt;
+        if (ugs == "Ut"){
+            ugsTxt = ugs
+        } else {
+            ugsTxt = ugs+'V'
+        }
+        udsTxt= cdDraw.text(ugsTxt).move(225, 17).font({
+            family: 'Arial',
+            size: '20',
+            weight: 'bold'
+        });
         let group = cdDraw.group();
         let obj1 = group.circle(20)
         obj1.fill('white')
@@ -1994,7 +2054,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
         }
     }
 
-    drawText()
+    drawText(ugs, uds)
     schema1()
     graphN()
     dotN()
@@ -2009,7 +2069,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
             selectValue = "n";
             gDraw.clear()
             cdDraw.clear()
-            drawText()
+            drawText(ugs, uds)
             schema1()
             graphN()
             dotN()
@@ -2020,7 +2080,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
             selectValue = "p";
             gDraw.clear()
             cdDraw.clear()
-            drawText()
+            drawText(ugs, uds)
             schema1()
             graphP()
             animacia2()
@@ -2034,6 +2094,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
         switch (selectValue) {
             case "n":
                 animacia1();
+                drawText(ugs, uds)
                 // redCircle.remove()
                 dotN()
                 if (uds == "0") {
@@ -2045,6 +2106,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
                 break
             case "p":
                 animacia2()
+                drawText(ugs, uds)
                 if (uds == "0") {
                     value = false;
                 } else {
@@ -2063,6 +2125,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
         switch (selectValue) {
             case "n":
                 animacia1();
+                drawText(ugs, uds)
                 dotN()
                 if (uds == "0") {
                     value = false;
@@ -2073,6 +2136,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
                 break
             case "p":
                 animacia2()
+                drawText(ugs, uds)
                 if (uds == "0") {
                     value = false;
                 } else {
