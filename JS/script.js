@@ -2239,7 +2239,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
         }
     });
 
-    console.log(2)
+    console.log(3)
 
     document.getElementById('Uds').addEventListener('change', function () {
         uds = this.value;
