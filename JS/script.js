@@ -1965,6 +1965,13 @@ SVG.on(document, 'DOMContentLoaded', function () {
         }, timeout);
     }
 
+    function addAndRemoveClassesToSelects(displayType) {
+        let selectDiv = document.getElementById("select-row");
+        console.log("selectDiv", selectDiv);
+        selectDiv.style.visibility = displayType
+
+    }
+
     var redCircle
     function dotN(){
         if (redCircle) {
@@ -2152,18 +2159,23 @@ SVG.on(document, 'DOMContentLoaded', function () {
     document.querySelector('.form-check-input').addEventListener('change', function () {
         if (this.checked) {
             cdDraw.clear()
+            addAndRemoveClassesToSelects("hidden")
             schema1()
-            clearTimeout(timeoutIDp)
-            clearTimeout(timeoutIDn)
-        } else if (!this.checked && document.getElementById('kanal').value == "n") {
+            //clearTimeout(timeoutIDp)
+            //clearTimeout(timeoutIDn)
+        }else {
             animacia1()
-            clearTimeout(timeoutIDp)
-            clearTimeout(timeoutIDn)
-        } else if (!this.checked && document.getElementById('kanal').value == "p") {
-            animacia2()
-            clearTimeout(timeoutIDp)
-            clearTimeout(timeoutIDn)
+            addAndRemoveClassesToSelects("visible")
         }
+        // } else if (!this.checked && document.getElementById('kanal').value == "n") {
+        //     animacia1()
+        //     clearTimeout(timeoutIDp)
+        //     clearTimeout(timeoutIDn)
+        // } else if (!this.checked && document.getElementById('kanal').value == "p") {
+        //     animacia2()
+        //     clearTimeout(timeoutIDp)
+        //     clearTimeout(timeoutIDn)
+        // }
     });
 })
 
