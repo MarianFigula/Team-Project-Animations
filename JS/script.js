@@ -2239,6 +2239,8 @@ SVG.on(document, 'DOMContentLoaded', function () {
         }
     });
 
+    console.log(2)
+
     document.getElementById('Uds').addEventListener('change', function () {
         uds = this.value;
         console.log(uds);
