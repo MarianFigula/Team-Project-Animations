@@ -1920,32 +1920,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
             clearTimeout(timeoutIDn)
             curve = 760
         }
-        let udsTxt;
-        if (uds == "Udsat"){
-            udsTxt = uds
-        } else {
-            udsTxt = uds+'V'
-        }
-        udsTxt= cdDraw.text(udsTxt).move(940, 300).font({
-            family: 'Arial',
-            size: '20',
-            weight: 'bold'
-        });
 
-        if (ugsTxtObj) {
-            ugsTxtObj.remove()
-        }
-        let ugsTxt;
-        if (ugs == "Ut"){
-            ugsTxt = ugs
-        } else {
-            ugsTxt = ugs+'V'
-        }
-        udsTxt= cdDraw.text(ugsTxt).move(225, 17).font({
-            family: 'Arial',
-            size: '20',
-            weight: 'bold'
-        });
         let group = cdDraw.group();
         let obj1 = group.circle(20)
         obj1.fill('white')
