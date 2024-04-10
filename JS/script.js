@@ -2107,25 +2107,26 @@ SVG.on(document, 'DOMContentLoaded', function () {
         document.getElementById('Uds').value = "0"
         ugs = "0"
         uds = "0"
+        value = false
         if (this.value == "n") {
             selectValue = "n";
             gDraw.clear()
             cdDraw.clear()
-            drawText(ugs, uds)
             schema1()
             graphN()
             dotN()
             animacia1()
+            drawText(ugs, uds)
             clearTimeout(timeoutIDp)
             clearTimeout(timeoutIDn)
         } else if (this.value == "p") {
             selectValue = "p";
             gDraw.clear()
             cdDraw.clear()
-            drawText(ugs, uds)
             schema1()
             graphP()
             animacia2()
+            drawText(ugs, uds)
             clearTimeout(timeoutIDp)
             clearTimeout(timeoutIDn)
         }
@@ -2200,10 +2201,12 @@ SVG.on(document, 'DOMContentLoaded', function () {
             clearTimeout(timeoutIDn)
         } else if (!this.checked && document.getElementById('kanal').value == "n") {
             animacia1()
+            drawText(ugs, uds)
             clearTimeout(timeoutIDp)
             clearTimeout(timeoutIDn)
         } else if (!this.checked && document.getElementById('kanal').value == "p") {
             animacia2()
+            drawText(ugs, uds)
             clearTimeout(timeoutIDp)
             clearTimeout(timeoutIDn)
         }
