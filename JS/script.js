@@ -2165,6 +2165,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
         }else {
             animacia1()
             addAndRemoveClassesToSelects("visible")
+            drawText(ugs, uds)
         }
         // } else if (!this.checked && document.getElementById('kanal').value == "n") {
         //     animacia1()
