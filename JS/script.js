@@ -1485,26 +1485,6 @@ SVG.on(document, 'DOMContentLoaded', function () {
             size: '24',
             weight: 'bold'
         });
-
-        //TODO:zdroj
-        rectangle = cdDraw.rect(70, 70).fill("#FFFFE0").stroke({color: '#FFFF00', width: 4});
-        rectangle.move(930, 275);
-
-        base = cdDraw.text('Zdroj - UDS').move(930, 250).font({
-            family: 'Arial',
-            size: '15',
-            weight: 'bold'
-        });
-
-        rectangle = cdDraw.rect(70, 70).fill("#FFFFE0").stroke({color: '#FFFF00', width: 4});
-        rectangle.move(210, -10);
-
-        base = cdDraw.text('Zdroj - UGS').move(205, -35).font({
-            family: 'Arial',
-            size: '15',
-            weight: 'bold'
-        });
-
         // p+
         rectangle = cdDraw.rect(250, 65).fill("#AFE1FF").stroke({color: '#0000FF', width: 0});
         rectangle.move(340, 123);
@@ -1979,6 +1959,13 @@ SVG.on(document, 'DOMContentLoaded', function () {
         }, timeout);
     }
 
+    function addAndRemoveClassesToSelects(displayType) {
+        let selectDiv = document.getElementById("select-row");
+        console.log("selectDiv", selectDiv);
+        selectDiv.style.visibility = displayType
+
+    }
+
     var redCircle
     function dotN(){
         if (redCircle) {
@@ -2171,20 +2158,23 @@ SVG.on(document, 'DOMContentLoaded', function () {
     document.querySelector('.form-check-input').addEventListener('change', function () {
         if (this.checked) {
             cdDraw.clear()
+            addAndRemoveClassesToSelects("hidden")
             schema1()
-            clearTimeout(timeoutIDp)
-            clearTimeout(timeoutIDn)
-        } else if (!this.checked && document.getElementById('kanal').value == "n") {
+            //clearTimeout(timeoutIDp)
+            //clearTimeout(timeoutIDn)
+        }else {
             animacia1()
-            drawText(ugs, uds)
-            clearTimeout(timeoutIDp)
-            clearTimeout(timeoutIDn)
-        } else if (!this.checked && document.getElementById('kanal').value == "p") {
-            animacia2()
-            drawText(ugs, uds)
-            clearTimeout(timeoutIDp)
-            clearTimeout(timeoutIDn)
+            addAndRemoveClassesToSelects("visible")
         }
+        // } else if (!this.checked && document.getElementById('kanal').value == "n") {
+        //     animacia1()
+        //     clearTimeout(timeoutIDp)
+        //     clearTimeout(timeoutIDn)
+        // } else if (!this.checked && document.getElementById('kanal').value == "p") {
+        //     animacia2()
+        //     clearTimeout(timeoutIDp)
+        //     clearTimeout(timeoutIDn)
+        // }
     });
 })
 
