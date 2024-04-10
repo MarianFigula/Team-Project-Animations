@@ -1694,7 +1694,6 @@ SVG.on(document, 'DOMContentLoaded', function () {
         }
 
 
-        //TODO: upravit aj cestu pre specificke nastavenia
         let group = cdDraw.group();
         let obj1 = group.circle(20);
         obj1.fill('white');
@@ -1732,9 +1731,6 @@ SVG.on(document, 'DOMContentLoaded', function () {
                     eased_pos2 = threshold + acceleration;
                 }
             }
-
-            //TODO: zvysit prud, zuzenie kanala -> mensi prud
-
 
             const p1 = path1.pointAt(eased_pos1 * length1);
             const p2 = path2.pointAt(eased_pos2 * length2);
