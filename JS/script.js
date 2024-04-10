@@ -192,6 +192,25 @@ SVG.on(document, 'DOMContentLoaded', function () {
         circle = cdDraw.circle(10)
         circle.fill('none')
         circle.stroke({color: '#000', width: 3, linecap: 'round'}).move(460, 35)
+
+        //TODO:zdroj
+        let rectangle = cdDraw.rect(70, 70).fill("#FFFFE0").stroke({color: '#FFFF00', width: 4});
+        rectangle.move(930, 275);
+
+        let base = cdDraw.text('Zdroj - UDS').move(930, 250).font({
+            family: 'Arial',
+            size: '15',
+            weight: 'bold'
+        });
+
+        rectangle = cdDraw.rect(70, 70).fill("#FFFFE0").stroke({color: '#FFFF00', width: 4});
+        rectangle.move(210, -10);
+
+        base = cdDraw.text('Zdroj - UGS').move(205, -35).font({
+            family: 'Arial',
+            size: '15',
+            weight: 'bold'
+        });
     }
 
     function graphN() {
@@ -1466,6 +1485,26 @@ SVG.on(document, 'DOMContentLoaded', function () {
             size: '24',
             weight: 'bold'
         });
+
+        //TODO:zdroj
+        rectangle = cdDraw.rect(70, 70).fill("#FFFFE0").stroke({color: '#FFFF00', width: 4});
+        rectangle.move(930, 275);
+
+        base = cdDraw.text('Zdroj - UDS').move(930, 250).font({
+            family: 'Arial',
+            size: '15',
+            weight: 'bold'
+        });
+
+        rectangle = cdDraw.rect(70, 70).fill("#FFFFE0").stroke({color: '#FFFF00', width: 4});
+        rectangle.move(210, -10);
+
+        base = cdDraw.text('Zdroj - UGS').move(205, -35).font({
+            family: 'Arial',
+            size: '15',
+            weight: 'bold'
+        });
+
         // p+
         rectangle = cdDraw.rect(250, 65).fill("#AFE1FF").stroke({color: '#0000FF', width: 0});
         rectangle.move(340, 123);
@@ -2064,6 +2103,10 @@ SVG.on(document, 'DOMContentLoaded', function () {
     var selectValue = "n";
 
     document.getElementById('kanal').addEventListener('change', function () {
+        document.getElementById('Ugs').value = "0"
+        document.getElementById('Uds').value = "0"
+        ugs = "0"
+        uds = "0"
         if (this.value == "n") {
             selectValue = "n";
             gDraw.clear()
