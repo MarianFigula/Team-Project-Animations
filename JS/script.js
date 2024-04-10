@@ -2054,12 +2054,11 @@ SVG.on(document, 'DOMContentLoaded', function () {
         }
     }
 
-    drawText(ugs, uds)
     schema1()
     graphN()
     dotN()
     animacia1()
-
+    drawText(ugs, uds)
 
 
     var selectValue = "n";
