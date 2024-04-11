@@ -155,28 +155,28 @@ SVG.on(document, 'DOMContentLoaded', function () {
 
         let text = cdDraw.text(function (add) {
             add.tspan('S')
-        }).move(127, 15).stroke({color: '#000', width: 1}).font({
+        }).move(127, 12).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '24'
         })
 
         text = cdDraw.text(function (add) {
             add.tspan('G')
-        }).move(457, 15).stroke({color: '#000', width: 1}).font({
+        }).move(457, 12).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '24'
         })
 
         text = cdDraw.text(function (add) {
             add.tspan('D')
-        }).move(787, 15).stroke({color: '#000', width: 1}).font({
+        }).move(787, 12).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '24'
         })
 
         text = cdDraw.text(function (add) {
             add.tspan('Rz')
-        }).move(890, 6).stroke({color: '#000', width: 1}).font({
+        }).move(890, 0).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '24'
         })
@@ -1626,6 +1626,24 @@ SVG.on(document, 'DOMContentLoaded', function () {
             size: '24',
             weight: 'bold'
         });
+        //zdroj
+        rectangle = cdDraw.rect(70, 70).fill("#FFFFE0").stroke({color: '#FFFF00', width: 4});
+        rectangle.move(930, 275);
+
+        base = cdDraw.text('Zdroj - UDS').move(930, 250).font({
+            family: 'Arial',
+            size: '15',
+            weight: 'bold'
+        });
+
+        rectangle = cdDraw.rect(70, 70).fill("#FFFFE0").stroke({color: '#FFFF00', width: 4});
+        rectangle.move(210, -10);
+
+        base = cdDraw.text('Zdroj - UGS').move(205, -35).font({
+            family: 'Arial',
+            size: '15',
+            weight: 'bold'
+        });
         // p+
         rectangle = cdDraw.rect(250, 65).fill("#AFE1FF").stroke({color: '#0000FF', width: 0});
         rectangle.move(340, 123);
@@ -2075,9 +2093,6 @@ SVG.on(document, 'DOMContentLoaded', function () {
                     eased_pos2 = threshold + acceleration;
                 }
             }
-
-            //TODO: zvysit prud, zuzenie kanala -> mensi prud
-
 
             const p1 = path1.pointAt(eased_pos1 * length1);
             const p2 = path2.pointAt(eased_pos2 * length2);
