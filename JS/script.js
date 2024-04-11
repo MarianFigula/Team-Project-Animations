@@ -239,14 +239,19 @@ SVG.on(document, 'DOMContentLoaded', function () {
         path.fill('none')
         path.stroke({color: '#A020F0', width: 3, linecap: 'round', linejoin: 'round'})
         let circle = gDraw.circle(7)
+        circle.fill("#A020F0")
         circle.stroke({color: '#A020F0', width: 3, linecap: 'round'}).move(165, 332)
         circle = gDraw.circle(7)
+        circle.fill("#A020F0")
         circle.stroke({color: '#A020F0', width: 3, linecap: 'round'}).move(208, 299)
         circle = gDraw.circle(7)
+        circle.fill("#A020F0")
         circle.stroke({color: '#A020F0', width: 3, linecap: 'round'}).move(229, 248)
         circle = gDraw.circle(7)
+        circle.fill("#A020F0")
         circle.stroke({color: '#A020F0', width: 3, linecap: 'round'}).move(253, 192)
         circle = gDraw.circle(7)
+        circle.fill("#A020F0")
         circle.stroke({color: '#A020F0', width: 3, linecap: 'round'}).move(293, 98)
 
         text = gDraw.text(function (add) {
@@ -587,186 +592,189 @@ SVG.on(document, 'DOMContentLoaded', function () {
     }
 
     function graphP() {
-        let path = gDraw.path('M680 20 C610 60 700 60 250 60 Q220 60 200 350');
+        let path = gDraw.path('M280 20 C210 60 300 60 -150 60 Q-180 60 -200 350');
         path.fill('none');
         path.stroke({color: '#000', width: 3, linecap: 'round', linejoin: 'round'});
-        path = gDraw.path('M680 20 C600 100 695 100 220 100 Q190 100 180 350');
+        path = gDraw.path('M280 20 C200 100 295 100 -180 100 Q-210 100 -220 350');
         path.fill('none');
         path.stroke({color: '#000', width: 3, linecap: 'round', linejoin: 'round'});
-        path = gDraw.path('M680 20 C590 150 690 150 180 150 Q165 150 157 350');
+        path = gDraw.path('M280 20 C190 150 290 150 -220 150 Q-235 150 -243 350');
         path.fill('none');
         path.stroke({color: '#000', width: 3, linecap: 'round', linejoin: 'round'});
-        path = gDraw.path('M680 20 C580 200 685 200 160 200 Q140 200 135 350');
+        path = gDraw.path('M280 20 C180 200 285 200 -240 200 Q-260 200 -265 350');
         path.fill('none');
         path.stroke({color: '#000', width: 3, linecap: 'round', linejoin: 'round'});
-        path = gDraw.path('M680 20 C570 240 680 240 140 240 Q120 240 115 350');
+        path = gDraw.path('M280 20 C170 240 280 240 -260 240 Q-280 240 -285 350');
         path.fill('none');
         path.stroke({color: '#000', width: 3, linecap: 'round', linejoin: 'round'});
         // ('M120 350 C200 330 210 310 220 280 L340 0')
-        path = gDraw.path('M680 20 C590 30 590 40 580 60 L450 350');
+        path = gDraw.path('M280 20 C190 30 190 40 180 60 L50 350');
         path.fill('none');
         path.stroke({color: '#A020F0', width: 5, linecap: 'round', linejoin: 'round'});
 
-        line = gDraw.line(100, 20, 700, 20)
-        line.stroke({color: '#FF0000', width: 5, linecap: 'round'})
-        line = gDraw.line(680, 0, 680, 370)
-        line.stroke({color: '#FF0000', width: 5, linecap: 'round'})
-        let circle = gDraw.circle(10);
-        circle.stroke({color: '#000', width: 3, linecap: 'round'}).move(674, 15);
+        path = gDraw.path('M680 20 C590 30 590 40 580 60 L450 350');
+        path.fill('none');
+        path.stroke({color: '#000', width: 5, linecap: 'round', linejoin: 'round'});
+
+        line = gDraw.line(100-400, 20, 700, 20)
+        line.stroke({color: '#FF0000', width: 3, linecap: 'round'})
+        line = gDraw.line(680-400, 0, 680-400, 370)
+        line.stroke({color: '#FF0000', width: 3, linecap: 'round'})
+
+        line = gDraw.line(503, 0, 503, 370)
+        line.stroke({color: '#FF0000', width: 3, linecap: 'round'})
+
+        let circle = gDraw.circle(7);
+        circle.fill("#A020F0")
+        circle.stroke({color: '#A020F0', width: 3, linecap: 'round'}).move(577-400, 55);
         circle = gDraw.circle(7);
-        circle.stroke({color: '#000', width: 3, linecap: 'round'}).move(577, 55);
+        circle.fill("#A020F0")
+        circle.stroke({color: '#A020F0', width: 3, linecap: 'round'}).move(560-400, 91);
         circle = gDraw.circle(7);
-        circle.stroke({color: '#000', width: 3, linecap: 'round'}).move(560, 91);
+        circle.fill("#A020F0")
+        circle.stroke({color: '#A020F0', width: 3, linecap: 'round'}).move(538-400, 140);
         circle = gDraw.circle(7);
-        circle.stroke({color: '#000', width: 3, linecap: 'round'}).move(538, 140);
+        circle.fill("#A020F0")
+        circle.stroke({color: '#A020F0', width: 3, linecap: 'round'}).move(517-400, 188);
         circle = gDraw.circle(7);
-        circle.stroke({color: '#000', width: 3, linecap: 'round'}).move(517, 188);
-        circle = gDraw.circle(7);
-        circle.stroke({color: '#000', width: 3, linecap: 'round'}).move(500, 228);
+        circle.fill("#A020F0")
+        circle.stroke({color: '#A020F0', width: 3, linecap: 'round'}).move(500-400, 228);
         text = gDraw.text(function (add) {
-            add.tspan('lineárna')
-            add.tspan('oblasť').newLine()
-        }).move(710, 150).stroke({color: '#A020F0', width: 1}).font({
+            add.tspan('zovretie kanála')
+        }).move(85, 300).stroke({color: '#A020F0', width: 1}).font({
             family: 'Arial',
             size: '18'
         })
 
         text = gDraw.text(function (add) {
             add.tspan('I')
-        }).move(715, 350).stroke({color: '#000', width: 1}).font({
+        }).move(715-400, 350).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '15'
         })
         text = gDraw.text(function (add) {
             add.tspan('D')
-        }).move(720, 355).stroke({color: '#000', width: 1}).font({
+        }).move(720-400, 355).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '12'
         })
         text = gDraw.text(function (add) {
             add.tspan('[mA]')
-        }).move(730, 350).stroke({color: '#000', width: 1}).font({
-            family: 'Arial',
-            size: '15'
-        })
-
-        text = gDraw.text(function (add) {
-            add.tspan('zovretie kanála')
-        }).move(540, 360).stroke({color: '#000', width: 1}).font({
+        }).move(730-400, 350).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '15'
         })
 
         text = gDraw.text(function (add) {
             add.tspan('U')
-        }).move(330, 250).stroke({color: '#000', width: 1}).font({
+        }).move(330-500, 250).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '15'
         })
         text = gDraw.text(function (add) {
             add.tspan('GS')
-        }).move(340, 255).stroke({color: '#000', width: 1}).font({
+        }).move(340-500, 255).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '12'
         })
         text = gDraw.text(function (add) {
             add.tspan('= 0V')
-        }).move(360, 250).stroke({color: '#000', width: 1}).font({
+        }).move(360-500, 250).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '15'
         })
 
         text = gDraw.text(function (add) {
             add.tspan('U')
-        }).move(330, 197).stroke({color: '#000', width: 1}).font({
+        }).move(330-500, 197).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '15'
         })
         text = gDraw.text(function (add) {
             add.tspan('GS')
-        }).move(340, 202).stroke({color: '#000', width: 1}).font({
+        }).move(340-500, 202).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '12'
         })
         text = gDraw.text(function (add) {
-            add.tspan('= -1V')
-        }).move(360, 197).stroke({color: '#000', width: 1}).font({
+            add.tspan('= 1V')
+        }).move(360-500, 197).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '15'
         })
 
         text = gDraw.text(function (add) {
             add.tspan('U')
-        }).move(330, 150).stroke({color: '#000', width: 1}).font({
+        }).move(330-500, 150).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '15'
         })
         text = gDraw.text(function (add) {
             add.tspan('GS')
-        }).move(340, 160).stroke({color: '#000', width: 1}).font({
+        }).move(340-500, 160).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '12'
         })
         text = gDraw.text(function (add) {
-            add.tspan('= -2,2V')
-        }).move(360, 150).stroke({color: '#000', width: 1}).font({
+            add.tspan('= 2,2V')
+        }).move(360-500, 150).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '15'
         })
 
         text = gDraw.text(function (add) {
             add.tspan('U')
-        }).move(330, 75).stroke({color: '#000', width: 1}).font({
+        }).move(330-480, 75).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '15'
         })
         text = gDraw.text(function (add) {
             add.tspan('GS')
-        }).move(340, 80).stroke({color: '#000', width: 1}).font({
+        }).move(340-480, 80).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '12'
         })
         text = gDraw.text(function (add) {
-            add.tspan('= -3V')
-        }).move(360, 75).stroke({color: '#000', width: 1}).font({
+            add.tspan('= 3V')
+        }).move(360-480, 75).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '15'
         })
 
         text = gDraw.text(function (add) {
             add.tspan('U')
-        }).move(330, 35).stroke({color: '#000', width: 1}).font({
+        }).move(330-500, 35).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '15'
         })
         text = gDraw.text(function (add) {
             add.tspan('GS')
-        }).move(340, 40).stroke({color: '#000', width: 1}).font({
+        }).move(340-500, 40).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '12'
         })
         text = gDraw.text(function (add) {
             add.tspan('=U')
-        }).move(360, 35).stroke({color: '#000', width: 1}).font({
+        }).move(360-500, 35).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '15'
         })
         text = gDraw.text(function (add) {
             add.tspan('t')
-        }).move(379, 40).stroke({color: '#000', width: 1}).font({
+        }).move(379-500, 40).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '12'
         })
         text = gDraw.text(function (add) {
             add.tspan('V')
-        }).move(383, 35).stroke({color: '#000', width: 1}).font({
+        }).move(383-500, 35).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '15'
         })
 
         text = gDraw.text(function (add) {
             add.tspan('saturačná oblasť')
-        }).move(315, 113).stroke({color: '#00FF00', width: 0.5}).font({
+        }).move(315-470, 113).stroke({color: '#00FF00', width: 0.5}).font({
             family: 'Arial',
             size: '14'
         })
@@ -775,49 +783,148 @@ SVG.on(document, 'DOMContentLoaded', function () {
             add.tspan('oblasť')
             add.tspan('lavínového').newLine()
             add.tspan('prierazu').newLine()
-        }).move(100, 125).stroke({color: '#00FF00', width: 0.5}).font({
+        }).move(100-400, 125).stroke({color: '#00FF00', width: 0.5}).font({
             family: 'Arial',
             size: '14'
         })
 
         text = gDraw.text(function (add) {
             add.tspan('0')
-        }).move(685, 0).stroke({color: '#000', width: 1}).font({
+        }).move(685-400, 0).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '12'
         })
 
         text = gDraw.text(function (add) {
             add.tspan('-1')
-        }).move(620, 0).stroke({color: '#000', width: 1}).font({
+        }).move(620-400, 0).stroke({color: '#000', width: 1}).font({
+            family: 'Arial',
+            size: '12'
+        })
+
+        text = gDraw.text(function (add) {
+            add.tspan('-5')
+        }).move(63, 0).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '12'
         })
 
         text = gDraw.text(function (add) {
             add.tspan('-10')
-        }).move(320, 0).stroke({color: '#000', width: 1}).font({
+        }).move(-150, 0).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '12'
         })
 
         text = gDraw.text(function (add) {
             add.tspan('U')
-        }).move(100, 30).stroke({color: '#000', width: 1}).font({
+        }).move(100-400, 30).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '15'
         })
         text = gDraw.text(function (add) {
             add.tspan('DS')
-        }).move(112, 35).stroke({color: '#000', width: 1}).font({
+        }).move(112-400, 35).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '12'
         })
         text = gDraw.text(function (add) {
             add.tspan('[V]')
-        }).move(130, 30).stroke({color: '#000', width: 1}).font({
+        }).move(130-400, 30).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '15'
+        })
+        path = gDraw.path('M67 233 500 233')
+        path.fill('none')
+        path.stroke({color: '#000', width: 1, linecap: 'round', dasharray: '10, 5'})
+
+        path = gDraw.path('M100 193 520 193')
+        path.fill('none')
+        path.stroke({color: '#000', width: 1, linecap: 'round', dasharray: '10, 5'})
+
+        path = gDraw.path('M67 145 541 145')
+        path.fill('none')
+        path.stroke({color: '#000', width: 1, linecap: 'round', dasharray: '10, 5'})
+
+        path = gDraw.path('M140 96 563 96')
+        path.fill('none')
+        path.stroke({color: '#000', width: 1, linecap: 'round', dasharray: '10, 5'})
+
+        path = gDraw.path('M67 60 578 60')
+        path.fill('none')
+        path.stroke({color: '#000', width: 1, linecap: 'round', dasharray: '10, 5'})
+
+        path = gDraw.path('M582 20 582 60')
+        path.fill('none')
+        path.stroke({color: '#000', width: 1, linecap: 'round', dasharray: '10, 5'})
+
+        path = gDraw.path('M567 20 567 85')
+        path.fill('none')
+        path.stroke({color: '#000', width: 1, linecap: 'round', dasharray: '10, 5'})
+
+        path = gDraw.path('M543 20 543 140')
+        path.fill('none')
+        path.stroke({color: '#000', width: 1, linecap: 'round', dasharray: '10, 5'})
+
+        path = gDraw.path('M523 20 523 180')
+        path.fill('none')
+        path.stroke({color: '#000', width: 1, linecap: 'round', dasharray: '10, 5'})
+
+
+        circle = gDraw.circle(7)
+        circle.stroke({color: '#000', width: 3, linecap: 'round'}).move(578, 57)
+        circle = gDraw.circle(7)
+        circle.stroke({color: '#000', width: 3, linecap: 'round'}).move(563, 90)
+        circle = gDraw.circle(7)
+        circle.stroke({color: '#000', width: 3, linecap: 'round'}).move(541, 142)
+        circle = gDraw.circle(7)
+        circle.stroke({color: '#000', width: 3, linecap: 'round'}).move(520, 187)
+        circle = gDraw.circle(7)
+        circle.stroke({color: '#000', width: 3, linecap: 'round'}).move(500, 230)
+
+        path = gDraw.path('M70 20 70 350')
+        path.fill('none')
+        path.stroke({color: '#000', width: 1, linecap: 'round', dasharray: '10, 5'})
+
+        circle = gDraw.circle(7)
+        circle.stroke({color: '#000', width: 3, linecap: 'round'}).move(67, 55)
+        circle = gDraw.circle(7)
+        circle.stroke({color: '#000', width: 3, linecap: 'round'}).move(67, 95)
+        circle = gDraw.circle(7)
+        circle.stroke({color: '#000', width: 3, linecap: 'round'}).move(67, 144)
+        circle = gDraw.circle(7)
+        circle.stroke({color: '#000', width: 3, linecap: 'round'}).move(67, 192)
+        circle = gDraw.circle(7)
+        circle.stroke({color: '#000', width: 3, linecap: 'round'}).move(67, 232)
+        text = gDraw.text(function (add) {
+            add.tspan('0')
+        }).move(490, 0).stroke({color: '#000', width: 1}).font({
+            family: 'Arial',
+            size: '12'
+        })
+        text = gDraw.text(function (add) {
+            add.tspan('1')
+        }).move(519, 0).stroke({color: '#000', width: 1}).font({
+            family: 'Arial',
+            size: '12'
+        })
+        text = gDraw.text(function (add) {
+            add.tspan('2,2')
+        }).move(534, 0).stroke({color: '#000', width: 1}).font({
+            family: 'Arial',
+            size: '12'
+        })
+        text = gDraw.text(function (add) {
+            add.tspan('3')
+        }).move(562, 0).stroke({color: '#000', width: 1}).font({
+            family: 'Arial',
+            size: '12'
+        })
+        text = gDraw.text(function (add) {
+            add.tspan('Ut')
+        }).move(576, 0).stroke({color: '#000', width: 1}).font({
+            family: 'Arial',
+            size: '12'
         })
     }
 
@@ -2207,6 +2314,94 @@ SVG.on(document, 'DOMContentLoaded', function () {
         }
     }
 
+    function dotP(){
+        if (redCircle) {
+            redCircle.remove();
+        }
+
+        if (ugs == "0" && uds == "0") {
+            redCircle = gDraw.circle(16)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(272, 12)
+        } else if (ugs == "-1" && uds == "0") {
+            redCircle = gDraw.circle(16)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(272, 12)
+        } else if (ugs == "-2.2" && uds == "0") {
+            redCircle = gDraw.circle(16)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(272, 12)
+        } else if (ugs == "-3" && uds == "0") {
+            redCircle = gDraw.circle(16)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(272, 12)
+        } else if (ugs == "Ut" && uds == "0") {
+            redCircle = gDraw.circle(16)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(272, 12)
+        } else if (ugs == "0" && uds == "0.5") {
+            redCircle = gDraw.circle(16)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(245, 70)
+        } else if (ugs == "-1" && uds == "0.5") {
+            redCircle = gDraw.circle(16)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(245, 64)
+        } else if (ugs == "-2.2" && uds == "0.5") {
+            redCircle = gDraw.circle(16)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(245, 57)
+        } else if (ugs == "-3" && uds == "0.5") {
+            redCircle = gDraw.circle(16)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(245, 45)
+        } else if (ugs == "Ut" && uds == "0.5") {
+            redCircle = gDraw.circle(16)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(245, 30)
+        } else if (ugs == "0" && uds == "5") {
+            redCircle = gDraw.circle(16)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(62, 230)
+        } else if (ugs == "-1" && uds == "5") {
+            redCircle = gDraw.circle(16)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(62, 190)
+        } else if (ugs == "-2.2" && uds == "5") {
+            redCircle = gDraw.circle(16)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(62, 140)
+        } else if (ugs == "-3" && uds == "5") {
+            redCircle = gDraw.circle(16)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(62, 92)
+        } else if (ugs == "Ut" && uds == "5") {
+            redCircle = gDraw.circle(16)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(62, 50)
+        } else if (ugs == "0" && uds == "Udsat") {
+            redCircle = gDraw.circle(16)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(93, 225)
+        } else if (ugs == "-1" && uds == "Udsat") {
+            redCircle = gDraw.circle(16)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(113, 184)
+        } else if (ugs == "-2.2" && uds == "Udsat") {
+            redCircle = gDraw.circle(16)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(132, 137)
+        } else if (ugs == "-3" && uds == "Udsat") {
+            redCircle = gDraw.circle(16)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(153, 90)
+        } else if (ugs == "Ut" && uds == "Udsat") {
+            redCircle = gDraw.circle(16)
+            redCircle.fill("#FE8585")
+            redCircle.stroke({color: '#FF0000', width: 3, linecap: 'round'}).move(172, 49)
+        }
+    }
+
     schema1()
     graphN()
     dotN()
@@ -2240,6 +2435,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
             cdDraw.clear()
             schema1()
             graphP()
+            dotP()
             animacia2()
             drawText(ugs, uds)
             clearTimeout(timeoutIDp)
@@ -2265,6 +2461,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
             case "p":
                 animacia2()
                 drawText(ugs, uds)
+                dotP()
                 if (uds == "0") {
                     value = false;
                 } else {
@@ -2297,6 +2494,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
             case "p":
                 animacia2()
                 drawText(ugs, uds)
+                dotP()
                 if (uds == "0") {
                     value = false;
                 } else {
