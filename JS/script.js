@@ -2185,6 +2185,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
         ugs = "0"
         uds = "0"
         value = false
+        dotN()
         if (this.value == "n") {
             selectValue = "n";
             gDraw.clear()
@@ -2273,6 +2274,12 @@ SVG.on(document, 'DOMContentLoaded', function () {
     });
 
     document.querySelector('.form-check-input').addEventListener('change', function () {
+        document.getElementById('Ugs').value = "0"
+        document.getElementById('Uds').value = "0"
+        ugs = "0"
+        uds = "0"
+        value = false
+        dotN()
         if (this.checked) {
             cdDraw.clear()
             addAndRemoveClassesToSelects("hidden")
