@@ -1,6 +1,7 @@
 var ctx = document.getElementById('canvas3').getContext('2d');
 var cW = ctx.canvas.width, cH = ctx.canvas.height;
-
+// premenna na zabranenie kreslenia dier pocas pohybu prvych dvoch elektronov
+var get_rid_of_drawing_holes_2 = 0
 // vytvorenie objektov podla ich konstruktorov, ktore sa budu hybat
 let electron6 = new Dot(80, 40, 0);
 let electron9 = new Dot(130, 40, 0);
@@ -42,14 +43,19 @@ function draw_while_moving3(ctx) {
     draw3(ctx);
     acceptor1.draw(ctx);
     acceptor2.draw(ctx);
-    electron6.draw(ctx);
     electron7.draw(ctx);
     electron8.draw(ctx);
-    electron9.draw(ctx);
-    hole4.draw(ctx);
     hole5.draw(ctx);
     hole6.draw(ctx);
-    hole9.draw(ctx);
+    if(get_rid_of_drawing_holes_2 > 45){
+        electron6.draw(ctx);
+        hole4.draw(ctx);
+    }
+    if(get_rid_of_drawing_holes_2 > cH - 52){
+        electron9.draw(ctx);
+        hole9.draw(ctx);
+    }
+
 }
 
 //funkcia, ktora vykresli elektrony a diery pri rekombinacii
@@ -58,21 +64,26 @@ function draw_while_moving_middle3(ctx) {
     draw3(ctx);
     acceptor1.drawWhileMoving(ctx);
     acceptor2.drawWhileMoving(ctx);
-    electron6.draw(ctx);
-    electron9.draw(ctx);
-    hole4.draw(ctx);
     hole5.draw(ctx);
     hole6.draw(ctx);
-    hole9.draw(ctx);
+    electron6.draw(ctx);
+    hole4.draw(ctx);
+    if(get_rid_of_drawing_holes_2 > cH - 52){
+        electron9.draw(ctx);
+        hole9.draw(ctx);
+    }
 }
 
 //funkcia, ktora vykresli elektrony a diery pri rekombinacii
 function draw_while_moving_end3(ctx) {
     draw3(ctx);
+    if(get_rid_of_drawing_holes_2 > cH - 52){
+        electron9.draw(ctx);
+        hole9.draw(ctx);
+    }
     electron6.draw(ctx);
-    electron9.draw(ctx);
     hole4.draw(ctx);
-    hole9.draw(ctx);
+
 }
 
 //generovanie na onclick
@@ -84,7 +95,7 @@ function move3() {
     var pos = 0;
     var count = cH - 52;
     var count3 = count * 2;
-    var id = setInterval(frame, 15);
+    var id = setInterval(frame, 25);
 
     function frame() {
         if (pos == count3) {
@@ -92,6 +103,7 @@ function move3() {
             //document.getElementById("animateBack3").disabled = false;
         } else {
             pos++;
+            get_rid_of_drawing_holes_2++;
             ctx.clearRect(0, 0, innerWidth, innerHeight);
             draw_while_moving3(ctx);
             if(pos < 45)
@@ -132,6 +144,7 @@ function moveBack3() {
 
     function frame() {
         if (pos == count) {
+            get_rid_of_drawing_holes_2 = 0
             clearInterval(id);
             draw3(ctx);
             //document.getElementById("animate3").disabled = false;

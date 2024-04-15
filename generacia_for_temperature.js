@@ -1,6 +1,7 @@
 var ctx = document.getElementById('canvas1').getContext('2d');
 var cW = ctx.canvas.width, cH = ctx.canvas.height;
-
+// premenna na zabranenie kreslenia dier pocas pohybu prvych dvoch elektronov
+var get_rid_of_drawing_holes_3 = 0
 let band1 = new Band(0, cH - 80, 0);
 let band2 = new Band(0, 0, 1);
 
@@ -25,13 +26,25 @@ draw(ctx);
 function draw_moving(ctx) {
     draw(ctx);
     electron1.draw(ctx);
-    electron2.draw(ctx);
     hole1.draw(ctx);
-    hole2.draw(ctx);
+    if(get_rid_of_drawing_holes_3 > cH - 120){
+        electron2.draw(ctx);
+        hole2.draw(ctx);
+    }
+}
+async function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 //generovanie na onClick (generovanie)
-function move() {
+async function move() {
+
+    console.log("Button clicked!");
+
+    await delay(1500);
+
+    console.log("Delayed function execution!");
+
     var ctx = document.getElementById('canvas1').getContext('2d');
     var cW = ctx.canvas.width, cH = ctx.canvas.height;
     //document.getElementById("animateBack1").disabled = true;
@@ -39,15 +52,19 @@ function move() {
     var pos = 0;
     var count = cH - 120;
     var count4 = count * 2;
-    var id = setInterval(frame, 15);
+    var id = setInterval(frame, 25);
 
     function frame() {
+        //if(get_rid_of_drawing_holes_3 > cH - 120){
+        //    id = setInterval(frame, 20);
+        //}
         //mozno sem zaviest nejaky delay pre synchronizaciu
         if (pos == count4) {
             clearInterval(id);
             //document.getElementById("animateBack1").disabled = false;
         } else {
             pos++;
+            get_rid_of_drawing_holes_3++;
             ctx.clearRect(0, 0, innerWidth, innerHeight);
             draw_moving(ctx);
             if (pos < count ){
@@ -77,7 +94,8 @@ function moveBack() {
     var id = setInterval(frame, 6);
 
     function frame() {
-        if (pos == count) {
+        if (pos == count - 80) {
+            get_rid_of_drawing_holes_3 = 0;
             clearInterval(id);
             draw(ctx);
             //document.getElementById("animate1").disabled = false;

@@ -1,6 +1,7 @@
 var ctx = document.getElementById('canvas2').getContext('2d');
 var cW = ctx.canvas.width, cH = ctx.canvas.height;
-
+// premenna na zabranenie kreslenia dier pocas pohybu prvych dvoch elektronov
+var get_rid_of_drawing_holes = 0
 // vytvorenie objektov podla ich konstruktorov, ktore sa budu hybat
 let electron3 = new Dot(80, 60, 0);
 let electron10 = new Dot(130, 60, 0);
@@ -36,13 +37,17 @@ function draw_while_moving2(ctx) {
     draw2(ctx);
     donor1.drawWhileMoving(ctx);
     donor2.drawWhileMoving(ctx);
-    electron3.draw(ctx);
     electron4.draw(ctx);
     electron5.draw(ctx);
-    electron10.draw(ctx);
 
-    hole3.draw(ctx);
-    hole10.draw(ctx);
+    if (get_rid_of_drawing_holes > 48){
+        hole3.draw(ctx);
+        electron3.draw(ctx);
+    }
+    if (get_rid_of_drawing_holes > cH - 52){
+        hole10.draw(ctx);
+        electron10.draw(ctx);
+    }
 }
 
 function draw_while_moving_end2(ctx) {
@@ -54,9 +59,18 @@ function draw_while_moving_end2(ctx) {
     hole3.draw(ctx);
     hole10.draw(ctx);
 }
-
+async function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 //generovanie na onclick
-function move2() {
+async function move2() {
+
+    console.log("Button clicked!");
+
+    await delay(150);
+
+    console.log("Delayed function execution!");
+
     var ctx = document.getElementById('canvas2').getContext('2d');
     var cW = ctx.canvas.width, cH = ctx.canvas.height;
     document.getElementById("animateBack2").disabled = true;
@@ -65,7 +79,7 @@ function move2() {
     var pos2 = 0;
     var count = cH - 52;
     var count2 = count * 2;
-    var id = setInterval(frame, 15);
+    var id = setInterval(frame, 25);
 
     function frame() {
         if (pos == count2) {
@@ -73,6 +87,7 @@ function move2() {
             document.getElementById("animateBack2").disabled = false;
         } else{
             pos++;
+            get_rid_of_drawing_holes++;
             ctx.clearRect(0, 0, innerWidth, innerHeight);
             draw_while_moving2(ctx);
             //if(pos2 > 47){
@@ -101,6 +116,7 @@ function move2() {
     }
 }
 
+
 function moveBack2() {
     var ctx = document.getElementById('canvas2').getContext('2d');
     var cW = ctx.canvas.width, cH = ctx.canvas.height;
@@ -112,6 +128,7 @@ function moveBack2() {
 
     function frame() {
         if (pos == count) {
+            get_rid_of_drawing_holes = 0
             clearInterval(id);
             draw2(ctx);
             document.getElementById("animate2").disabled = false;

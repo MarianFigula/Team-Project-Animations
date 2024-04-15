@@ -106,6 +106,8 @@
                         </div>
                         <h4 data-i18n="semiconductor_type_1">Donor</h4>
                         <canvas id="canvas2" width="300" height="300"></canvas><br>
+                        <button id="animate2" onclick="move2();move();move3()" data-i18n="button_1">Generovanie</button>
+                        <button id="animateBack2" onclick="moveBack2(); moveBack();moveBack3()" data-i18n="button_2" disabled>Rekombinácia</button>
                     </div>
                     <div class="col-md-4" id="temperature_div_canvas3">
                         <h3 data-i18n="subtitle_2">Prímesový polovodič</h3>
@@ -133,22 +135,13 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 <script src="objects.js"></script>
-<script src="generacia.js"></script>
-<script src="generaciaDonor.js"></script>
-<script src="generaciaAkceptor.js"></script>
+<script src="generacia_for_temperature.js"></script>
+<script src="generaciaDonor_for_temperature.js"></script>
+<script src="generaciaAkceptor_for_temperature.js"></script>
 <script src="helperFunctions.js"></script>
-<script src="infoModal.js"></script>
+<!--<script src="infoModal.js"></script>-->
 
-<script>
 
-    // Function to start generation
-    function startGeneration() {
-        // Call your other methods here
-        move();
-        move2();
-        move3();
-    }
-</script>
 
 
 
