@@ -41,15 +41,16 @@ section h2{
 
 section .cards{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
 section .cards .text-card{
-    background: #2696E9;
+    background: #a594f9;
     margin: 10px;
     padding: 20px;
     border-radius: 10px;
+
 }
 
 section .cards .text-card h3{
