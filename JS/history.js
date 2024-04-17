@@ -2,12 +2,12 @@ window.addEventListener("scroll", reveal);
 
 
 function reveal() {
-    var reveals = document.querySelectorAll(".reveal");
+    let reveals = document.querySelectorAll(".reveal");
 
-    for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var revealTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 150;
+    for (let i = 0; i < reveals.length; i++) {
+        let windowHeight = window.innerHeight;
+        let revealTop = reveals[i].getBoundingClientRect().top;
+        let elementVisible = 150;
 
         if (revealTop < windowHeight - elementVisible) {
             reveals[i].classList.add("active");
