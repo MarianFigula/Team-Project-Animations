@@ -69,9 +69,13 @@ async function move() {
             draw_moving(ctx);
             if (pos < count ){
                 //cestuje prvy elektron , teplomer ukazuje 200 (v donor a akceptor je nacasovanie s tretim elektronom)
+                document.getElementById("thermometer5KContainer").style.display = "none";
+                document.getElementById("thermometer200KContainer").style.display = "flex";
                 electron1.transportation();
             }else if(pos < count + 179){
                 //cestuje druhy elektron , teplomer ukazuje 300 (v donor a akceptor je nacasovanie so stvrtym elektronom)
+                document.getElementById("thermometer200KContainer").style.display = "none";
+                document.getElementById("thermometer300KContainer").style.display = "flex";
                 electron2.transportation();
             }
             //electron2.transportation();

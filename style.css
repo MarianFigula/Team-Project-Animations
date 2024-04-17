@@ -318,16 +318,16 @@ span {
     }
 }
 
-.thermometer5KContainer p,
-.thermometer200KContainer p,
-.thermometer300KContainer p {
+#thermometer5KContainer p,
+#thermometer200KContainer p,
+#thermometer300KContainer p {
     text-align: center;
     font-size: 30px;
     font-weight: bold;
 }
 
-.thermometer200KContainer,
-.thermometer300KContainer {
+#thermometer200KContainer,
+#thermometer300KContainer {
     display: none;
 }
 
