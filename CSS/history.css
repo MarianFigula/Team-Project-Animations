@@ -16,6 +16,9 @@ section{
     justify-content: center;
     align-items: center;
 }
+section:nth-child(2){
+    flex-direction: column;
+}
 
 section:nth-child(even){
     color: #fff;
@@ -80,4 +83,21 @@ section .cards .text-card h3{
 .reveal.active{
     transform: translateY(0);
     opacity: 1;
+}
+
+.arrow-down{
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: moveUpDown 1.5s infinite alternate-reverse;
+}
+
+@keyframes moveUpDown {
+    0% {
+        bottom: 30%;
+    }
+    100% {
+        bottom: 26%; /* Adjust this value to control how far the image moves */
+    }
 }
