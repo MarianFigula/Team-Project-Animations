@@ -66,6 +66,7 @@ section .cards .text-card h3{
 @media (max-width: 900px) {
     section h1{
         font-size: 40px;
+        text-align: center;
     }
 
     section .cards{
@@ -87,7 +88,7 @@ section .cards .text-card h3{
 
 .arrow-down{
     position: absolute;
-    bottom: 30%;
+    top: 60%;
     left: 50%;
     transform: translateX(-50%);
     animation: moveUpDown 1.5s infinite alternate-reverse;
@@ -95,9 +96,9 @@ section .cards .text-card h3{
 
 @keyframes moveUpDown {
     0% {
-        bottom: 30%;
+        top: 60%;
     }
     100% {
-        bottom: 26%; /* Adjust this value to control how far the image moves */
+        top: 63%; /* Adjust this value to control how far the image moves */
     }
 }
