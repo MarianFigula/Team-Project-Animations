@@ -89,6 +89,9 @@ async function move() {
 
 //rekombinacia na onClick (rekombinacia)
 function moveBack() {
+    document.getElementById("thermometer300KContainer").style.display = "none";
+    document.getElementById("thermometer5KContainer").style.display = "flex";
+
     var ctx = document.getElementById('canvas1').getContext('2d');
     var cW = ctx.canvas.width, cH = ctx.canvas.height;
     //document.getElementById("animateBack1").disabled = true;
