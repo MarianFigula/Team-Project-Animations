@@ -88,16 +88,22 @@
             <div class="col-md-2">
                 <!-- Thermometer Images -->
                 <div id="thermometer5KContainer">
-                    <img id="thermometer5K" src="obrazky/thermometer_5K.png" height="400">
-                    <p>t = 5K</p>
+                    <div class="content">
+                        <img id="thermometer5K" src="obrazky/thermometer_5K.png" height="400">
+                        <p>t = 5K</p>
+                    </div>
                 </div>
                 <div id="thermometer200KContainer">
-                    <img id="thermometer200K" src="obrazky/thermometer_200K.png" height="400">
-                    <p>t = 200K</p>
+                    <div class="content">
+                        <img id="thermometer200K" src="obrazky/thermometer_200K.png" height="400">
+                        <p>t = 200K</p>
+                    </div>
                 </div>
                 <div id="thermometer300KContainer">
-                    <img id="thermometer300K" src="obrazky/thermometer_300K.png" height="400">
-                    <p>t = 300K</p>
+                    <div class="content">
+                        <img id="thermometer300K" src="obrazky/thermometer_300K.png" height="400">
+                        <p>t = 300K</p>
+                    </div>
                 </div>
             </div>
             <div class="col-md-10">
@@ -115,8 +121,10 @@
                         </div>
                         <h4 data-i18n="semiconductor_type_1">Donor</h4>
                         <canvas id="canvas2" width="300" height="300"></canvas><br>
-                        <button id="animate2" onclick="move2();move();move3()" data-i18n="button_1">Generovanie</button>
-                        <button id="animateBack2" onclick="moveBack2(); moveBack();moveBack3()" data-i18n="button_2" disabled>Rekombinácia</button>
+                        <div class="animate-buttons">
+                            <button id="animate2" onclick="move2();move();move3()" data-i18n="button_1">Generovanie</button>
+                            <button id="animateBack2" onclick="moveBack2(); moveBack();moveBack3()" data-i18n="button_2" disabled>Rekombinácia</button>
+                        </div>
                     </div>
                     <div class="col-md-4" id="temperature_div_canvas3">
                         <h3 data-i18n="subtitle_2">Prímesový polovodič</h3>
@@ -124,9 +132,11 @@
                         <canvas id="canvas3" width="300" height="300"></canvas><br>
                     </div>
                 </div>
+                <!--
                 <div class="text-center mt-4">
                     <button id="startGenerationButton" onclick="startGeneration()">Start generation</button>
                 </div>
+                -->
             </div>
         </div>
     </div>

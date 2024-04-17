@@ -228,6 +228,7 @@ select {
 .container {
     clear: both;
     overflow: hidden;
+    padding-bottom: 100px;
 }
 
 canvas {
@@ -318,12 +319,20 @@ span {
     }
 }
 
-#thermometer5KContainer p,
-#thermometer200KContainer p,
-#thermometer300KContainer p {
-    text-align: center;
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content img {
+    max-width: 100%; /* Ensure image responsiveness */
+}
+
+.content p {
     font-size: 30px;
     font-weight: bold;
+    text-align: center;
 }
 
 #thermometer200KContainer,
@@ -331,9 +340,8 @@ span {
     display: none;
 }
 
-
-#startGenerationButton {
-    margin: 50px 0;
+.animate-buttons {
+    margin-top: 100px;
 }
 
 .vysvetlivky {
