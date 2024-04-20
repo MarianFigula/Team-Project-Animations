@@ -73,7 +73,7 @@ section:nth-child(odd) .cards .text-card{
 .scrollUp {
     position: fixed;
     bottom: 20px;
-    right: 40px;
+    right: 30px;
     display: block;
     opacity: 0;
     padding: 0;
@@ -90,9 +90,10 @@ section:nth-child(odd) .cards .text-card{
 .year-legend {
     background-color: #76c893;
     border-radius: 15px;
+    max-width: 200px;
     position: fixed;
-    top: 100px;
-    right: 20px;
+    bottom: 20px;
+    left: 30px;
     display: block;
     opacity: 0;
     padding: 12px 0;
@@ -106,7 +107,7 @@ section:nth-child(odd) .cards .text-card{
 }
 
 .year-legend ul{
-    padding-right: 1.2em;
+    padding-right: 1em;
     margin-bottom: 0!important;
     font-size: 1em;
 }
