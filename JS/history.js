@@ -19,15 +19,18 @@ function reveal() {
 
 // Get the button
 let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+let yearLegend = document.getElementById("yearLegend");
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         scrollToTopBtn.classList.add("show");
+        yearLegend.classList.add("show");
     } else {
         scrollToTopBtn.classList.remove("show");
+        yearLegend.classList.remove("show");
     }
 }
 

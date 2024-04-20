@@ -73,7 +73,7 @@ section:nth-child(odd) .cards .text-card{
 .scrollUp {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 40px;
     display: block;
     opacity: 0;
     padding: 0;
@@ -87,7 +87,42 @@ section:nth-child(odd) .cards .text-card{
     opacity: 1; /* Change opacity to 1 when the button is shown */
 }
 
+.year-legend {
+    background-color: #76c893;
+    border-radius: 15px;
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    display: block;
+    opacity: 0;
+    padding: 12px 0;
+    border: none;
+    transition: opacity 0.5s ease; /* Add a transition effect for opacity */
 
+}
+
+.year-legend.show {
+    opacity: 1;
+}
+
+.year-legend ul{
+    padding-right: 1.2em;
+    margin-bottom: 0!important;
+    font-size: 1em;
+}
+
+.year-legend ul li{
+    list-style: none;
+    margin-right: 15px;
+}
+
+.year-legend ul li a{
+    color: #333533;
+}
+
+.year-legend ul li a:hover{
+    color: black;
+}
 
 @media (max-width: 900px) {
     section h1{
