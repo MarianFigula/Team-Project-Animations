@@ -15,35 +15,13 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon_package/favicon-16x16.png">
   <link rel="manifest" href="/favicon_package/site.webmanifest">
   <link rel="mask-icon" href="/favicon_package/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="stylesheet" href="../CSS/scroll-show.css">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
   <!-- <script src="/JS/script.js"></script> -->
 
 </head>
 <body>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Využitie JFET Tranzistora</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        I keď je princíp JFET starý už vyše 40 rokov, dodnes sa hojne využíva v komerčnom či armádnom odvetví.
-        Táto technológia v elektrickom obvode pomáha riešiť problémy svojimi výhodami, medzi ktoré patrí
-        vysoká impedancia a potreba nízkeho výkonu. Taktiež má vysokú radiačnú a tepelnú toleranciu
-        (typicky od -60°C do 150°C), čo je požadované v mnohých armádnych projektoch.
-        JFET je rozmerovo malý a našiel si využitie ako zosilňovací prvok v týchto zariadeniach:
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvoriť</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -81,7 +59,150 @@
   </nav>
 </header>
 
+<section class="text-white">
+  <h1>Teória JFET</h1>
+  <img src="../imgs/chevron-double-down.svg" class="mt-5 arrow-down" alt="scroll-down" width="32">
+</section>
 
+
+<section id="definition">
+  <div class="custom-container reveal">
+    <h2>Definícia</h2>
+    <div class="cards">
+      <div class="text-card">
+        <h4>FET - Field Effect Transistor</h4>
+        <hr>
+        <p class="fs-5">Unipolárne FET tranzistory, riadené elektrickým poľom, sú polovodičové súčiastky,
+          kde napätie na hradlovú elektródu G vytvára kanál medzi emitorom S a kolektorom D.
+          Kanál slúži na prechod prúdu polovodičom.
+        </p>
+      </div>
+      <div class="text-card">
+        <h4>Majoritné nosiče</h4>
+        <hr>
+        <p class="fs-5">Typ náboja, ktorý prenáša prúd v tranzistoroch.
+          Majú veľmi vysoký vstupný odpor (viac ako 1010 Ω), pretože cez hradlovú elektródu neprechádza takmer žiadny prúd.
+        </p>
+      </div>
+      <div class="ms-3 img-card">
+        <img src="../imgs/definition.png" alt="obrázok" class="light">
+      </div>
+    </div>
+  </div>
+</section>
+<section id="principle_1">
+  <div class="custom-container reveal">
+    <h2>Princíp</h2>
+    <div class="cards">
+      <div class="text-card">
+        <h4>JFET - Junction Field Effect Transistor</h4>
+        <hr>
+        <p class="fs-5">
+          Najjednoduchší typ unipolárneho tranzistora riadeného elektrickým poľom.
+          Má tri vývody: hradlo (G), kolektor (D) a emitor (S).
+          Na substráte je vytvorená homogénna vrstva opačného typu polovodiča, tzv. kanál, hrubá približne 1 μm.
+        </p>
+      </div>
+      <div class="text-card">
+        <h4>Dielektrika (SiO<span class="lower-number">2</span>)</h4>
+        <hr>
+        <p class="fs-5">Je tenká vrstvička s tromi vytepanými okienkami.
+          Prostredné okienko má oblasť opačného typu polovodiča s vyššou dotáciou než kanál,
+          zatiaľ čo krajné okienka majú vrstvy rovnakého typu polovodiča ako kanál, opäť s vyššou dotáciou.
+          Každá vrstva má svoju elektródu, kde krajné tvoria kolektor a emitor a stredná tvorí hradlo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="principle_2">
+  <div class="custom-container reveal">
+    <h2>Princíp</h2>
+    <div class="cards">
+      <div class="text-card">
+        <h4>Elektródy</h4>
+        <hr>
+        <p class="fs-5">Elektróda S privádza nosiče náboja do kanála a elektróda D ich odvádza späť.
+          Pri priložení napätia medzi elektródami G a S sa vytvorí elektrické pole kolmo k povrchu polovodiča,
+          ktoré vytláča nosiče náboja z oblasti medzi pn priechodmi G-S.</p>
+      </div>
+      <div class="ms-3 me-3">
+        <img src="../imgs/principle.png" alt="obrázok" class="light">
+      </div>
+      <div class="text-card">
+        <h4>Pinch off</h4>
+        <hr>
+        <p class="fs-5">To spôsobuje zúženie kanála a zníženie jeho vodivosti. Týmto spôsobom sa dá riadiť prúd
+          medzi S a D, dosahujúc tranzistorový efekt. Tento jav je podobný stláčaniu záhradnej hadice,
+          kde pritláčanie môže úplne zastaviť prúd v hadici (pinch off).</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="types">
+  <div class="custom-container reveal">
+    <h2>Typy JFET</h2>
+    <div class="cards">
+      <div class="text-card">
+        <h4>N/P kanál</h4>
+        <hr>
+        <p class="fs-5">
+          Existujú dva typy JFET tranzistorov: n-kanálový a p-kanálový.
+          Kladné napätie v bráne p-kanálového JFET znižuje záporné napätie.
+
+        </p>
+      </div>
+      <div class="ms-3 me-3">
+        <img src="../imgs/types.png" alt="obrázok" class="dark">
+      </div>
+      <div class="text-card">
+        <h4>N/P kanál</h4>
+        <hr>
+        <p class="fs-5">Rozdiel medzi nimi sa dá rozpoznať podľa
+          smeru šípok na schémach alebo podľa prúdu - kladný prúd ku kolektoru je pre p-kanálový JFET, záporný pre n-kanálový.
+          Oba typy tranzistorov môžu vykonávať rovnaké úlohy s jediným rozdielom - polaritou.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Využitie JFET Tranzistora</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        I keď je princíp JFET starý už vyše 40 rokov, dodnes sa hojne využíva v komerčnom či armádnom odvetví.
+        Táto technológia v elektrickom obvode pomáha riešiť problémy svojimi výhodami, medzi ktoré patrí
+        vysoká impedancia a potreba nízkeho výkonu. Taktiež má vysokú radiačnú a tepelnú toleranciu
+        (typicky od -60°C do 150°C), čo je požadované v mnohých armádnych projektoch.
+        JFET je rozmerovo malý a našiel si využitie ako zosilňovací prvok v týchto zariadeniach:
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvoriť</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<button id="scrollToTopBtn" class="scrollUp"><img src="../imgs/arrow-up-square-fill.svg" alt="Scroll to Top"
+                                                  width="50" height="50"></button>
+
+<div class="year-legend" id="yearLegend">
+  <h6 class="text-center">Teória</h6>
+  <ul>
+    <li class="text-center"><a href="#definition">Definícia</a></li>
+    <li class="text-center"><a href="#principle_1">Princíp 1</a></li>
+    <li class="text-center"><a href="#principle_2">Princíp 2</a></li>
+    <li class="text-center"><a href="#types">Typy JFET</a></li>
+  </ul>
+</div>
 <script src="../bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
+<script src="../JS/scroll-show.js"></script>
 </body>
 </html>
