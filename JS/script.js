@@ -2427,7 +2427,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
             dotN()
             animacia1()
             drawText(ugs, uds)
-            clearTimeout(timeoutIDp)
+            //clearTimeout(timeoutIDp)
             clearTimeout(timeoutIDn)
         } else if (this.value == "p") {
             selectValue = "p";
@@ -2438,7 +2438,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
             dotP()
             animacia2()
             drawText(ugs, uds)
-            clearTimeout(timeoutIDp)
+            //clearTimeout(timeoutIDp)
             clearTimeout(timeoutIDn)
         }
     });
