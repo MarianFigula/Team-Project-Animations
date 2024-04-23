@@ -329,6 +329,13 @@ span {
     max-width: 100%; /* Ensure image responsiveness */
 }
 
+@media only screen and (max-width: 768px) {
+    /* Hide the thermometer images on screens smaller than 768px */
+    .content img {
+        display: none;
+    }
+}
+
 .content p {
     font-size: 30px;
     font-weight: bold;
