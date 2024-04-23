@@ -114,10 +114,20 @@ Band.prototype.draw = function (ctx) {
 
     //vypis energie
     if (this.type == 0) {
-        ctx.fillText("Ev", this.x, this.y + 10);
-    } else if (this.type == 1)
-    {
-        ctx.fillText("Ec", this.x, this.y + 80);
+        ctx.font = "14px Arial"; // Set font size and family for "E"
+        ctx.fillText("E", this.x, this.y + 10);
+
+        // Set font style to italic for "v"
+        ctx.font = "italic 12px Arial"; // Adjust font size and family as needed
+        ctx.fillText("v", this.x + ctx.measureText("E").width, this.y + 10);
+    } else if (this.type == 1) {
+        // Set font style to italic for "c"
+        ctx.font = "italic 12px Arial"; // Adjust font size and family as needed
+        ctx.fillText("c", this.x + ctx.measureText("E").width, this.y + 80);
+
+        // Draw "E" normally
+        ctx.font = "14px Arial"; // Set font size and family for "E"
+        ctx.fillText("E", this.x, this.y + 80);
     }
     ctx.closePath();
 };
