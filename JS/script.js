@@ -1781,36 +1781,36 @@ SVG.on(document, 'DOMContentLoaded', function () {
             weight: 'bold'
         });
         //zdroj
-        rectangle = cdDraw.rect(70, 70).fill("#FFFFE0").stroke({color: '#FFFF00', width: 4});
-        rectangle.move(930, 275);
-
-        base = cdDraw.text('Zdroj - U').move(930, 250).font({
-            family: 'Arial',
-            size: '15',
-            weight: 'bold'
-        });
-
-        base = cdDraw.text('DS').move(961, 252).font({
-            family: 'Arial',
-            size: '12',
-            weight: 'bold'
-        });
-
-
-        rectangle = cdDraw.rect(70, 70).fill("#FFFFE0").stroke({color: '#FFFF00', width: 4});
-        rectangle.move(210, -10);
-
-        base = cdDraw.text('Zdroj - U').move(205, -35).font({
-            family: 'Arial',
-            size: '15',
-            weight: 'bold'
-        });
-
-        base = cdDraw.text('GS').move(266, -33).font({
-            family: 'Arial',
-            size: '12',
-            weight: 'bold'
-        });
+        // rectangle = cdDraw.rect(70, 70).fill("#FFFFE0").stroke({color: '#FFFF00', width: 4});
+        // rectangle.move(930, 275);
+        //
+        // base = cdDraw.text('Zdroj - U').move(930, 250).font({
+        //     family: 'Arial',
+        //     size: '15',
+        //     weight: 'bold'
+        // });
+        //
+        // base = cdDraw.text('DS').move(991, 252).font({
+        //     family: 'Arial',
+        //     size: '12',
+        //     weight: 'bold'
+        // });
+        //
+        //
+        // rectangle = cdDraw.rect(70, 70).fill("#FFFFE0").stroke({color: '#FFFF00', width: 4});
+        // rectangle.move(210, -10);
+        //
+        // base = cdDraw.text('Zdroj - U').move(205, -35).font({
+        //     family: 'Arial',
+        //     size: '15',
+        //     weight: 'bold'
+        // });
+        //
+        // base = cdDraw.text('GS').move(266, -33).font({
+        //     family: 'Arial',
+        //     size: '12',
+        //     weight: 'bold'
+        // });
 
         // p+
         rectangle = cdDraw.rect(250, 65).fill("#AFE1FF").stroke({color: '#0000FF', width: 0});
