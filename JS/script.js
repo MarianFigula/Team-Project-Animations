@@ -197,18 +197,30 @@ SVG.on(document, 'DOMContentLoaded', function () {
         let rectangle = cdDraw.rect(70, 70).fill("#FFFFE0").stroke({color: '#FFFF00', width: 4});
         rectangle.move(930, 275);
 
-        let base = cdDraw.text('Zdroj - UDS').move(930, 250).font({
+        let base = cdDraw.text('Zdroj - U').move(930, 250).font({
             family: 'Arial',
             size: '15',
+            weight: 'bold'
+        });
+
+        base = cdDraw.text('DS').move(991, 252).font({
+            family: 'Arial',
+            size: '12',
             weight: 'bold'
         });
 
         rectangle = cdDraw.rect(70, 70).fill("#FFFFE0").stroke({color: '#FFFF00', width: 4});
         rectangle.move(210, -10);
 
-        base = cdDraw.text('Zdroj - UGS').move(205, -35).font({
+        base = cdDraw.text('Zdroj - U').move(205, -35).font({
             family: 'Arial',
             size: '15',
+            weight: 'bold'
+        });
+
+        base = cdDraw.text('GS').move(266, -33).font({
+            family: 'Arial',
+            size: '12',
             weight: 'bold'
         });
     }
@@ -1325,18 +1337,30 @@ SVG.on(document, 'DOMContentLoaded', function () {
         rectangle = cdDraw.rect(70, 70).fill("#FFFFE0").stroke({color: '#FFFF00', width: 4});
         rectangle.move(930, 275);
 
-        base = cdDraw.text('Zdroj - UDS').move(930, 250).font({
+        base = cdDraw.text('Zdroj - U').move(930, 250).font({
             family: 'Arial',
             size: '15',
+            weight: 'bold'
+        });
+
+        base = cdDraw.text('DS').move(991, 252).font({
+            family: 'Arial',
+            size: '12',
             weight: 'bold'
         });
 
         rectangle = cdDraw.rect(70, 70).fill("#FFFFE0").stroke({color: '#FFFF00', width: 4});
         rectangle.move(210, -10);
 
-        base = cdDraw.text('Zdroj - UGS').move(205, -35).font({
+        base = cdDraw.text('Zdroj - U').move(205, -35).font({
             family: 'Arial',
             size: '15',
+            weight: 'bold'
+        });
+
+        base = cdDraw.text('GS').move(266, -33).font({
+            family: 'Arial',
+            size: '12',
             weight: 'bold'
         });
 
@@ -1760,20 +1784,34 @@ SVG.on(document, 'DOMContentLoaded', function () {
         rectangle = cdDraw.rect(70, 70).fill("#FFFFE0").stroke({color: '#FFFF00', width: 4});
         rectangle.move(930, 275);
 
-        base = cdDraw.text('Zdroj - UDS').move(930, 250).font({
+        base = cdDraw.text('Zdroj - U').move(930, 250).font({
             family: 'Arial',
             size: '15',
             weight: 'bold'
         });
+
+        base = cdDraw.text('DS').move(961, 252).font({
+            family: 'Arial',
+            size: '12',
+            weight: 'bold'
+        });
+
 
         rectangle = cdDraw.rect(70, 70).fill("#FFFFE0").stroke({color: '#FFFF00', width: 4});
         rectangle.move(210, -10);
 
-        base = cdDraw.text('Zdroj - UGS').move(205, -35).font({
+        base = cdDraw.text('Zdroj - U').move(205, -35).font({
             family: 'Arial',
             size: '15',
             weight: 'bold'
         });
+
+        base = cdDraw.text('GS').move(266, -33).font({
+            family: 'Arial',
+            size: '12',
+            weight: 'bold'
+        });
+
         // p+
         rectangle = cdDraw.rect(250, 65).fill("#AFE1FF").stroke({color: '#0000FF', width: 0});
         rectangle.move(340, 123);
@@ -2442,6 +2480,8 @@ SVG.on(document, 'DOMContentLoaded', function () {
         value = false
         dotN()
         if (this.value == "n") {
+            document.getElementById("left_graph").innerHTML = "Prevodová VACH"
+            document.getElementById("right_graph").innerHTML = "Výstupná VACH"
             selectValue = "n";
             gDraw.clear()
             cdDraw.clear()
@@ -2453,6 +2493,8 @@ SVG.on(document, 'DOMContentLoaded', function () {
             //clearTimeout(timeoutIDp)
             clearTimeout(timeoutIDn)
         } else if (this.value == "p") {
+            document.getElementById("right_graph").innerHTML = "Prevodová VACH"
+            document.getElementById("left_graph").innerHTML = "Výstupná VACH"
             selectValue = "p";
             gDraw.clear()
             cdDraw.clear()
@@ -2560,4 +2602,3 @@ SVG.on(document, 'DOMContentLoaded', function () {
         // }
     });
 })
-

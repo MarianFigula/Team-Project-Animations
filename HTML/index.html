@@ -20,7 +20,6 @@
     <!-- <script src="/JS/script.js"></script> -->
 
 
-
 </head>
 <body>
 
@@ -35,8 +34,36 @@
             <div class="modal-body">
                 Aj keď je JFET starý viac ako 40 rokov, stále sa hojne využíva v komerčnom aj vojenskom priemysle.
                 Táto technológia prináša výhody ako vysoká impedancia a nízky výkon.
-                Má tiež vysokú odolnosť voči žiareniu a teplu (-60°C až 150°C), čo je dôležité pre mnohé armádne projekty.
-                Vďaka svojim malým rozmerom sa JFET využíva ako zosilňovací prvok v <b>mikrofónoch</b>, <b>senzoroch</b>, <b>LCD</b> a <b>pamäťových obvodoch</b>.
+                Má tiež vysokú odolnosť voči žiareniu a teplu (-60°C až 150°C), čo je dôležité pre mnohé armádne
+                projekty.
+                Vďaka svojim malým rozmerom sa JFET využíva ako zosilňovací prvok v <b>mikrofónoch</b>, <b>senzoroch</b>,
+                <b>LCD</b> a <b>pamäťových obvodoch</b>.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvoriť</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalSkratky" tabindex="-1" aria-labelledby="exampleModalLabelSkratky"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabelSkratky">SKRATKY</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li>
+                        <b>JFET</b> - Junction Field Effect Transistor
+                    </li>
+                    <li>
+                        <b>VACH</b> - Volt-ampérová charakteristika
+                    </li>
+                </ul>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zatvoriť</button>
@@ -52,7 +79,9 @@
                 <img src="../imgs/STU-FEI-ancv_nn.png" width="150" alt="STU-FEI-LOGO">
 
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -73,6 +102,12 @@
                     <li class="nav-item">
                         <a class="nav-link fs-5" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             Využitie
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fs-5" href="#" data-bs-toggle="modal" data-bs-target="#exampleModalSkratky">
+                            Skratky
                         </a>
                     </li>
                 </ul>
@@ -120,17 +155,20 @@
         </div>
     </div>
     <div class="row mt-4">
-        <div class="col"><div id="circuit-diagram" class="mb-5"></div></div>
+        <div class="col">
+            <div id="circuit-diagram" class="mb-5"></div>
+        </div>
     </div>
     <div class="row">
-        <h2 class="col-6 text-center mb-4">Prevodová VACH </h2>
-        <h2 class="col-6 mb-4">Výstupná VACH </h2>
+        <h2 id="left_graph" class="col-6 text-center mb-4">Prevodová VACH</h2>
+        <h2 id="right_graph" class="col-6 text-center mb-4">Výstupná VACH </h2>
     </div>
     <div class="row">
-        <div class="col"><div id="graph"></div></div>
+        <div class="col">
+            <div id="graph"></div>
+        </div>
     </div>
 </div>
-
 
 
 <script src="../bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
