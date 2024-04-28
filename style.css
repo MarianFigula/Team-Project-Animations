@@ -284,10 +284,20 @@ span {
     margin-left: 20px;
 }
 
-#div_canvas1, #div_canvas2, #div_canvas3{
+#div_canvas1, #div_canvas2 {
     display: inherit;
     height: inherit;
     width:32%;
+}
+
+#div_canvas3 {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+#div_canvas3 img {
+    padding: 0 30px;
 }
 
 #temperature_animations {
