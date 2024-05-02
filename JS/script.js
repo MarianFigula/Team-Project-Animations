@@ -270,7 +270,8 @@ SVG.on(document, 'DOMContentLoaded', function () {
             add.tspan('U')
         }).move(-20, 10).stroke({color: '#A020F0', width: 1}).font({
             family: 'Arial',
-            size: '15'
+            size: '15',
+            style: 'italic'
         })
         text = gDraw.text(function (add) {
             add.tspan('DS')
@@ -289,7 +290,8 @@ SVG.on(document, 'DOMContentLoaded', function () {
             add.tspan('I')
         }).move(130, 0).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
-            size: '15'
+            size: '15',
+            style: 'italic'
         })
         text = gDraw.text(function (add) {
             add.tspan('D')
@@ -298,7 +300,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
             size: '12'
         })
         text = gDraw.text(function (add) {
-            add.tspan('[mA]')
+            add.tspan('(mA)')
         }).move(145, 0).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '15'
@@ -308,7 +310,8 @@ SVG.on(document, 'DOMContentLoaded', function () {
             add.tspan('I')
         }).move(-160, 0).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
-            size: '15'
+            size: '15',
+            style: 'italic'
         })
         text = gDraw.text(function (add) {
             add.tspan('D')
@@ -317,7 +320,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
             size: '12'
         })
         text = gDraw.text(function (add) {
-            add.tspan('[mA]')
+            add.tspan('(mA)')
         }).move(-145, 0).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '15'
@@ -332,20 +335,21 @@ SVG.on(document, 'DOMContentLoaded', function () {
 
         text = gDraw.text(function (add) {
             add.tspan('U')
-        }).move(400, 80).stroke({color: '#000', width: 1}).font({
+        }).move(370, 80).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
-            size: '15'
+            size: '15',
+            style: 'italic'
         })
         text = gDraw.text(function (add) {
             add.tspan('GS')
-        }).move(410, 83).stroke({color: '#000', width: 1}).font({
+        }).move(380, 83).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '12'
         })
 
         text = gDraw.text(function (add) {
             add.tspan('= 0V')
-        }).move(430, 80).stroke({color: '#000', width: 1}).font({
+        }).move(400, 80).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '15'
         })
@@ -354,7 +358,8 @@ SVG.on(document, 'DOMContentLoaded', function () {
             add.tspan('U')
         }).move(370, 172).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
-            size: '15'
+            size: '15',
+            style: 'italic'
         })
         text = gDraw.text(function (add) {
             add.tspan('GS')
@@ -373,7 +378,8 @@ SVG.on(document, 'DOMContentLoaded', function () {
             add.tspan('U')
         }).move(370, 225).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
-            size: '15'
+            size: '15',
+            style: 'italic'
         })
         text = gDraw.text(function (add) {
             add.tspan('GS')
@@ -392,7 +398,8 @@ SVG.on(document, 'DOMContentLoaded', function () {
             add.tspan('U')
         }).move(370, 275).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
-            size: '12'
+            size: '12',
+            style: 'italic'
         })
         text = gDraw.text(function (add) {
             add.tspan('GS')
@@ -411,7 +418,8 @@ SVG.on(document, 'DOMContentLoaded', function () {
             add.tspan('U')
         }).move(370, 310).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
-            size: '15'
+            size: '15',
+            style: 'italic'
         })
         text = gDraw.text(function (add) {
             add.tspan('GS')
@@ -423,7 +431,8 @@ SVG.on(document, 'DOMContentLoaded', function () {
             add.tspan('= U')
         }).move(400, 310).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
-            size: '15'
+            size: '15',
+            style: 'italic'
         })
         text = gDraw.text(function (add) {
             add.tspan('t')
@@ -441,6 +450,19 @@ SVG.on(document, 'DOMContentLoaded', function () {
         text = gDraw.text(function (add) {
             add.tspan('saturačná oblasť')
         }).move(370, 130).stroke({color: '#00FF00', width: 0.5}).font({
+            family: 'Arial',
+            size: '14'
+        })
+
+        text = gDraw.text(function (add) {
+            add.tspan('lineárna')
+        }).move(265, 200).stroke({color: '#00FF00', width: 0.5}).font({
+            family: 'Arial',
+            size: '14'
+        })
+        text = gDraw.text(function (add) {
+            add.tspan('oblasť')
+        }).move(270, 220).stroke({color: '#00FF00', width: 0.5}).font({
             family: 'Arial',
             size: '14'
         })
@@ -478,7 +500,8 @@ SVG.on(document, 'DOMContentLoaded', function () {
             add.tspan('U')
         }).move(660, 350).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
-            size: '15'
+            size: '15',
+            style: 'italic'
         })
         text = gDraw.text(function (add) {
             add.tspan('DS')
@@ -487,7 +510,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
             size: '12'
         })
         text = gDraw.text(function (add) {
-            add.tspan('[V]')
+            add.tspan('(V)')
         }).move(692, 350).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '15'
@@ -654,7 +677,8 @@ SVG.on(document, 'DOMContentLoaded', function () {
             add.tspan('I')
         }).move(715-430, 350).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
-            size: '15'
+            size: '15',
+            style: 'italic'
         })
         text = gDraw.text(function (add) {
             add.tspan('D')
@@ -663,7 +687,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
             size: '12'
         })
         text = gDraw.text(function (add) {
-            add.tspan('[mA]')
+            add.tspan('(mA)')
         }).move(730-430, 350).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '15'
@@ -673,7 +697,8 @@ SVG.on(document, 'DOMContentLoaded', function () {
             add.tspan('I')
         }).move(715-205, 350).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
-            size: '15'
+            size: '15',
+            style: 'italic'
         })
         text = gDraw.text(function (add) {
             add.tspan('D')
@@ -682,7 +707,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
             size: '12'
         })
         text = gDraw.text(function (add) {
-            add.tspan('[mA]')
+            add.tspan('(mA)')
         }).move(730-205, 350).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '15'
@@ -692,7 +717,8 @@ SVG.on(document, 'DOMContentLoaded', function () {
             add.tspan('U')
         }).move(330-500, 250).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
-            size: '15'
+            size: '15',
+            style: 'italic'
         })
         text = gDraw.text(function (add) {
             add.tspan('GS')
@@ -711,7 +737,8 @@ SVG.on(document, 'DOMContentLoaded', function () {
             add.tspan('U')
         }).move(330-500, 197).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
-            size: '15'
+            size: '15',
+            style: 'italic'
         })
         text = gDraw.text(function (add) {
             add.tspan('GS')
@@ -730,7 +757,8 @@ SVG.on(document, 'DOMContentLoaded', function () {
             add.tspan('U')
         }).move(330-500, 150).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
-            size: '15'
+            size: '15',
+            style: 'italic'
         })
         text = gDraw.text(function (add) {
             add.tspan('GS')
@@ -749,7 +777,8 @@ SVG.on(document, 'DOMContentLoaded', function () {
             add.tspan('U')
         }).move(330-500, 75).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
-            size: '15'
+            size: '15',
+            style: 'italic'
         })
         text = gDraw.text(function (add) {
             add.tspan('GS')
@@ -768,7 +797,8 @@ SVG.on(document, 'DOMContentLoaded', function () {
             add.tspan('U')
         }).move(330-500, 35).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
-            size: '15'
+            size: '15',
+            style: 'italic'
         })
         text = gDraw.text(function (add) {
             add.tspan('GS')
@@ -780,7 +810,8 @@ SVG.on(document, 'DOMContentLoaded', function () {
             add.tspan('=U')
         }).move(360-500, 35).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
-            size: '15'
+            size: '15',
+            style: 'italic'
         })
         text = gDraw.text(function (add) {
             add.tspan('t')
@@ -798,6 +829,19 @@ SVG.on(document, 'DOMContentLoaded', function () {
         text = gDraw.text(function (add) {
             add.tspan('saturačná oblasť')
         }).move(315-500, 113).stroke({color: '#00FF00', width: 0.5}).font({
+            family: 'Arial',
+            size: '14'
+        })
+
+        text = gDraw.text(function (add) {
+            add.tspan('lineárna')
+        }).move(85, 100).stroke({color: '#00FF00', width: 0.5}).font({
+            family: 'Arial',
+            size: '14'
+        })
+        text = gDraw.text(function (add) {
+            add.tspan('oblasť')
+        }).move(90, 115).stroke({color: '#00FF00', width: 0.5}).font({
             family: 'Arial',
             size: '14'
         })
@@ -835,7 +879,8 @@ SVG.on(document, 'DOMContentLoaded', function () {
             add.tspan('U')
         }).move(100-400, -5).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
-            size: '15'
+            size: '15',
+            style: 'italic'
         })
         text = gDraw.text(function (add) {
             add.tspan('DS')
@@ -844,7 +889,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
             size: '12'
         })
         text = gDraw.text(function (add) {
-            add.tspan('[V]')
+            add.tspan('(V)')
         }).move(130-400, -5).stroke({color: '#000', width: 1}).font({
             family: 'Arial',
             size: '15'
@@ -916,7 +961,8 @@ SVG.on(document, 'DOMContentLoaded', function () {
             add.tspan('U')
         }).move(360, 300).stroke({color: '#A020F0', width: 1}).font({
             family: 'Arial',
-            size: '15'
+            size: '15',
+            style: 'italic'
         })
         text = gDraw.text(function (add) {
             add.tspan('DS')
