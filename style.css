@@ -344,6 +344,9 @@ span {
     .content img {
         display: none;
     }
+    .content p {
+        text-align: center !important;
+    }
 }
 
 .content p {
@@ -356,6 +359,13 @@ span {
 #thermometer300KContainer {
     display: none;
 }
+
+#thermometer200KContainer,
+#thermometer300KContaine,
+#thermometer5KContainer {
+    justify-content: center;
+}
+
 
 .animate-buttons {
     margin-top: 100px;
