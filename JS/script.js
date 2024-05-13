@@ -197,10 +197,17 @@ SVG.on(document, 'DOMContentLoaded', function () {
         let rectangle = cdDraw.rect(70, 70).fill("#FFFFE0").stroke({color: '#FFFF00', width: 4});
         rectangle.move(930, 275);
 
-        let base = cdDraw.text('Zdroj - U').move(930, 250).font({
+        let base = cdDraw.text('Zdroj - ').move(930, 250).font({
             family: 'Arial',
             size: '15',
             weight: 'bold'
+        });
+
+        base = cdDraw.text('U').move(980, 250).font({
+            family: 'Arial',
+            size: '15',
+            weight: 'bold',
+            style: 'italic'
         });
 
         base = cdDraw.text('DS').move(991, 252).font({
@@ -212,10 +219,17 @@ SVG.on(document, 'DOMContentLoaded', function () {
         rectangle = cdDraw.rect(70, 70).fill("#FFFFE0").stroke({color: '#FFFF00', width: 4});
         rectangle.move(210, -10);
 
-        base = cdDraw.text('Zdroj - U').move(205, -35).font({
+        base = cdDraw.text('Zdroj - ').move(205, -35).font({
             family: 'Arial',
             size: '15',
             weight: 'bold'
+        });
+
+        base = cdDraw.text('U').move(255, -35).font({
+            family: 'Arial',
+            size: '15',
+            weight: 'bold',
+            style: 'italic'
         });
 
         base = cdDraw.text('GS').move(266, -33).font({
@@ -1383,32 +1397,32 @@ SVG.on(document, 'DOMContentLoaded', function () {
         rectangle = cdDraw.rect(70, 70).fill("#FFFFE0").stroke({color: '#FFFF00', width: 4});
         rectangle.move(930, 275);
 
-        base = cdDraw.text('Zdroj - U').move(930, 250).font({
-            family: 'Arial',
-            size: '15',
-            weight: 'bold'
-        });
-
-        base = cdDraw.text('DS').move(991, 252).font({
-            family: 'Arial',
-            size: '12',
-            weight: 'bold'
-        });
+        // base = cdDraw.text('Zdroj - ').move(930, 250).font({
+        //     family: 'Arial',
+        //     size: '15',
+        //     weight: 'bold'
+        // });
+        //
+        // base = cdDraw.text('DS').move(991, 252).font({
+        //     family: 'Arial',
+        //     size: '12',
+        //     weight: 'bold'
+        // });
 
         rectangle = cdDraw.rect(70, 70).fill("#FFFFE0").stroke({color: '#FFFF00', width: 4});
         rectangle.move(210, -10);
 
-        base = cdDraw.text('Zdroj - U').move(205, -35).font({
-            family: 'Arial',
-            size: '15',
-            weight: 'bold'
-        });
-
-        base = cdDraw.text('GS').move(266, -33).font({
-            family: 'Arial',
-            size: '12',
-            weight: 'bold'
-        });
+        // base = cdDraw.text('Zdroj - U').move(205, -35).font({
+        //     family: 'Arial',
+        //     size: '15',
+        //     weight: 'bold'
+        // });
+        //
+        // base = cdDraw.text('GS').move(266, -33).font({
+        //     family: 'Arial',
+        //     size: '12',
+        //     weight: 'bold'
+        // });
 
         base = cdDraw.text('p').move(450, 130).font({
             family: 'Arial',
@@ -2569,6 +2583,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
                 }
                 break
             case "p":
+                animacia1()
                 animacia2()
                 drawText(ugs, uds)
                 dotP()
@@ -2603,6 +2618,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
                 }
                 break
             case "p":
+                animacia1()
                 animacia2()
                 drawText(ugs, uds)
                 dotP()
