@@ -193,7 +193,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
         circle.fill('none')
         circle.stroke({color: '#000', width: 3, linecap: 'round'}).move(460, 35)
 
-        //TODO:zdroj
+        //zdroj
         let rectangle = cdDraw.rect(70, 70).fill("#FFFFE0").stroke({color: '#FFFF00', width: 4});
         rectangle.move(930, 275);
 
@@ -1393,36 +1393,12 @@ SVG.on(document, 'DOMContentLoaded', function () {
         rectangle = cdDraw.rect(250, 65).fill("#FFB9B9").stroke({color: '#FE8585', width: 0});
         rectangle.move(340, 123);
 
-        //TODO:zdroj
+        // zdroj
         rectangle = cdDraw.rect(70, 70).fill("#FFFFE0").stroke({color: '#FFFF00', width: 4});
         rectangle.move(930, 275);
 
-        // base = cdDraw.text('Zdroj - ').move(930, 250).font({
-        //     family: 'Arial',
-        //     size: '15',
-        //     weight: 'bold'
-        // });
-        //
-        // base = cdDraw.text('DS').move(991, 252).font({
-        //     family: 'Arial',
-        //     size: '12',
-        //     weight: 'bold'
-        // });
-
         rectangle = cdDraw.rect(70, 70).fill("#FFFFE0").stroke({color: '#FFFF00', width: 4});
         rectangle.move(210, -10);
-
-        // base = cdDraw.text('Zdroj - U').move(205, -35).font({
-        //     family: 'Arial',
-        //     size: '15',
-        //     weight: 'bold'
-        // });
-        //
-        // base = cdDraw.text('GS').move(266, -33).font({
-        //     family: 'Arial',
-        //     size: '12',
-        //     weight: 'bold'
-        // });
 
         base = cdDraw.text('p').move(450, 130).font({
             family: 'Arial',
@@ -1840,37 +1816,6 @@ SVG.on(document, 'DOMContentLoaded', function () {
             size: '24',
             weight: 'bold'
         });
-        //zdroj
-        // rectangle = cdDraw.rect(70, 70).fill("#FFFFE0").stroke({color: '#FFFF00', width: 4});
-        // rectangle.move(930, 275);
-        //
-        // base = cdDraw.text('Zdroj - U').move(930, 250).font({
-        //     family: 'Arial',
-        //     size: '15',
-        //     weight: 'bold'
-        // });
-        //
-        // base = cdDraw.text('DS').move(991, 252).font({
-        //     family: 'Arial',
-        //     size: '12',
-        //     weight: 'bold'
-        // });
-        //
-        //
-        // rectangle = cdDraw.rect(70, 70).fill("#FFFFE0").stroke({color: '#FFFF00', width: 4});
-        // rectangle.move(210, -10);
-        //
-        // base = cdDraw.text('Zdroj - U').move(205, -35).font({
-        //     family: 'Arial',
-        //     size: '15',
-        //     weight: 'bold'
-        // });
-        //
-        // base = cdDraw.text('GS').move(266, -33).font({
-        //     family: 'Arial',
-        //     size: '12',
-        //     weight: 'bold'
-        // });
 
         // p+
         rectangle = cdDraw.rect(250, 65).fill("#AFE1FF").stroke({color: '#0000FF', width: 0});
@@ -1923,13 +1868,6 @@ SVG.on(document, 'DOMContentLoaded', function () {
             size: '24',
             weight: 'bold'
         });
-    }
-    function easeInSine(pos) {
-        return 1 - Math.cos(pos * Math.PI / 2);
-    }
-
-    function easeOutCubic(pos) {
-        return 1 - Math.pow(1 - pos, 3);
     }
 
     var timeoutIDn
@@ -2650,8 +2588,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
             cdDraw.clear()
             addAndRemoveClassesToSelects("hidden")
             schema1()
-            //clearTimeout(timeoutIDp)
-            //clearTimeout(timeoutIDn)
+
         }else {
             if (selectValue == "n") {
                 animacia1()
@@ -2661,14 +2598,5 @@ SVG.on(document, 'DOMContentLoaded', function () {
             addAndRemoveClassesToSelects("visible")
             drawText(ugs, uds)
         }
-        // } else if (!this.checked && document.getElementById('kanal').value == "n") {
-        //     animacia1()
-        //     clearTimeout(timeoutIDp)
-        //     clearTimeout(timeoutIDn)
-        // } else if (!this.checked && document.getElementById('kanal').value == "p") {
-        //     animacia2()
-        //     clearTimeout(timeoutIDp)
-        //     clearTimeout(timeoutIDn)
-        // }
     });
 })
