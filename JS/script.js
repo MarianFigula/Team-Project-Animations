@@ -2524,7 +2524,6 @@ SVG.on(document, 'DOMContentLoaded', function () {
         ugs = "0"
         uds = "0"
         value = false
-        dotN()
         if (this.value == "n") {
             document.getElementById("left_graph").innerHTML = "Prevodová VACH"
             document.getElementById("right_graph").innerHTML = "Výstupná VACH"
@@ -2587,6 +2586,7 @@ SVG.on(document, 'DOMContentLoaded', function () {
 
     console.log(3)
 
+
     document.getElementById('Uds').addEventListener('change', function () {
         uds = this.value;
         console.log(uds);
@@ -2625,7 +2625,11 @@ SVG.on(document, 'DOMContentLoaded', function () {
         ugs = "0"
         uds = "0"
         value = false
-        dotN()
+        if (selectValue == "n") {
+            dotN()
+        }else{
+            dotP()
+        }
         if (this.checked) {
             cdDraw.clear()
             addAndRemoveClassesToSelects("hidden")
@@ -2633,7 +2637,11 @@ SVG.on(document, 'DOMContentLoaded', function () {
             //clearTimeout(timeoutIDp)
             //clearTimeout(timeoutIDn)
         }else {
-            animacia1()
+            if (selectValue == "n") {
+                animacia1()
+            }else{
+                animacia2()
+            }
             addAndRemoveClassesToSelects("visible")
             drawText(ugs, uds)
         }
